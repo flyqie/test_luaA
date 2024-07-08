@@ -1,4 +1,4 @@
-return {
+﻿return {
 	id = "tb_20",
 	isWorld = false,
 	events = {
@@ -13,34 +13,16 @@ return {
 				posX = -668.9,
 				uiset = {
 					{
-						pathIndex = -1,
 						lineMode = 1,
-						dynamicPath = function ()
-							if getProxy(SettingsProxy):IsMellowStyle() then
-								return "/OverlayCamera/Overlay/UIMain/NewMainMellowTheme(Clone)/frame/top/icon"
-							else
-								return "OverlayCamera/Overlay/UIMain/NewMainClassicTheme(Clone)/frame/char"
-							end
-						end
+						path = "OverlayCamera/Overlay/UIMain/main/frame/char",
+						pathIndex = -1
 					}
 				}
 			},
 			ui = {
-				pathIndex = -1,
-				dynamicPath = function ()
-					if getProxy(SettingsProxy):IsMellowStyle() then
-						return "/OverlayCamera/Overlay/UIMain/NewMainMellowTheme(Clone)/frame/top/icon"
-					else
-						return "OverlayCamera/Overlay/UIMain/NewMainClassicTheme(Clone)/frame/char"
-					end
-				end,
-				dynamicEventPath = function ()
-					if getProxy(SettingsProxy):IsMellowStyle() then
-						return "/OverlayCamera/Overlay/UIMain/NewMainMellowTheme(Clone)/frame/top/name_bg"
-					else
-						return "OverlayCamera/Overlay/UIMain/NewMainClassicTheme(Clone)/frame/top/iconBack"
-					end
-				end
+				path = "OverlayCamera/Overlay/UIMain/main/frame/char",
+				eventPath = "OverlayCamera/Overlay/UIMain/main/frame/top/iconBack",
+				pathIndex = -1
 			}
 		},
 		{

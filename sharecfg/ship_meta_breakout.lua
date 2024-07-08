@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.ship_meta_breakout = setmetatable({
 	__name = "ship_meta_breakout",
 	all = {
@@ -18,10 +18,6 @@ pg.ship_meta_breakout = setmetatable({
 		9701042,
 		9701043,
 		9701044,
-		9701051,
-		9701052,
-		9701053,
-		9701054,
 		9702011,
 		9702012,
 		9702013,
@@ -86,10 +82,6 @@ pg.ship_meta_breakout = setmetatable({
 		9705042,
 		9705043,
 		9705044,
-		9705051,
-		9705052,
-		9705053,
-		9705054,
 		9706011,
 		9706012,
 		9706013,
@@ -114,10 +106,6 @@ pg.ship_meta_breakout = setmetatable({
 		9707032,
 		9707033,
 		9707034,
-		9707041,
-		9707042,
-		9707043,
-		9707044,
 		9708011,
 		9708012,
 		9708013,
@@ -388,69 +376,6 @@ pg.base.ship_meta_breakout = {
 		id = 9701044,
 		item1 = 21029,
 		pre_id = 9701043,
-		weapon_ids = {}
-	},
-	[9701051] = {
-		breakout_view = "习得技能【逐光之焰·吸血鬼】I/鱼雷效率提高5%",
-		gold = 500,
-		breakout_id = 9701052,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 1,
-		level = 10,
-		item2_num = 0,
-		id = 9701051,
-		item1 = 21032,
-		pre_id = 0,
-		weapon_ids = {
-			80221
-		}
-	},
-	[9701052] = {
-		breakout_view = "鱼雷底座+1/鱼雷预装填+1/主炮效率提高10%",
-		gold = 1500,
-		breakout_id = 9701053,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 1,
-		level = 30,
-		item2_num = 0,
-		id = 9701052,
-		item1 = 21032,
-		pre_id = 9701051,
-		weapon_ids = {
-			105,
-			105
-		}
-	},
-	[9701053] = {
-		breakout_view = "【逐光之焰·吸血鬼】升级/全武器效率提高5%",
-		gold = 2500,
-		breakout_id = 9701054,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 2,
-		level = 70,
-		item2_num = 0,
-		id = 9701053,
-		item1 = 21032,
-		pre_id = 9701052,
-		weapon_ids = {
-			80222
-		}
-	},
-	[9701054] = {
-		breakout_view = "无",
-		gold = 0,
-		breakout_id = 0,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 0,
-		level = 0,
-		item2_num = 0,
-		id = 9701054,
-		item1 = 21032,
-		pre_id = 9701053,
 		weapon_ids = {}
 	},
 	[9702011] = {
@@ -1488,73 +1413,6 @@ pg.base.ship_meta_breakout = {
 		pre_id = 9705043,
 		weapon_ids = {}
 	},
-	[9705051] = {
-		breakout_view = "习得技能【构造之理·罗德尼】/主炮底座+1/主炮效率提高5%",
-		gold = 1000,
-		breakout_id = 9705052,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 1,
-		level = 10,
-		item2_num = 0,
-		id = 9705051,
-		item1 = 21031,
-		pre_id = 0,
-		weapon_ids = {
-			24200,
-			24200
-		}
-	},
-	[9705052] = {
-		breakout_view = "副炮底座+2/主炮效率提高10%",
-		gold = 3000,
-		breakout_id = 9705053,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 1,
-		level = 30,
-		item2_num = 0,
-		id = 9705052,
-		item1 = 21031,
-		pre_id = 9705051,
-		weapon_ids = {
-			22100,
-			22100,
-			22100
-		}
-	},
-	[9705053] = {
-		breakout_view = "【构造之理·罗德尼】升级/主炮底座+1/主炮效率提高15%",
-		gold = 10000,
-		breakout_id = 9705054,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 2,
-		level = 70,
-		item2_num = 0,
-		id = 9705053,
-		item1 = 21031,
-		pre_id = 9705052,
-		weapon_ids = {
-			24200,
-			24200,
-			24200
-		}
-	},
-	[9705054] = {
-		breakout_view = "无",
-		gold = 0,
-		breakout_id = 0,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 0,
-		level = 0,
-		item2_num = 0,
-		id = 9705054,
-		item1 = 21031,
-		pre_id = 9705053,
-		weapon_ids = {}
-	},
 	[9706011] = {
 		breakout_view = "习得技能【破敌之炬·{namecode:220}】/所有鱼雷机+1/舰载机效率提高3%",
 		gold = 500,
@@ -1967,75 +1825,6 @@ pg.base.ship_meta_breakout = {
 		id = 9707034,
 		item1 = 21004,
 		pre_id = 9707033,
-		weapon_ids = {}
-	},
-	[9707041] = {
-		breakout_view = "习得技能【摇曳之火·贝亚恩】/所有舰载机+1/舰载机效率提高3%",
-		gold = 1000,
-		breakout_id = 9707042,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 1,
-		level = 10,
-		item2_num = 0,
-		id = 9707041,
-		item1 = 21033,
-		pre_id = 0,
-		weapon_ids = {
-			60511,
-			54014
-		}
-	},
-	[9707042] = {
-		breakout_view = "机库容量+1/副武器底座+1/舰载机效率提高5%",
-		gold = 3000,
-		breakout_id = 9707043,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 1,
-		level = 30,
-		item2_num = 0,
-		id = 9707042,
-		item1 = 21033,
-		pre_id = 9707041,
-		weapon_ids = {
-			60512,
-			54014,
-			60512,
-			54014
-		}
-	},
-	[9707043] = {
-		breakout_view = "【摇曳之火·贝亚恩】升级/所有舰载机+1/舰载机效率提高7%",
-		gold = 10000,
-		breakout_id = 9707044,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 2,
-		level = 70,
-		item2_num = 0,
-		id = 9707043,
-		item1 = 21033,
-		pre_id = 9707042,
-		weapon_ids = {
-			60513,
-			54015,
-			60513,
-			54015
-		}
-	},
-	[9707044] = {
-		breakout_view = "无",
-		gold = 0,
-		breakout_id = 0,
-		repair = 0,
-		item2 = 21001,
-		item1_num = 0,
-		level = 0,
-		item2_num = 0,
-		id = 9707044,
-		item1 = 21033,
-		pre_id = 9707043,
 		weapon_ids = {}
 	},
 	[9708011] = {

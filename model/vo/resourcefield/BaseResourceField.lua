@@ -1,128 +1,134 @@
-slot0 = class("BaseResourceField", import("..BaseVO"))
+﻿local var_0_0 = class("BaseResourceField", import("..BaseVO"))
 
-slot0.Ctor = function(slot0, slot1)
-	slot0.attrs = {}
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	arg_1_0.attrs = {}
 end
 
-slot0.SetLevel = function(slot0, slot1)
-	slot0._LV = slot1
-	slot0.configId = slot1
+function var_0_0.SetLevel(arg_2_0, arg_2_1)
+	arg_2_0._LV = arg_2_1
+	arg_2_0.configId = arg_2_1
 
-	for slot5, slot6 in ipairs(slot0.attrs) do
-		slot6:Update(slot0._LV)
+	for iter_2_0, iter_2_1 in ipairs(arg_2_0.attrs) do
+		iter_2_1:Update(arg_2_0._LV)
 	end
 end
 
-slot0.SetUpgradeTimeStamp = function(slot0, slot1)
-	slot0._upgradeTimeStamp = slot1
+function var_0_0.SetUpgradeTimeStamp(arg_3_0, arg_3_1)
+	arg_3_0._upgradeTimeStamp = arg_3_1
 end
 
-slot0.GetUpgradeTimeStamp = function(slot0)
-	return slot0._upgradeTimeStamp
+function var_0_0.GetUpgradeTimeStamp(arg_4_0)
+	return arg_4_0._upgradeTimeStamp
 end
 
-slot0.GetDuration = function(slot0)
-	if slot0._upgradeTimeStamp ~= 0 then
-		return slot0._upgradeTimeStamp - pg.TimeMgr.GetInstance():GetServerTime()
+function var_0_0.GetDuration(arg_5_0)
+	if arg_5_0._upgradeTimeStamp ~= 0 then
+		return arg_5_0._upgradeTimeStamp - pg.TimeMgr.GetInstance():GetServerTime()
 	else
 		return nil
 	end
 end
 
-slot0.IsStarting = function(slot0)
-	return slot0._upgradeTimeStamp > 0 and pg.TimeMgr.GetInstance():GetServerTime() < slot0._upgradeTimeStamp
+function var_0_0.IsStarting(arg_6_0)
+	return arg_6_0._upgradeTimeStamp > 0 and arg_6_0._upgradeTimeStamp > pg.TimeMgr.GetInstance():GetServerTime()
 end
 
-slot0.GetSpendTime = function(slot0)
-	return slot0:getConfig("time")
+function var_0_0.GetSpendTime(arg_7_0)
+	return arg_7_0:getConfig("time")
 end
 
-slot0.GetLevel = function(slot0)
-	return slot0._LV
+function var_0_0.GetLevel(arg_8_0)
+	return arg_8_0._LV
 end
 
-slot0.IsMaxLevel = function(slot0)
-	slot1 = slot0:bindConfigTable()
+function var_0_0.IsMaxLevel(arg_9_0)
+	local var_9_0 = arg_9_0:bindConfigTable()
 
-	return slot0._LV == slot1.all[#slot1.all]
+	return arg_9_0._LV == var_9_0.all[#var_9_0.all]
 end
 
-slot0.GetTargetLevel = function(slot0)
-	return slot0:bindConfigTable()[slot0:GetLevel()].user_level
+function var_0_0.GetTargetLevel(arg_10_0)
+	return arg_10_0:bindConfigTable()[arg_10_0:GetLevel()].user_level
 end
 
-slot0.IsReachLevel = function(slot0)
-	return slot0:bindConfigTable()[slot0:GetLevel()].user_level <= getProxy(PlayerProxy):getRawData().level
+function var_0_0.IsReachLevel(arg_11_0)
+	local var_11_0 = getProxy(PlayerProxy):getRawData()
+	local var_11_1 = arg_11_0:bindConfigTable()[arg_11_0:GetLevel()]
+
+	return var_11_0.level >= var_11_1.user_level
 end
 
-slot0.GetTargetRes = function(slot0)
-	return slot0:bindConfigTable()[slot0:GetLevel()].use[2]
+function var_0_0.GetTargetRes(arg_12_0)
+	return arg_12_0:bindConfigTable()[arg_12_0:GetLevel()].use[2]
 end
 
-slot0.IsReachRes = function(slot0)
-	return slot0:bindConfigTable()[slot0:GetLevel()].use[2] <= getProxy(PlayerProxy):getRawData().gold
+function var_0_0.IsReachRes(arg_13_0)
+	local var_13_0 = getProxy(PlayerProxy):getRawData()
+	local var_13_1 = arg_13_0:bindConfigTable()[arg_13_0:GetLevel()]
+
+	return var_13_0.gold >= var_13_1.use[2]
 end
 
-slot0.CanUpgrade = function(slot0)
-	if slot0:IsReachLevel() and slot0:IsReachRes() and not slot0:IsMaxLevel() and slot0._upgradeTimeStamp == 0 then
+function var_0_0.CanUpgrade(arg_14_0)
+	if arg_14_0:IsReachLevel() and arg_14_0:IsReachRes() and not arg_14_0:IsMaxLevel() and arg_14_0._upgradeTimeStamp == 0 then
 		return true
 	end
 
 	return false
 end
 
-slot0.isCommissionNotify = function(slot0, slot1)
-	return slot0:getHourProduct() > slot0:getConfig("store") - slot1
+function var_0_0.isCommissionNotify(arg_15_0, arg_15_1)
+	return arg_15_0:getHourProduct() > arg_15_0:getConfig("store") - arg_15_1
 end
 
-slot0.GetCost = function(slot0)
-	slot1 = slot0:getConfig("use")
+function var_0_0.GetCost(arg_16_0)
+	local var_16_0 = arg_16_0:getConfig("use")
 
 	return {
 		type = DROP_TYPE_RESOURCE,
-		id = slot1[1],
-		count = slot1[2]
+		id = var_16_0[1],
+		count = var_16_0[2]
 	}
 end
 
-slot0.GetEffectAttrs = function(slot0)
-	return slot0.attrs
+function var_0_0.GetEffectAttrs(arg_17_0)
+	return arg_17_0.attrs
 end
 
-slot0.GetName = function(slot0)
+function var_0_0.GetName(arg_18_0)
 	assert(false)
 end
 
-slot0.getHourProduct = function(slot0)
+function var_0_0.getHourProduct(arg_19_0)
 	assert(false)
 end
 
-slot0.GetKeyWord = function(slot0)
+function var_0_0.GetKeyWord(arg_20_0)
 	assert(false)
 end
 
-slot0.bindConfigTable = function(slot0)
+function var_0_0.bindConfigTable(arg_21_0)
 	assert(false)
 end
 
-slot0.GetUpgradeType = function(slot0)
+function var_0_0.GetUpgradeType(arg_22_0)
 	assert(false)
 end
 
-slot0.GetResourceType = function(slot0)
+function var_0_0.GetResourceType(arg_23_0)
 	assert(false)
 end
 
-slot0.GetDesc = function(slot0)
+function var_0_0.GetDesc(arg_24_0)
 	assert(false)
 end
 
-slot0.GetPlayerRes = function(slot0)
+function var_0_0.GetPlayerRes(arg_25_0)
 	assert(false)
 end
 
-slot0.HasRes = function(slot0)
-	return slot0:GetPlayerRes() > 0
+function var_0_0.HasRes(arg_26_0)
+	return arg_26_0:GetPlayerRes() > 0
 end
 
-return slot0
+return var_0_0

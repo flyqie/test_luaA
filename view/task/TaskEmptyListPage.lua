@@ -1,30 +1,33 @@
-slot0 = class("TaskEmptyListPage", import("..base.BaseSubView"))
+﻿local var_0_0 = class("TaskEmptyListPage", import("..base.BaseSubView"))
 
-slot0.getUIName = function(slot0)
+function var_0_0.getUIName(arg_1_0)
 	return "TaskEmptyListUI"
 end
 
-slot0.OnLoaded = function(slot0)
-	slot0._tf:SetSiblingIndex(1)
-	setText(findTF(slot0._tf, "Text"), i18n("list_empty_tip_taskscene"))
+function var_0_0.OnLoaded(arg_2_0)
+	arg_2_0._tf:SetSiblingIndex(1)
+
+	local var_2_0 = findTF(arg_2_0._tf, "Text")
+
+	setText(var_2_0, i18n("list_empty_tip_taskscene"))
 end
 
-slot0.OnInit = function(slot0)
-	slot0.isShowUI = false
+function var_0_0.OnInit(arg_3_0)
+	arg_3_0.isShowUI = false
 end
 
-slot0.ShowOrHide = function(slot0, slot1)
-	if slot0.isShowUI == slot1 then
+function var_0_0.ShowOrHide(arg_4_0, arg_4_1)
+	if arg_4_0.isShowUI == arg_4_1 then
 		return
 	end
 
-	if slot1 then
-		slot0:Show()
+	if arg_4_1 then
+		arg_4_0:Show()
 	else
-		slot0:Hide()
+		arg_4_0:Hide()
 	end
 
-	slot0.isShowUI = slot1
+	arg_4_0.isShowUI = arg_4_1
 end
 
-return slot0
+return var_0_0

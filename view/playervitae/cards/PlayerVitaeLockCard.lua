@@ -1,14 +1,15 @@
-slot0 = class("PlayerVitaeLockCard", import(".PlayerVitaeBaseCard"))
+﻿local var_0_0 = class("PlayerVitaeLockCard", import(".PlayerVitaeBaseCard"))
 
-slot0.OnInit = function(slot0)
-	slot0.desc = slot0._tf:Find("Text")
+function var_0_0.OnInit(arg_1_0)
+	arg_1_0.desc = arg_1_0._tf:Find("Text")
 end
 
-slot0.OnUpdate = function(slot0, slot1, slot2)
-	setText(slot0.desc, i18n("secretary_unlock" .. slot1))
+function var_0_0.OnUpdate(arg_2_0, arg_2_1, arg_2_2)
+	setText(arg_2_0.desc, i18n("secretary_unlock" .. arg_2_1))
 end
 
-slot0.OnDispose = function(slot0)
+function var_0_0.OnDispose(arg_3_0)
+	return
 end
 
-return slot0
+return var_0_0

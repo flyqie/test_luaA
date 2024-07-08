@@ -1,48 +1,59 @@
-slot0 = class("CommanderBuildPool", import("..BaseVO"))
+﻿local var_0_0 = class("CommanderBuildPool", import("..BaseVO"))
 
-slot0.Ctor = function(slot0, slot1)
-	slot0.id = slot1.id
-	slot0.configId = slot0.id
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	arg_1_0.id = arg_1_1.id
+	arg_1_0.configId = arg_1_0.id
 end
 
-slot0.bindConfigTable = function(slot0)
+function var_0_0.bindConfigTable(arg_2_0)
 	return pg.commander_data_create_material
 end
 
-slot0.getName = function(slot0)
-	return slot0:getConfig("name") or Item.New({
-		id = slot0:getConfig("use_item")
-	}):getConfig("name") or ""
+function var_0_0.getName(arg_3_0)
+	local var_3_0 = arg_3_0:getConfig("use_item")
+	local var_3_1 = Item.New({
+		id = var_3_0
+	})
+
+	return arg_3_0:getConfig("name") or var_3_1:getConfig("name") or ""
 end
 
-slot0.getConsume = function(slot0)
+function var_0_0.getConsume(arg_4_0)
+	local var_4_0 = arg_4_0:getConfig("use_item")
+	local var_4_1 = arg_4_0:getConfig("number_1")
+
 	return {
 		{
 			2,
-			slot0:getConfig("use_item"),
-			slot0:getConfig("number_1")
+			var_4_0,
+			var_4_1
 		}
 	}
 end
 
-slot0.getConsumeDesc = function(slot0)
-	slot1 = slot0:getConfig("use_gold")
+function var_0_0.getConsumeDesc(arg_5_0)
+	local var_5_0 = arg_5_0:getConfig("use_gold")
+	local var_5_1 = arg_5_0:getConfig("use_item")
+	local var_5_2 = arg_5_0:getConfig("number_1")
+	local var_5_3 = Item.New({
+		id = var_5_1
+	})
 
-	return i18n("commander_build_pool_tip", Item.New({
-		id = slot0:getConfig("use_item")
-	}):getConfig("name"), slot0:getConfig("number_1"))
+	return i18n("commander_build_pool_tip", var_5_3:getConfig("name"), var_5_2)
 end
 
-slot0.getPrint = function(slot0)
-	return Commander.rarity2Print(slot0.id + 2)
+function var_0_0.getPrint(arg_6_0)
+	return Commander.rarity2Print(arg_6_0.id + 2)
 end
 
-slot0.getItemCount = function(slot0)
-	return getProxy(BagProxy):getItemCountById(slot0:getConfig("use_item"))
+function var_0_0.getItemCount(arg_7_0)
+	local var_7_0 = arg_7_0:getConfig("use_item")
+
+	return getProxy(BagProxy):getItemCountById(var_7_0)
 end
 
-slot0.getRarity = function(slot0)
-	return slot0.id
+function var_0_0.getRarity(arg_8_0)
+	return arg_8_0.id
 end
 
-return slot0
+return var_0_0

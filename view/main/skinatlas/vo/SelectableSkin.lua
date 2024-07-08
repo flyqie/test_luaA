@@ -1,31 +1,31 @@
-slot0 = class("SelectableSkin")
+﻿local var_0_0 = class("SelectableSkin")
 
-slot0.Ctor = function(slot0, slot1)
-	slot0.skinId = slot1.id
-	slot0.isTimeLimit = slot1.isTimeLimit
-	slot0.own = getProxy(ShipSkinProxy):hasSkin(slot0.skinId)
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	arg_1_0.skinId = arg_1_1.id
+	arg_1_0.isTimeLimit = arg_1_1.isTimeLimit
+	arg_1_0.own = getProxy(ShipSkinProxy):hasSkin(arg_1_0.skinId)
 end
 
-slot0.IsTimeLimit = function(slot0)
-	return slot0.isTimeLimit
+function var_0_0.IsTimeLimit(arg_2_0)
+	return arg_2_0.isTimeLimit
 end
 
-slot0.OwnSkin = function(slot0)
-	return slot0.own
+function var_0_0.OwnSkin(arg_3_0)
+	return arg_3_0.own
 end
 
-slot0.ToShipSkin = function(slot0)
+function var_0_0.ToShipSkin(arg_4_0)
 	return ShipSkin.New({
-		id = slot0.skinId
+		id = arg_4_0.skinId
 	})
 end
 
-slot0.GetTimeLimitWeight = function(slot0)
-	return slot0:IsTimeLimit() and 1 or 0
+function var_0_0.GetTimeLimitWeight(arg_5_0)
+	return arg_5_0:IsTimeLimit() and 1 or 0
 end
 
-slot0.GetOwnWeight = function(slot0)
-	return slot0:OwnSkin() and 0 or 1
+function var_0_0.GetOwnWeight(arg_6_0)
+	return arg_6_0:OwnSkin() and 0 or 1
 end
 
-return slot0
+return var_0_0

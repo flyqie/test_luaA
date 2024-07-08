@@ -1,8 +1,8 @@
-slot0 = class("JapanV2framePage", import(".TemplatePage.FrameTemplatePage"))
+﻿local var_0_0 = class("JapanV2framePage", import(".TemplatePage.FrameTemplatePage"))
 
-slot0.OnUpdateFlush = function(slot0)
-	uv0.super.OnUpdateFlush(slot0)
-	setActive(slot0.gotBtn, false)
+function var_0_0.OnUpdateFlush(arg_1_0)
+	var_0_0.super.OnUpdateFlush(arg_1_0)
+	setActive(arg_1_0.gotBtn, false)
 end
 
-return slot0
+return var_0_0

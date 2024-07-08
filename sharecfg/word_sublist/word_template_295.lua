@@ -1,11 +1,14 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_295 = {}
-slot1 = slot0.word_template_295
+﻿pg = pg or {}
 
-temp = function()
-	uv0["販"] = {
-		["毒"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_295 = {}
+
+local var_0_1 = var_0_0.word_template_295
+
+function temp()
+	var_0_1.販 = {
+		毒 = {
 			this = true
 		}
 	}
@@ -13,78 +16,78 @@ end
 
 temp()
 
-temp = function()
-	uv0["汸"] = {
-		["幣"] = {
-			["屛"] = {
-				["哋"] = {
-					["歮"] = {
+function temp()
+	var_0_1.汸 = {
+		幣 = {
+			屛 = {
+				哋 = {
+					歮 = {
 						this = true
 					}
 				}
 			}
 		},
-		["弹"] = {
-			["汸"] = {
-				["懪"] = {
-					["頭"] = {
-						["盔"] = {
+		弹 = {
+			汸 = {
+				懪 = {
+					頭 = {
+						盔 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["剨"] = {
-			["汸"] = {
-				["剌"] = {
+		剨 = {
+			汸 = {
+				剌 = {
 					this = true
 				}
 			}
 		},
-		["裑"] = {
-			["濆"] = {
-				["霚"] = {
+		裑 = {
+			濆 = {
+				霚 = {
 					this = true
 				}
 			},
-			["噐"] = {
-				["財"] = {
-					["蛧"] = {
+			噐 = {
+				財 = {
+					蛧 = {
 						this = true
 					}
 				}
 			}
 		},
-		["嫃"] = {
-			["⑤"] = {
-				["④"] = {
-					["掱"] = {
-						["熗"] = {
-							["抟"] = {
+		嫃 = {
+			⑤ = {
+				④ = {
+					掱 = {
+						熗 = {
+							抟 = {
 								this = true
 							}
 						}
 					}
 				}
 			},
-			["⑥"] = {
-				["④"] = {
-					["掱"] = {
-						["熗"] = {
-							["抟"] = {
+			⑥ = {
+				④ = {
+					掱 = {
+						熗 = {
+							抟 = {
 								this = true
 							}
 						}
 					}
 				}
 			},
-			["硅"] = {
-				["烄"] = {
+			硅 = {
+				烄 = {
 					this = true
 				}
 			},
-			["豞"] = {
+			豞 = {
 				this = true
 			}
 		}
@@ -93,11 +96,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["訪"] = {
-		["問"] = {
-			["坦"] = {
-				["桑"] = {
+function temp()
+	var_0_1.訪 = {
+		問 = {
+			坦 = {
+				桑 = {
 					this = true
 				}
 			}
@@ -107,10 +110,10 @@ end
 
 temp()
 
-temp = function()
-	uv0["妃"] = {
-		["悠"] = {
-			["爱"] = {
+function temp()
+	var_0_1.妃 = {
+		悠 = {
+			爱 = {
 				this = true
 			}
 		}
@@ -119,15 +122,15 @@ end
 
 temp()
 
-temp = function()
-	uv0["翡"] = {
-		["翠"] = {
-			["台"] = {
-				["走"] = {
-					["过"] = {
-						["二"] = {
-							["十"] = {
-								["年"] = {
+function temp()
+	var_0_1.翡 = {
+		翠 = {
+			台 = {
+				走 = {
+					过 = {
+						二 = {
+							十 = {
+								年 = {
 									this = true
 								}
 							}
@@ -141,13 +144,13 @@ end
 
 temp()
 
-temp = function()
-	uv0["沸"] = {
-		["点"] = {
-			["网"] = {
-				["上"] = {
-					["商"] = {
-						["城"] = {
+function temp()
+	var_0_1.沸 = {
+		点 = {
+			网 = {
+				上 = {
+					商 = {
+						城 = {
 							this = true
 						}
 					}
@@ -159,9 +162,9 @@ end
 
 temp()
 
-temp = function()
-	uv0["蕟"] = {
-		["票"] = {
+function temp()
+	var_0_1.蕟 = {
+		票 = {
 			this = true
 		}
 	}
@@ -169,11 +172,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["帉"] = {
-		["嫰"] = {
-			["尒"] = {
-				["泬"] = {
+function temp()
+	var_0_1.帉 = {
+		嫰 = {
+			尒 = {
+				泬 = {
 					this = true
 				}
 			}
@@ -183,11 +186,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["蒶"] = {
-		["嫩"] = {
-			["尐"] = {
-				["穴"] = {
+function temp()
+	var_0_1.蒶 = {
+		嫩 = {
+			尐 = {
+				穴 = {
 					this = true
 				}
 			}
@@ -197,20 +200,20 @@ end
 
 temp()
 
-temp = function()
-	uv0["愤"] = {
-		["怒"] = {
-			["中"] = {
-				["共"] = {
-					["暴"] = {
-						["政"] = {
+function temp()
+	var_0_1.愤 = {
+		怒 = {
+			中 = {
+				共 = {
+					暴 = {
+						政 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["青"] = {
+		青 = {
 			this = true
 		}
 	}

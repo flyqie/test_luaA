@@ -1,4 +1,4 @@
-return {
+﻿return {
 	id = "NG0031",
 	events = {
 		{
@@ -7,13 +7,7 @@ return {
 				1
 			},
 			ui = {
-				dynamicPath = function ()
-					if getProxy(SettingsProxy):IsMellowStyle() then
-						return "/OverlayCamera/Overlay/UIMain/NewMainMellowTheme(Clone)/frame/right/MainActDelegationBtn(Clone)"
-					else
-						return "OverlayCamera/Overlay/UIMain/NewMainClassicTheme(Clone)/frame/eventPanel/MainActDelegationBtn(Clone)"
-					end
-				end,
+				path = "OverlayCamera/Overlay/UIMain/main/frame/eventPanel/MainActDelegationBtn(Clone)",
 				triggerType = {
 					1
 				},

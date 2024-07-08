@@ -1,29 +1,29 @@
-slot0 = require("Mgr/Pool/PoolUtil")
-slot1 = class("PoolObjPack")
+﻿local var_0_0 = require("Mgr/Pool/PoolUtil")
+local var_0_1 = class("PoolObjPack")
 
-slot1.Ctor = function(slot0, slot1)
-	slot0.type = slot1
-	slot0.items = {}
+function var_0_1.Ctor(arg_1_0, arg_1_1)
+	arg_1_0.type = arg_1_1
+	arg_1_0.items = {}
 end
 
-slot1.Get = function(slot0, slot1)
-	return slot0.items[slot1]
+function var_0_1.Get(arg_2_0, arg_2_1)
+	return arg_2_0.items[arg_2_1]
 end
 
-slot1.Set = function(slot0, slot1, slot2)
-	slot0.items[slot1] = slot2
+function var_0_1.Set(arg_3_0, arg_3_1, arg_3_2)
+	arg_3_0.items[arg_3_1] = arg_3_2
 end
 
-slot1.Remove = function(slot0, slot1)
-	return table.removebykey(slot0.items, slot1)
+function var_0_1.Remove(arg_4_0, arg_4_1)
+	return table.removebykey(arg_4_0.items, arg_4_1)
 end
 
-slot1.GetAmount = function(slot0)
-	return table.getCount(slot0.items)
+function var_0_1.GetAmount(arg_5_0)
+	return table.getCount(arg_5_0.items)
 end
 
-slot1.Clear = function(slot0)
-	slot0.items = nil
+function var_0_1.Clear(arg_6_0)
+	arg_6_0.items = nil
 end
 
-return slot1
+return var_0_1

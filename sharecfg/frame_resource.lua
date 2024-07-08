@@ -1,6 +1,6 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.frame_resource = {
-	["3_1"] = {
+	["13"] = {
 		param = {
 			0,
 			-5.5,
@@ -8,7 +8,7 @@ pg.frame_resource = {
 			-4.5
 		}
 	},
-	["4_1"] = {
+	["14"] = {
 		param = {
 			-14,
 			-5.5,
@@ -16,7 +16,7 @@ pg.frame_resource = {
 			-4.5
 		}
 	},
-	b3_1 = {
+	b13 = {
 		param = {
 			1.13,
 			-0.97,
@@ -24,7 +24,7 @@ pg.frame_resource = {
 			-5
 		}
 	},
-	b4_1 = {
+	b14 = {
 		param = {
 			-6,
 			0,
@@ -32,7 +32,7 @@ pg.frame_resource = {
 			-5
 		}
 	},
-	prop4_1 = {
+	prop14 = {
 		param = {
 			-4,
 			-4,
@@ -40,7 +40,7 @@ pg.frame_resource = {
 			4
 		}
 	},
-	bprop4_1 = {
+	bprop14 = {
 		param = {
 			-2,
 			-3,

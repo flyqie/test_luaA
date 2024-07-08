@@ -1,19 +1,19 @@
-slot0 = class("CourtYardTransportFurniture", import(".CourtYardFurniture"))
+﻿local var_0_0 = class("CourtYardTransportFurniture", import(".CourtYardFurniture"))
 
-slot0.InitSlots = function(slot0)
-	table.insert(slot0.slots, CourtYardTransportSlot.New(1, slot0.config.spine))
+function var_0_0.InitSlots(arg_1_0)
+	table.insert(arg_1_0.slots, CourtYardTransportSlot.New(1, arg_1_0.config.spine))
 
-	if type(slot0.config.animator) == "table" then
-		slot0.slots[1]:SetAnimators(slot0.config.animator)
+	if type(arg_1_0.config.animator) == "table" then
+		arg_1_0.slots[1]:SetAnimators(arg_1_0.config.animator)
 	end
 end
 
-slot0.IsUsing = function(slot0)
-	return #slot0:GetUsingSlots() > 0
+function var_0_0.IsUsing(arg_2_0)
+	return #arg_2_0:GetUsingSlots() > 0
 end
 
-slot0.Stop = function(slot0)
-	slot0.slots[1]:Stop()
+function var_0_0.Stop(arg_3_0)
+	arg_3_0.slots[1]:Stop()
 end
 
-return slot0
+return var_0_0

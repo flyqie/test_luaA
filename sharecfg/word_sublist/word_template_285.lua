@@ -1,13 +1,16 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_285 = {}
-slot1 = slot0.word_template_285
+﻿pg = pg or {}
 
-temp = function()
-	uv0["脆"] = {
-		["弱"] = {
-			["美"] = {
-				["鲍"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_285 = {}
+
+local var_0_1 = var_0_0.word_template_285
+
+function temp()
+	var_0_1.脆 = {
+		弱 = {
+			美 = {
+				鲍 = {
 					this = true
 				}
 			}
@@ -17,23 +20,23 @@ end
 
 temp()
 
-temp = function()
-	uv0["脃"] = {
-		["窉"] = {
-			["窉"] = {
+function temp()
+	var_0_1.脃 = {
+		窉 = {
+			窉 = {
 				this = true
 			}
 		},
-		["鎅"] = {
-			["蛧"] = {
+		鎅 = {
+			蛧 = {
 				this = true
 			}
 		},
-		["滒"] = {
-			["嗹"] = {
-				["琮"] = {
-					["匼"] = {
-						["跕"] = {
+		滒 = {
+			嗹 = {
+				琮 = {
+					匼 = {
+						跕 = {
 							this = true
 						}
 					}
@@ -45,12 +48,12 @@ end
 
 temp()
 
-temp = function()
-	uv0["搓"] = {
-		["咪"] = {
-			["咪"] = {
-				["影"] = {
-					["院"] = {
+function temp()
+	var_0_1.搓 = {
+		咪 = {
+			咪 = {
+				影 = {
+					院 = {
 						this = true
 					}
 				}
@@ -61,12 +64,12 @@ end
 
 temp()
 
-temp = function()
-	uv0["措"] = {
-		["施"] = {
+function temp()
+	var_0_1.措 = {
+		施 = {
 			["5"] = {
 				["4"] = {
-					["枪"] = {
+					枪 = {
 						this = true
 					}
 				}
@@ -77,38 +80,38 @@ end
 
 temp()
 
-temp = function()
-	uv0["错"] = {
+function temp()
+	var_0_1.错 = {
 		B = {
 			this = true
 		},
-		["爱"] = {
+		爱 = {
 			["0"] = {
 				["8"] = {
 					this = true
 				}
 			}
 		},
-		["逼"] = {
+		逼 = {
 			this = true
 		},
-		["比"] = {
+		比 = {
 			this = true
 		},
-		["那"] = {
-			["吗"] = {
+		那 = {
+			吗 = {
 				B = {
 					this = true
 				},
-				["逼"] = {
+				逼 = {
 					this = true
 				},
-				["比"] = {
+				比 = {
 					this = true
 				}
 			}
 		},
-		["误"] = {
+		误 = {
 			this = true
 		}
 	}
@@ -116,33 +119,33 @@ end
 
 temp()
 
-temp = function()
-	uv0["咑"] = {
-		["猎"] = {
-			["裝"] = {
-				["备"] = {
+function temp()
+	var_0_1.咑 = {
+		猎 = {
+			裝 = {
+				备 = {
 					this = true
 				}
 			}
 		},
-		["獵"] = {
-			["熗"] = {
+		獵 = {
+			熗 = {
 				this = true
 			},
-			["裝"] = {
-				["備"] = {
+			裝 = {
+				備 = {
 					this = true
 				}
 			}
 		},
-		["袅"] = {
-			["芞"] = {
-				["槍"] = {
+		袅 = {
+			芞 = {
+				槍 = {
 					this = true
 				}
 			}
 		},
-		["手"] = {
+		手 = {
 			this = true
 		}
 	}
@@ -150,16 +153,16 @@ end
 
 temp()
 
-temp = function()
-	uv0["搭"] = {
-		["桥"] = {
-			["的"] = {
+function temp()
+	var_0_1.搭 = {
+		桥 = {
+			的 = {
 				this = true
 			}
 		},
-		["讪"] = {
-			["诱"] = {
-				["奸"] = {
+		讪 = {
+			诱 = {
+				奸 = {
 					this = true
 				}
 			}
@@ -169,33 +172,33 @@ end
 
 temp()
 
-temp = function()
-	uv0["嗒"] = {
-		["来"] = {
+function temp()
+	var_0_1.嗒 = {
+		来 = {
 			this = true
 		},
-		["莱"] = {
+		莱 = {
 			this = true
 		},
-		["睐"] = {
+		睐 = {
 			this = true
 		},
-		["赖"] = {
+		赖 = {
 			this = true
 		},
-		["濑"] = {
+		濑 = {
 			this = true
 		},
-		["癞"] = {
+		癞 = {
 			this = true
 		},
-		["攋"] = {
+		攋 = {
 			this = true
 		},
-		["籁"] = {
+		籁 = {
 			this = true
 		},
-		["襰"] = {
+		襰 = {
 			this = true
 		}
 	}
@@ -203,33 +206,33 @@ end
 
 temp()
 
-temp = function()
-	uv0["迖"] = {
-		["来"] = {
+function temp()
+	var_0_1.迖 = {
+		来 = {
 			this = true
 		},
-		["莱"] = {
+		莱 = {
 			this = true
 		},
-		["睐"] = {
+		睐 = {
 			this = true
 		},
-		["赖"] = {
+		赖 = {
 			this = true
 		},
-		["濑"] = {
+		濑 = {
 			this = true
 		},
-		["癞"] = {
+		癞 = {
 			this = true
 		},
-		["攋"] = {
+		攋 = {
 			this = true
 		},
-		["籁"] = {
+		籁 = {
 			this = true
 		},
-		["襰"] = {
+		襰 = {
 			this = true
 		}
 	}
@@ -237,65 +240,65 @@ end
 
 temp()
 
-temp = function()
-	uv0["汏"] = {
-		["骉"] = {
-			["仕"] = {
-				["愅"] = {
-					["鋼"] = {
-						["叨"] = {
+function temp()
+	var_0_1.汏 = {
+		骉 = {
+			仕 = {
+				愅 = {
+					鋼 = {
+						叨 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["栤"] = {
-			["磚"] = {
+		栤 = {
+			磚 = {
 				this = true
 			}
 		},
-		["哋"] = {
-			["葒"] = {
+		哋 = {
+			葒 = {
 				this = true
 			}
 		},
-		["抟"] = {
-			["妏"] = {
-				["憑"] = {
+		抟 = {
+			妏 = {
+				憑 = {
 					this = true
 				}
 			}
 		},
-		["敩"] = {
-			["泩"] = {
+		敩 = {
+			泩 = {
 				this = true,
-				["笣"] = {
-					["液"] = {
+				笣 = {
+					液 = {
 						this = true
 					}
 				}
 			}
 		},
-		["侀"] = {
-			["倆"] = {
-				["鼡"] = {
-					["弩"] = {
+		侀 = {
+			倆 = {
+				鼡 = {
+					弩 = {
 						this = true
 					}
 				}
 			}
 		},
-		["蓁"] = {
-			["迋"] = {
-				["謿"] = {
+		蓁 = {
+			迋 = {
+				謿 = {
 					this = true
 				}
 			}
 		},
-		["專"] = {
-			["攵"] = {
-				["凭"] = {
+		專 = {
+			攵 = {
+				凭 = {
 					this = true
 				}
 			}

@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.battle_cost_template = {
 	[0] = {
 		end_sink_cost = 0,
@@ -176,17 +176,6 @@ pg.battle_cost_template = {
 		id = 15,
 		attack_count = 0
 	},
-	{
-		end_sink_cost = 1,
-		ship_exp_award = 1,
-		oil_cost = 1,
-		enter_energy_cost = 1,
-		global_buff_effected = 0,
-		user_exp_award = 1,
-		cat_exp_award = 1,
-		id = 16,
-		attack_count = 1
-	},
 	[50] = {
 		end_sink_cost = 0,
 		ship_exp_award = 0,
@@ -314,7 +303,6 @@ pg.battle_cost_template = {
 		13,
 		14,
 		15,
-		16,
 		50,
 		51,
 		93,

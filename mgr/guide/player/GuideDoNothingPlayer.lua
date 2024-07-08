@@ -1,7 +1,7 @@
-slot0 = class("GuideDoNothingPlayer", import(".GuidePlayer"))
+﻿local var_0_0 = class("GuideDoNothingPlayer", import(".GuidePlayer"))
 
-slot0.OnExecution = function(slot0, slot1, slot2)
-	slot2()
+function var_0_0.OnExecution(arg_1_0, arg_1_1, arg_1_2)
+	arg_1_2()
 end
 
-return slot0
+return var_0_0

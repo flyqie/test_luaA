@@ -1,47 +1,49 @@
-slot0 = class("BackYardLargeSpriteLoader")
+﻿local var_0_0 = class("BackYardLargeSpriteLoader")
 
-slot0.Ctor = function(slot0, slot1)
-	slot0.cnt = slot1 or 6
-	slot0.maxCnt = slot1 * 2 + 1
-	slot0.cache = {}
-	slot0.paths = {}
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	arg_1_0.cnt = arg_1_1 or 6
+	arg_1_0.maxCnt = arg_1_1 * 2 + 1
+	arg_1_0.cache = {}
+	arg_1_0.paths = {}
 end
 
-slot0.LoadSpriteAsync = function(slot0, slot1, slot2)
-	if slot0.cache[slot1] then
-		slot2(slot0.cache[slot1])
+function var_0_0.LoadSpriteAsync(arg_2_0, arg_2_1, arg_2_2)
+	if arg_2_0.cache[arg_2_1] then
+		arg_2_2(arg_2_0.cache[arg_2_1])
 
 		return
 	end
 
-	LoadSpriteAsync(slot1, function (slot0)
-		uv0.cache[uv1] = slot0
+	LoadSpriteAsync(arg_2_1, function(arg_3_0)
+		arg_2_0.cache[arg_2_1] = arg_3_0
 
-		table.insert(uv0.paths, uv1)
-		uv2(slot0)
-		uv0:Check()
+		table.insert(arg_2_0.paths, arg_2_1)
+		arg_2_2(arg_3_0)
+		arg_2_0:Check()
 	end)
 end
 
-slot0.Check = function(slot0)
-	if slot0.maxCnt <= #slot0.paths then
-		slot0:Clear()
+function var_0_0.Check(arg_4_0)
+	if #arg_4_0.paths >= arg_4_0.maxCnt then
+		arg_4_0:Clear()
 	end
 end
 
-slot0.Clear = function(slot0)
-	for slot4 = slot0.cnt, 1, -1 do
-		slot0.cache[slot0.paths[slot4]] = nil
+function var_0_0.Clear(arg_5_0)
+	for iter_5_0 = arg_5_0.cnt, 1, -1 do
+		local var_5_0 = arg_5_0.paths[iter_5_0]
 
-		table.remove(slot0.paths, slot4)
+		arg_5_0.cache[var_5_0] = nil
+
+		table.remove(arg_5_0.paths, iter_5_0)
 	end
 
 	gcAll(false)
 end
 
-slot0.Dispose = function(slot0)
-	slot0.cache = nil
-	slot0.paths = nil
+function var_0_0.Dispose(arg_6_0)
+	arg_6_0.cache = nil
+	arg_6_0.paths = nil
 end
 
-return slot0
+return var_0_0

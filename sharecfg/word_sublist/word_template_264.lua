@@ -1,17 +1,20 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_264 = {}
-slot1 = slot0.word_template_264
+﻿pg = pg or {}
 
-temp = function()
-	uv0["牺"] = {
-		["牲"] = {
-			["湖"] = {
-				["北"] = {
-					["六"] = {
-						["千"] = {
-							["万"] = {
-								["人"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_264 = {}
+
+local var_0_1 = var_0_0.word_template_264
+
+function temp()
+	var_0_1.牺 = {
+		牲 = {
+			湖 = {
+				北 = {
+					六 = {
+						千 = {
+							万 = {
+								人 = {
 									this = true
 								}
 							}
@@ -25,11 +28,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["牢"] = {
-		["疫"] = {
-			["结"] = {
-				["合"] = {
+function temp()
+	var_0_1.牢 = {
+		疫 = {
+			结 = {
+				合 = {
 					this = true
 				}
 			}
@@ -39,14 +42,14 @@ end
 
 temp()
 
-temp = function()
-	uv0["肺"] = {
-		["炎"] = {
-			["病"] = {
-				["人"] = {
-					["都"] = {
-						["死"] = {
-							["绝"] = {
+function temp()
+	var_0_1.肺 = {
+		炎 = {
+			病 = {
+				人 = {
+					都 = {
+						死 = {
+							绝 = {
 								this = true
 							}
 						}
@@ -54,10 +57,10 @@ temp = function()
 				}
 			}
 		},
-		["脏"] = {
+		脏 = {
 			this = true
 		},
-		["臟"] = {
+		臟 = {
 			this = true
 		}
 	}
@@ -65,11 +68,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["蝠"] = {
-		["无"] = {
-			["双"] = {
-				["至"] = {
+function temp()
+	var_0_1.蝠 = {
+		无 = {
+			双 = {
+				至 = {
 					this = true
 				}
 			}
@@ -79,14 +82,14 @@ end
 
 temp()
 
-temp = function()
-	uv0["趁"] = {
-		["疫"] = {
-			["打"] = {
-				["劫"] = {
+function temp()
+	var_0_1.趁 = {
+		疫 = {
+			打 = {
+				劫 = {
 					this = true
 				},
-				["压"] = {
+				压 = {
 					this = true
 				}
 			}
@@ -96,11 +99,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["０"] = {
-		["８"] = {
-			["宪"] = {
-				["章"] = {
+function temp()
+	var_0_1.０ = {
+		８ = {
+			宪 = {
+				章 = {
 					this = true
 				}
 			}
@@ -110,14 +113,14 @@ end
 
 temp()
 
-temp = function()
-	uv0["⒈"] = {
-		["屌"] = {
-			["丝"] = {
-				["色"] = {
-					["站"] = {
-						["导"] = {
-							["航"] = {
+function temp()
+	var_0_1.⒈ = {
+		屌 = {
+			丝 = {
+				色 = {
+					站 = {
+						导 = {
+							航 = {
 								this = true
 							}
 						}
@@ -130,129 +133,129 @@ end
 
 temp()
 
-temp = function()
-	uv0["①"] = {
-		["対"] = {
-			["①"] = {
-				["裸"] = {
-					["窷"] = {
+function temp()
+	var_0_1.① = {
+		対 = {
+			① = {
+				裸 = {
+					窷 = {
 						this = true
 					}
 				}
 			}
 		},
-		["怼"] = {
-			["①"] = {
-				["裸"] = {
-					["窷"] = {
+		怼 = {
+			① = {
+				裸 = {
+					窷 = {
 						this = true
 					}
 				}
 			}
 		},
-		["懟"] = {
-			["１"] = {
-				["裸"] = {
-					["聊"] = {
+		懟 = {
+			１ = {
+				裸 = {
+					聊 = {
 						this = true
 					}
 				}
 			}
 		},
-		["嗰"] = {
-			["铯"] = {
-				["導"] = {
-					["航"] = {
+		嗰 = {
+			铯 = {
+				導 = {
+					航 = {
 						this = true
 					}
 				},
-				["綜"] = {
-					["合"] = {
+				綜 = {
+					合 = {
 						this = true
 					}
 				}
 			}
 		},
-		["個"] = {
-			["脃"] = {
-				["琮"] = {
-					["匼"] = {
+		個 = {
+			脃 = {
+				琮 = {
+					匼 = {
 						this = true
 					}
 				}
 			}
 		},
-		["铯"] = {
-			["郦"] = {
-				["矢"] = {
-					["種"] = {
-						["孒"] = {
+		铯 = {
+			郦 = {
+				矢 = {
+					種 = {
+						孒 = {
 							this = true
 						}
 					}
 				}
 			},
-			["鲇"] = {
-				["媄"] = {
-					["種"] = {
-						["孒"] = {
+			鲇 = {
+				媄 = {
+					種 = {
+						孒 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["夜"] = {
-			["情"] = {
+		夜 = {
+			情 = {
 				this = true,
-				["鲛"] = {
-					["叐"] = {
-						["網"] = {
+				鲛 = {
+					叐 = {
+						網 = {
 							this = true
 						}
 					}
 				}
 			},
-			["请"] = {
+			请 = {
 				this = true
 			},
-			["铯"] = {
-				["萋"] = {
+			铯 = {
+				萋 = {
 					this = true
 				}
 			}
 		},
-		["沅"] = {
-			["徦"] = {
-				["哽"] = {
-					["币"] = {
+		沅 = {
+			徦 = {
+				哽 = {
+					币 = {
 						this = true
 					}
 				}
 			}
 		},
-		["⑨"] = {
-			["⑧"] = {
-				["⑨"] = {
+		⑨ = {
+			⑧ = {
+				⑨ = {
 					this = true,
 					["3"] = {
 						["0"] = {
 							this = true
 						}
 					},
-					["三"] = {
-						["十"] = {
+					三 = {
+						十 = {
 							this = true
 						},
-						["〇"] = {
+						〇 = {
 							this = true
 						},
-						["拾"] = {
+						拾 = {
 							this = true
 						}
 					},
-					["叁"] = {
-						["拾"] = {
+					叁 = {
+						拾 = {
 							this = true
 						}
 					}
@@ -260,353 +263,353 @@ temp = function()
 				["9"] = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
-			["八"] = {
+			八 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
-			["捌"] = {
+			捌 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
@@ -614,118 +617,118 @@ temp = function()
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
@@ -733,414 +736,414 @@ temp = function()
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["⑦"] = {
+			⑦ = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["七"] = {
+			七 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["柒"] = {
+			柒 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			}
 		},
 		["9"] = {
-			["八"] = {
+			八 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
-			["捌"] = {
+			捌 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
-			["⑧"] = {
+			⑧ = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
@@ -1148,118 +1151,118 @@ temp = function()
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
@@ -1267,414 +1270,414 @@ temp = function()
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["⑦"] = {
+			⑦ = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["七"] = {
+			七 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["柒"] = {
+			柒 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			}
 		},
-		["九"] = {
-			["八"] = {
+		九 = {
+			八 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
-			["捌"] = {
+			捌 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
-			["⑧"] = {
+			⑧ = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
@@ -1682,118 +1685,118 @@ temp = function()
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
@@ -1801,414 +1804,414 @@ temp = function()
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["⑦"] = {
+			⑦ = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["七"] = {
+			七 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["柒"] = {
+			柒 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			}
 		},
-		["玖"] = {
-			["八"] = {
+		玖 = {
+			八 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
-			["捌"] = {
+			捌 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
-			["⑧"] = {
+			⑧ = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
@@ -2216,118 +2219,118 @@ temp = function()
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				},
-				["八"] = {
+				八 = {
 					this = true
 				},
 				["8"] = {
 					this = true
 				},
-				["⑧"] = {
+				⑧ = {
 					this = true
 				},
-				["捌"] = {
+				捌 = {
 					this = true
 				},
 				["7"] = {
 					this = true
 				},
-				["⑦"] = {
+				⑦ = {
 					this = true
 				},
-				["七"] = {
+				七 = {
 					this = true
 				},
-				["柒"] = {
+				柒 = {
 					this = true
 				},
 				["6"] = {
 					this = true
 				},
-				["六"] = {
+				六 = {
 					this = true
 				},
-				["⑥"] = {
+				⑥ = {
 					this = true
 				},
-				["陆"] = {
+				陆 = {
 					this = true
 				},
 				["5"] = {
 					this = true
 				},
-				["五"] = {
+				五 = {
 					this = true
 				},
-				["⑤"] = {
+				⑤ = {
 					this = true
 				},
-				["伍"] = {
+				伍 = {
 					this = true
 				},
 				["4"] = {
 					this = true
 				},
-				["④"] = {
+				④ = {
 					this = true
 				},
-				["四"] = {
+				四 = {
 					this = true
 				},
-				["肆"] = {
+				肆 = {
 					this = true
 				},
 				["3"] = {
 					this = true
 				},
-				["③"] = {
+				③ = {
 					this = true
 				},
-				["三"] = {
+				三 = {
 					this = true
 				},
-				["叁"] = {
+				叁 = {
 					this = true
 				},
 				["2"] = {
 					this = true
 				},
-				["②"] = {
+				② = {
 					this = true
 				},
-				["二"] = {
+				二 = {
 					this = true
 				},
-				["贰"] = {
+				贰 = {
 					this = true
 				},
 				["1"] = {
 					this = true
 				},
-				["一"] = {
+				一 = {
 					this = true
 				},
-				["壹"] = {
+				壹 = {
 					this = true
 				},
-				["①"] = {
+				① = {
 					this = true
 				},
 				["0"] = {
 					this = true
 				},
-				["〇"] = {
+				〇 = {
 					this = true
 				},
-				["零"] = {
+				零 = {
 					this = true
 				}
 			},
@@ -2335,55 +2338,55 @@ temp = function()
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["⑦"] = {
+			⑦ = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["七"] = {
+			七 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			},
-			["柒"] = {
+			柒 = {
 				["9"] = {
 					this = true
 				},
-				["⑨"] = {
+				⑨ = {
 					this = true
 				},
-				["九"] = {
+				九 = {
 					this = true
 				},
-				["玖"] = {
+				玖 = {
 					this = true
 				}
 			}
@@ -2393,12 +2396,12 @@ end
 
 temp()
 
-temp = function()
-	uv0["２"] = {
-		["１"] = {
-			["色"] = {
-				["中"] = {
-					["色"] = {
+function temp()
+	var_0_1.２ = {
+		１ = {
+			色 = {
+				中 = {
+					色 = {
 						this = true
 					}
 				}
@@ -2409,17 +2412,17 @@ end
 
 temp()
 
-temp = function()
-	uv0["②"] = {
-		["奶"] = {
-			["大"] = {
-				["赛"] = {
+function temp()
+	var_0_1.② = {
+		奶 = {
+			大 = {
+				赛 = {
 					this = true
 				}
 			}
 		},
-		["時"] = {
-			["大"] = {
+		時 = {
+			大 = {
 				this = true
 			}
 		}

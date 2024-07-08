@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.ship_data_create_exchange = {
 	{
 		exchange_request = 400,
@@ -65,22 +65,6 @@ pg.ship_data_create_exchange = {
 			705021
 		}
 	},
-	[5285] = {
-		exchange_request = 200,
-		exchange_available_times = 4,
-		id = 5285,
-		exchange_ship_id = {
-			718011
-		}
-	},
-	[5352] = {
-		exchange_request = 200,
-		exchange_available_times = 4,
-		id = 5352,
-		exchange_ship_id = {
-			805031
-		}
-	},
 	[8034] = {
 		exchange_request = 40,
 		exchange_available_times = 1,
@@ -93,14 +77,6 @@ pg.ship_data_create_exchange = {
 		exchange_request = 40,
 		exchange_available_times = 1,
 		id = 8044,
-		exchange_ship_id = {
-			107061
-		}
-	},
-	[8056] = {
-		exchange_request = 40,
-		exchange_available_times = 1,
-		id = 8056,
 		exchange_ship_id = {
 			107061
 		}
@@ -130,11 +106,8 @@ pg.ship_data_create_exchange = {
 		5148,
 		5165,
 		5223,
-		5285,
-		5352,
 		8034,
 		8044,
-		8056,
 		30863,
 		41249
 	}

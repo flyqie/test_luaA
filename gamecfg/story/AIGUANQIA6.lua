@@ -1,4 +1,4 @@
-return {
+﻿return {
 	id = "AIGUANQIA6",
 	mode = 2,
 	fadein = 1.5,
@@ -215,7 +215,7 @@ return {
 			side = 2,
 			nameColor = "#a9f548",
 			dir = -1,
-			say = "太好了。接下来只要把随机单词生成器修好就行了……",
+			say = "太好了。接下来来只要把随机单词生成器修好就行了……",
 			typewriter = {
 				speed = 0.05,
 				speedUp = 0.01

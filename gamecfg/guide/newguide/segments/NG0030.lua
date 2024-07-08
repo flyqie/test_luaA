@@ -1,4 +1,4 @@
-return {
+﻿return {
 	id = "NG0030",
 	events = {
 		{
@@ -8,13 +8,7 @@ return {
 			},
 			ui = {
 				delay = 1,
-				dynamicPath = function ()
-					if getProxy(SettingsProxy):IsMellowStyle() then
-						return "/OverlayCamera/Overlay/UIMain/NewMainMellowTheme(Clone)/frame/right/1/MainActivityBtnMellowAdapt"
-					else
-						return "OverlayCamera/Overlay/UIMain/NewMainClassicTheme(Clone)/frame/linkBtns/MainActMapBtn"
-					end
-				end,
+				path = "OverlayCamera/Overlay/UIMain/main/frame/linkBtns/MainActMapBtn",
 				triggerType = {
 					1
 				},
@@ -24,13 +18,7 @@ return {
 				}
 			},
 			baseui = {
-				dynamicPath = function ()
-					if getProxy(SettingsProxy):IsMellowStyle() then
-						return "/OverlayCamera/Overlay/UIMain/NewMainMellowTheme(Clone)/frame/right/1/MainActivityBtnMellowAdapt"
-					else
-						return "OverlayCamera/Overlay/UIMain/NewMainClassicTheme(Clone)/frame/linkBtns/MainActMapBtn"
-					end
-				end
+				path = "OverlayCamera/Overlay/UIMain/main/frame/linkBtns/MainActMapBtn"
 			},
 			style = {
 				text = "现在去活动关卡看看新解锁的采集地关卡吧",

@@ -1,50 +1,55 @@
-ys = ys or {}
-slot0 = ys
-slot1 = slot0.Battle.BattleConst
-slot2 = slot0.Battle.BattleAttr
-slot0.Battle.RaidOxyState = class("RaidOxyState", slot0.Battle.IOxyState)
-slot0.Battle.RaidOxyState.__name = "RaidOxyState"
-slot3 = slot0.Battle.RaidOxyState
+﻿ys = ys or {}
 
-slot3.Ctor = function(slot0)
-	uv0.super.Ctor(slot0)
+local var_0_0 = ys
+local var_0_1 = var_0_0.Battle.BattleConst
+local var_0_2 = var_0_0.Battle.BattleAttr
+
+var_0_0.Battle.RaidOxyState = class("RaidOxyState", var_0_0.Battle.IOxyState)
+var_0_0.Battle.RaidOxyState.__name = "RaidOxyState"
+
+local var_0_3 = var_0_0.Battle.RaidOxyState
+
+function var_0_3.Ctor(arg_1_0)
+	var_0_3.super.Ctor(arg_1_0)
 end
 
-slot3.GetWeaponUseableList = function(slot0)
+function var_0_3.GetWeaponUseableList(arg_2_0)
 	return {
-		uv0.OXY_STATE.DIVE
+		var_0_1.OXY_STATE.DIVE
 	}
 end
 
-slot3.UpdateCldData = function(slot0, slot1, slot2)
-	slot4 = slot0:GetDiveState()
-	slot1:GetCldData().Surface = slot4
+function var_0_3.UpdateCldData(arg_3_0, arg_3_1, arg_3_2)
+	local var_3_0 = arg_3_2:GetDiveState()
+	local var_3_1 = arg_3_0:GetDiveState()
 
-	if slot2:GetDiveState() ~= slot4 then
-		uv0.UnitCldImmune(slot1)
+	arg_3_1:GetCldData().Surface = var_3_1
+
+	if var_3_0 ~= var_3_1 then
+		var_0_2.UnitCldImmune(arg_3_1)
 	end
 end
 
-slot3.GetDiveState = function(slot0)
-	return uv0.OXY_STATE.DIVE
+function var_0_3.GetDiveState(arg_4_0)
+	return var_0_1.OXY_STATE.DIVE
 end
 
-slot3.GetBubbleFlag = function(slot0)
+function var_0_3.GetBubbleFlag(arg_5_0)
 	return true
 end
 
-slot3.IsVisible = function(slot0)
+function var_0_3.IsVisible(arg_6_0)
 	return false
 end
 
-slot3.GetBarVisible = function(slot0)
+function var_0_3.GetBarVisible(arg_7_0)
 	return true
 end
 
-slot3.RunMode = function(slot0)
+function var_0_3.RunMode(arg_8_0)
 	return false
 end
 
-slot3.DoUpdateOxy = function(slot0, slot1)
-	slot1:OxyConsume()
+function var_0_3.DoUpdateOxy(arg_9_0, arg_9_1)
+	arg_9_1:OxyConsume()
 end

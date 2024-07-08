@@ -1,5 +1,6 @@
-slot0 = class("Dorm3dFurniture", import("model.vo.BaseVO"))
-slot0.TYPE = {
+﻿local var_0_0 = class("Dorm3dFurniture", import("model.vo.BaseVO"))
+
+var_0_0.TYPE = {
 	DECORATION = 3,
 	FLOOR = 2,
 	COUCH = 5,
@@ -7,7 +8,7 @@ slot0.TYPE = {
 	WALLPAPER = 1,
 	TABLE = 6
 }
-slot0.TYPE2NAME = {
+var_0_0.TYPE2NAME = {
 	"dorm3d_furnitrue_type_wallpaper",
 	"dorm3d_furnitrue_type_floor",
 	"dorm3d_furnitrue_type_decoration",
@@ -16,58 +17,60 @@ slot0.TYPE2NAME = {
 	"dorm3d_furnitrue_type_table"
 }
 
-slot0.bindConfigTable = function(slot0)
+function var_0_0.bindConfigTable(arg_1_0)
 	return pg.dorm3d_furniture_template
 end
 
-slot0.Ctor = function(slot0, slot1)
-	uv0.super.Ctor(slot0, slot1)
+function var_0_0.Ctor(arg_2_0, arg_2_1)
+	var_0_0.super.Ctor(arg_2_0, arg_2_1)
 
-	slot0.slotId = slot0.slotId or 0
+	arg_2_0.slotId = arg_2_0.slotId or 0
 end
 
-slot0.GetSlotID = function(slot0)
-	return slot0.slotId
+function var_0_0.GetSlotID(arg_3_0)
+	return arg_3_0.slotId
 end
 
-slot0.SetSlotID = function(slot0, slot1)
-	slot0.slotId = slot1
+function var_0_0.SetSlotID(arg_4_0, arg_4_1)
+	arg_4_0.slotId = arg_4_1
 end
 
-slot0.GetName = function(slot0)
-	return slot0:getConfig("name")
+function var_0_0.GetName(arg_5_0)
+	return arg_5_0:getConfig("name")
 end
 
-slot0.GetType = function(slot0)
-	return slot0:getConfig("type")
+function var_0_0.GetType(arg_6_0)
+	return arg_6_0:getConfig("type")
 end
 
-slot0.GetRarity = function(slot0)
-	return slot0:getConfig("rarity")
+function var_0_0.GetRarity(arg_7_0)
+	return arg_7_0:getConfig("rarity")
 end
 
-slot0.GetTargetSlots = function(slot0)
-	return slot0:getConfig("target_slots")
+function var_0_0.GetTargetSlots(arg_8_0)
+	return arg_8_0:getConfig("target_slots")
 end
 
-slot0.GetShipGroupId = function(slot0)
-	return slot0:getConfig("char_id")
+function var_0_0.GetShipGroupId(arg_9_0)
+	return arg_9_0:getConfig("char_id")
 end
 
-slot0.GetIcon = function(slot0)
-	return slot0:getConfig("icon")
+function var_0_0.GetIcon(arg_10_0)
+	return arg_10_0:getConfig("icon")
 end
 
-slot0.GetModel = function(slot0)
-	return slot0:getConfig("model")
+function var_0_0.GetModel(arg_11_0)
+	return arg_11_0:getConfig("model")
 end
 
-slot0.GetAcesses = function(slot0)
-	if slot0:getConfig("acesses") == nil or slot1 == "" then
+function var_0_0.GetAcesses(arg_12_0)
+	local var_12_0 = arg_12_0:getConfig("acesses")
+
+	if var_12_0 == nil or var_12_0 == "" then
 		return {}
 	end
 
-	return slot1
+	return var_12_0
 end
 
-return slot0
+return var_0_0

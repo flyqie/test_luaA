@@ -1,27 +1,33 @@
-ys = ys or {}
-slot0.MVC = ys.MVC or {}
-slot0.MVC.Mediator = class("MVC.Mediator")
-slot0.MVC.Mediator.__name = "MVC.Mediator"
+﻿ys = ys or {}
 
-slot0.MVC.Mediator.Ctor = function(slot0)
+local var_0_0 = ys
+
+var_0_0.MVC = var_0_0.MVC or {}
+var_0_0.MVC.Mediator = class("MVC.Mediator")
+var_0_0.MVC.Mediator.__name = "MVC.Mediator"
+
+function var_0_0.MVC.Mediator.Ctor(arg_1_0)
+	return
 end
 
-slot0.MVC.Mediator.Initialize = function(slot0)
-	uv0.EventDispatcher.AttachEventDispatcher(slot0)
-	uv0.EventListener.AttachEventListener(slot0)
+function var_0_0.MVC.Mediator.Initialize(arg_2_0)
+	var_0_0.EventDispatcher.AttachEventDispatcher(arg_2_0)
+	var_0_0.EventListener.AttachEventListener(arg_2_0)
 end
 
-slot0.MVC.Mediator.Update = function(slot0)
+function var_0_0.MVC.Mediator.Update(arg_3_0)
+	return
 end
 
-slot0.MVC.Mediator.UpdatePause = function(slot0)
+function var_0_0.MVC.Mediator.UpdatePause(arg_4_0)
+	return
 end
 
-slot0.MVC.Mediator.Dispose = function(slot0)
-	uv0.EventListener.DetachEventListener(slot0)
-	uv0.EventDispatcher.DetachEventDispatcher(slot0)
+function var_0_0.MVC.Mediator.Dispose(arg_5_0)
+	var_0_0.EventListener.DetachEventListener(arg_5_0)
+	var_0_0.EventDispatcher.DetachEventDispatcher(arg_5_0)
 end
 
-slot0.MVC.Mediator.GetState = function(slot0)
-	return slot0._state
+function var_0_0.MVC.Mediator.GetState(arg_6_0)
+	return arg_6_0._state
 end

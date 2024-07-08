@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.pay_data_display = setmetatable({
 	__name = "pay_data_display",
 	all = {
@@ -66,8 +66,6 @@ pg.pay_data_display = setmetatable({
 		66,
 		67,
 		68,
-		69,
-		70,
 		1000,
 		1001,
 		1002,
@@ -83,7 +81,6 @@ pg.pay_data_display = setmetatable({
 		1012,
 		1013,
 		1014,
-		1015,
 		2001,
 		2002,
 		2003,
@@ -109,7 +106,6 @@ pg.pay_data_display = setmetatable({
 		2023,
 		2024,
 		2025,
-		2026,
 		5001,
 		5002,
 		5003,
@@ -6710,232 +6706,6 @@ pg.base.pay_data_display = {
 			}
 		}
 	},
-	[69] = {
-		subject = "七周年泳装礼盒",
-		limit_group = 0,
-		descrip_extra = "*礼盒将发送到邮箱，请注意查收。\n*重复获得已拥有的换装时，则自动置换成等价的钻石。",
-		type = 1,
-		limit_arg = 1,
-		name = "七周年泳装礼盒",
-		name_display = "七周年泳装礼盒",
-		type_order = 2,
-		extra_gem = 0,
-		id = 69,
-		money = 198,
-		tag = 2,
-		gem = 0,
-		limit_type = 2,
-		picture = "fudai13",
-		skin_inquire_relation = 86204,
-		id_str = "com.bilibili.blhx.zuanshi169",
-		first_pay_double = 0,
-		extra_service = 3,
-		descrip = "可获得一件角色换装，2024钻，和大量其他奖励",
-		airijp_id = "com.yostarjp.azurlane.diamond157",
-		extra_service_item = {
-			{
-				2,
-				86204,
-				1
-			},
-			{
-				1,
-				14,
-				2024
-			},
-			{
-				2,
-				42056,
-				2
-			},
-			{
-				2,
-				15008,
-				50
-			},
-			{
-				2,
-				20001,
-				20
-			},
-			{
-				2,
-				15003,
-				10
-			},
-			{
-				1,
-				6,
-				100
-			}
-		},
-		time = {
-			{
-				{
-					2024,
-					5,
-					21
-				},
-				{
-					0,
-					0,
-					0
-				}
-			},
-			{
-				{
-					2024,
-					6,
-					12
-				},
-				{
-					23,
-					59,
-					59
-				}
-			}
-		},
-		display = {
-			{
-				2,
-				86204,
-				1
-			},
-			{
-				1,
-				14,
-				2024
-			},
-			{
-				2,
-				42056,
-				2
-			}
-		},
-		sub_display = {},
-		ignorePlatform = {},
-		limit_args = {},
-		drop_item = {
-			{
-				2,
-				81204,
-				1
-			}
-		}
-	},
-	[70] = {
-		subject = "六周年泳装礼盒复刻",
-		limit_group = 0,
-		descrip_extra = "*礼盒将发送到邮箱，请注意查收。\n*重复获得已拥有的换装时，则自动置换成等价的钻石。",
-		type = 1,
-		limit_arg = 1,
-		name = "六周年泳装礼盒复刻",
-		name_display = "六周年泳装礼盒复刻",
-		type_order = 2,
-		extra_gem = 0,
-		id = 70,
-		money = 198,
-		tag = 2,
-		gem = 0,
-		limit_type = 2,
-		picture = "lihecn6ss_l",
-		skin_inquire_relation = 69926,
-		id_str = "com.bilibili.blhx.zuanshi172",
-		first_pay_double = 0,
-		extra_service = 3,
-		descrip = "可获得一件角色换装，2023钻，和大量其他奖励",
-		airijp_id = "com.yostarjp.azurlane.diamond158",
-		extra_service_item = {
-			{
-				2,
-				69926,
-				1
-			},
-			{
-				1,
-				14,
-				2023
-			},
-			{
-				2,
-				42046,
-				2
-			},
-			{
-				2,
-				15008,
-				50
-			},
-			{
-				2,
-				20001,
-				20
-			},
-			{
-				2,
-				15003,
-				10
-			},
-			{
-				1,
-				6,
-				100
-			}
-		},
-		time = {
-			{
-				{
-					2024,
-					5,
-					21
-				},
-				{
-					0,
-					0,
-					0
-				}
-			},
-			{
-				{
-					2024,
-					6,
-					12
-				},
-				{
-					23,
-					59,
-					59
-				}
-			}
-		},
-		display = {
-			{
-				2,
-				69926,
-				1
-			},
-			{
-				1,
-				14,
-				2023
-			},
-			{
-				2,
-				42046,
-				2
-			}
-		},
-		sub_display = {},
-		ignorePlatform = {},
-		limit_args = {},
-		drop_item = {
-			{
-				2,
-				40926,
-				1
-			}
-		}
-	},
 	[1000] = {
 		subject = "特许巡游凭证",
 		limit_group = 0,
@@ -8055,81 +7825,6 @@ pg.base.pay_data_display = {
 		},
 		sub_display = {
 			7015,
-			1500
-		},
-		ignorePlatform = {},
-		limit_args = {},
-		drop_item = {}
-	},
-	[1015] = {
-		subject = "特许巡游凭证",
-		limit_group = 0,
-		descrip_extra = "*需要通过任务达成对应巡游进度后才可获取",
-		type = 0,
-		limit_arg = 1,
-		name = "特许巡游凭证(2024.4)",
-		name_display = "特许巡游凭证",
-		type_order = 4,
-		extra_gem = 0,
-		id = 1015,
-		money = 68,
-		tag = 2,
-		gem = 0,
-		limit_type = 2,
-		picture = "battlepass_1",
-		skin_inquire_relation = 0,
-		id_str = "com.bilibili.blhx.battlepass17",
-		first_pay_double = 0,
-		extra_service = 4,
-		descrip = "可获得1500巡游点数，同时解锁特许巡游奖励·柏限定换装和其他奖励",
-		airijp_id = "com.yostarjp.azurlane.seasonpass16",
-		extra_service_item = {
-			{
-				1,
-				4016,
-				1500
-			},
-			{
-				8,
-				59541,
-				1
-			}
-		},
-		time = {
-			{
-				{
-					2024,
-					4,
-					1
-				},
-				{
-					0,
-					0,
-					0
-				}
-			},
-			{
-				{
-					2024,
-					5,
-					31
-				},
-				{
-					22,
-					59,
-					59
-				}
-			}
-		},
-		display = {
-			{
-				1,
-				4016,
-				1500
-			}
-		},
-		sub_display = {
-			7016,
 			1500
 		},
 		ignorePlatform = {},
@@ -10024,114 +9719,6 @@ pg.base.pay_data_display = {
 			{
 				2,
 				40043,
-				1
-			}
-		}
-	},
-	[2026] = {
-		subject = "舰艇教材礼包",
-		limit_group = 0,
-		descrip_extra = "*礼包将发送到邮箱，请注意查收。",
-		type = 0,
-		limit_arg = 4,
-		name = "舰艇教材礼包(2024春)",
-		name_display = "舰艇教材礼包",
-		type_order = 0,
-		extra_gem = 0,
-		id = 2026,
-		money = 18,
-		tag = 2,
-		gem = 0,
-		limit_type = 2,
-		picture = "boxSkill",
-		skin_inquire_relation = 0,
-		id_str = "com.bilibili.blhx.libao118",
-		first_pay_double = 0,
-		extra_service = 3,
-		descrip = "可获得大量教材奖励",
-		airijp_id = "com.yostarjp.azurlane.package118",
-		extra_service_item = {
-			{
-				2,
-				16004,
-				1
-			},
-			{
-				2,
-				16014,
-				1
-			},
-			{
-				2,
-				16024,
-				1
-			},
-			{
-				2,
-				16003,
-				3
-			},
-			{
-				2,
-				16013,
-				3
-			},
-			{
-				2,
-				16023,
-				3
-			}
-		},
-		time = {
-			{
-				{
-					2024,
-					4,
-					25
-				},
-				{
-					0,
-					0,
-					0
-				}
-			},
-			{
-				{
-					2024,
-					11,
-					6
-				},
-				{
-					23,
-					59,
-					59
-				}
-			}
-		},
-		display = {
-			{
-				2,
-				16004,
-				1
-			},
-			{
-				2,
-				16014,
-				1
-			},
-			{
-				2,
-				16024,
-				1
-			}
-		},
-		sub_display = {},
-		ignorePlatform = {},
-		limit_args = {},
-		drop_item = {
-			{
-				2,
-				40023,
 				1
 			}
 		}

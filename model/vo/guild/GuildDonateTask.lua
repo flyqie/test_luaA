@@ -1,37 +1,39 @@
-slot0 = class("GuildDonateTask", import("..BaseVO"))
+﻿local var_0_0 = class("GuildDonateTask", import("..BaseVO"))
 
-slot0.Ctor = function(slot0, slot1)
-	slot0.id = slot1.id
-	slot0.configId = slot0.id
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	arg_1_0.id = arg_1_1.id
+	arg_1_0.configId = arg_1_0.id
 end
 
-slot0.bindConfigTable = function(slot0)
+function var_0_0.bindConfigTable(arg_2_0)
 	return pg.guild_contribution_template
 end
 
-slot0.getCommitItem = function(slot0)
+function var_0_0.getCommitItem(arg_3_0)
 	return {
-		slot0:getConfig("type"),
-		slot0:getConfig("type_id"),
-		slot0:getConfig("consume")
+		arg_3_0:getConfig("type"),
+		arg_3_0:getConfig("type_id"),
+		arg_3_0:getConfig("consume")
 	}
 end
 
-slot0.getCapital = function(slot0)
-	return slot0:getConfig("award_capital")
+function var_0_0.getCapital(arg_4_0)
+	return arg_4_0:getConfig("award_capital")
 end
 
-slot0.GetLivenessAddition = function(slot0)
-	return slot0:getConfig("guild_active")
+function var_0_0.GetLivenessAddition(arg_5_0)
+	return arg_5_0:getConfig("guild_active")
 end
 
-slot0.canCommit = function(slot0)
-	if slot0:getCommitItem()[1] == DROP_TYPE_RESOURCE then
-		if getProxy(PlayerProxy):getData()[id2res(slot1[2])] < slot1[3] then
+function var_0_0.canCommit(arg_6_0)
+	local var_6_0 = arg_6_0:getCommitItem()
+
+	if var_6_0[1] == DROP_TYPE_RESOURCE then
+		if getProxy(PlayerProxy):getData()[id2res(var_6_0[2])] < var_6_0[3] then
 			return false
 		end
-	elseif slot1[1] == DROP_TYPE_ITEM then
-		if getProxy(BagProxy):getItemCountById(slot1[2]) < slot1[3] then
+	elseif var_6_0[1] == DROP_TYPE_ITEM then
+		if getProxy(BagProxy):getItemCountById(var_6_0[2]) < var_6_0[3] then
 			return false
 		end
 	else
@@ -41,4 +43,4 @@ slot0.canCommit = function(slot0)
 	return true
 end
 
-return slot0
+return var_0_0

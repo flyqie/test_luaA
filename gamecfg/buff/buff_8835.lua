@@ -1,4 +1,4 @@
-return {
+﻿return {
 	init_effect = "",
 	name = "metaboss保底伤害",
 	time = 16,
@@ -15,10 +15,13 @@ return {
 				"onUpdate"
 			},
 			arg_list = {
+				randExtraRange = 70,
+				dotType = 10,
 				time = 3,
-				metaDot = true,
-				tagOnly = {
-					"BOSS"
+				number = -8635,
+				WorldBossDotDamage = {
+					paramA = 300,
+					useGlobalAttr = "WorldBossSupportDays"
 				}
 			}
 		}

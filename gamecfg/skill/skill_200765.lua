@@ -1,7 +1,7 @@
-return {
+﻿return {
 	uiEffect = "",
 	name = "2024 同盟活动EX 开场提示语",
-	painting = 0,
+	painting = 1,
 	id = 200765,
 	picture = "0",
 	aniEffect = "",

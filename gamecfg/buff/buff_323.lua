@@ -1,4 +1,4 @@
-return {
+﻿return {
 	init_effect = "",
 	name = "苏俄冰锥减速",
 	time = 4,
@@ -32,16 +32,6 @@ return {
 				time = 3.5,
 				dotType = 2,
 				k = 0
-			}
-		},
-		{
-			type = "BattleBuffAddTag",
-			trigger = {
-				"onAttach",
-				"onRemove"
-			},
-			arg_list = {
-				tag = "flood"
 			}
 		}
 	}

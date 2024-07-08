@@ -1,4 +1,4 @@
-return {
+﻿return {
 	id = "XUEJINGMIZONG5",
 	mode = 2,
 	fadeOut = 1.5,
@@ -659,7 +659,7 @@ return {
 			actor = 900332,
 			actorName = "？？",
 			hidePaintObj = true,
-			say = "这不比西欧斯给你的待遇好多了~",
+			say = "这不比欧西斯给你的待遇好多了~",
 			painting = {
 				alpha = 0.3,
 				time = 1

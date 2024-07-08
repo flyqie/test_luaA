@@ -1,11 +1,11 @@
-slot0 = class("ResourceFieldPercentAttr", import(".ResourceFieldProductAttr"))
+﻿local var_0_0 = class("ResourceFieldPercentAttr", import(".ResourceFieldProductAttr"))
 
-slot0.GetProgressDesc = function(slot0)
-	return slot0.value .. "%" .. "/" .. slot0.maxValue .. "%"
+function var_0_0.GetProgressDesc(arg_1_0)
+	return arg_1_0.value .. "%" .. "/" .. arg_1_0.maxValue .. "%"
 end
 
-slot0.GetAdditionDesc = function(slot0)
-	return slot0.addition .. "%"
+function var_0_0.GetAdditionDesc(arg_2_0)
+	return arg_2_0.addition .. "%"
 end
 
-return slot0
+return var_0_0

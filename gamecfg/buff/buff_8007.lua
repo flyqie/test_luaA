@@ -1,4 +1,4 @@
-return {
+﻿return {
 	init_effect = "",
 	name = "自爆船冲撞自杀buff加速等效果",
 	time = 0,
@@ -12,8 +12,7 @@ return {
 		{
 			type = "BattleBuffFixVelocity",
 			trigger = {
-				"onAttach",
-				"onRemove"
+				"onAttach"
 			},
 			arg_list = {
 				group = 8003,

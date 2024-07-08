@@ -1,8 +1,8 @@
-slot0 = class("MainSubmitTaskSequence")
+﻿local var_0_0 = class("MainSubmitTaskSequence")
 
-slot0.Execute = function(slot0, slot1)
+function var_0_0.Execute(arg_1_0, arg_1_1)
 	getProxy(TaskProxy):pushAutoSubmitTask()
-	slot1()
+	arg_1_1()
 end
 
-return slot0
+return var_0_0

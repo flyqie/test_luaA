@@ -1,10 +1,13 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_69 = {}
-slot1 = slot0.word_template_69
+﻿pg = pg or {}
 
-temp = function()
-	uv0["谲"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_69 = {}
+
+local var_0_1 = var_0_0.word_template_69
+
+function temp()
+	var_0_1.谲 = {
 		this = {
 			this = true
 		}
@@ -13,8 +16,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["爝"] = {
+function temp()
+	var_0_1.爝 = {
 		this = {
 			this = true
 		}
@@ -23,8 +26,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["麇"] = {
+function temp()
+	var_0_1.麇 = {
 		this = {
 			this = true
 		}
@@ -33,8 +36,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["贶"] = {
+function temp()
+	var_0_1.贶 = {
 		this = {
 			this = true
 		}
@@ -43,8 +46,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["悝"] = {
+function temp()
+	var_0_1.悝 = {
 		this = {
 			this = true
 		}
@@ -53,8 +56,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["喟"] = {
+function temp()
+	var_0_1.喟 = {
 		this = {
 			this = true
 		}
@@ -63,8 +66,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["仂"] = {
+function temp()
+	var_0_1.仂 = {
 		this = {
 			this = true
 		}
@@ -73,8 +76,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["泐"] = {
+function temp()
+	var_0_1.泐 = {
 		this = {
 			this = true
 		}
@@ -83,8 +86,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["鳓"] = {
+function temp()
+	var_0_1.鳓 = {
 		this = {
 			this = true
 		}
@@ -93,8 +96,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["诔"] = {
+function temp()
+	var_0_1.诔 = {
 		this = {
 			this = true
 		}

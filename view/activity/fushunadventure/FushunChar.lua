@@ -1,209 +1,203 @@
-slot0 = class("FushunChar")
-slot1 = 1
-slot2 = 2
-slot3 = 3
-slot4 = 4
-slot5 = 5
-slot6 = 6
+﻿local var_0_0 = class("FushunChar")
+local var_0_1 = 1
+local var_0_2 = 2
+local var_0_3 = 3
+local var_0_4 = 4
+local var_0_5 = 5
+local var_0_6 = 6
 
-slot0.Ctor = function(slot0, slot1)
-	slot0._go = slot1
-	slot0._tf = slot1.transform
-	slot2 = slot0._go
-	slot0.animator = slot2:GetComponent(typeof(Animator))
-	slot2 = slot0._go
-	slot0.animatorEvent = slot2:GetComponent(typeof(DftAniEvent))
-	slot0.contactFilter2D = UnityEngine.ContactFilter2D.New()
-	slot0.contactFilter2D.useTriggers = true
-	slot0.keys = {}
-	slot0.state = uv0
-	slot0.hp = 3
-	slot0.harm = 0
-	slot0.energy = 0
-	slot0.exEnergyTarget = 100
-	slot2 = slot0._go
-	slot0.collider2D = slot2:GetComponent(typeof(UnityEngine.Collider2D))
-	slot2 = slot0._tf
-	slot2 = slot2:Find("effect")
-	slot0.effectCollider2D = slot2:GetComponent(typeof(UnityEngine.Collider2D))
-	slot2 = slot0.animatorEvent
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	arg_1_0._go = arg_1_1
+	arg_1_0._tf = arg_1_1.transform
+	arg_1_0.animator = arg_1_0._go:GetComponent(typeof(Animator))
+	arg_1_0.animatorEvent = arg_1_0._go:GetComponent(typeof(DftAniEvent))
+	arg_1_0.contactFilter2D = UnityEngine.ContactFilter2D.New()
+	arg_1_0.contactFilter2D.useTriggers = true
+	arg_1_0.keys = {}
+	arg_1_0.state = var_0_1
+	arg_1_0.hp = 3
+	arg_1_0.harm = 0
+	arg_1_0.energy = 0
+	arg_1_0.exEnergyTarget = 100
+	arg_1_0.collider2D = arg_1_0._go:GetComponent(typeof(UnityEngine.Collider2D))
+	arg_1_0.effectCollider2D = arg_1_0._tf:Find("effect"):GetComponent(typeof(UnityEngine.Collider2D))
 
-	slot2:SetEndEvent(function ()
-		if uv0.state == uv1 then
+	arg_1_0.animatorEvent:SetEndEvent(function()
+		if arg_1_0.state == var_0_5 then
 			return
 		end
 
-		uv0.state = uv2
+		arg_1_0.state = var_0_1
 
-		if uv0.OnAttackFinish then
-			uv0.OnAttackFinish()
+		if arg_1_0.OnAttackFinish then
+			arg_1_0.OnAttackFinish()
 
-			uv0.OnAttackFinish = nil
+			arg_1_0.OnAttackFinish = nil
 		end
 
-		uv0.harm = 0
+		arg_1_0.harm = 0
 
-		if uv0.OnAnimEnd then
-			uv0.OnAnimEnd()
+		if arg_1_0.OnAnimEnd then
+			arg_1_0.OnAnimEnd()
 		end
 	end)
 end
 
-slot0.GetAttackPosition = function(slot0)
-	return Vector3(FushunAdventureGameConst.FUSHUN_ATTACK_DISTANCE + slot0._tf.localPosition.x, slot0._tf.localPosition.y, 0)
+function var_0_0.GetAttackPosition(arg_3_0)
+	return Vector3(FushunAdventureGameConst.FUSHUN_ATTACK_DISTANCE + arg_3_0._tf.localPosition.x, arg_3_0._tf.localPosition.y, 0)
 end
 
-slot0.ClearHarm = function(slot0)
-	if slot0.state == uv0 then
+function var_0_0.ClearHarm(arg_4_0)
+	if arg_4_0.state == var_0_5 then
 		return
 	end
 
-	slot0.harm = 0
+	arg_4_0.harm = 0
 end
 
-slot0.GetHarm = function(slot0)
-	return math.max(0, slot0.harm)
+function var_0_0.GetHarm(arg_5_0)
+	return math.max(0, arg_5_0.harm)
 end
 
-slot0.SetOnAnimEnd = function(slot0, slot1)
-	slot0.OnAnimEnd = slot1
+function var_0_0.SetOnAnimEnd(arg_6_0, arg_6_1)
+	arg_6_0.OnAnimEnd = arg_6_1
 end
 
-slot0.SetPosition = function(slot0, slot1)
-	slot0._tf.localPosition = slot1
+function var_0_0.SetPosition(arg_7_0, arg_7_1)
+	arg_7_0._tf.localPosition = arg_7_1
 end
 
-slot0.GetPosition = function(slot0)
-	return slot0._tf.localPosition
+function var_0_0.GetPosition(arg_8_0)
+	return arg_8_0._tf.localPosition
 end
 
-slot0.InAttackState = function(slot0)
-	return slot0.state == uv0
+function var_0_0.InAttackState(arg_9_0)
+	return arg_9_0.state == var_0_2
 end
 
-slot0.TriggerAction = function(slot0, slot1, slot2)
-	if slot0.state == uv0 or slot0.state == uv1 then
-		slot0.state = uv1
-		slot0.harm = slot0.harm + 1
-		slot0.OnAttackFinish = slot2
+function var_0_0.TriggerAction(arg_10_0, arg_10_1, arg_10_2)
+	if arg_10_0.state == var_0_1 or arg_10_0.state == var_0_2 then
+		arg_10_0.state = var_0_2
+		arg_10_0.harm = arg_10_0.harm + 1
+		arg_10_0.OnAttackFinish = arg_10_2
 
-		slot0:StartAction(slot1)
+		arg_10_0:StartAction(arg_10_1)
 	end
 end
 
-slot0.Miss = function(slot0)
-	if slot0.state == uv0 then
+function var_0_0.Miss(arg_11_0)
+	if arg_11_0.state == var_0_5 then
 		return
 	end
 
-	if slot0.OnAttackFinish then
-		slot0.OnAttackFinish = nil
+	if arg_11_0.OnAttackFinish then
+		arg_11_0.OnAttackFinish = nil
 	end
 
-	slot0.state = uv1
+	arg_11_0.state = var_0_4
 
-	slot0:StartAction("miss")
+	arg_11_0:StartAction("miss")
 end
 
-slot0.Hurt = function(slot0)
-	if slot0.state == uv0 then
+function var_0_0.Hurt(arg_12_0)
+	if arg_12_0.state == var_0_5 then
 		return
 	end
 
-	if slot0.OnAttackFinish then
-		slot0.OnAttackFinish = nil
+	if arg_12_0.OnAttackFinish then
+		arg_12_0.OnAttackFinish = nil
 	end
 
-	slot0.state = uv1
-	slot0.hp = slot0.hp - 1
+	arg_12_0.state = var_0_3
+	arg_12_0.hp = arg_12_0.hp - 1
 
-	slot0:StartAction("damage")
+	arg_12_0:StartAction("damage")
 end
 
-slot0.AddEnergy = function(slot0, slot1)
-	if slot0.state == uv0 then
+function var_0_0.AddEnergy(arg_13_0, arg_13_1)
+	if arg_13_0.state == var_0_5 then
 		return
 	end
 
-	slot0.energy = math.min(slot0.energy + slot1, slot0.exEnergyTarget)
+	arg_13_0.energy = math.min(arg_13_0.energy + arg_13_1, arg_13_0.exEnergyTarget)
 end
 
-slot0.StartAction = function(slot0, slot1)
-	for slot5, slot6 in ipairs(slot0.keys) do
-		slot0.animator:ResetTrigger(slot5)
+function var_0_0.StartAction(arg_14_0, arg_14_1)
+	for iter_14_0, iter_14_1 in ipairs(arg_14_0.keys) do
+		arg_14_0.animator:ResetTrigger(iter_14_0)
 	end
 
-	slot0.animator:SetTrigger(slot1)
+	arg_14_0.animator:SetTrigger(arg_14_1)
 
-	slot0.keys[slot1] = true
+	arg_14_0.keys[arg_14_1] = true
 end
 
-slot0.GetHp = function(slot0)
-	return slot0.hp
+function var_0_0.GetHp(arg_15_0)
+	return arg_15_0.hp
 end
 
-slot0.IsDeath = function(slot0)
-	return slot0.hp <= 0
+function var_0_0.IsDeath(arg_16_0)
+	return arg_16_0.hp <= 0
 end
 
-slot0.Die = function(slot0)
-	slot0:StartAction("down")
+function var_0_0.Die(arg_17_0)
+	arg_17_0:StartAction("down")
 end
 
-slot0.GetEnergy = function(slot0)
-	return slot0.energy
+function var_0_0.GetEnergy(arg_18_0)
+	return arg_18_0.energy
 end
 
-slot0.GetEnergyTarget = function(slot0)
-	return slot0.exEnergyTarget
+function var_0_0.GetEnergyTarget(arg_19_0)
+	return arg_19_0.exEnergyTarget
 end
 
-slot0.ReduceEnergy = function(slot0, slot1)
-	slot0.energy = slot0.energy - slot1
+function var_0_0.ReduceEnergy(arg_20_0, arg_20_1)
+	arg_20_0.energy = arg_20_0.energy - arg_20_1
 end
 
-slot0.ShouldInvincible = function(slot0)
-	return slot0.state ~= uv0 and slot0.exEnergyTarget <= slot0.energy
+function var_0_0.ShouldInvincible(arg_21_0)
+	return arg_21_0.state ~= var_0_5 and arg_21_0.energy >= arg_21_0.exEnergyTarget
 end
 
-slot0.ShouldVincible = function(slot0)
-	if slot0.state == uv0 and slot0.energy <= 0 then
+function var_0_0.ShouldVincible(arg_22_0)
+	if arg_22_0.state == var_0_5 and arg_22_0.energy <= 0 then
 		return true
 	end
 
 	return false
 end
 
-slot0.InvincibleState = function(slot0)
-	return slot0.state == uv0
+function var_0_0.InvincibleState(arg_23_0)
+	return arg_23_0.state == var_0_5
 end
 
-slot0.Invincible = function(slot0)
-	slot0.harm = 1
-	slot0.state = uv0
+function var_0_0.Invincible(arg_24_0)
+	arg_24_0.harm = 1
+	arg_24_0.state = var_0_5
 end
 
-slot0.IsMissState = function(slot0)
-	return slot0.state == uv0
+function var_0_0.IsMissState(arg_25_0)
+	return arg_25_0.state == var_0_4
 end
 
-slot0.IsDamageState = function(slot0)
-	return slot0.state == uv0
+function var_0_0.IsDamageState(arg_26_0)
+	return arg_26_0.state == var_0_3
 end
 
-slot0.Vincible = function(slot0)
-	slot0:StartAction("EX_FINISH")
+function var_0_0.Vincible(arg_27_0)
+	arg_27_0:StartAction("EX_FINISH")
 
-	slot0.harm = 0
-	slot0.state = uv0
+	arg_27_0.harm = 0
+	arg_27_0.state = var_0_1
 end
 
-slot0.Destory = function(slot0)
-	slot0.animatorEvent:SetEndEvent(nil)
-	Destroy(slot0._go)
+function var_0_0.Destory(arg_28_0)
+	arg_28_0.animatorEvent:SetEndEvent(nil)
+	Destroy(arg_28_0._go)
 
-	slot0._go = nil
-	slot0.animator = nil
+	arg_28_0._go = nil
+	arg_28_0.animator = nil
 end
 
-return slot0
+return var_0_0

@@ -1,12 +1,15 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_272 = {}
-slot1 = slot0.word_template_272
+﻿pg = pg or {}
 
-temp = function()
-	uv0["褒"] = {
-		["二"] = {
-			["奶"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_272 = {}
+
+local var_0_1 = var_0_0.word_template_272
+
+function temp()
+	var_0_1.褒 = {
+		二 = {
+			奶 = {
 				this = true
 			}
 		}
@@ -15,31 +18,31 @@ end
 
 temp()
 
-temp = function()
-	uv0["豹"] = {
-		["哥"] = {
-			["好"] = {
-				["枪"] = {
-					["网"] = {
+function temp()
+	var_0_1.豹 = {
+		哥 = {
+			好 = {
+				枪 = {
+					网 = {
 						this = true
 					}
 				}
 			}
 		},
-		["纹"] = {
-			["老"] = {
-				["婆"] = {
-					["的"] = {
-						["激"] = {
-							["情"] = {
+		纹 = {
+			老 = {
+				婆 = {
+					的 = {
+						激 = {
+							情 = {
 								this = true
 							}
 						}
 					}
 				}
 			},
-			["熟"] = {
-				["妇"] = {
+			熟 = {
+				妇 = {
 					this = true
 				}
 			}
@@ -49,36 +52,36 @@ end
 
 temp()
 
-temp = function()
-	uv0["報"] = {
-		["仇"] = {
+function temp()
+	var_0_1.報 = {
+		仇 = {
 			this = true,
 			Q = {
 				this = true
 			},
-			["電"] = {
-				["話"] = {
+			電 = {
+				話 = {
 					this = true
 				}
 			},
-			["公"] = {
-				["司"] = {
+			公 = {
+				司 = {
 					this = true
 				}
 			},
-			["毀"] = {
-				["容"] = {
+			毀 = {
+				容 = {
 					this = true
 				}
 			}
 		},
-		["復"] = {
+		復 = {
 			this = true
 		},
-		["碼"] = {
-			["聊"] = {
-				["天"] = {
-					["室"] = {
+		碼 = {
+			聊 = {
+				天 = {
+					室 = {
 						this = true
 					}
 				}
@@ -89,13 +92,13 @@ end
 
 temp()
 
-temp = function()
-	uv0["儤"] = {
-		["ㄌ"] = {
-			["強"] = {
-				["幵"] = {
-					["エ"] = {
-						["具"] = {
+function temp()
+	var_0_1.儤 = {
+		ㄌ = {
+			強 = {
+				幵 = {
+					エ = {
+						具 = {
 							this = true
 						}
 					}
@@ -107,11 +110,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["卑"] = {
-		["猥"] = {
-			["病"] = {
-				["栋"] = {
+function temp()
+	var_0_1.卑 = {
+		猥 = {
+			病 = {
+				栋 = {
 					this = true
 				}
 			}
@@ -121,12 +124,12 @@ end
 
 temp()
 
-temp = function()
-	uv0["悲"] = {
-		["哀"] = {
-			["的"] = {
-				["熟"] = {
-					["女"] = {
+function temp()
+	var_0_1.悲 = {
+		哀 = {
+			的 = {
+				熟 = {
+					女 = {
 						this = true
 					}
 				}
@@ -137,22 +140,22 @@ end
 
 temp()
 
-temp = function()
-	uv0["犇"] = {
-		["逼"] = {
-			["铯"] = {
+function temp()
+	var_0_1.犇 = {
+		逼 = {
+			铯 = {
 				this = true,
-				["綜"] = {
-					["合"] = {
+				綜 = {
+					合 = {
 						this = true
 					}
 				}
 			}
 		},
-		["腷"] = {
-			["脃"] = {
-				["琮"] = {
-					["匼"] = {
+		腷 = {
+			脃 = {
+				琮 = {
+					匼 = {
 						this = true
 					}
 				}
@@ -163,12 +166,12 @@ end
 
 temp()
 
-temp = function()
-	uv0["夲"] = {
-		["甶"] = {
-			["強"] = {
-				["閞"] = {
-					["迋"] = {
+function temp()
+	var_0_1.夲 = {
+		甶 = {
+			強 = {
+				閞 = {
+					迋 = {
 						this = true
 					}
 				}
@@ -179,10 +182,10 @@ end
 
 temp()
 
-temp = function()
-	uv0["绷"] = {
-		["弓"] = {
-			["子"] = {
+function temp()
+	var_0_1.绷 = {
+		弓 = {
+			子 = {
 				this = true
 			}
 		}
@@ -191,17 +194,17 @@ end
 
 temp()
 
-temp = function()
-	uv0["吡"] = {
-		["咯"] = {
-			["戊"] = {
-				["酮"] = {
+function temp()
+	var_0_1.吡 = {
+		咯 = {
+			戊 = {
+				酮 = {
 					this = true
 				}
 			}
 		},
-		["利"] = {
-			["啶"] = {
+		利 = {
+			啶 = {
 				this = true
 			}
 		}

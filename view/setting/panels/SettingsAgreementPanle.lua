@@ -1,32 +1,28 @@
-slot0 = class("SettingsAgreementPanle", import(".SettingsBasePanel"))
+﻿local var_0_0 = class("SettingsAgreementPanle", import(".SettingsBasePanel"))
 
-slot0.GetUIName = function(slot0)
+function var_0_0.GetUIName(arg_1_0)
 	return "SettingsAgreement"
 end
 
-slot0.GetTitle = function(slot0)
+function var_0_0.GetTitle(arg_2_0)
 	return i18n("Settings_title_agreement")
 end
 
-slot0.GetTitleEn = function(slot0)
+function var_0_0.GetTitleEn(arg_3_0)
 	return "  / VIEW AGREEMENT"
 end
 
-slot0.OnInit = function(slot0)
-	slot3 = slot0._tf
-
-	onButton(slot0, slot3:Find("private"), function ()
+function var_0_0.OnInit(arg_4_0)
+	onButton(arg_4_0, arg_4_0._tf:Find("private"), function()
 		pg.SdkMgr.GetInstance():ShowPrivate()
 	end, SFX_PANEL)
-
-	slot3 = slot0._tf
-
-	onButton(slot0, slot3:Find("licence"), function ()
+	onButton(arg_4_0, arg_4_0._tf:Find("licence"), function()
 		pg.SdkMgr.GetInstance():ShowLicence()
 	end, SFX_PANEL)
 end
 
-slot0.OnUpdate = function(slot0)
+function var_0_0.OnUpdate(arg_7_0)
+	return
 end
 
-return slot0
+return var_0_0

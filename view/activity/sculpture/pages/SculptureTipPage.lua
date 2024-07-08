@@ -1,30 +1,32 @@
-slot0 = class("SculptureTipPage", import("view.base.BaseSubView"))
+﻿local var_0_0 = class("SculptureTipPage", import("view.base.BaseSubView"))
 
-slot0.getUIName = function(slot0)
+function var_0_0.getUIName(arg_1_0)
 	return "SculptureTipUI"
 end
 
-slot0.OnLoaded = function(slot0)
-	slot0.tip = slot0:findTF("tip")
+function var_0_0.OnLoaded(arg_2_0)
+	arg_2_0.tip = arg_2_0:findTF("tip")
 end
 
-slot0.OnInit = function(slot0)
+function var_0_0.OnInit(arg_3_0)
+	return
 end
 
-slot0.Show = function(slot0)
-	uv0.super.Show(slot0)
-	setActive(slot0.tip, true)
-	onDelayTick(function ()
-		uv0:Hide()
+function var_0_0.Show(arg_4_0)
+	var_0_0.super.Show(arg_4_0)
+	setActive(arg_4_0.tip, true)
+	onDelayTick(function()
+		arg_4_0:Hide()
 	end, 2)
 end
 
-slot0.Hide = function(slot0)
-	uv0.super.Hide(slot0)
-	setActive(slot0.tip, false)
+function var_0_0.Hide(arg_6_0)
+	var_0_0.super.Hide(arg_6_0)
+	setActive(arg_6_0.tip, false)
 end
 
-slot0.OnDestroy = function(slot0)
+function var_0_0.OnDestroy(arg_7_0)
+	return
 end
 
-return slot0
+return var_0_0

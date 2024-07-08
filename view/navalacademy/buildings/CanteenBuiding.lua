@@ -1,19 +1,19 @@
-slot0 = class("CanteenBuiding", import(".NavalAcademyUpgradableBuilding"))
+﻿local var_0_0 = class("CanteenBuiding", import(".NavalAcademyUpgradableBuilding"))
 
-slot0.GetGameObjectName = function(slot0)
+function var_0_0.GetGameObjectName(arg_1_0)
 	return "canteen"
 end
 
-slot0.GetTitle = function(slot0)
+function var_0_0.GetTitle(arg_2_0)
 	return i18n("school_title_shitang")
 end
 
-slot0.OnClick = function(slot0)
-	slot0:emit(NavalAcademyMediator.ON_OPEN_OILRESFIELD)
+function var_0_0.OnClick(arg_3_0)
+	arg_3_0:emit(NavalAcademyMediator.ON_OPEN_OILRESFIELD)
 end
 
-slot0.GetResField = function(slot0)
-	return slot0.parent.oilResField
+function var_0_0.GetResField(arg_4_0)
+	return arg_4_0.parent.oilResField
 end
 
-return slot0
+return var_0_0

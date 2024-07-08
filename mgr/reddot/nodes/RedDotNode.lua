@@ -1,38 +1,40 @@
-slot0 = class("RedDotNode")
+﻿local var_0_0 = class("RedDotNode")
 
-slot0.Ctor = function(slot0, slot1, slot2)
-	assert(not IsNil(slot1))
+function var_0_0.Ctor(arg_1_0, arg_1_1, arg_1_2)
+	assert(not IsNil(arg_1_1))
 
-	slot0.gameObject = slot1
-	slot0.types = slot2
+	arg_1_0.gameObject = arg_1_1
+	arg_1_0.types = arg_1_2
 end
 
-slot0.GetName = function(slot0)
-	return slot0.gameObject.transform.parent.gameObject.name
+function var_0_0.GetName(arg_2_0)
+	return arg_2_0.gameObject.transform.parent.gameObject.name
 end
 
-slot0.Init = function(slot0)
+function var_0_0.Init(arg_3_0)
+	return
 end
 
-slot0.RefreshSelf = function(slot0)
-	for slot4, slot5 in ipairs(slot0.types) do
-		pg.RedDotMgr.GetInstance():NotifyAll(slot5)
+function var_0_0.RefreshSelf(arg_4_0)
+	for iter_4_0, iter_4_1 in ipairs(arg_4_0.types) do
+		pg.RedDotMgr.GetInstance():NotifyAll(iter_4_1)
 	end
 end
 
-slot0.GetTypes = function(slot0)
-	return slot0.types
+function var_0_0.GetTypes(arg_5_0)
+	return arg_5_0.types
 end
 
-slot0.SetData = function(slot0, slot1)
-	if IsNil(slot0.gameObject) then
+function var_0_0.SetData(arg_6_0, arg_6_1)
+	if IsNil(arg_6_0.gameObject) then
 		return
 	end
 
-	setActive(slot0.gameObject, slot1)
+	setActive(arg_6_0.gameObject, arg_6_1)
 end
 
-slot0.Remove = function(slot0)
+function var_0_0.Remove(arg_7_0)
+	return
 end
 
-return slot0
+return var_0_0

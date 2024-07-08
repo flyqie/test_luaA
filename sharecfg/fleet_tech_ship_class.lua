@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.fleet_tech_ship_class = {
 	[10101] = {
 		shiptype = 1,
@@ -748,8 +748,7 @@ pg.fleet_tech_ship_class = {
 		t_level_1 = 39,
 		t_level = 5,
 		ships = {
-			20132,
-			20137
+			20132
 		}
 	},
 	[20113] = {
@@ -888,8 +887,7 @@ pg.fleet_tech_ship_class = {
 		t_level = 7,
 		ships = {
 			20209,
-			20210,
-			20234
+			20210
 		}
 	},
 	[20211] = {
@@ -924,8 +922,7 @@ pg.fleet_tech_ship_class = {
 		ships = {
 			20301,
 			20302,
-			20309,
-			20313
+			20309
 		}
 	},
 	[20302] = {
@@ -2143,8 +2140,7 @@ pg.fleet_tech_ship_class = {
 		t_level = 5,
 		ships = {
 			40309,
-			40310,
-			40314
+			40310
 		}
 	},
 	[40305] = {
@@ -3079,17 +3075,6 @@ pg.fleet_tech_ship_class = {
 			80301
 		}
 	},
-	[80303] = {
-		shiptype = 3,
-		name = "布伦努斯",
-		nation = 8,
-		id = 80303,
-		t_level_1 = 137,
-		t_level = 8,
-		ships = {
-			80302
-		}
-	},
 	[80501] = {
 		shiptype = 5,
 		name = "黎塞留级",
@@ -3121,17 +3106,6 @@ pg.fleet_tech_ship_class = {
 		t_level = 4,
 		ships = {
 			80502
-		}
-	},
-	[80504] = {
-		shiptype = 5,
-		name = "阿尔萨斯级",
-		nation = 8,
-		id = 80504,
-		t_level_1 = 1,
-		t_level = 9,
-		ships = {
-			80503
 		}
 	},
 	[80701] = {
@@ -3212,29 +3186,6 @@ pg.fleet_tech_ship_class = {
 			90102,
 			90103,
 			90104
-		}
-	},
-	[90105] = {
-		shiptype = 1,
-		name = "莫加多尔级",
-		nation = 9,
-		id = 90105,
-		t_level_1 = 1,
-		t_level = 9,
-		ships = {
-			90107
-		}
-	},
-	[90106] = {
-		shiptype = 1,
-		name = "大胆级",
-		nation = 9,
-		id = 90106,
-		t_level_1 = 133,
-		t_level = 6,
-		ships = {
-			90105,
-			90106
 		}
 	},
 	[90201] = {
@@ -3427,17 +3378,6 @@ pg.fleet_tech_ship_class = {
 			970104
 		}
 	},
-	[970105] = {
-		shiptype = 1,
-		name = "吸血鬼·META",
-		nation = 97,
-		id = 970105,
-		t_level_1 = 1,
-		t_level = 3,
-		ships = {
-			970105
-		}
-	},
 	[970201] = {
 		shiptype = 2,
 		name = "海伦娜·META",
@@ -3625,17 +3565,6 @@ pg.fleet_tech_ship_class = {
 			970504
 		}
 	},
-	[970505] = {
-		shiptype = 5,
-		name = "罗德尼·META",
-		nation = 97,
-		id = 970505,
-		t_level_1 = 5,
-		t_level = 2,
-		ships = {
-			970505
-		}
-	},
 	[970601] = {
 		shiptype = 6,
 		name = "飞鹰·META",
@@ -3700,17 +3629,6 @@ pg.fleet_tech_ship_class = {
 		t_level = 4,
 		ships = {
 			970703
-		}
-	},
-	[970704] = {
-		shiptype = 7,
-		name = "贝亚恩·META",
-		nation = 97,
-		id = 970704,
-		t_level_1 = 5,
-		t_level = 4,
-		ships = {
-			970704
 		}
 	},
 	[970801] = {
@@ -4001,11 +3919,9 @@ pg.fleet_tech_ship_class = {
 		80203,
 		80301,
 		80302,
-		80303,
 		80501,
 		80502,
 		80503,
-		80504,
 		80701,
 		80702,
 		80801,
@@ -4013,8 +3929,6 @@ pg.fleet_tech_ship_class = {
 		90101,
 		90103,
 		90104,
-		90105,
-		90106,
 		90201,
 		90301,
 		90302,
@@ -4032,7 +3946,6 @@ pg.fleet_tech_ship_class = {
 		970102,
 		970103,
 		970104,
-		970105,
 		970201,
 		970202,
 		970203,
@@ -4050,14 +3963,12 @@ pg.fleet_tech_ship_class = {
 		970502,
 		970503,
 		970504,
-		970505,
 		970601,
 		970602,
 		970603,
 		970701,
 		970702,
 		970703,
-		970704,
 		970801,
 		971201,
 		971301

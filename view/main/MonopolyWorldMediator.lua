@@ -1,20 +1,22 @@
-slot0 = class("MonthCardSetMediator", import("..base.ContextMediator"))
+﻿local var_0_0 = class("MonthCardSetMediator", import("..base.ContextMediator"))
 
-slot0.register = function(slot0)
+function var_0_0.register(arg_1_0)
+	return
 end
 
-slot0.listNotificationInterests = function(slot0)
+function var_0_0.listNotificationInterests(arg_2_0)
 	return {
 		GAME.MONOPOLY_AWARD_DONE
 	}
 end
 
-slot0.handleNotification = function(slot0, slot1)
-	slot3 = slot1:getBody()
+function var_0_0.handleNotification(arg_3_0, arg_3_1)
+	local var_3_0 = arg_3_1:getName()
+	local var_3_1 = arg_3_1:getBody()
 
-	if slot1:getName() == GAME.MONOPOLY_AWARD_DONE then
-		slot0.viewComponent:emit(BaseUI.ON_ACHIEVE, slot3.awards, slot3.callback)
+	if var_3_0 == GAME.MONOPOLY_AWARD_DONE then
+		arg_3_0.viewComponent:emit(BaseUI.ON_ACHIEVE, var_3_1.awards, var_3_1.callback)
 	end
 end
 
-return slot0
+return var_0_0

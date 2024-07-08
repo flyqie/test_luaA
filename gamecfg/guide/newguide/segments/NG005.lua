@@ -1,21 +1,15 @@
-return {
+﻿return {
 	id = "NG005",
 	events = {
 		{
 			ui = {
-				dynamicPath = function ()
-					if getProxy(SettingsProxy):IsMellowStyle() then
-						return "/OverlayCamera/Overlay/UIMain/NewMainMellowTheme(Clone)/frame/bottom/frame/live"
-					else
-						return "/OverlayCamera/Overlay/UIMain/NewMainClassicTheme(Clone)/frame/bottom/liveButton"
-					end
-				end
+				path = "/OverlayCamera/Overlay/UIMain/main/frame/bottom/liveButton"
 			}
 		},
 		{
 			ui = {
-				dynamicPath = function ()
-					if USE_OLD_MAIN_LIVE_AREA_UI then
+				dynamicPath = function()
+					if LOCK_EDUCATE_SYSTEM then
 						return "/OverlayCamera/Overlay/UIMain/MainLiveAreaOldUI(Clone)/commander_btn"
 					else
 						return "/OverlayCamera/Overlay/UIMain/MainLiveAreaUI(Clone)/commander_btn"

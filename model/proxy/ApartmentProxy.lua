@@ -1,67 +1,83 @@
-slot0 = class("ApartmentProxy", import(".NetProxy"))
-slot0.UPDATE_APARTMENT = "ApartmentProxy.UPDATE_APARTMENT"
-slot0.UPDATE_GIFT_COUNT = "ApartmentProxy.UPDATE_GIFT_COUNT"
+﻿local var_0_0 = class("ApartmentProxy", import(".NetProxy"))
 
-slot0.register = function(slot0)
-	slot0.data = {}
-	slot0.giftBag = setDefaultZeroMetatable({})
-	slot0.giftGiveCount = setDefaultZeroMetatable({})
+var_0_0.UPDATE_APARTMENT = "ApartmentProxy.UPDATE_APARTMENT"
+var_0_0.UPDATE_GIFT_COUNT = "ApartmentProxy.UPDATE_GIFT_COUNT"
+
+function var_0_0.register(arg_1_0)
+	arg_1_0.data = {}
+	arg_1_0.giftBag = setDefaultZeroMetatable({})
+	arg_1_0.giftGiveCount = setDefaultZeroMetatable({})
+
+	arg_1_0:on(28000, function(arg_2_0)
+		for iter_2_0, iter_2_1 in ipairs(arg_2_0.gifts) do
+			arg_1_0.giftBag[iter_2_1.gift_id] = iter_2_1.number
+			arg_1_0.giftGiveCount[iter_2_1.gift_id] = iter_2_1.used_number
+		end
+
+		for iter_2_2, iter_2_3 in ipairs(arg_2_0.ships) do
+			local var_2_0 = Apartment.New(iter_2_3)
+
+			arg_1_0.data[var_2_0.configId] = var_2_0
+		end
+	end)
 end
 
-slot0.updateApartment = function(slot0, slot1)
-	slot0.data[slot1.configId] = slot1:clone()
+function var_0_0.updateApartment(arg_3_0, arg_3_1)
+	arg_3_0.data[arg_3_1.configId] = arg_3_1:clone()
 
-	slot0:sendNotification(uv0.UPDATE_APARTMENT, slot1)
+	arg_3_0:sendNotification(var_0_0.UPDATE_APARTMENT, arg_3_1)
 end
 
-slot0.getApartment = function(slot0, slot1)
-	return slot0.data[slot1] and slot0.data[slot1]:clone() or nil
+function var_0_0.getApartment(arg_4_0, arg_4_1)
+	return arg_4_0.data[arg_4_1] and arg_4_0.data[arg_4_1]:clone() or nil
 end
 
-slot0.getGiftCount = function(slot0, slot1)
-	return slot0.giftBag[slot1]
+function var_0_0.getGiftCount(arg_5_0, arg_5_1)
+	return arg_5_0.giftBag[arg_5_1]
 end
 
-slot0.changeGiftCount = function(slot0, slot1, slot2)
-	assert(slot2 ~= 0)
+function var_0_0.changeGiftCount(arg_6_0, arg_6_1, arg_6_2)
+	assert(arg_6_2 ~= 0)
 
-	slot0.giftBag[slot1] = slot0.giftBag[slot1] + slot2
+	arg_6_0.giftBag[arg_6_1] = arg_6_0.giftBag[arg_6_1] + arg_6_2
 
-	slot0:sendNotification(uv0.UPDATE_GIFT_COUNT, slot1)
+	arg_6_0:sendNotification(var_0_0.UPDATE_GIFT_COUNT, arg_6_1)
 end
 
-slot0.addGiftGiveCount = function(slot0, slot1, slot2)
-	slot0.giftGiveCount[slot1] = slot0.giftGiveCount[slot1] + slot2
+function var_0_0.addGiftGiveCount(arg_7_0, arg_7_1, arg_7_2)
+	arg_7_0.giftGiveCount[arg_7_1] = arg_7_0.giftGiveCount[arg_7_1] + arg_7_2
 end
 
-slot0.isGiveGiftDone = function(slot0, slot1)
-	return slot0.giftGiveCount[slot1] > 0
+function var_0_0.isGiveGiftDone(arg_8_0, arg_8_1)
+	return arg_8_0.giftGiveCount[arg_8_1] > 0
 end
 
-slot0.getGiftUnlockTalk = function(slot0, slot1, slot2)
-	for slot6, slot7 in ipairs(pg.dorm3d_dialogue_group.get_id_list_by_char_id[20220]) do
-		if pg.dorm3d_dialogue_group[slot7].type == 401 and table.contains(slot8.trigger_config, slot2) then
-			return slot7
+function var_0_0.getGiftUnlockTalk(arg_9_0, arg_9_1, arg_9_2)
+	for iter_9_0, iter_9_1 in ipairs(pg.dorm3d_dialogue_group.get_id_list_by_char_id[20220]) do
+		local var_9_0 = pg.dorm3d_dialogue_group[iter_9_1]
+
+		if var_9_0.type == 401 and table.contains(var_9_0.trigger_config, arg_9_2) then
+			return iter_9_1
 		end
 	end
 end
 
-slot0.GetTimeIndex = function(slot0)
-	slot1 = 3
+function var_0_0.GetTimeIndex(arg_10_0)
+	local var_10_0 = 3
 
-	for slot5, slot6 in ipairs({
+	for iter_10_0, iter_10_1 in ipairs({
 		7,
 		16,
 		20
 	}) do
-		if slot0 < slot6 then
+		if arg_10_0 < iter_10_1 then
 			break
 		else
-			slot1 = slot5
+			var_10_0 = iter_10_0
 		end
 	end
 
-	return slot1
+	return var_10_0
 end
 
-return slot0
+return var_0_0

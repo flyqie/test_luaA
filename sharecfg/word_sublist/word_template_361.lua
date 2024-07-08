@@ -1,12 +1,15 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_361 = {}
-slot1 = slot0.word_template_361
+﻿pg = pg or {}
 
-temp = function()
-	uv0["豎"] = {
-		["山"] = {
-			["愛"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_361 = {}
+
+local var_0_1 = var_0_0.word_template_361
+
+function temp()
+	var_0_1.豎 = {
+		山 = {
+			愛 = {
 				b = {
 					t = {
 						this = true
@@ -19,16 +22,16 @@ end
 
 temp()
 
-temp = function()
-	uv0["栓"] = {
-		["管"] = {
-			["狗"] = {
+function temp()
+	var_0_1.栓 = {
+		管 = {
+			狗 = {
 				this = true
 			}
 		},
-		["式"] = {
-			["枪"] = {
-				["机"] = {
+		式 = {
+			枪 = {
+				机 = {
 					this = true
 				}
 			}
@@ -38,16 +41,16 @@ end
 
 temp()
 
-temp = function()
-	uv0["滝"] = {
-		["沢"] = {
-			["优"] = {
-				["季"] = {
+function temp()
+	var_0_1.滝 = {
+		沢 = {
+			优 = {
+				季 = {
 					this = true
 				},
-				["奈"] = {
-					["高"] = {
-						["清"] = {
+				奈 = {
+					高 = {
+						清 = {
 							this = true
 						}
 					}
@@ -59,12 +62,12 @@ end
 
 temp()
 
-temp = function()
-	uv0["孇"] = {
-		["管"] = {
-			["猎"] = {
-				["狗"] = {
-					["專"] = {
+function temp()
+	var_0_1.孇 = {
+		管 = {
+			猎 = {
+				狗 = {
+					專 = {
 						this = true
 					}
 				}
@@ -75,27 +78,27 @@ end
 
 temp()
 
-temp = function()
-	uv0["氺"] = {
-		["城"] = {
-			["萘"] = {
-				["緒"] = {
+function temp()
+	var_0_1.氺 = {
+		城 = {
+			萘 = {
+				緒 = {
 					this = true
 				}
 			}
 		},
-		["猓"] = {
-			["氷"] = {
+		猓 = {
+			氷 = {
 				this = true
 			}
 		},
-		["淉"] = {
-			["栤"] = {
+		淉 = {
+			栤 = {
 				this = true,
-				["送"] = {
-					["貨"] = {
-						["丄"] = {
-							["冂"] = {
+				送 = {
+					貨 = {
+						丄 = {
+							冂 = {
 								this = true
 							}
 						}
@@ -103,48 +106,48 @@ temp = function()
 				}
 			}
 		},
-		["橸"] = {
-			["栤"] = {
+		橸 = {
+			栤 = {
 				this = true
 			},
-			["徔"] = {
-				["纞"] = {
+			徔 = {
+				纞 = {
 					this = true
 				}
 			}
 		},
-		["嘢"] = {
+		嘢 = {
 			this = true,
-			["噯"] = {
-				["裡"] = {
-					["ｂ"] = {
-						["τ"] = {
+			噯 = {
+				裡 = {
+					ｂ = {
+						τ = {
 							this = true
 						}
 					},
-					["電"] = {
-						["驴"] = {
+					電 = {
+						驴 = {
 							this = true
 						}
 					},
-					["佺"] = {
-						["雧"] = {
+					佺 = {
+						雧 = {
 							this = true
 						}
 					},
-					["兂"] = {
-						["碼"] = {
+					兂 = {
+						碼 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["澤"] = {
-			["り"] = {
-				["の"] = {
-					["兂"] = {
-						["碼"] = {
+		澤 = {
+			り = {
+				の = {
+					兂 = {
+						碼 = {
 							this = true
 						}
 					}
@@ -156,16 +159,16 @@ end
 
 temp()
 
-temp = function()
-	uv0["吮"] = {
-		["吸"] = {
-			["肉"] = {
-				["棒"] = {
+function temp()
+	var_0_1.吮 = {
+		吸 = {
+			肉 = {
+				棒 = {
 					this = true
 				}
 			},
-			["小"] = {
-				["穴"] = {
+			小 = {
+				穴 = {
 					this = true
 				}
 			}
@@ -175,16 +178,16 @@ end
 
 temp()
 
-temp = function()
-	uv0["瞬"] = {
-		["间"] = {
-			["开"] = {
-				["锁"] = {
+function temp()
+	var_0_1.瞬 = {
+		间 = {
+			开 = {
+				锁 = {
 					this = true
 				}
 			},
-			["装"] = {
-				["填"] = {
+			装 = {
+				填 = {
 					this = true
 				}
 			}
@@ -194,10 +197,10 @@ end
 
 temp()
 
-temp = function()
-	uv0["说"] = {
-		["藏"] = {
-			["语"] = {
+function temp()
+	var_0_1.说 = {
+		藏 = {
+			语 = {
 				this = true
 			}
 		}
@@ -206,11 +209,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["哾"] = {
-		["唻"] = {
-			["愙"] = {
-				["棧"] = {
+function temp()
+	var_0_1.哾 = {
+		唻 = {
+			愙 = {
+				棧 = {
 					this = true
 				}
 			}
@@ -220,11 +223,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["朔"] = {
-		["州"] = {
-			["冰"] = {
-				["毒"] = {
+function temp()
+	var_0_1.朔 = {
+		州 = {
+			冰 = {
+				毒 = {
 					this = true
 				}
 			}

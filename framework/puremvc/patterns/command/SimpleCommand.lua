@@ -1,10 +1,12 @@
-slot1 = class("SimpleCommand", import("..observer.Notifier"))
+﻿local var_0_0 = import("..observer.Notifier")
+local var_0_1 = class("SimpleCommand", var_0_0)
 
-slot1.Ctor = function(slot0)
-	uv0.super.Ctor(slot0)
+function var_0_1.Ctor(arg_1_0)
+	var_0_1.super.Ctor(arg_1_0)
 end
 
-slot1.execute = function(slot0, slot1)
+function var_0_1.execute(arg_2_0, arg_2_1)
+	return
 end
 
-return slot1
+return var_0_1

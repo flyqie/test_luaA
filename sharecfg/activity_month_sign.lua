@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.activity_month_sign = {
 	{
 		id = 1,
@@ -945,7 +945,7 @@ pg.activity_month_sign = {
 		day21 = {
 			{
 				5,
-				100060,
+				100048,
 				1
 			}
 		},
@@ -1200,7 +1200,7 @@ pg.activity_month_sign = {
 		day21 = {
 			{
 				5,
-				100061,
+				100049,
 				1
 			}
 		},

@@ -1,10 +1,11 @@
-slot0 = class("SummaryPage3", import(".SummaryAnimationPage"))
+﻿local var_0_0 = class("SummaryPage3", import(".SummaryAnimationPage"))
 
-slot0.OnInit = function(slot0)
-	setActive(slot0._go, false)
+function var_0_0.OnInit(arg_1_0)
+	setActive(arg_1_0._go, false)
 end
 
-slot0.Clear = function(slot0)
+function var_0_0.Clear(arg_2_0)
+	return
 end
 
-return slot0
+return var_0_0

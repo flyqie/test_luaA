@@ -1,4 +1,5 @@
-return {
+﻿return {
+	effect_list = {},
 	{
 		effect_list = {
 			{
@@ -20,7 +21,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield<=0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "lessequal"
+						}
 					}
 				}
 			},
@@ -33,7 +38,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield>0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "great"
+						}
 					}
 				}
 			}
@@ -60,7 +69,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield<=0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "lessequal"
+						}
 					}
 				}
 			},
@@ -73,7 +86,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield>0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "great"
+						}
 					}
 				}
 			}
@@ -100,7 +117,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield<=0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "lessequal"
+						}
 					}
 				}
 			},
@@ -113,7 +134,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield>0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "great"
+						}
 					}
 				}
 			}
@@ -140,7 +165,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield<=0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "lessequal"
+						}
 					}
 				}
 			},
@@ -153,7 +182,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield>0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "great"
+						}
 					}
 				}
 			}
@@ -180,7 +213,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield<=0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "lessequal"
+						}
 					}
 				}
 			},
@@ -193,7 +230,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield>0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "great"
+						}
 					}
 				}
 			}
@@ -220,7 +261,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield<=0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "lessequal"
+						}
 					}
 				}
 			},
@@ -233,7 +278,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield>0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "great"
+						}
 					}
 				}
 			}
@@ -260,7 +309,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield<=0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "lessequal"
+						}
 					}
 				}
 			},
@@ -273,7 +326,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield>0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "great"
+						}
 					}
 				}
 			}
@@ -300,7 +357,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield<=0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "lessequal"
+						}
 					}
 				}
 			},
@@ -313,7 +374,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield>0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "great"
+						}
 					}
 				}
 			}
@@ -340,7 +405,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield<=0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "lessequal"
+						}
 					}
 				}
 			},
@@ -353,7 +422,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield>0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "great"
+						}
 					}
 				}
 			}
@@ -380,7 +453,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield<=0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "lessequal"
+						}
 					}
 				}
 			},
@@ -393,7 +470,11 @@ return {
 					buff_id = 16113,
 					target = "TargetSelf",
 					effectAttachData = {
-						"BattleBuffShield>0"
+						{
+							value = 0,
+							type = "BattleBuffShield",
+							op = "great"
+						}
 					}
 				}
 			}
@@ -407,6 +488,5 @@ return {
 	stack = 1,
 	id = 16112,
 	icon = 16112,
-	last_effect = "Shield",
-	effect_list = {}
+	last_effect = "Shield"
 }

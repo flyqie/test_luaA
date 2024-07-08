@@ -1,35 +1,35 @@
-slot0 = class("WorldNShopCommodity", import(".BaseCommodity"))
+﻿local var_0_0 = class("WorldNShopCommodity", import(".BaseCommodity"))
 
-slot0.bindConfigTable = function(slot0)
+function var_0_0.bindConfigTable(arg_1_0)
 	return pg.world_newshop_data
 end
 
-slot0.canPurchase = function(slot0)
-	return slot0:GetPurchasableCnt() > 0
+function var_0_0.canPurchase(arg_2_0)
+	return arg_2_0:GetPurchasableCnt() > 0
 end
 
-slot0.GetPurchasableCnt = function(slot0)
-	return slot0:GetLimitGoodCount() - slot0.buyCount
+function var_0_0.GetPurchasableCnt(arg_3_0)
+	return arg_3_0:GetLimitGoodCount() - arg_3_0.buyCount
 end
 
-slot0.GetLimitGoodCount = function(slot0)
-	return slot0:getConfig("frequency")
+function var_0_0.GetLimitGoodCount(arg_4_0)
+	return arg_4_0:getConfig("frequency")
 end
 
-slot0.GetDropInfo = function(slot0)
+function var_0_0.GetDropInfo(arg_5_0)
 	return Drop.New({
-		type = slot0:getConfig("item_type"),
-		id = slot0:getConfig("item_id"),
-		count = slot0:getConfig("item_num")
+		type = arg_5_0:getConfig("item_type"),
+		id = arg_5_0:getConfig("item_id"),
+		count = arg_5_0:getConfig("item_num")
 	})
 end
 
-slot0.GetPriceInfo = function(slot0)
+function var_0_0.GetPriceInfo(arg_6_0)
 	return Drop.New({
-		type = slot0:getConfig("price_type"),
-		id = slot0:getConfig("price_id"),
-		count = slot0:getConfig("price_num")
+		type = arg_6_0:getConfig("price_type"),
+		id = arg_6_0:getConfig("price_id"),
+		count = arg_6_0:getConfig("price_num")
 	})
 end
 
-return slot0
+return var_0_0

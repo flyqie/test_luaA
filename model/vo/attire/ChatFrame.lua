@@ -1,31 +1,31 @@
-slot0 = class("ChatFrame", import(".AttireFrame"))
+﻿local var_0_0 = class("ChatFrame", import(".AttireFrame"))
 
-slot0.GetIcon = function(slot0)
-	return "ChatFrame/" .. slot0
+function var_0_0.GetIcon(arg_1_0)
+	return "ChatFrame/" .. arg_1_0
 end
 
-slot0.getType = function(slot0)
+function var_0_0.getType(arg_2_0)
 	return AttireConst.TYPE_CHAT_FRAME
 end
 
-slot0.bindConfigTable = function(slot0)
+function var_0_0.bindConfigTable(arg_3_0)
 	return pg.item_data_chat
 end
 
-slot0.getPrefabName = function(slot0)
-	if slot0:getConfig("id") == 0 then
-		return slot0:getConfig("id") .. "_self"
+function var_0_0.getPrefabName(arg_4_0)
+	if arg_4_0:getConfig("id") == 0 then
+		return arg_4_0:getConfig("id") .. "_self"
 	else
-		return slot0:getConfig("id") .. "_self"
+		return arg_4_0:getConfig("id") .. "_self"
 	end
 end
 
-slot0.getDropType = function(slot0)
+function var_0_0.getDropType(arg_5_0)
 	return DROP_TYPE_CHAT_FRAME
 end
 
-slot0.getIcon = function(slot0)
-	return uv0.GetIcon(slot0:getPrefabName())
+function var_0_0.getIcon(arg_6_0)
+	return var_0_0.GetIcon(arg_6_0:getPrefabName())
 end
 
-return slot0
+return var_0_0

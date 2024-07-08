@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.item_data_frame = {
 	[0] = {
 		time_limit_type = 0,
@@ -70,15 +70,6 @@ pg.item_data_frame = {
 		id = 108,
 		time_second = 0,
 		desc = "<color=#ffffff>献给所有六年间持续奋斗在港区的指挥官们</color>\n通过参与六周年限定活动获取",
-		scene = {}
-	},
-	[109] = {
-		time_limit_type = 0,
-		name = "七周年纪念",
-		gain_by = "",
-		id = 109,
-		time_second = 0,
-		desc = "<color=#ffffff>献给所有七年间持续奋斗在港区的指挥官们</color>\n通过参与七周年限定活动获取",
 		scene = {}
 	},
 	[201] = {
@@ -450,15 +441,6 @@ pg.item_data_frame = {
 		desc = "<color=#ffffff>「跨越冰山，穿越雪原，定义自我，见证未来。」</color>\n「雪境迷踪」活动获取",
 		scene = {}
 	},
-	[330] = {
-		time_limit_type = 0,
-		name = "幻梦守护者 ",
-		gain_by = "绽放于辉光之城 ",
-		id = 330,
-		time_second = 0,
-		desc = "<color=#ffffff>「纵使身处幻梦之中，我将依然选择守护。」</color>\n「绽放于辉光之城」活动获取",
-		scene = {}
-	},
 	[401] = {
 		time_limit_type = 0,
 		name = "殿堂纪念：企业",
@@ -594,15 +576,6 @@ pg.item_data_frame = {
 		desc = "<color=#ffffff>以极速越过终点，取得比赛胜利的证明</color>\n通过参与「疾速赛道」活动获取",
 		scene = {}
 	},
-	[606] = {
-		time_limit_type = 0,
-		name = "假日与心跳之证",
-		gain_by = "",
-		id = 606,
-		time_second = 0,
-		desc = "<color=#ffffff>扬帆起航！豪华邮轮与心跳之旅！</color>通过参与七周年限定活动获取",
-		scene = {}
-	},
 	[10001] = {
 		time_limit_type = 0,
 		name = "限界的挑战者·双子座",
@@ -693,24 +666,6 @@ pg.item_data_frame = {
 		desc = "<color=#ffffff>结晶之中闪烁着双鱼座的光芒，献给勇于挑战极限的指挥官！</color>\n通过参与「限界挑战」获取 （24.03.01-24.03.31）",
 		scene = {}
 	},
-	[10011] = {
-		time_limit_type = 0,
-		name = "限界的挑战者·白羊座",
-		gain_by = "",
-		id = 10011,
-		time_second = 0,
-		desc = "<color=#ffffff>结晶之中闪烁着白羊座的光芒，献给勇于挑战极限的指挥官！</color>\n通过参与「限界挑战」获取 （24.04.01-24.04.30）",
-		scene = {}
-	},
-	[10012] = {
-		time_limit_type = 0,
-		name = "限界的挑战者·金牛座",
-		gain_by = "",
-		id = 10012,
-		time_second = 0,
-		desc = "<color=#ffffff>结晶之中闪烁着金牛座的光芒，献给勇于挑战极限的指挥官！</color>\n通过参与「限界挑战」获取 （24.05.01-24.05.31）",
-		scene = {}
-	},
 	all = {
 		0,
 		101,
@@ -720,7 +675,6 @@ pg.item_data_frame = {
 		105,
 		107,
 		108,
-		109,
 		201,
 		202,
 		203,
@@ -762,7 +716,6 @@ pg.item_data_frame = {
 		327,
 		328,
 		329,
-		330,
 		401,
 		402,
 		404,
@@ -778,7 +731,6 @@ pg.item_data_frame = {
 		603,
 		604,
 		605,
-		606,
 		10001,
 		10002,
 		10003,
@@ -788,8 +740,6 @@ pg.item_data_frame = {
 		10007,
 		10008,
 		10009,
-		10010,
-		10011,
-		10012
+		10010
 	}
 }

@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.expedition_daily_template = {
 	[101] = {
 		tips = "该副本暂未开放，敬请期待",
@@ -322,9 +322,9 @@ pg.expedition_daily_template = {
 		limit_period = {
 			{
 				{
-					2024,
-					3,
-					21
+					2023,
+					12,
+					14
 				},
 				{
 					0,
@@ -334,9 +334,9 @@ pg.expedition_daily_template = {
 			},
 			{
 				{
-					2024,
-					3,
-					27
+					2023,
+					12,
+					20
 				},
 				{
 					23,

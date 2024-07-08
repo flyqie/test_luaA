@@ -1,23 +1,23 @@
-slot0 = class("VedioStep", import(".StoryStep"))
+﻿local var_0_0 = class("VedioStep", import(".StoryStep"))
 
-slot0.Ctor = function(slot0, slot1)
-	uv0.super.Ctor(slot0, slot1)
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	var_0_0.super.Ctor(arg_1_0, arg_1_1)
 
-	slot0.cpkPath = slot1.cpkPath
-	slot0.skippable = defaultValue(slot1.skippable, true)
-	slot0.blackFg = 1
+	arg_1_0.cpkPath = arg_1_1.cpkPath
+	arg_1_0.skippable = defaultValue(arg_1_1.skippable, true)
+	arg_1_0.blackFg = 1
 end
 
-slot0.GetMode = function(slot0)
+function var_0_0.GetMode(arg_2_0)
 	return Story.MODE_VEDIO
 end
 
-slot0.GetVedioPath = function(slot0)
-	return slot0.cpkPath
+function var_0_0.GetVedioPath(arg_3_0)
+	return arg_3_0.cpkPath
 end
 
-slot0.GetSkipFlag = function(slot0)
-	return slot0.skippable
+function var_0_0.GetSkipFlag(arg_4_0)
+	return arg_4_0.skippable
 end
 
-return slot0
+return var_0_0

@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.activity_const = {
 	TASK_ACTIVITY_ID = {
 		act_id = 16
@@ -22,7 +22,7 @@ pg.activity_const = {
 		act_id = 171
 	},
 	ACT_NPC_SHIP_ID = {
-		act_id = 5320
+		act_id = 4885
 	},
 	SANLI_7DAYS_LOGIN = {
 		act_id = 274
@@ -31,7 +31,7 @@ pg.activity_const = {
 		act_id = 270
 	},
 	ACTIVITY_PRAY_POOL = {
-		act_id = 5339
+		act_id = 5010
 	},
 	DAY7_LOGIN_ACTIVITY_ID = {
 		act_id = 3
@@ -1013,50 +1013,5 @@ pg.activity_const = {
 	},
 	ACTIVITY_HUAZHONGSHIJIE = {
 		act_id = 4667
-	},
-	OTHER_WORLD_TASK_ID = {
-		act_id = 5261
-	},
-	OTHER_WORLD_TERMINAL_EVENT_ID = {
-		act_id = 5265
-	},
-	OTHER_WORLD_TERMINAL_LOTTERY_ID = {
-		act_id = 5264
-	},
-	OTHER_WORLD_TERMINAL_TASK_ID = {
-		act_id = 5269
-	},
-	OTHER_WORLD_TERMINAL_PT_ID = {
-		act_id = 5270
-	},
-	OTHER_WORLD_TERMINAL_BATTLE_ID = {
-		act_id = 5260
-	},
-	MUSIC_FESTIVAL_ID_3 = {
-		act_id = 5310
-	},
-	MUSIC_FESTIVAL_MEDALCOLLECTION_3 = {
-		act_id = 5309
-	},
-	MUSIC_FESTIVAL_PT_ID_3 = {
-		act_id = 5308
-	},
-	LINER_SIGN_ID = {
-		act_id = 5324
-	},
-	SEVEN_INVITE_ID = {
-		act_id = 5350
-	},
-	LINER_NAMED_ID = {
-		act_id = 5322
-	},
-	LINER_ID = {
-		act_id = 5335
-	},
-	PIPE_GAME_ACT_ID = {
-		act_id = 5355
-	},
-	UR_EXCHANGE_MOGADOR_ID = {
-		act_id = 5351
 	}
 }

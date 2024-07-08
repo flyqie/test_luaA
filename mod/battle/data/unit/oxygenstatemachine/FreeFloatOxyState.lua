@@ -1,51 +1,56 @@
-ys = ys or {}
-slot0 = ys
-slot1 = slot0.Battle.BattleConst
-slot2 = slot0.Battle.BattleAttr
-slot0.Battle.FreeFloatOxyState = class("FreeFloatOxyState", slot0.Battle.IOxyState)
-slot0.Battle.FreeFloatOxyState.__name = "FreeFloatOxyState"
-slot3 = slot0.Battle.FreeFloatOxyState
+﻿ys = ys or {}
 
-slot3.Ctor = function(slot0)
-	uv0.super.Ctor(slot0)
+local var_0_0 = ys
+local var_0_1 = var_0_0.Battle.BattleConst
+local var_0_2 = var_0_0.Battle.BattleAttr
+
+var_0_0.Battle.FreeFloatOxyState = class("FreeFloatOxyState", var_0_0.Battle.IOxyState)
+var_0_0.Battle.FreeFloatOxyState.__name = "FreeFloatOxyState"
+
+local var_0_3 = var_0_0.Battle.FreeFloatOxyState
+
+function var_0_3.Ctor(arg_1_0)
+	var_0_3.super.Ctor(arg_1_0)
 end
 
-slot3.GetWeaponUseableList = function(slot0)
+function var_0_3.GetWeaponUseableList(arg_2_0)
 	return {
-		uv0.OXY_STATE.DIVE,
-		uv0.OXY_STATE.FLOAT
+		var_0_1.OXY_STATE.DIVE,
+		var_0_1.OXY_STATE.FLOAT
 	}
 end
 
-slot3.UpdateCldData = function(slot0, slot1, slot2)
-	slot4 = slot0:GetDiveState()
-	slot1:GetCldData().Surface = slot4
+function var_0_3.UpdateCldData(arg_3_0, arg_3_1, arg_3_2)
+	local var_3_0 = arg_3_2:GetDiveState()
+	local var_3_1 = arg_3_0:GetDiveState()
 
-	if slot2:GetDiveState() ~= slot4 then
-		uv0.UnitCldEnable(slot1)
+	arg_3_1:GetCldData().Surface = var_3_1
+
+	if var_3_0 ~= var_3_1 then
+		var_0_2.UnitCldEnable(arg_3_1)
 	end
 end
 
-slot3.GetDiveState = function(slot0)
-	return uv0.OXY_STATE.FLOAT
+function var_0_3.GetDiveState(arg_4_0)
+	return var_0_1.OXY_STATE.FLOAT
 end
 
-slot3.GetBubbleFlag = function(slot0)
+function var_0_3.GetBubbleFlag(arg_5_0)
 	return false
 end
 
-slot3.DoUpdateOxy = function(slot0, slot1)
-	slot1:OxyRecover(uv0.Battle.OxyState.STATE_FREE_FLOAT)
+function var_0_3.DoUpdateOxy(arg_6_0, arg_6_1)
+	arg_6_1:OxyRecover(var_0_0.Battle.OxyState.STATE_FREE_FLOAT)
 end
 
-slot3.IsVisible = function(slot0)
+function var_0_3.IsVisible(arg_7_0)
 	return true
 end
 
-slot3.GetBarVisible = function(slot0)
+function var_0_3.GetBarVisible(arg_8_0)
 	return true
 end
 
-slot3.RunMode = function(slot0)
+function var_0_3.RunMode(arg_9_0)
 	return true
 end

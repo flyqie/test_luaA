@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.benefit_buff_template = setmetatable({
 	__name = "benefit_buff_template",
 	all = {
@@ -603,7 +603,7 @@ pg.base.benefit_buff_template = {
 		benefit_type = "battle_buff",
 		benefit_condition = {
 			"activity",
-			5308,
+			753,
 			0
 		}
 	},
@@ -620,7 +620,7 @@ pg.base.benefit_buff_template = {
 		benefit_type = "battle_buff",
 		benefit_condition = {
 			"activity",
-			5308,
+			753,
 			0
 		}
 	},
@@ -637,7 +637,7 @@ pg.base.benefit_buff_template = {
 		benefit_type = "battle_buff",
 		benefit_condition = {
 			"activity",
-			5308,
+			753,
 			0
 		}
 	},
@@ -654,7 +654,7 @@ pg.base.benefit_buff_template = {
 		benefit_type = "battle_buff",
 		benefit_condition = {
 			"activity",
-			5308,
+			753,
 			0
 		}
 	},
@@ -671,7 +671,7 @@ pg.base.benefit_buff_template = {
 		benefit_type = "battle_buff",
 		benefit_condition = {
 			"activity",
-			5308,
+			753,
 			0
 		}
 	},
@@ -688,7 +688,7 @@ pg.base.benefit_buff_template = {
 		benefit_type = "battle_buff",
 		benefit_condition = {
 			"activity",
-			5308,
+			753,
 			0
 		}
 	},
@@ -705,7 +705,7 @@ pg.base.benefit_buff_template = {
 		benefit_type = "ship_battle_exp",
 		benefit_condition = {
 			"activity",
-			5308,
+			753,
 			0
 		}
 	},
@@ -722,7 +722,7 @@ pg.base.benefit_buff_template = {
 		benefit_type = "ship_battle_exp",
 		benefit_condition = {
 			"activity",
-			5308,
+			753,
 			0
 		}
 	},
@@ -739,7 +739,7 @@ pg.base.benefit_buff_template = {
 		benefit_type = "ship_battle_exp",
 		benefit_condition = {
 			"activity",
-			5308,
+			753,
 			0
 		}
 	},
@@ -2837,7 +2837,7 @@ pg.base.benefit_buff_template = {
 			"pt",
 			286,
 			5000,
-			1000000000000.0
+			1000000000000
 		}
 	},
 	[300086] = {
@@ -2927,7 +2927,7 @@ pg.base.benefit_buff_template = {
 			"pt",
 			286,
 			5000,
-			1000000000000.0
+			1000000000000
 		}
 	},
 	[300091] = {
@@ -3017,7 +3017,7 @@ pg.base.benefit_buff_template = {
 			"pt",
 			286,
 			5000,
-			1000000000000.0
+			1000000000000
 		}
 	},
 	[300096] = {
@@ -3107,7 +3107,7 @@ pg.base.benefit_buff_template = {
 			"pt",
 			286,
 			5000,
-			1000000000000.0
+			1000000000000
 		}
 	},
 	[300101] = {

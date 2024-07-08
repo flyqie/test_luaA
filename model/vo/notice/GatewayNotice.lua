@@ -1,7 +1,7 @@
-slot0 = class("GatewayNotice", import(".Notice"))
+﻿local var_0_0 = class("GatewayNotice", import(".Notice"))
 
-slot0.prefKey = function(slot0)
-	return "GatewayNotice" .. slot0.id
+function var_0_0.prefKey(arg_1_0)
+	return "GatewayNotice" .. arg_1_0.id
 end
 
-return slot0
+return var_0_0

@@ -1,7 +1,7 @@
-slot0 = class("JapaneseNewyearPage", import(".TemplatePage.PreviewTemplatePage"))
+﻿local var_0_0 = class("JapaneseNewyearPage", import(".TemplatePage.PreviewTemplatePage"))
 
-slot0.OnFirstFlush = function(slot0)
-	slot0:initBtn()
+function var_0_0.OnFirstFlush(arg_1_0)
+	arg_1_0:initBtn()
 end
 
-return slot0
+return var_0_0

@@ -1,152 +1,182 @@
-slot0 = class("NewBattleResultBackSceneHandler", pm.Mediator)
+﻿local var_0_0 = class("NewBattleResultBackSceneHandler", pm.Mediator)
 
-slot0.Ctor = function(slot0, slot1)
-	uv0.super.Ctor(slot0)
-	pg.m02:registerMediator(slot0)
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	var_0_0.super.Ctor(arg_1_0)
+	pg.m02:registerMediator(arg_1_0)
 
-	slot0.contextData = slot1
+	arg_1_0.contextData = arg_1_1
 end
 
-slot0.Execute = function(slot0)
-	if slot0.contextData.system == SYSTEM_DUEL then
-		slot0:ExitDuelSystem(slot1)
-	elseif slot2 == SYSTEM_ACT_BOSS then
-		slot0:ExitActBossSystem(slot1)
-	elseif slot2 == SYSTEM_ROUTINE or slot2 == SYSTEM_SUB_ROUTINE then
-		slot0:ExitRoutineSystem(slot1)
-	elseif slot2 == SYSTEM_SCENARIO then
-		slot0:ExitScenarioSystem(slot1)
-	elseif slot2 == SYSTEM_CHALLENGE then
-		slot0:ExitChallengeSystem(slot1)
-	elseif slot2 == SYSTEM_HP_SHARE_ACT_BOSS or slot2 == SYSTEM_BOSS_EXPERIMENT or slot2 == SYSTEM_ACT_BOSS_SP then
-		slot0:ExitShareBossSystem(slot1)
-	elseif slot2 == SYSTEM_WORLD_BOSS then
-		slot0:ExitWorldBossSystem(slot1)
-	elseif slot2 == SYSTEM_WORLD then
-		slot0:ExitWorldSystem(slot1)
-	elseif slot2 == SYSTEM_BOSS_RUSH or slot2 == SYSTEM_BOSS_RUSH_EX then
-		if slot0:CheckBossRushSystem(slot1) then
-			slot0:ResultRushBossSystem(slot1)
+function var_0_0.Execute(arg_2_0)
+	local var_2_0 = arg_2_0.contextData
+	local var_2_1 = var_2_0.system
+
+	if var_2_1 == SYSTEM_DUEL then
+		arg_2_0:ExitDuelSystem(var_2_0)
+	elseif var_2_1 == SYSTEM_ACT_BOSS then
+		arg_2_0:ExitActBossSystem(var_2_0)
+	elseif var_2_1 == SYSTEM_ROUTINE or var_2_1 == SYSTEM_SUB_ROUTINE then
+		arg_2_0:ExitRoutineSystem(var_2_0)
+	elseif var_2_1 == SYSTEM_SCENARIO then
+		arg_2_0:ExitScenarioSystem(var_2_0)
+	elseif var_2_1 == SYSTEM_CHALLENGE then
+		arg_2_0:ExitChallengeSystem(var_2_0)
+	elseif var_2_1 == SYSTEM_HP_SHARE_ACT_BOSS or var_2_1 == SYSTEM_BOSS_EXPERIMENT or var_2_1 == SYSTEM_ACT_BOSS_SP then
+		arg_2_0:ExitShareBossSystem(var_2_0)
+	elseif var_2_1 == SYSTEM_WORLD_BOSS then
+		arg_2_0:ExitWorldBossSystem(var_2_0)
+	elseif var_2_1 == SYSTEM_WORLD then
+		arg_2_0:ExitWorldSystem(var_2_0)
+	elseif var_2_1 == SYSTEM_BOSS_RUSH or var_2_1 == SYSTEM_BOSS_RUSH_EX then
+		if arg_2_0:CheckBossRushSystem(var_2_0) then
+			arg_2_0:ResultRushBossSystem(var_2_0)
 		end
-	elseif slot2 == SYSTEM_LIMIT_CHALLENGE then
-		slot0:ExitLimitChallengeSystem(slot1)
-	elseif slot2 == SYSTEM_BOSS_SINGLE then
-		slot0:ExitBossSingleSystem(slot1)
+	elseif var_2_1 == SYSTEM_LIMIT_CHALLENGE then
+		arg_2_0:ExitLimitChallengeSystem(var_2_0)
 	else
-		slot0:ExitCommonSystem(slot1)
+		arg_2_0:ExitCommonSystem(var_2_0)
 	end
 
 	getProxy(MetaCharacterProxy):clearLastMetaSkillExpInfoList()
 end
 
-slot0.ExitDuelSystem = function(slot0, slot1)
-	if getProxy(ContextProxy):getContextByMediator(MilitaryExerciseMediator) then
-		slot3:removeChild(slot3:getContextByMediator(ExercisePreCombatMediator))
+function var_0_0.ExitDuelSystem(arg_3_0, arg_3_1)
+	local var_3_0 = getProxy(ContextProxy):getContextByMediator(MilitaryExerciseMediator)
+
+	if var_3_0 then
+		local var_3_1 = var_3_0:getContextByMediator(ExercisePreCombatMediator)
+
+		var_3_0:removeChild(var_3_1)
 	end
 
 	pg.m02:sendNotification(GAME.GO_BACK)
 end
 
-slot0.ExitActBossSystem = function(slot0, slot1)
-	slot3, slot4 = getProxy(ContextProxy):getContextByMediator(ActivityBossPreCombatMediator)
+function var_0_0.ExitActBossSystem(arg_4_0, arg_4_1)
+	local var_4_0, var_4_1 = getProxy(ContextProxy):getContextByMediator(ActivityBossPreCombatMediator)
 
-	if slot3 then
-		slot4:removeChild(slot3)
+	if var_4_0 then
+		var_4_1:removeChild(var_4_0)
 	end
 
 	if getProxy(ContextProxy):getCurrentContext():getContextByMediator(ContinuousOperationMediator) then
-		slot0:CheckActBossSystem(slot1)
+		arg_4_0:CheckActBossSystem(arg_4_1)
 	else
 		pg.m02:sendNotification(GAME.GO_BACK)
 	end
 end
 
-slot0.ExitRoutineSystem = function(slot0, slot1)
-	if getProxy(ContextProxy):getContextByMediator(DailyLevelMediator) then
-		slot3:removeChild(slot3:getContextByMediator(PreCombatMediator))
+function var_0_0.ExitRoutineSystem(arg_5_0, arg_5_1)
+	local var_5_0 = getProxy(ContextProxy):getContextByMediator(DailyLevelMediator)
+
+	if var_5_0 then
+		local var_5_1 = var_5_0:getContextByMediator(PreCombatMediator)
+
+		var_5_0:removeChild(var_5_1)
 	end
 
 	pg.m02:sendNotification(GAME.GO_BACK)
 end
 
-slot0.ExitScenarioSystem = function(slot0, slot1)
-	if slot1.needHelpMessage then
+function var_0_0.ExitScenarioSystem(arg_6_0, arg_6_1)
+	if arg_6_1.needHelpMessage then
 		getProxy(ChapterProxy):StopAutoFight(ChapterConst.AUTOFIGHT_STOP_REASON.BATTLE_FAILED)
 	end
 
-	if getProxy(ContextProxy):getContextByMediator(LevelMediator2) and slot3:getContextByMediator(ChapterPreCombatMediator) then
-		slot3:removeChild(slot4)
+	local var_6_0 = getProxy(ContextProxy):getContextByMediator(LevelMediator2)
+
+	if var_6_0 then
+		local var_6_1 = var_6_0:getContextByMediator(ChapterPreCombatMediator)
+
+		if var_6_1 then
+			var_6_0:removeChild(var_6_1)
+		end
 	end
 
-	if ys.Battle.BattleConst.BattleScore.C < slot1.score then
-		slot0:ShowExtraChapterActSocre(slot1)
+	if arg_6_1.score > ys.Battle.BattleConst.BattleScore.C then
+		arg_6_0:ShowExtraChapterActSocre(arg_6_1)
 	end
 
 	getProxy(ChapterProxy):WriteBackOnExitBattleResult()
 	pg.m02:sendNotification(GAME.GO_BACK)
 end
 
-slot0.ExitChallengeSystem = function(slot0, slot1)
-	getProxy(ChallengeProxy):WriteBackOnExitBattleResult(slot0.contextData.score, slot0.contextData.mode)
+function var_0_0.ExitChallengeSystem(arg_7_0, arg_7_1)
+	getProxy(ChallengeProxy):WriteBackOnExitBattleResult(arg_7_0.contextData.score, arg_7_0.contextData.mode)
 
-	if not slot1.goToNext then
-		slot1.goToNext = nil
+	if not arg_7_1.goToNext then
+		arg_7_1.goToNext = nil
 
-		if getProxy(ContextProxy):getContextByMediator(ChallengeMainMediator) then
-			slot3:removeChild(slot3:getContextByMediator(ChallengePreCombatMediator))
+		local var_7_0 = getProxy(ContextProxy):getContextByMediator(ChallengeMainMediator)
+
+		if var_7_0 then
+			local var_7_1 = var_7_0:getContextByMediator(ChallengePreCombatMediator)
+
+			var_7_0:removeChild(var_7_1)
 		end
 	end
 
 	pg.m02:sendNotification(GAME.GO_BACK)
 end
 
-slot0.ExitShareBossSystem = function(slot0, slot1)
-	slot3, slot4 = getProxy(ContextProxy):getContextByMediator(ActivityBossPreCombatMediator)
+function var_0_0.ExitShareBossSystem(arg_8_0, arg_8_1)
+	local var_8_0, var_8_1 = getProxy(ContextProxy):getContextByMediator(ActivityBossPreCombatMediator)
 
-	if slot3 then
-		slot4:removeChild(slot3)
+	if var_8_0 then
+		var_8_1:removeChild(var_8_0)
 	end
 
 	pg.m02:sendNotification(GAME.GO_BACK)
 end
 
-slot0.ExitWorldBossSystem = function(slot0, slot1)
-	if getProxy(ContextProxy):getContextByMediator(WorldBossMediator):getContextByMediator(WorldBossFormationMediator) then
-		slot3:removeChild(slot4)
+function var_0_0.ExitWorldBossSystem(arg_9_0, arg_9_1)
+	local var_9_0 = getProxy(ContextProxy):getContextByMediator(WorldBossMediator)
+	local var_9_1 = var_9_0:getContextByMediator(WorldBossFormationMediator)
+
+	if var_9_1 then
+		var_9_0:removeChild(var_9_1)
 	end
 
 	pg.m02:sendNotification(GAME.WORLD_BOSS_BATTLE_QUIT, {
-		id = slot1.bossId
+		id = arg_9_1.bossId
 	})
 	pg.m02:sendNotification(GAME.GO_BACK)
 end
 
-slot0.ExitWorldSystem = function(slot0, slot1)
-	if getProxy(ContextProxy):getContextByMediator(WorldMediator):getContextByMediator(WorldPreCombatMediator) or slot3:getContextByMediator(WorldBossInformationMediator) then
-		slot3:removeChild(slot4)
+function var_0_0.ExitWorldSystem(arg_10_0, arg_10_1)
+	local var_10_0 = getProxy(ContextProxy):getContextByMediator(WorldMediator)
+	local var_10_1 = var_10_0:getContextByMediator(WorldPreCombatMediator) or var_10_0:getContextByMediator(WorldBossInformationMediator)
+
+	if var_10_1 then
+		var_10_0:removeChild(var_10_1)
 	end
 
 	pg.m02:sendNotification(GAME.GO_BACK)
 end
 
-slot0.ResultRushBossSystem = function(slot0, slot1)
-	if getProxy(ContextProxy):GetPrevContext(1):getContextByMediator(BossRushPreCombatMediator) then
-		slot3:removeChild(slot4)
+function var_0_0.ResultRushBossSystem(arg_11_0, arg_11_1)
+	local var_11_0 = getProxy(ContextProxy):GetPrevContext(1)
+	local var_11_1 = var_11_0:getContextByMediator(BossRushPreCombatMediator)
+
+	if var_11_1 then
+		var_11_0:removeChild(var_11_1)
 	end
 
-	if slot3:getContextByMediator(BossRushFleetSelectMediator) then
-		slot3:removeChild(slot5)
+	local var_11_2 = var_11_0:getContextByMediator(BossRushFleetSelectMediator)
+
+	if var_11_2 then
+		var_11_0:removeChild(var_11_2)
 	end
 
-	if not (ys.Battle.BattleConst.BattleScore.C < slot1.score) and slot1.system == SYSTEM_BOSS_RUSH_EX then
-		slot0:addSubLayers(Context.New({
+	if not (arg_11_1.score > ys.Battle.BattleConst.BattleScore.C) and arg_11_1.system == SYSTEM_BOSS_RUSH_EX then
+		arg_11_0:addSubLayers(Context.New({
 			mediator = BattleFailTipMediator,
 			viewComponent = BattleFailTipLayer,
 			data = {
-				mainShips = slot1.newMainShips,
-				battleSystem = slot1.system
+				mainShips = arg_11_1.newMainShips,
+				battleSystem = arg_11_1.system
 			},
-			onRemoved = function ()
+			onRemoved = function()
 				pg.m02:sendNotification(GAME.GO_BACK)
 			end
 		}))
@@ -155,203 +185,223 @@ slot0.ResultRushBossSystem = function(slot0, slot1)
 	end
 
 	pg.m02:sendNotification(GAME.BOSSRUSH_SETTLE, {
-		actId = slot1.actId
+		actId = arg_11_1.actId
 	})
 end
 
-slot0.ExitRushBossSystem = function(slot0, slot1, slot2)
-	slot3 = slot1.system
+function var_0_0.ExitRushBossSystem(arg_13_0, arg_13_1, arg_13_2)
+	local var_13_0 = arg_13_1.system
+	local var_13_1 = arg_13_1.actId
+	local var_13_2 = arg_13_2.seriesData
+	local var_13_3 = arg_13_1.score > ys.Battle.BattleConst.BattleScore.C
+	local var_13_4 = var_13_0 == SYSTEM_BOSS_RUSH and BossRushBattleResultMediator or BossRushBattleResultMediator
+	local var_13_5 = var_13_0 == SYSTEM_BOSS_RUSH and BossRushBattleResultLayer or BossRushEXBattleResultLayer
 
-	slot0:addSubLayers(Context.New({
-		mediator = slot3 == SYSTEM_BOSS_RUSH and BossRushBattleResultMediator or BossRushBattleResultMediator,
-		viewComponent = slot3 == SYSTEM_BOSS_RUSH and BossRushBattleResultLayer or BossRushEXBattleResultLayer,
+	arg_13_0:addSubLayers(Context.New({
+		mediator = var_13_4,
+		viewComponent = var_13_5,
 		data = {
-			awards = slot2.awards,
-			system = slot3,
-			actId = slot1.actId,
-			seriesData = slot2.seriesData,
-			win = ys.Battle.BattleConst.BattleScore.C < slot1.score
+			awards = arg_13_2.awards,
+			system = var_13_0,
+			actId = var_13_1,
+			seriesData = var_13_2,
+			win = var_13_3
 		}
 	}), true)
 	LoadContextCommand.RemoveLayerByMediator(NewBattleResultMediator)
 end
 
-slot0.ExitLimitChallengeSystem = function(slot0, slot1)
-	if getProxy(ContextProxy):getContextByMediator(LimitChallengeMediator) and slot3:getContextByMediator(LimitChallengePreCombatMediator) then
-		slot3:removeChild(slot4)
-	end
+function var_0_0.ExitLimitChallengeSystem(arg_14_0, arg_14_1)
+	local var_14_0 = getProxy(ContextProxy):getContextByMediator(LimitChallengeMediator)
 
-	pg.m02:sendNotification(GAME.GO_BACK)
-end
+	if var_14_0 then
+		local var_14_1 = var_14_0:getContextByMediator(LimitChallengePreCombatMediator)
 
-slot0.ExitBossSingleSystem = function(slot0, slot1)
-	slot3, slot4 = getProxy(ContextProxy):getContextByMediator(BossSinglePreCombatMediator)
-
-	if slot3 then
-		slot4:removeChild(slot3)
-	end
-
-	if getProxy(ContextProxy):getCurrentContext():getContextByMediator(BossSingleContinuousOperationMediator) then
-		slot0:CheckBossSingleSystem(slot1)
-	else
-		pg.m02:sendNotification(GAME.GO_BACK)
-	end
-end
-
-slot0.ExitCommonSystem = function(slot0, slot1)
-	if getProxy(ContextProxy):getContextByMediator(LevelMediator2) and slot3:getContextByMediator(PreCombatMediator) then
-		slot3:removeChild(slot4)
-	end
-
-	pg.m02:sendNotification(GAME.GO_BACK)
-end
-
-slot1 = function()
-	slot2 = {}
-
-	for slot6, slot7 in ipairs(getProxy(ActivityProxy):getActivitiesByType(ActivityConst.ACTIVITY_TYPE_EXTRA_CHAPTER_RANK)) do
-		if slot7 and not slot7:isEnd() then
-			table.insert(slot2, slot7)
+		if var_14_1 then
+			var_14_0:removeChild(var_14_1)
 		end
 	end
 
-	return slot2
+	pg.m02:sendNotification(GAME.GO_BACK)
 end
 
-slot0.ShowExtraChapterActSocre = function(slot0, slot1)
-	slot4 = getProxy(ChapterProxy):getActiveChapter() and slot2:getMapById(slot3:getConfig("map"))
+function var_0_0.ExitCommonSystem(arg_15_0, arg_15_1)
+	local var_15_0 = getProxy(ContextProxy):getContextByMediator(LevelMediator2)
 
-	for slot9, slot10 in ipairs(uv0()) do
-		if slot10:getConfig("config_data")[1] == slot1.stageId and slot4 and slot4:isActExtra() then
-			slot15, slot16 = ActivityLevelConst.getExtraChapterSocre(slot12, math.floor(slot1.statistics._totalTime), ActivityLevelConst.getShipsPower(slot1.prefabFleet or slot1.oldMainShips), slot10)
-			slot17 = slot16 < slot15 and i18n("extra_chapter_record_updated") or i18n("extra_chapter_record_not_updated")
+	if var_15_0 then
+		local var_15_1 = var_15_0:getContextByMediator(PreCombatMediator)
 
-			if slot16 < slot15 then
-				slot10.data1 = slot15
+		if var_15_1 then
+			var_15_0:removeChild(var_15_1)
+		end
+	end
 
-				getProxy(ActivityProxy):updateActivity(slot10)
+	pg.m02:sendNotification(GAME.GO_BACK)
+end
 
-				slot16 = slot15
+local function var_0_1()
+	local var_16_0 = getProxy(ActivityProxy):getActivitiesByType(ActivityConst.ACTIVITY_TYPE_EXTRA_CHAPTER_RANK)
+	local var_16_1 = {}
+
+	for iter_16_0, iter_16_1 in ipairs(var_16_0) do
+		if iter_16_1 and not iter_16_1:isEnd() then
+			table.insert(var_16_1, iter_16_1)
+		end
+	end
+
+	return var_16_1
+end
+
+function var_0_0.ShowExtraChapterActSocre(arg_17_0, arg_17_1)
+	local var_17_0 = getProxy(ChapterProxy)
+	local var_17_1 = var_17_0:getActiveChapter()
+	local var_17_2 = var_17_1 and var_17_0:getMapById(var_17_1:getConfig("map"))
+	local var_17_3 = var_0_1()
+
+	for iter_17_0, iter_17_1 in ipairs(var_17_3) do
+		local var_17_4 = iter_17_1:getConfig("config_data")
+		local var_17_5 = arg_17_1.stageId
+
+		if var_17_4[1] == var_17_5 and var_17_2 and var_17_2:isActExtra() then
+			local var_17_6 = math.floor(arg_17_1.statistics._totalTime)
+			local var_17_7 = ActivityLevelConst.getShipsPower(arg_17_1.prefabFleet or arg_17_1.oldMainShips)
+			local var_17_8, var_17_9 = ActivityLevelConst.getExtraChapterSocre(var_17_5, var_17_6, var_17_7, iter_17_1)
+			local var_17_10 = var_17_9 < var_17_8 and i18n("extra_chapter_record_updated") or i18n("extra_chapter_record_not_updated")
+
+			if var_17_9 < var_17_8 then
+				iter_17_1.data1 = var_17_8
+
+				getProxy(ActivityProxy):updateActivity(iter_17_1)
+
+				var_17_9 = var_17_8
 			end
 
 			pg.MsgboxMgr.GetInstance():ShowMsgBox({
 				hideNo = true,
-				content = i18n("extra_chapter_socre_tip", slot15, slot16, slot17),
+				content = i18n("extra_chapter_socre_tip", var_17_8, var_17_9, var_17_10),
 				weight = LayerWeightConst.SECOND_LAYER
 			})
 		end
 	end
 end
 
-slot2 = function(slot0)
-	slot1 = getProxy(ActivityProxy):getActivityById(slot0.actId)
-	slot8 = pg.activity_event_worldboss[slot1:getConfig("config_id")].use_oil_limit[slot0.mainFleetId]
+local function var_0_2(arg_18_0)
+	local var_18_0 = getProxy(ActivityProxy):getActivityById(arg_18_0.actId)
+	local var_18_1 = var_18_0:getConfig("config_id")
+	local var_18_2 = pg.activity_event_worldboss[var_18_1]
+	local var_18_3 = var_18_0:IsOilLimit(arg_18_0.stageId)
+	local var_18_4 = getProxy(FleetProxy):getActivityFleets()[arg_18_0.actId]
+	local var_18_5 = 0
+	local var_18_6 = var_18_2.use_oil_limit[arg_18_0.mainFleetId]
 
-	(function (slot0, slot1)
-		slot2 = slot0:GetCostSum().oil
+	local function var_18_7(arg_19_0, arg_19_1)
+		local var_19_0 = arg_19_0:GetCostSum().oil
 
-		if slot1 > 0 then
-			slot2 = math.min(slot2, slot1)
+		if arg_19_1 > 0 then
+			var_19_0 = math.min(var_19_0, arg_19_1)
 		end
 
-		uv0 = uv0 + slot2
-	end)(getProxy(FleetProxy):getActivityFleets()[slot0.actId][slot0.mainFleetId], slot1:IsOilLimit(slot0.stageId) and slot8[1] or 0)
-	slot9(slot6[slot0.mainFleetId + 10], slot4 and slot8[2] or 0)
+		var_18_5 = var_18_5 + var_19_0
+	end
 
-	return 0
+	var_18_7(var_18_4[arg_18_0.mainFleetId], var_18_3 and var_18_6[1] or 0)
+	var_18_7(var_18_4[arg_18_0.mainFleetId + 10], var_18_3 and var_18_6[2] or 0)
+
+	return var_18_5
 end
 
-slot3 = function(slot0, slot1)
+local function var_0_3(arg_20_0, arg_20_1)
+	local var_20_0 = getProxy(ContextProxy):getCurrentContext():getContextByMediator(ContinuousOperationMediator)
+	local var_20_1 = var_20_0 and var_20_0.data.autoFlag or nil
+	local var_20_2 = getProxy(ChapterProxy):PopActBossRewards()
+
 	LoadContextCommand.LoadLayerOnTopContext(Context.New({
 		mediator = ActivityBossTotalRewardPanelMediator,
 		viewComponent = ActivityBossTotalRewardPanel,
 		data = {
-			onClose = function ()
+			onClose = function()
 				pg.m02:sendNotification(GAME.GO_BACK)
 			end,
-			stopReason = slot1,
-			rewards = getProxy(ChapterProxy):PopActBossRewards(),
-			isAutoFight = getProxy(ContextProxy):getCurrentContext():getContextByMediator(ContinuousOperationMediator) and slot2.data.autoFlag or nil,
-			continuousBattleTimes = slot0.continuousBattleTimes,
-			totalBattleTimes = slot0.totalBattleTimes
+			stopReason = arg_20_1,
+			rewards = var_20_2,
+			isAutoFight = var_20_1,
+			continuousBattleTimes = arg_20_0.continuousBattleTimes,
+			totalBattleTimes = arg_20_0.totalBattleTimes
 		}
 	}))
 end
 
-slot4 = function(slot0, slot1)
-	LoadContextCommand.LoadLayerOnTopContext(Context.New({
-		mediator = BossSingleTotalRewardPanelMediator,
-		viewComponent = BossSingleTotalRewardPanel,
-		data = {
-			onClose = function ()
-				pg.m02:sendNotification(GAME.GO_BACK)
-			end,
-			stopReason = slot1,
-			rewards = getProxy(ChapterProxy):PopBossSingleRewards(),
-			isAutoFight = getProxy(ContextProxy):getCurrentContext():getContextByMediator(BossSingleContinuousOperationMediator) and slot2.data.autoFlag or nil,
-			continuousBattleTimes = slot0.continuousBattleTimes,
-			totalBattleTimes = slot0.totalBattleTimes
-		}
-	}))
-end
+local function var_0_4()
+	local var_22_0 = pg.GuildMsgBoxMgr.GetInstance()
 
-slot5 = function()
-	if pg.GuildMsgBoxMgr.GetInstance():GetShouldShowBattleTip() and getProxy(GuildProxy):getRawData() and slot1:getWeeklyTask() and slot2.id ~= 0 then
-		slot0:SubmitTask(function (slot0, slot1)
-			if slot1 then
-				uv0:CancelShouldShowBattleTip()
-			end
-		end)
+	if var_22_0:GetShouldShowBattleTip() then
+		local var_22_1 = getProxy(GuildProxy):getRawData()
+		local var_22_2 = var_22_1 and var_22_1:getWeeklyTask()
+
+		if var_22_2 and var_22_2.id ~= 0 then
+			var_22_0:SubmitTask(function(arg_23_0, arg_23_1)
+				if arg_23_1 then
+					var_22_0:CancelShouldShowBattleTip()
+				end
+			end)
+		end
 	end
 end
 
-slot0.CheckActBossSystem = function(slot0, slot1)
+function var_0_0.CheckActBossSystem(arg_24_0, arg_24_1)
 	pg.m02:sendNotification(ContinuousOperationMediator.CONTINUE_OPERATION)
 
-	if getProxy(PlayerProxy):getRawData().oil < uv0(slot1) then
-		uv1(slot1, i18n("multiple_sorties_stop_reason1"))
+	if var_0_2(arg_24_1) > getProxy(PlayerProxy):getRawData().oil then
+		var_0_3(arg_24_1, i18n("multiple_sorties_stop_reason1"))
 
 		return
 	end
 
-	if getProxy(PlayerProxy):getRawData():getMaxShipBag() <= getProxy(BayProxy):getShipCount() then
-		uv1(slot1, i18n("multiple_sorties_stop_reason3"))
+	if getProxy(BayProxy):getShipCount() >= getProxy(PlayerProxy):getRawData():getMaxShipBag() then
+		var_0_3(arg_24_1, i18n("multiple_sorties_stop_reason3"))
 
 		return
 	end
 
-	slot2 = getProxy(FleetProxy)
+	local var_24_0 = getProxy(FleetProxy):getActivityFleets()[arg_24_1.actId][arg_24_1.mainFleetId]
+	local var_24_1 = _.map(_.values(var_24_0.ships), function(arg_25_0)
+		local var_25_0 = getProxy(BayProxy):getShipById(arg_25_0)
 
-	if #_.map(_.values(slot2:getActivityFleets()[slot1.actId][slot1.mainFleetId].ships), function (slot0)
-		if getProxy(BayProxy):getShipById(slot0) and slot1.energy == Ship.ENERGY_LOW then
-			return slot1
+		if var_25_0 and var_25_0.energy == Ship.ENERGY_LOW then
+			return var_25_0
 		end
-	end) > 0 then
-		uv1(slot1, i18n("multiple_sorties_stop_reason2", Fleet.DEFAULT_NAME_BOSS_ACT[slot1.mainFleetId], table.concat(_.map(slot5, function (slot0)
-			return "「" .. slot0:getConfig("name") .. "」"
-		end), "")))
+	end)
+
+	if #var_24_1 > 0 then
+		local var_24_2 = Fleet.DEFAULT_NAME_BOSS_ACT[arg_24_1.mainFleetId]
+		local var_24_3 = _.map(var_24_1, function(arg_26_0)
+			return "「" .. arg_26_0:getConfig("name") .. "」"
+		end)
+
+		var_0_3(arg_24_1, i18n("multiple_sorties_stop_reason2", var_24_2, table.concat(var_24_3, "")))
 
 		return
 	end
 
-	if slot1.statistics._battleScore <= ys.Battle.BattleConst.BattleScore.C then
-		uv1(slot1, i18n("multiple_sorties_stop_reason4"))
+	if arg_24_1.statistics._battleScore <= ys.Battle.BattleConst.BattleScore.C then
+		var_0_3(arg_24_1, i18n("multiple_sorties_stop_reason4"))
 
 		return
 	end
 
-	uv2()
+	var_0_4()
 
-	slot6 = getProxy(ContextProxy)
+	local var_24_4 = getProxy(ContextProxy)
+	local var_24_5 = getProxy(ContextProxy):getCurrentContext():getContextByMediator(ContinuousOperationMediator)
 
-	if getProxy(ContextProxy):getCurrentContext():getContextByMediator(ContinuousOperationMediator) and not slot7.data.autoFlag then
-		uv1(slot1)
+	if var_24_5 and not var_24_5.data.autoFlag then
+		var_0_3(arg_24_1)
 
 		return
 	end
 
-	if slot1.continuousBattleTimes < 1 then
-		uv1(slot1)
+	if arg_24_1.continuousBattleTimes < 1 then
+		var_0_3(arg_24_1)
 
 		return
 	end
@@ -359,200 +409,131 @@ slot0.CheckActBossSystem = function(slot0, slot1)
 	pg.m02:sendNotification(NewBattleResultMediator.ON_COMPLETE_BATTLE_RESULT)
 end
 
-slot0.ContinuousBossRush = function(slot0, slot1, slot2, slot3, slot4, slot5, slot6)
+function var_0_0.ContinuousBossRush(arg_27_0, arg_27_1, arg_27_2, arg_27_3, arg_27_4, arg_27_5, arg_27_6)
 	seriesAsync({
-		function (slot0)
-			uv0:addSubLayers(Context.New({
+		function(arg_28_0)
+			arg_27_0:addSubLayers(Context.New({
 				mediator = ChallengePassedMediator,
 				viewComponent = BossRushPassedLayer,
 				data = {
-					curIndex = uv1 - 1,
-					maxIndex = #uv2
+					curIndex = arg_27_3 - 1,
+					maxIndex = #arg_27_4
 				},
-				onRemoved = slot0
+				onRemoved = arg_28_0
 			}))
 		end,
-		function (slot0)
+		function(arg_29_0)
 			pg.m02:sendNotification(GAME.BEGIN_STAGE, {
-				system = uv0,
-				actId = uv1,
-				continuousBattleTimes = uv2,
-				totalBattleTimes = uv3
+				system = arg_27_1,
+				actId = arg_27_2,
+				continuousBattleTimes = arg_27_5,
+				totalBattleTimes = arg_27_6
 			})
 		end
 	})
 end
 
-slot0.CheckBossRushSystem = function(slot0, slot1)
-	slot3 = ys.Battle.BattleConst.BattleScore.C < slot1.score
-	slot6 = getProxy(ActivityProxy):getActivityById(slot1.actId):GetSeriesData()
+function var_0_0.CheckBossRushSystem(arg_30_0, arg_30_1)
+	local var_30_0 = getProxy(ContextProxy)
+	local var_30_1 = arg_30_1.score > ys.Battle.BattleConst.BattleScore.C
+	local var_30_2 = arg_30_1.actId
+	local var_30_3 = getProxy(ActivityProxy):getActivityById(var_30_2):GetSeriesData()
 
-	assert(slot6)
+	assert(var_30_3)
 
-	slot7 = slot6:GetStaegLevel() + 1
-	slot8 = slot6:GetExpeditionIds()
+	local var_30_4 = var_30_3:GetStaegLevel() + 1
+	local var_30_5 = var_30_3:GetExpeditionIds()
 
-	if getProxy(ContextProxy):getCurrentContext():getContextByMediator(ContinuousOperationMediator) then
-		uv0()
+	if var_30_0:getCurrentContext():getContextByMediator(ContinuousOperationMediator) then
+		var_0_4()
 	end
 
-	if not (not slot3 or slot7 > #slot8 or not (not slot2:getCurrentContext():getContextByMediator(ContinuousOperationMediator) or slot9.data.autoFlag)) then
-		slot0:ContinuousBossRush(slot1.system, slot4, slot7, slot8, slot1.continuousBattleTimes, slot1.totalBattleTimes)
+	local var_30_6 = var_30_0:getCurrentContext():getContextByMediator(ContinuousOperationMediator)
+	local var_30_7 = not var_30_6 or var_30_6.data.autoFlag
+	local var_30_8 = not var_30_1 or var_30_4 > #var_30_5 or not var_30_7
+
+	if not var_30_8 then
+		arg_30_0:ContinuousBossRush(arg_30_1.system, var_30_2, var_30_4, var_30_5, arg_30_1.continuousBattleTimes, arg_30_1.totalBattleTimes)
 	end
 
-	return slot11
+	return var_30_8
 end
 
-slot6 = function(slot0)
-	(function (slot0, slot1)
-		slot2 = slot0:GetCostSum().oil
+local function var_0_5(arg_31_0, arg_31_1)
+	local var_31_0 = getProxy(ActivityProxy):getActivityById(arg_31_0)
+	local var_31_1 = var_31_0:getConfig("config_id")
+	local var_31_2 = pg.activity_event_worldboss[var_31_1].ticket
+	local var_31_3 = getProxy(PlayerProxy):getRawData():getResource(var_31_2)
 
-		if slot1 > 0 then
-			slot2 = math.min(slot2, slot1)
-		end
-
-		uv0 = uv0 + slot2
-	end)(getProxy(FleetProxy):getActivityFleets()[slot0.actId][slot0.mainFleetId], getProxy(ActivityProxy):getActivityById(slot0.actId):GetEnemyDataByStageId(slot0.stageId):GetOilLimit()[1] or 0)
-	slot7(slot5[slot0.mainFleetId + 10], slot3[2] or 0)
-
-	return 0
-end
-
-slot0.CheckBossSingleSystem = function(slot0, slot1)
-	pg.m02:sendNotification(BossSingleContinuousOperationMediator.CONTINUE_OPERATION)
-
-	if getProxy(PlayerProxy):getRawData().oil < uv0(slot1) then
-		uv1(slot1, i18n("multiple_sorties_stop_reason1"))
-
-		return
-	end
-
-	if getProxy(PlayerProxy):getRawData():getMaxShipBag() <= getProxy(BayProxy):getShipCount() then
-		uv1(slot1, i18n("multiple_sorties_stop_reason3"))
-
-		return
-	end
-
-	slot2 = getProxy(FleetProxy)
-
-	if #_.map(_.values(slot2:getActivityFleets()[slot1.actId][slot1.mainFleetId].ships), function (slot0)
-		if getProxy(BayProxy):getShipById(slot0) and slot1.energy == Ship.ENERGY_LOW then
-			return slot1
-		end
-	end) > 0 then
-		uv1(slot1, i18n("multiple_sorties_stop_reason2", Fleet.DEFAULT_NAME_BOSS_ACT[slot1.mainFleetId], table.concat(_.map(slot5, function (slot0)
-			return "「" .. slot0:getConfig("name") .. "」"
-		end), "")))
-
-		return
-	end
-
-	if slot1.statistics._battleScore <= ys.Battle.BattleConst.BattleScore.C then
-		uv1(slot1, i18n("multiple_sorties_stop_reason4"))
-
-		return
-	end
-
-	uv2()
-
-	slot6 = getProxy(ContextProxy)
-
-	if getProxy(ContextProxy):getCurrentContext():getContextByMediator(BossSingleContinuousOperationMediator) and not slot7.data.autoFlag then
-		uv1(slot1)
-
-		return
-	end
-
-	if slot1.continuousBattleTimes < 1 then
-		uv1(slot1)
-
-		return
-	end
-
-	pg.m02:sendNotification(NewBattleResultMediator.ON_COMPLETE_BATTLE_RESULT)
-end
-
-slot7 = function(slot0, slot1)
-	slot2 = getProxy(ActivityProxy):getActivityById(slot0)
-	slot6 = getProxy(PlayerProxy):getRawData():getResource(pg.activity_event_worldboss[slot2:getConfig("config_id")].ticket)
-
-	if slot2:GetStageBonus(slot1) == 0 and getProxy(SettingsProxy):isTipActBossExchangeTicket() == 1 and slot6 > 0 then
+	if var_31_0:GetStageBonus(arg_31_1) == 0 and getProxy(SettingsProxy):isTipActBossExchangeTicket() == 1 and var_31_3 > 0 then
 		return true
 	end
 
 	return false
 end
 
-slot8 = function(slot0)
+local function var_0_6(arg_32_0)
 	pg.m02:sendNotification(GAME.BEGIN_STAGE, {
-		stageId = slot0.stageId,
-		mainFleetId = slot0.mainFleetId,
-		system = slot0.system,
-		actId = slot0.actId,
-		rivalId = slot0.rivalId,
-		continuousBattleTimes = slot0.continuousBattleTimes,
-		totalBattleTimes = slot0.totalBattleTimes
+		stageId = arg_32_0.stageId,
+		mainFleetId = arg_32_0.mainFleetId,
+		system = arg_32_0.system,
+		actId = arg_32_0.actId,
+		rivalId = arg_32_0.rivalId,
+		continuousBattleTimes = arg_32_0.continuousBattleTimes,
+		totalBattleTimes = arg_32_0.totalBattleTimes
 	})
 end
 
-slot0.listNotificationInterests = function(slot0)
+function var_0_0.listNotificationInterests(arg_33_0)
 	return {
 		GAME.BOSSRUSH_SETTLE_DONE,
-		ContinuousOperationMediator.ON_REENTER,
-		BossSingleContinuousOperationMediator.ON_REENTER
+		ContinuousOperationMediator.ON_REENTER
 	}
 end
 
-slot0.handleNotification = function(slot0, slot1)
-	slot3 = slot1:getBody()
+function var_0_0.handleNotification(arg_34_0, arg_34_1)
+	local var_34_0 = arg_34_1:getName()
+	local var_34_1 = arg_34_1:getBody()
 
-	if slot1:getName() == GAME.BOSSRUSH_SETTLE_DONE then
-		slot0:ExitRushBossSystem(slot0.contextData, slot3)
-	elseif slot2 == ContinuousOperationMediator.ON_REENTER then
-		if not slot3.autoFlag then
-			uv0(slot0.contextData)
+	if var_34_0 == GAME.BOSSRUSH_SETTLE_DONE then
+		arg_34_0:ExitRushBossSystem(arg_34_0.contextData, var_34_1)
+	elseif var_34_0 == ContinuousOperationMediator.ON_REENTER then
+		if not var_34_1.autoFlag then
+			var_0_3(arg_34_0.contextData)
 
 			return
 		end
 
-		if uv1(slot0.contextData.actId, slot0.contextData.stageId) then
+		if var_0_5(arg_34_0.contextData.actId, arg_34_0.contextData.stageId) then
 			pg.m02:sendNotification(GAME.ACT_BOSS_EXCHANGE_TICKET, {
-				stageId = slot0.contextData.stageId
+				stageId = arg_34_0.contextData.stageId
 			})
 		else
-			uv2(slot0.contextData)
+			var_0_6(arg_34_0.contextData)
 		end
-	elseif slot2 == BossSingleContinuousOperationMediator.ON_REENTER then
-		if not slot3.autoFlag then
-			uv3(slot0.contextData)
-
-			return
-		end
-
-		uv2(slot0.contextData)
 	end
 end
 
-slot0.addSubLayers = function(slot0, slot1, slot2, slot3)
-	assert(isa(slot1, Context), "should be an instance of Context")
+function var_0_0.addSubLayers(arg_35_0, arg_35_1, arg_35_2, arg_35_3)
+	assert(isa(arg_35_1, Context), "should be an instance of Context")
 
-	slot6 = getProxy(ContextProxy):getCurrentContext():getContextByMediator(NewBattleResultMediator)
+	local var_35_0 = getProxy(ContextProxy):getCurrentContext():getContextByMediator(NewBattleResultMediator)
 
-	if slot2 then
-		while slot6.parent do
-			slot6 = slot6.parent
+	if arg_35_2 then
+		while var_35_0.parent do
+			var_35_0 = var_35_0.parent
 		end
 	end
 
-	slot0:sendNotification(GAME.LOAD_LAYERS, {
-		parentContext = slot6,
-		context = slot1,
-		callback = slot3
+	arg_35_0:sendNotification(GAME.LOAD_LAYERS, {
+		parentContext = var_35_0,
+		context = arg_35_1,
+		callback = arg_35_3
 	})
 end
 
-slot0.Dispose = function(slot0)
-	pg.m02:removeMediator(slot0.__cname)
+function var_0_0.Dispose(arg_36_0)
+	pg.m02:removeMediator(arg_36_0.__cname)
 end
 
-return slot0
+return var_0_0

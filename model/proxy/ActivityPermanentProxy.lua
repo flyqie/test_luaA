@@ -1,36 +1,36 @@
-slot0 = class("ActivityPermanentProxy", import(".NetProxy"))
+﻿local var_0_0 = class("ActivityPermanentProxy", import(".NetProxy"))
 
-slot0.register = function(slot0)
-	slot0:on(11210, function (slot0)
-		uv0.finishActivity = {}
+function var_0_0.register(arg_1_0)
+	arg_1_0:on(11210, function(arg_2_0)
+		arg_1_0.finishActivity = {}
 
-		underscore.each(slot0.permanent_activity, function (slot0)
-			uv0.finishActivity[slot0] = true
+		underscore.each(arg_2_0.permanent_activity, function(arg_3_0)
+			arg_1_0.finishActivity[arg_3_0] = true
 		end)
 
-		uv0.doingActivity = slot0.permanent_now
+		arg_1_0.doingActivity = arg_2_0.permanent_now
 	end)
 end
 
-slot0.startSelectActivity = function(slot0, slot1)
-	slot0.doingActivity = slot1
+function var_0_0.startSelectActivity(arg_4_0, arg_4_1)
+	arg_4_0.doingActivity = arg_4_1
 end
 
-slot0.finishNowActivity = function(slot0, slot1)
-	slot0.finishActivity[slot1] = true
-	slot0.doingActivity = 0
+function var_0_0.finishNowActivity(arg_5_0, arg_5_1)
+	arg_5_0.finishActivity[arg_5_1] = true
+	arg_5_0.doingActivity = 0
 end
 
-slot0.isActivityFinish = function(slot0, slot1)
-	return slot0.finishActivity[slot1]
+function var_0_0.isActivityFinish(arg_6_0, arg_6_1)
+	return arg_6_0.finishActivity[arg_6_1]
 end
 
-slot0.getDoingActivity = function(slot0)
-	if slot0.doingActivity ~= 0 then
-		return getProxy(ActivityProxy):getActivityById(slot0.doingActivity)
+function var_0_0.getDoingActivity(arg_7_0)
+	if arg_7_0.doingActivity ~= 0 then
+		return getProxy(ActivityProxy):getActivityById(arg_7_0.doingActivity)
 	end
 
 	return nil
 end
 
-return slot0
+return var_0_0

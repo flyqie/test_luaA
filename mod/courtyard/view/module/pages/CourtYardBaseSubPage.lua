@@ -1,5 +1,6 @@
-slot0 = class("CourtYardBaseSubPage")
-slot0.STATES = {
+﻿local var_0_0 = class("CourtYardBaseSubPage")
+
+var_0_0.STATES = {
 	DESTROY = 5,
 	NONE = 1,
 	LOADING = 2,
@@ -7,187 +8,190 @@ slot0.STATES = {
 	LOADED = 3
 }
 
-slot0.Ctor = function(slot0, slot1, slot2)
-	slot0.contextData = slot2
-	slot0.parent = slot1
-	slot0._parentTf = slot1._tf
-	slot0._go = nil
-	slot0._tf = nil
-	slot0._state = uv0.STATES.NONE
-	slot0._funcQueue = {}
+function var_0_0.Ctor(arg_1_0, arg_1_1, arg_1_2)
+	arg_1_0.contextData = arg_1_2
+	arg_1_0.parent = arg_1_1
+	arg_1_0._parentTf = arg_1_1._tf
+	arg_1_0._go = nil
+	arg_1_0._tf = nil
+	arg_1_0._state = var_0_0.STATES.NONE
+	arg_1_0._funcQueue = {}
 end
 
-slot0.Load = function(slot0)
-	if slot0._state ~= uv0.STATES.NONE then
+function var_0_0.Load(arg_2_0)
+	if arg_2_0._state ~= var_0_0.STATES.NONE then
 		return
 	end
 
-	slot0._state = uv0.STATES.LOADING
-	slot1 = pg.UIMgr.GetInstance()
+	arg_2_0._state = var_0_0.STATES.LOADING
 
-	slot1:LoadingOn()
+	pg.UIMgr.GetInstance():LoadingOn()
 
-	slot1 = PoolMgr.GetInstance()
+	local var_2_0 = PoolMgr.GetInstance()
 
-	slot1:GetUI(slot0:getUIName(), true, function (slot0)
-		if uv0._state == uv1.STATES.DESTROY then
+	var_2_0:GetUI(arg_2_0:getUIName(), true, function(arg_3_0)
+		if arg_2_0._state == var_0_0.STATES.DESTROY then
 			pg.UIMgr.GetInstance():LoadingOff()
-			uv2:ReturnUI(uv0:getUIName(), slot0)
+			var_2_0:ReturnUI(arg_2_0:getUIName(), arg_3_0)
 		else
-			uv0:Loaded(slot0)
-			uv0:Init()
+			arg_2_0:Loaded(arg_3_0)
+			arg_2_0:Init()
 		end
 	end)
 end
 
-slot0.Loaded = function(slot0, slot1)
+function var_0_0.Loaded(arg_4_0, arg_4_1)
 	pg.UIMgr.GetInstance():LoadingOff()
 
-	if slot0._state ~= uv0.STATES.LOADING then
+	if arg_4_0._state ~= var_0_0.STATES.LOADING then
 		return
 	end
 
-	slot0._state = uv0.STATES.LOADED
-	slot0._go = slot1
-	slot0._tf = tf(slot1)
+	arg_4_0._state = var_0_0.STATES.LOADED
+	arg_4_0._go = arg_4_1
+	arg_4_0._tf = tf(arg_4_1)
 
-	pg.DelegateInfo.New(slot0)
-	SetParent(slot0._tf, slot0._parentTf, false)
-	slot0:OnLoaded()
+	pg.DelegateInfo.New(arg_4_0)
+	SetParent(arg_4_0._tf, arg_4_0._parentTf, false)
+	arg_4_0:OnLoaded()
 end
 
-slot0.Init = function(slot0)
-	if slot0._state ~= uv0.STATES.LOADED then
+function var_0_0.Init(arg_5_0)
+	if arg_5_0._state ~= var_0_0.STATES.LOADED then
 		return
 	end
 
-	slot0._state = uv0.STATES.INITED
+	arg_5_0._state = var_0_0.STATES.INITED
 
-	slot0:OnInit()
-	slot0:HandleFuncQueue()
+	arg_5_0:OnInit()
+	arg_5_0:HandleFuncQueue()
 end
 
-slot0.Destroy = function(slot0)
-	if slot0._state == uv0.STATES.DESTROY then
+function var_0_0.Destroy(arg_6_0)
+	if arg_6_0._state == var_0_0.STATES.DESTROY then
 		return
 	end
 
-	if not slot0:GetLoaded() then
-		slot0._state = uv0.STATES.DESTROY
+	if not arg_6_0:GetLoaded() then
+		arg_6_0._state = var_0_0.STATES.DESTROY
 
 		return
 	end
 
-	slot0._state = uv0.STATES.DESTROY
+	arg_6_0._state = var_0_0.STATES.DESTROY
 
-	pg.DelegateInfo.Dispose(slot0)
-	slot0:OnDestroy()
+	pg.DelegateInfo.Dispose(arg_6_0)
+	arg_6_0:OnDestroy()
 
-	slot0._tf = nil
-	slot1 = PoolMgr.GetInstance()
-	slot2 = slot0:getUIName()
+	arg_6_0._tf = nil
 
-	if slot0._go ~= nil and slot2 then
-		slot1:ReturnUI(slot2, slot0._go)
+	local var_6_0 = PoolMgr.GetInstance()
+	local var_6_1 = arg_6_0:getUIName()
 
-		slot0._go = nil
+	if arg_6_0._go ~= nil and var_6_1 then
+		var_6_0:ReturnUI(var_6_1, arg_6_0._go)
+
+		arg_6_0._go = nil
 	end
 end
 
-slot0.HandleFuncQueue = function(slot0)
-	if slot0._state == uv0.STATES.INITED then
-		while #slot0._funcQueue > 0 do
-			slot1 = table.remove(slot0._funcQueue, 1)
+function var_0_0.HandleFuncQueue(arg_7_0)
+	if arg_7_0._state == var_0_0.STATES.INITED then
+		while #arg_7_0._funcQueue > 0 do
+			local var_7_0 = table.remove(arg_7_0._funcQueue, 1)
 
-			slot1.func(unpack(slot1.params, 1, slot1.params.len))
+			var_7_0.func(unpack(var_7_0.params, 1, var_7_0.params.len))
 		end
 	end
 end
 
-slot0.Reset = function(slot0)
-	slot0._state = uv0.STATES.NONE
+function var_0_0.Reset(arg_8_0)
+	arg_8_0._state = var_0_0.STATES.NONE
 end
 
-slot0.ActionInvoke = function(slot0, slot1, ...)
-	assert(slot0[slot1], "func not exist >>>" .. slot1)
+function var_0_0.ActionInvoke(arg_9_0, arg_9_1, ...)
+	assert(arg_9_0[arg_9_1], "func not exist >>>" .. arg_9_1)
 
-	slot0._funcQueue[#slot0._funcQueue + 1] = {
-		funcName = slot1,
-		func = slot0[slot1],
+	arg_9_0._funcQueue[#arg_9_0._funcQueue + 1] = {
+		funcName = arg_9_1,
+		func = arg_9_0[arg_9_1],
 		params = {
-			slot0,
 			len = 1 + select("#", ...),
+			arg_9_0,
 			...
 		}
 	}
 
-	slot0:HandleFuncQueue()
+	arg_9_0:HandleFuncQueue()
 end
 
-slot0.CallbackInvoke = function(slot0, slot1, ...)
-	slot0._funcQueue[#slot0._funcQueue + 1] = {
-		func = slot1,
+function var_0_0.CallbackInvoke(arg_10_0, arg_10_1, ...)
+	arg_10_0._funcQueue[#arg_10_0._funcQueue + 1] = {
+		func = arg_10_1,
 		params = packEx(...)
 	}
 
-	slot0:HandleFuncQueue()
+	arg_10_0:HandleFuncQueue()
 end
 
-slot0.ExecuteAction = function(slot0, slot1, ...)
-	slot0:Load()
-	slot0:ActionInvoke(slot1, ...)
+function var_0_0.ExecuteAction(arg_11_0, arg_11_1, ...)
+	arg_11_0:Load()
+	arg_11_0:ActionInvoke(arg_11_1, ...)
 end
 
-slot0.GetLoaded = function(slot0)
-	return uv0.STATES.LOADED <= slot0._state
+function var_0_0.GetLoaded(arg_12_0)
+	return arg_12_0._state >= var_0_0.STATES.LOADED
 end
 
-slot0.CheckState = function(slot0, slot1)
-	return slot0._state == slot1
+function var_0_0.CheckState(arg_13_0, arg_13_1)
+	return arg_13_0._state == arg_13_1
 end
 
-slot0.Show = function(slot0)
-	setActive(slot0._tf, true)
+function var_0_0.Show(arg_14_0)
+	setActive(arg_14_0._tf, true)
 end
 
-slot0.Hide = function(slot0)
-	setActive(slot0._tf, false)
+function var_0_0.Hide(arg_15_0)
+	setActive(arg_15_0._tf, false)
 end
 
-slot0.isShowing = function(slot0)
-	return slot0._tf and isActive(slot0._tf)
+function var_0_0.isShowing(arg_16_0)
+	return arg_16_0._tf and isActive(arg_16_0._tf)
 end
 
-slot0.Emit = function(slot0, slot1, ...)
-	slot0.parent:Emit(slot1, ...)
+function var_0_0.Emit(arg_17_0, arg_17_1, ...)
+	arg_17_0.parent:Emit(arg_17_1, ...)
 end
 
-slot0.findTF = function(slot0, slot1, slot2)
-	assert(slot0._tf, "transform should exist")
+function var_0_0.findTF(arg_18_0, arg_18_1, arg_18_2)
+	assert(arg_18_0._tf, "transform should exist")
 
-	return findTF(slot2 or slot0._tf, slot1)
+	return findTF(arg_18_2 or arg_18_0._tf, arg_18_1)
 end
 
-slot0.getTpl = function(slot0, slot1, slot2)
-	slot3 = slot0:findTF(slot1, slot2)
+function var_0_0.getTpl(arg_19_0, arg_19_1, arg_19_2)
+	local var_19_0 = arg_19_0:findTF(arg_19_1, arg_19_2)
 
-	slot3:SetParent(slot0._tf, false)
-	SetActive(slot3, false)
+	var_19_0:SetParent(arg_19_0._tf, false)
+	SetActive(var_19_0, false)
 
-	return slot3
+	return var_19_0
 end
 
-slot0.getUIName = function(slot0)
+function var_0_0.getUIName(arg_20_0)
 	return nil
 end
 
-slot0.OnLoaded = function(slot0)
+function var_0_0.OnLoaded(arg_21_0)
+	return
 end
 
-slot0.OnInit = function(slot0)
+function var_0_0.OnInit(arg_22_0)
+	return
 end
 
-slot0.OnDestroy = function(slot0)
+function var_0_0.OnDestroy(arg_23_0)
+	return
 end
 
-return slot0
+return var_0_0

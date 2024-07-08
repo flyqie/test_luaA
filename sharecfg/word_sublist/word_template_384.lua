@@ -1,23 +1,26 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_384 = {}
-slot1 = slot0.word_template_384
+﻿pg = pg or {}
 
-temp = function()
-	uv0["宴"] = {
-		["召"] = {
-			["百"] = {
-				["丑"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_384 = {}
+
+local var_0_1 = var_0_0.word_template_384
+
+function temp()
+	var_0_1.宴 = {
+		召 = {
+			百 = {
+				丑 = {
 					this = true,
-					["大"] = {
-						["会"] = {
-							["堂"] = {
+					大 = {
+						会 = {
+							堂 = {
 								this = true
 							}
 						}
 					}
 				},
-				["醜"] = {
+				醜 = {
 					this = true
 				}
 			}
@@ -27,27 +30,27 @@ end
 
 temp()
 
-temp = function()
-	uv0["艷"] = {
-		["情"] = {
-			["小"] = {
-				["說"] = {
+function temp()
+	var_0_1.艷 = {
+		情 = {
+			小 = {
+				說 = {
 					this = true
 				}
 			}
 		},
-		["舞"] = {
-			["淫"] = {
-				["業"] = {
+		舞 = {
+			淫 = {
+				業 = {
 					this = true
 				}
 			}
 		},
-		["照"] = {
-			["门"] = {
+		照 = {
+			门 = {
 				this = true
 			},
-			["門"] = {
+			門 = {
 				this = true
 			}
 		}
@@ -56,39 +59,39 @@ end
 
 temp()
 
-temp = function()
-	uv0["豔"] = {
-		["婦"] = {
-			["淫"] = {
-				["女"] = {
+function temp()
+	var_0_1.豔 = {
+		婦 = {
+			淫 = {
+				女 = {
 					this = true
 				}
 			}
 		},
-		["乳"] = {
+		乳 = {
 			this = true
 		},
-		["舞"] = {
-			["女"] = {
-				["郎"] = {
-					["資"] = {
-						["源"] = {
+		舞 = {
+			女 = {
+				郎 = {
+					資 = {
+						源 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["星"] = {
-			["下"] = {
-				["載"] = {
+		星 = {
+			下 = {
+				載 = {
 					this = true
 				}
 			}
 		},
-		["照"] = {
+		照 = {
 			this = true,
-			["門"] = {
+			門 = {
 				this = true
 			}
 		}
@@ -97,26 +100,26 @@ end
 
 temp()
 
-temp = function()
-	uv0["仰"] = {
-		["望"] = {
-			["星"] = {
-				["空"] = {
+function temp()
+	var_0_1.仰 = {
+		望 = {
+			星 = {
+				空 = {
 					[" "] = {
-						["家"] = {
-							["宝"] = {
+						家 = {
+							宝 = {
 								this = true
 							}
 						},
-						["纽"] = {
-							["约"] = {
-								["时"] = {
-									["报"] = {
+						纽 = {
+							约 = {
+								时 = {
+									报 = {
 										this = true
 									}
 								},
-								["事"] = {
-									["报"] = {
+								事 = {
+									报 = {
 										this = true
 									}
 								}
@@ -131,12 +134,12 @@ end
 
 temp()
 
-temp = function()
-	uv0["腰"] = {
-		["带"] = {
+function temp()
+	var_0_1.腰 = {
+		带 = {
 			this = true
 		},
-		["射"] = {
+		射 = {
 			this = true
 		}
 	}
@@ -144,11 +147,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["亱"] = {
-		["店"] = {
-			["あ"] = {
-				["郎"] = {
+function temp()
+	var_0_1.亱 = {
+		店 = {
+			あ = {
+				郎 = {
 					this = true
 				}
 			}
@@ -158,11 +161,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["烨"] = {
-		["寐"] = {
-			["公"] = {
-				["寓"] = {
+function temp()
+	var_0_1.烨 = {
+		寐 = {
+			公 = {
+				寓 = {
 					this = true
 				}
 			}
@@ -172,11 +175,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["業"] = {
-		["主"] = {
-			["名"] = {
-				["單"] = {
+function temp()
+	var_0_1.業 = {
+		主 = {
+			名 = {
+				單 = {
 					this = true
 				}
 			}
@@ -186,12 +189,12 @@ end
 
 temp()
 
-temp = function()
-	uv0["吚"] = {
-		["亾"] = {
-			["凊"] = {
-				["脃"] = {
-					["蛧"] = {
+function temp()
+	var_0_1.吚 = {
+		亾 = {
+			凊 = {
+				脃 = {
+					蛧 = {
 						this = true
 					}
 				}
@@ -202,41 +205,41 @@ end
 
 temp()
 
-temp = function()
-	uv0["咿"] = {
-		["倲"] = {
-			["媄"] = {
-				["譁"] = {
-					["種"] = {
-						["孒"] = {
+function temp()
+	var_0_1.咿 = {
+		倲 = {
+			媄 = {
+				譁 = {
+					種 = {
+						孒 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["亽"] = {
-			["情"] = {
-				["铯"] = {
-					["網"] = {
+		亽 = {
+			情 = {
+				铯 = {
+					網 = {
 						this = true
 					}
 				}
 			}
 		},
-		["唦"] = {
-			["乜"] = {
-				["伽"] = {
-					["種"] = {
-						["孒"] = {
+		唦 = {
+			乜 = {
+				伽 = {
+					種 = {
+						孒 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["次"] = {
-			["麦"] = {
+		次 = {
+			麦 = {
 				d = {
 					u = {
 						t = {

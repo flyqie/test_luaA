@@ -1,221 +1,221 @@
-slot0 = class("TowerClimbingController")
+﻿local var_0_0 = class("TowerClimbingController")
 
-slot0.Ctor = function(slot0)
-	slot0.view = TowerClimbingView.New(slot0)
+function var_0_0.Ctor(arg_1_0)
+	arg_1_0.view = TowerClimbingView.New(arg_1_0)
 end
 
-slot0.SetCallBack = function(slot0, slot1, slot2)
-	slot0.OnGameEndCallBack = slot1
-	slot0.OnOverMapScore = slot2
+function var_0_0.SetCallBack(arg_2_0, arg_2_1, arg_2_2)
+	arg_2_0.OnGameEndCallBack = arg_2_1
+	arg_2_0.OnOverMapScore = arg_2_2
 end
 
-slot0.SetUp = function(slot0, slot1)
-	slot0:NetUpdateData(slot1)
-	slot0.view:OnEnter()
+function var_0_0.SetUp(arg_3_0, arg_3_1)
+	arg_3_0:NetUpdateData(arg_3_1)
+	arg_3_0.view:OnEnter()
 end
 
-slot0.NetUpdateData = function(slot0, slot1)
-	slot0.data = slot1
+function var_0_0.NetUpdateData(arg_4_0, arg_4_1)
+	arg_4_0.data = arg_4_1
 end
 
-slot0.StartGame = function(slot0, slot1)
-	if slot0.enterGame then
+function var_0_0.StartGame(arg_5_0, arg_5_1)
+	if arg_5_0.enterGame then
 		return
 	end
 
-	slot0.enterGame = true
+	arg_5_0.enterGame = true
 
 	seriesAsync({
-		function (slot0)
-			uv0.map = TowerClimbingMapVO.New(uv1, uv0.view)
+		function(arg_6_0)
+			arg_5_0.map = TowerClimbingMapVO.New(arg_5_1, arg_5_0.view)
 
-			uv0.view:OnCreateMap(uv0.map, slot0)
+			arg_5_0.view:OnCreateMap(arg_5_0.map, arg_6_0)
 		end,
-		function (slot0)
-			uv0.map:Init(uv0.data, slot0)
+		function(arg_7_0)
+			arg_5_0.map:Init(arg_5_0.data, arg_7_0)
 		end,
-		function (slot0)
-			uv0.view:DoEnter(slot0)
+		function(arg_8_0)
+			arg_5_0.view:DoEnter(arg_8_0)
 		end
-	}, function ()
-		uv0.IsStarting = true
+	}, function()
+		arg_5_0.IsStarting = true
 
-		uv0:MainLoop()
-		uv0.view:OnStartGame()
+		arg_5_0:MainLoop()
+		arg_5_0.view:OnStartGame()
 	end)
 end
 
-slot0.EnterBlock = function(slot0, slot1, slot2)
-	if slot0.map:GetPlayer():IsFatalInjured() then
+function var_0_0.EnterBlock(arg_10_0, arg_10_1, arg_10_2)
+	if arg_10_0.map:GetPlayer():IsFatalInjured() then
 		return
 	end
 
-	if slot0.map:GetPlayer():IsDeath() then
+	if arg_10_0.map:GetPlayer():IsDeath() then
 		return
 	end
 
-	if slot1.normal == Vector2.up then
-		slot0.map:GetPlayer():UpdateStand(true)
+	if arg_10_1.normal == Vector2.up then
+		arg_10_0.map:GetPlayer():UpdateStand(true)
 
-		slot0.level = slot2
+		arg_10_0.level = arg_10_2
 
-		slot0.map:SetCurrentLevel(slot2)
+		arg_10_0.map:SetCurrentLevel(arg_10_2)
 	end
 end
 
-slot0.StayBlock = function(slot0, slot1, slot2)
-	if slot0.map:GetPlayer():IsFatalInjured() then
+function var_0_0.StayBlock(arg_11_0, arg_11_1, arg_11_2)
+	if arg_11_0.map:GetPlayer():IsFatalInjured() then
 		return
 	end
 
-	if slot0.map:GetPlayer():IsDeath() then
+	if arg_11_0.map:GetPlayer():IsDeath() then
 		return
 	end
 
-	if _.any(slot1, function (slot0)
-		return slot0.normal == Vector2.up
-	end) and not slot0.map:GetPlayer():IsIdle() and slot2 == Vector2(0, 0) then
-		slot0.map:GetPlayer():Idle()
+	if _.any(arg_11_1, function(arg_12_0)
+		return arg_12_0.normal == Vector2.up
+	end) and not arg_11_0.map:GetPlayer():IsIdle() and arg_11_2 == Vector2(0, 0) then
+		arg_11_0.map:GetPlayer():Idle()
 	end
 end
 
-slot0.ExitBlock = function(slot0, slot1)
-	if slot0.map:GetPlayer():IsFatalInjured() then
+function var_0_0.ExitBlock(arg_13_0, arg_13_1)
+	if arg_13_0.map:GetPlayer():IsFatalInjured() then
 		return
 	end
 
-	if slot0.map:GetPlayer():IsDeath() then
+	if arg_13_0.map:GetPlayer():IsDeath() then
 		return
 	end
 
-	if slot0.level == slot1 then
-		slot0.map:GetPlayer():UpdateStand(false)
+	if arg_13_0.level == arg_13_1 then
+		arg_13_0.map:GetPlayer():UpdateStand(false)
 	end
 end
 
-slot0.EnterAttacker = function(slot0)
-	if slot0.map:GetPlayer():IsFatalInjured() then
+function var_0_0.EnterAttacker(arg_14_0)
+	if arg_14_0.map:GetPlayer():IsFatalInjured() then
 		return
 	end
 
-	if slot0.map:GetPlayer():IsDeath() then
+	if arg_14_0.map:GetPlayer():IsDeath() then
 		return
 	end
 
-	slot0.map:GetPlayer():BeInjured()
-	slot0.map:GetPlayer():AddInvincibleEffect(TowerClimbingGameSettings.INVINCEIBLE_TIME)
+	arg_14_0.map:GetPlayer():BeInjured()
+	arg_14_0.map:GetPlayer():AddInvincibleEffect(TowerClimbingGameSettings.INVINCEIBLE_TIME)
 end
 
-slot0.EnterGround = function(slot0)
-	if slot0.map:GetPlayer():IsFatalInjured() then
+function var_0_0.EnterGround(arg_15_0)
+	if arg_15_0.map:GetPlayer():IsFatalInjured() then
 		return
 	end
 
-	if slot0.map:GetPlayer():IsDeath() then
+	if arg_15_0.map:GetPlayer():IsDeath() then
 		return
 	end
 
-	slot0.map:GetPlayer():BeFatalInjured(function ()
-		if not uv0.map:GetPlayer():IsDeath() then
-			uv0.map:GetPlayer():AddInvincibleEffect(TowerClimbingGameSettings.INVINCEIBLE_TIME)
-			uv0.map:GetPlayer():UpdateStand(true)
-			uv0.map:ReBornPlayer()
-			uv0.map:GetPlayer():Idle()
+	arg_15_0.map:GetPlayer():BeFatalInjured(function()
+		if not arg_15_0.map:GetPlayer():IsDeath() then
+			arg_15_0.map:GetPlayer():AddInvincibleEffect(TowerClimbingGameSettings.INVINCEIBLE_TIME)
+			arg_15_0.map:GetPlayer():UpdateStand(true)
+			arg_15_0.map:ReBornPlayer()
+			arg_15_0.map:GetPlayer():Idle()
 		end
 	end)
 
-	if not slot0.map:GetPlayer():IsDeath() then
-		slot0.map:SetGroundSleep(TowerClimbingGameSettings.GROUND_SLEEP_TIME)
+	if not arg_15_0.map:GetPlayer():IsDeath() then
+		arg_15_0.map:SetGroundSleep(TowerClimbingGameSettings.GROUND_SLEEP_TIME)
 	end
 end
 
-slot0.OnStickChange = function(slot0, slot1)
-	if slot0.map:GetPlayer():IsFatalInjured() then
+function var_0_0.OnStickChange(arg_17_0, arg_17_1)
+	if arg_17_0.map:GetPlayer():IsFatalInjured() then
 		return
 	end
 
-	if slot1 > 0.05 then
-		slot0.map:GetPlayer():MoveRight()
-	elseif slot1 < -0.05 then
-		slot0.map:GetPlayer():MoveLeft()
+	if arg_17_1 > 0.05 then
+		arg_17_0.map:GetPlayer():MoveRight()
+	elseif arg_17_1 < -0.05 then
+		arg_17_0.map:GetPlayer():MoveLeft()
 	end
 end
 
-slot0.MainLoop = function(slot0)
-	if not slot0.handle then
-		slot0.handle = UpdateBeat:CreateListener(slot0.Update, slot0)
+function var_0_0.MainLoop(arg_18_0)
+	if not arg_18_0.handle then
+		arg_18_0.handle = UpdateBeat:CreateListener(arg_18_0.Update, arg_18_0)
 	end
 
-	UpdateBeat:AddListener(slot0.handle)
+	UpdateBeat:AddListener(arg_18_0.handle)
 end
 
-slot0.Update = function(slot0)
-	slot0.view:Update()
-	slot0.map:Update()
+function var_0_0.Update(arg_19_0)
+	arg_19_0.view:Update()
+	arg_19_0.map:Update()
 
-	if slot0.IsStarting and slot0.map:GetPlayer():IsDeath() then
-		slot0:EndGame()
-	end
-end
-
-slot0.PlayerJump = function(slot0)
-	slot0.map:GetPlayer():Jump()
-end
-
-slot0.PlayerIdle = function(slot0)
-	slot0.map:GetPlayer():Idle()
-end
-
-slot1 = function(slot0)
-	slot0.IsStarting = false
-
-	if slot0.handle then
-		UpdateBeat:RemoveListener(slot0.handle)
+	if arg_19_0.IsStarting and arg_19_0.map:GetPlayer():IsDeath() then
+		arg_19_0:EndGame()
 	end
 end
 
-slot0.EndGame = function(slot0)
-	uv0(slot0)
+function var_0_0.PlayerJump(arg_20_0)
+	arg_20_0.map:GetPlayer():Jump()
+end
 
-	slot1 = slot0.map:GetPlayer()
+function var_0_0.PlayerIdle(arg_21_0)
+	arg_21_0.map:GetPlayer():Idle()
+end
 
-	slot0.view:OnEndGame(slot1.score, slot1.mapScore, slot0.map.id)
+local function var_0_1(arg_22_0)
+	arg_22_0.IsStarting = false
 
-	if slot0.OnGameEndCallBack then
-		slot0.OnGameEndCallBack(slot1.score, slot1.higestscore, slot1.pageIndex, slot0.map.id)
+	if arg_22_0.handle then
+		UpdateBeat:RemoveListener(arg_22_0.handle)
+	end
+end
+
+function var_0_0.EndGame(arg_23_0)
+	var_0_1(arg_23_0)
+
+	local var_23_0 = arg_23_0.map:GetPlayer()
+
+	arg_23_0.view:OnEndGame(var_23_0.score, var_23_0.mapScore, arg_23_0.map.id)
+
+	if arg_23_0.OnGameEndCallBack then
+		arg_23_0.OnGameEndCallBack(var_23_0.score, var_23_0.higestscore, var_23_0.pageIndex, arg_23_0.map.id)
 	end
 
-	if slot0.OnOverMapScore and slot1:IsOverMapScore() then
-		slot0.OnOverMapScore(slot0.map.id, slot1.score)
+	if arg_23_0.OnOverMapScore and var_23_0:IsOverMapScore() then
+		arg_23_0.OnOverMapScore(arg_23_0.map.id, var_23_0.score)
 	end
 end
 
-slot0.updateHighScore = function(slot0, slot1)
-	slot0.highScores = slot1
+function var_0_0.updateHighScore(arg_24_0, arg_24_1)
+	arg_24_0.highScores = arg_24_1
 
-	slot0.view:SetHighScore(slot1)
+	arg_24_0.view:SetHighScore(arg_24_1)
 end
 
-slot0.ExitGame = function(slot0)
-	uv0(slot0)
-	slot0.view:OnExitGame()
+function var_0_0.ExitGame(arg_25_0)
+	var_0_1(arg_25_0)
+	arg_25_0.view:OnExitGame()
 
-	if slot0.map then
-		slot0.map:Dispose()
+	if arg_25_0.map then
+		arg_25_0.map:Dispose()
 
-		slot0.map = nil
+		arg_25_0.map = nil
 	end
 
-	slot0.enterGame = nil
+	arg_25_0.enterGame = nil
 end
 
-slot0.onBackPressed = function(slot0)
-	return slot0.view:onBackPressed()
+function var_0_0.onBackPressed(arg_26_0)
+	return arg_26_0.view:onBackPressed()
 end
 
-slot0.Dispose = function(slot0)
-	slot0:ExitGame()
-	slot0.view:Dispose()
+function var_0_0.Dispose(arg_27_0)
+	arg_27_0:ExitGame()
+	arg_27_0.view:Dispose()
 end
 
-return slot0
+return var_0_0

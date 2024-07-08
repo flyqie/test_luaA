@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.task_meta_data_template = setmetatable({
 	__name = "task_meta_data_template",
 	all = {
@@ -217,21 +217,6 @@ pg.task_meta_data_template = setmetatable({
 		100163,
 		100164,
 		100165,
-		100171,
-		100172,
-		100173,
-		100174,
-		100175,
-		100181,
-		100182,
-		100183,
-		100184,
-		100185,
-		100191,
-		100192,
-		100193,
-		100194,
-		100195,
 		200001,
 		200002,
 		200003,
@@ -295,19 +280,7 @@ pg.task_meta_data_template = setmetatable({
 		200161,
 		200162,
 		200163,
-		200164,
-		200171,
-		200172,
-		200173,
-		200174,
-		200181,
-		200182,
-		200183,
-		200184,
-		200191,
-		200192,
-		200193,
-		200194
+		200164
 	}
 }, confHX)
 pg.base = pg.base or {}
@@ -2032,126 +2005,6 @@ pg.base.task_meta_data_template = {
 		target_num = 1,
 		target_id = "100"
 	},
-	[100171] = {
-		target_id_2 = "970505",
-		sub_type = 180,
-		desc = "使用罗德尼·META获得1次胜利",
-		id = 100171,
-		target_num = 1,
-		target_id = "0"
-	},
-	[100172] = {
-		target_id_2 = "970505",
-		sub_type = 180,
-		desc = "使用罗德尼·META击破等级＞30的敌方1次",
-		id = 100172,
-		target_num = 1,
-		target_id = "30"
-	},
-	[100173] = {
-		target_id_2 = "970505",
-		sub_type = 180,
-		desc = "使用罗德尼·META击破等级＞55的敌方1次",
-		id = 100173,
-		target_num = 1,
-		target_id = "55"
-	},
-	[100174] = {
-		target_id_2 = "970505",
-		sub_type = 180,
-		desc = "使用罗德尼·META击破等级＞80的敌方1次",
-		id = 100174,
-		target_num = 1,
-		target_id = "80"
-	},
-	[100175] = {
-		target_id_2 = "970505",
-		sub_type = 180,
-		desc = "使用罗德尼·META击破等级＞100的敌方1次",
-		id = 100175,
-		target_num = 1,
-		target_id = "100"
-	},
-	[100181] = {
-		target_id_2 = "970105",
-		sub_type = 180,
-		desc = "使用吸血鬼·META获得1次胜利",
-		id = 100181,
-		target_num = 1,
-		target_id = "0"
-	},
-	[100182] = {
-		target_id_2 = "970105",
-		sub_type = 180,
-		desc = "使用吸血鬼·META击破等级＞30的敌方1次",
-		id = 100182,
-		target_num = 1,
-		target_id = "30"
-	},
-	[100183] = {
-		target_id_2 = "970105",
-		sub_type = 180,
-		desc = "使用吸血鬼·META击破等级＞55的敌方1次",
-		id = 100183,
-		target_num = 1,
-		target_id = "55"
-	},
-	[100184] = {
-		target_id_2 = "970105",
-		sub_type = 180,
-		desc = "使用吸血鬼·META击破等级＞80的敌方1次",
-		id = 100184,
-		target_num = 1,
-		target_id = "80"
-	},
-	[100185] = {
-		target_id_2 = "970105",
-		sub_type = 180,
-		desc = "使用吸血鬼·META击破等级＞100的敌方1次",
-		id = 100185,
-		target_num = 1,
-		target_id = "100"
-	},
-	[100191] = {
-		target_id_2 = "970704",
-		sub_type = 180,
-		desc = "使用贝亚恩·META获得1次胜利",
-		id = 100191,
-		target_num = 1,
-		target_id = "0"
-	},
-	[100192] = {
-		target_id_2 = "970704",
-		sub_type = 180,
-		desc = "使用贝亚恩·META击破等级＞30的敌方1次",
-		id = 100192,
-		target_num = 1,
-		target_id = "30"
-	},
-	[100193] = {
-		target_id_2 = "970704",
-		sub_type = 180,
-		desc = "使用贝亚恩·META击破等级＞55的敌方1次",
-		id = 100193,
-		target_num = 1,
-		target_id = "55"
-	},
-	[100194] = {
-		target_id_2 = "970704",
-		sub_type = 180,
-		desc = "使用贝亚恩·META击破等级＞80的敌方1次",
-		id = 100194,
-		target_num = 1,
-		target_id = "80"
-	},
-	[100195] = {
-		target_id_2 = "970704",
-		sub_type = 180,
-		desc = "使用贝亚恩·META击破等级＞100的敌方1次",
-		id = 100195,
-		target_num = 1,
-		target_id = "100"
-	},
 	[200001] = {
 		target_id_2 = "970101",
 		sub_type = 302,
@@ -2661,102 +2514,6 @@ pg.base.task_meta_data_template = {
 		sub_type = 302,
 		desc = "大型作战内使用水星纪念·META击破等级＞100的敌方1次",
 		id = 200164,
-		target_num = 1,
-		target_id = "100"
-	},
-	[200171] = {
-		target_id_2 = "970505",
-		sub_type = 302,
-		desc = "大型作战内使用罗德尼·META获得1次胜利",
-		id = 200171,
-		target_num = 1,
-		target_id = "0"
-	},
-	[200172] = {
-		target_id_2 = "970505",
-		sub_type = 302,
-		desc = "大型作战内使用罗德尼·META击破等级＞70的敌方1次",
-		id = 200172,
-		target_num = 1,
-		target_id = "70"
-	},
-	[200173] = {
-		target_id_2 = "970505",
-		sub_type = 302,
-		desc = "大型作战内使用罗德尼·META击破等级＞90的敌方1次",
-		id = 200173,
-		target_num = 1,
-		target_id = "90"
-	},
-	[200174] = {
-		target_id_2 = "970505",
-		sub_type = 302,
-		desc = "大型作战内使用罗德尼·META击破等级＞100的敌方1次",
-		id = 200174,
-		target_num = 1,
-		target_id = "100"
-	},
-	[200181] = {
-		target_id_2 = "970105",
-		sub_type = 302,
-		desc = "大型作战内使用吸血鬼·META获得1次胜利",
-		id = 200181,
-		target_num = 1,
-		target_id = "0"
-	},
-	[200182] = {
-		target_id_2 = "970105",
-		sub_type = 302,
-		desc = "大型作战内使用吸血鬼·META击破等级＞70的敌方1次",
-		id = 200182,
-		target_num = 1,
-		target_id = "70"
-	},
-	[200183] = {
-		target_id_2 = "970105",
-		sub_type = 302,
-		desc = "大型作战内使用吸血鬼·META击破等级＞90的敌方1次",
-		id = 200183,
-		target_num = 1,
-		target_id = "90"
-	},
-	[200184] = {
-		target_id_2 = "970105",
-		sub_type = 302,
-		desc = "大型作战内使用吸血鬼·META击破等级＞100的敌方1次",
-		id = 200184,
-		target_num = 1,
-		target_id = "100"
-	},
-	[200191] = {
-		target_id_2 = "970704",
-		sub_type = 302,
-		desc = "大型作战内使用贝亚恩·META获得1次胜利",
-		id = 200191,
-		target_num = 1,
-		target_id = "0"
-	},
-	[200192] = {
-		target_id_2 = "970704",
-		sub_type = 302,
-		desc = "大型作战内使用贝亚恩·META击破等级＞70的敌方1次",
-		id = 200192,
-		target_num = 1,
-		target_id = "70"
-	},
-	[200193] = {
-		target_id_2 = "970704",
-		sub_type = 302,
-		desc = "大型作战内使用贝亚恩·META击破等级＞90的敌方1次",
-		id = 200193,
-		target_num = 1,
-		target_id = "90"
-	},
-	[200194] = {
-		target_id_2 = "970704",
-		sub_type = 302,
-		desc = "大型作战内使用贝亚恩·META击破等级＞100的敌方1次",
-		id = 200194,
 		target_num = 1,
 		target_id = "100"
 	}

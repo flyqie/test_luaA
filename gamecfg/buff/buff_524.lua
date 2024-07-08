@@ -1,4 +1,4 @@
-return {
+﻿return {
 	init_effect = "",
 	name = "进水",
 	time = 24.1,
@@ -20,16 +20,6 @@ return {
 				time = 3,
 				dotType = 2,
 				k = 0.45
-			}
-		},
-		{
-			type = "BattleBuffAddTag",
-			trigger = {
-				"onAttach",
-				"onRemove"
-			},
-			arg_list = {
-				tag = "flood"
 			}
 		}
 	}

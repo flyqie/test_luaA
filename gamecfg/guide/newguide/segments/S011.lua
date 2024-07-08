@@ -1,4 +1,4 @@
-slot0 = {
+﻿local var_0_0 = {
 	"让我们打开<color=#ff7d36>任务日志</color>",
 	"领取<color=#ff7d36>任务奖励</color>"
 }
@@ -13,17 +13,11 @@ return {
 				mode = 2,
 				posY = -123,
 				posX = 87.7,
-				text = slot0[1]
+				text = var_0_0[1]
 			},
 			ui = {
+				path = "/OverlayCamera/Overlay/UIMain/main/frame/bottom/taskButton",
 				pathIndex = -1,
-				dynamicPath = function ()
-					if getProxy(SettingsProxy):IsMellowStyle() then
-						return "/OverlayCamera/Overlay/UIMain/NewMainMellowTheme(Clone)/frame/bottom/frame/task"
-					else
-						return "/OverlayCamera/Overlay/UIMain/NewMainClassicTheme(Clone)/frame/bottom/taskButton"
-					end
-				end,
 				triggerType = {
 					1
 				},
@@ -56,7 +50,7 @@ return {
 				mode = 2,
 				posY = 183,
 				posX = 474,
-				text = slot0[2]
+				text = var_0_0[2]
 			},
 			ui = {
 				delay = 1,

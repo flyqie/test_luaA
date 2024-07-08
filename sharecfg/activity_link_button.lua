@@ -1,7 +1,7 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.activity_link_button = {
 	{
-		param = "5331",
+		param = "0",
 		name = "event_all",
 		type = 3,
 		text_pic = "text_event_all",
@@ -11,7 +11,7 @@ pg.activity_link_button = {
 		order = 1,
 		time = {
 			"default",
-			5331
+			5221
 		}
 	},
 	{
@@ -50,7 +50,7 @@ pg.activity_link_button = {
 		}
 	},
 	[20] = {
-		type = 2,
+		type = 0,
 		name = "event_minigame",
 		text_pic = "text_event_minigame",
 		id = 20,
@@ -59,10 +59,10 @@ pg.activity_link_button = {
 		order = 1,
 		time = {
 			"default",
-			5335
+			5193
 		},
 		param = {
-			"LINER_BACKHILL"
+			"SPRING_FESTIVAL_BACKHILL_2024"
 		}
 	},
 	[30] = {
@@ -116,7 +116,7 @@ pg.activity_link_button = {
 		order = 1,
 		time = {
 			"default",
-			5267
+			4733
 		}
 	},
 	[80] = {
@@ -180,17 +180,6 @@ pg.activity_link_button = {
 			"SENRANKAGURA_TRAIN"
 		}
 	},
-	[102] = {
-		param = "0",
-		name = "event_boss_single",
-		time = "stop",
-		text_pic = "text_event_anotherWorld",
-		type = 0,
-		pic = "event_map",
-		id = 102,
-		group_id = 4,
-		order = 1
-	},
 	get_id_list_by_name = {
 		event_all = {
 			1,
@@ -226,9 +215,6 @@ pg.activity_link_button = {
 		},
 		event_senran = {
 			101
-		},
-		event_boss_single = {
-			102
 		}
 	},
 	all = {
@@ -244,7 +230,6 @@ pg.activity_link_button = {
 		80,
 		90,
 		100,
-		101,
-		102
+		101
 	}
 }

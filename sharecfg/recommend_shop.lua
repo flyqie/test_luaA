@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.recommend_shop = {
 	{
 		shop_id = 1,
@@ -42,17 +42,17 @@ pg.recommend_shop = {
 		}
 	},
 	[5] = {
-		shop_id = 69,
+		shop_id = 65,
 		shop_type = 1,
 		id = 5,
 		pic = "",
-		order = 1,
+		order = 3,
 		time = {
 			{
 				{
 					2024,
-					5,
-					21
+					1,
+					30
 				},
 				{
 					0,
@@ -63,8 +63,8 @@ pg.recommend_shop = {
 			{
 				{
 					2024,
-					6,
-					12
+					2,
+					21
 				},
 				{
 					23,
@@ -75,17 +75,17 @@ pg.recommend_shop = {
 		}
 	},
 	[6] = {
-		shop_id = 70,
+		shop_id = 66,
 		shop_type = 1,
 		id = 6,
 		pic = "",
-		order = 2,
+		order = 4,
 		time = {
 			{
 				{
 					2024,
-					5,
-					21
+					1,
+					30
 				},
 				{
 					0,
@@ -96,8 +96,8 @@ pg.recommend_shop = {
 			{
 				{
 					2024,
-					6,
-					12
+					2,
+					21
 				},
 				{
 					23,

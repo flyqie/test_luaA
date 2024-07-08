@@ -1,23 +1,23 @@
-slot0 = 0
+﻿local var_0_0 = 0
 
-HUT_Var1 = function()
-	uv0 = uv0 + 2
+function HUT_Var1()
+	var_0_0 = var_0_0 + 2
 
-	print("x = ", uv0)
+	print("x = ", var_0_0)
 end
 
-HUT_Var3 = function()
-	uv0 = uv0 + 10
+function HUT_Var3()
+	var_0_0 = var_0_0 + 10
 
-	print("x = ", uv0)
+	print("x = ", var_0_0)
 end
 
-slot1 = HUT_Var1
+local var_0_1 = HUT_Var1
 
-HUT_Func = function()
-	uv0()
+function HUT_Func()
+	var_0_1()
 end
 
-HUT_FUNC2 = function()
+function HUT_FUNC2()
 	print("y = 4")
 end

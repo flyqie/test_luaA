@@ -1,115 +1,118 @@
-slot0 = class("MainBasePainting", import("view.base.BaseEventLogic"))
-slot1 = 1
-slot2 = 2
-slot3 = 3
-slot4 = 4
-slot5 = nil
+﻿local var_0_0 = class("MainBasePainting")
+local var_0_1 = 1
+local var_0_2 = 2
+local var_0_3 = 3
+local var_0_4 = 4
+local var_0_5
 
-slot0.Ctor = function(slot0, slot1, slot2)
-	uv0.super.Ctor(slot0, slot2)
-	pg.DelegateInfo.New(slot0)
+function var_0_0.Ctor(arg_1_0, arg_1_1, arg_1_2)
+	pg.DelegateInfo.New(arg_1_0)
 
-	slot0.container = slot1
-	slot0.state = uv1
-	uv2 = pg.AssistantInfo
-	slot0.wordPosition = slot1:Find("live2d")
-	slot0.cvLoader = MainCVLoader.New()
-	slot0.longPressEvent = slot1:GetComponent("UILongPressTrigger").onLongPressed
+	arg_1_0.container = arg_1_1
+	arg_1_0.chatTf = arg_1_2
+	arg_1_0.chatText = arg_1_2:Find("Text")
+	arg_1_0.chatTextBg = arg_1_2:Find("chatbgtop")
+	arg_1_0.initChatBgH = arg_1_0.chatTextBg.sizeDelta.y
+	arg_1_0.state = var_0_1
+	var_0_5 = pg.AssistantInfo
+	arg_1_0.cvLoader = MainCVLoader.New()
+	arg_1_0.longPressEvent = arg_1_1:GetComponent("UILongPressTrigger").onLongPressed
 end
 
-slot0.IsUnload = function(slot0)
-	return slot0.state == uv0
+function var_0_0.GetCenterPos(arg_2_0)
+	local var_2_0 = arg_2_0.container
+
+	return (arg_2_0.chatTf.parent:InverseTransformPoint(var_2_0.position))
 end
 
-slot0.GetCenterPos = function(slot0)
-	return slot0.wordPosition.position
+function var_0_0.IsLoading(arg_3_0)
+	return arg_3_0.state == var_0_2
 end
 
-slot0.IsLoading = function(slot0)
-	return slot0.state == uv0
+function var_0_0.IsLoaded(arg_4_0)
+	return arg_4_0.state == var_0_3
 end
 
-slot0.IsLoaded = function(slot0)
-	return slot0.state == uv0
-end
+function var_0_0.Load(arg_5_0, arg_5_1)
+	arg_5_0.isPuase = false
+	arg_5_0.isExited = false
+	arg_5_0.state = var_0_2
+	arg_5_0.ship = arg_5_1
+	arg_5_0.paintingName = arg_5_1:getPainting()
 
-slot0.Load = function(slot0, slot1)
-	slot0.isPuase = false
-	slot0.isExited = false
-	slot0.state = uv0
-	slot0.ship = slot1
-	slot0.paintingName = slot1:getPainting()
+	arg_5_0:OnLoad(function()
+		arg_5_0.state = var_0_3
 
-	slot0:OnLoad(function ()
-		uv0.state = uv1
-
-		if uv0.triggerWhenLoaded then
-			uv0:TriggerEventAtFirstTime()
+		if arg_5_0.triggerWhenLoaded then
+			arg_5_0:TriggerEventAtFirstTime()
 		end
 
-		uv0:InitClickEvent()
+		arg_5_0:InitClickEvent()
 	end)
 end
 
-slot0.Unload = function(slot0)
-	slot0.state = uv0
+function var_0_0.Unload(arg_7_0)
+	arg_7_0.state = var_0_4
 
-	removeOnButton(slot0.container)
-	slot0.longPressEvent:RemoveAllListeners()
-	slot0:StopChatAnimtion()
-	slot0.cvLoader:Stop()
-	slot0:RemoveTimer()
-	slot0:OnUnload()
+	removeOnButton(arg_7_0.container)
+	arg_7_0.longPressEvent:RemoveAllListeners()
+	arg_7_0:StopChatAnimtion()
+	arg_7_0.cvLoader:Stop()
+	arg_7_0:RemoveTimer()
+	arg_7_0:OnUnload()
 
-	slot0.paintingName = nil
-
-	LeanTween.cancel(slot0.container.gameObject)
+	arg_7_0.paintingName = nil
 end
 
-slot0.UnloadOnlyPainting = function(slot0)
-	slot0.state = uv0
+function var_0_0.UnloadOnlyPainting(arg_8_0)
+	arg_8_0.state = var_0_4
 
-	removeOnButton(slot0.container)
-	slot0.longPressEvent:RemoveAllListeners()
-	slot0:RemoveTimer()
-	slot0:OnUnload()
+	removeOnButton(arg_8_0.container)
+	arg_8_0.longPressEvent:RemoveAllListeners()
+	arg_8_0:RemoveTimer()
+	arg_8_0:OnUnload()
 
-	slot0.paintingName = nil
+	arg_8_0.paintingName = nil
 end
 
-slot0.InitClickEvent = function(slot0)
-	onButton(slot0, slot0.container, function ()
-		uv0:OnClick()
-		uv0:TriggerPersonalTask(uv0.ship.groupId)
+function var_0_0.InitClickEvent(arg_9_0)
+	onButton(arg_9_0, arg_9_0.container, function()
+		arg_9_0:OnClick()
+		arg_9_0:TriggerPersonalTask(arg_9_0.ship.groupId)
 	end)
-
-	slot1 = slot0.longPressEvent
-
-	slot1:RemoveAllListeners()
-
-	slot1 = slot0.longPressEvent
-
-	slot1:AddListener(function ()
+	arg_9_0.longPressEvent:RemoveAllListeners()
+	arg_9_0.longPressEvent:AddListener(function()
 		if getProxy(ContextProxy):getCurrentContext().viewComponent.__cname == "NewMainScene" then
-			uv0:OnLongPress()
+			arg_9_0:OnLongPress()
 		end
 	end)
 end
 
-slot0.TriggerPersonalTask = function(slot0, slot1)
-	if slot0.isFoldState then
+function var_0_0.TriggerPersonalTask(arg_12_0, arg_12_1)
+	if arg_12_0.isFoldState then
 		return
 	end
 
-	slot0:TriggerInterActionTask()
+	local var_12_0 = getProxy(TaskProxy)
+	local var_12_1 = var_12_0:GetFlagShipInterActionTaskList()
 
-	slot2 = getProxy(TaskProxy)
+	if var_12_1 and #var_12_1 > 0 then
+		for iter_12_0, iter_12_1 in ipairs(var_12_1) do
+			pg.m02:sendNotification(GAME.UPDATE_TASK_PROGRESS, {
+				taskId = iter_12_1.id
+			})
+		end
+	end
 
-	for slot6, slot7 in ipairs(pg.task_data_trigger.all) do
-		if pg.task_data_trigger[slot7].group_id == slot1 then
-			if not slot2:getFinishTaskById(slot8.task_id) then
-				slot0:CheckStoryDownload(slot9, function ()
-					pg.m02:sendNotification(GAME.TRIGGER_TASK, uv0)
+	for iter_12_2, iter_12_3 in ipairs(pg.task_data_trigger.all) do
+		local var_12_2 = pg.task_data_trigger[iter_12_3]
+
+		if var_12_2.group_id == arg_12_1 then
+			local var_12_3 = var_12_2.task_id
+
+			if not var_12_0:getFinishTaskById(var_12_3) then
+				arg_12_0:CheckStoryDownload(var_12_3, function()
+					pg.m02:sendNotification(GAME.TRIGGER_TASK, var_12_3)
 				end)
 
 				break
@@ -118,422 +121,448 @@ slot0.TriggerPersonalTask = function(slot0, slot1)
 	end
 end
 
-slot0.TriggerInterActionTask = function(slot0)
-	if getProxy(TaskProxy):GetFlagShipInterActionTaskList() and #slot2 > 0 then
-		for slot6, slot7 in ipairs(slot2) do
-			pg.m02:sendNotification(GAME.UPDATE_TASK_PROGRESS, {
-				taskId = slot7.id
-			})
-		end
-	end
-end
-
-slot0.CheckStoryDownload = function(slot0, slot1, slot2)
-	slot3 = {}
-	slot4 = slot1
+function var_0_0.CheckStoryDownload(arg_14_0, arg_14_1, arg_14_2)
+	local var_14_0 = {}
+	local var_14_1 = arg_14_1
 
 	while true do
-		if pg.task_data_template[slot4].story_id ~= "" then
-			table.insert(slot3, slot5.story_id)
+		local var_14_2 = pg.task_data_template[var_14_1]
+
+		if var_14_2.story_id ~= "" then
+			table.insert(var_14_0, var_14_2.story_id)
 		end
 
-		if slot5.next_task == "" or slot5.next_task == "0" then
+		if var_14_2.next_task == "" or var_14_2.next_task == "0" then
 			break
 		end
 
-		slot4 = slot4 + 1
+		var_14_1 = var_14_1 + 1
 	end
 
-	slot5 = pg.NewStoryMgr.GetInstance()
+	local var_14_3 = pg.NewStoryMgr.GetInstance():GetStoryPaintingsByNameList(var_14_0)
+	local var_14_4 = _.map(var_14_3, function(arg_15_0)
+		return "painting/" .. arg_15_0
+	end)
 
 	PaintingGroupConst.PaintingDownload({
 		isShowBox = true,
-		paintingNameList = _.map(slot5:GetStoryPaintingsByNameList(slot3), function (slot0)
-			return "painting/" .. slot0
-		end),
-		finishFunc = slot2
+		paintingNameList = var_14_4,
+		finishFunc = arg_14_2
 	})
 end
 
-slot0.TriggerEventAtFirstTime = function(slot0)
-	if not slot0:IsLoaded() then
-		slot0.triggerWhenLoaded = true
+function var_0_0.TriggerEventAtFirstTime(arg_16_0)
+	if not arg_16_0:IsLoaded() then
+		arg_16_0.triggerWhenLoaded = true
 
 		return
 	end
 
-	slot0.triggerWhenLoaded = false
+	arg_16_0.triggerWhenLoaded = false
 
-	slot0:OnFirstTimeTriggerEvent()
+	arg_16_0:OnFirstTimeTriggerEvent()
 end
 
-slot0.OnFirstTimeTriggerEvent = function(slot0)
-	slot1 = function(slot0)
-		uv0:_TriggerEvent(slot0)
+function var_0_0.OnFirstTimeTriggerEvent(arg_17_0)
+	local function var_17_0(arg_18_0)
+		arg_17_0:_TriggerEvent(arg_18_0)
+	end
+
+	if arg_17_0.ship:GetSkinConfig().spine_use_live2d == 1 and arg_17_0.live2dChar then
+		return
 	end
 
 	if getProxy(PlayerProxy):getFlag("login") then
 		getProxy(PlayerProxy):setFlag("login", nil)
-		slot1("event_login")
+		var_17_0("event_login")
 	elseif getProxy(PlayerProxy):getFlag("battle") then
 		getProxy(PlayerProxy):setFlag("battle", nil)
-		slot1("home")
+		var_17_0("home")
 	else
-		slot0:TriggerNextEventAuto()
+		arg_17_0:TriggerNextEventAuto()
 	end
 end
 
-slot0._TriggerEvent = function(slot0, slot1)
-	if uv0.assistantEvents[slot1].dialog ~= "" then
-		slot0:DisplayWord(slot2.dialog)
+function var_0_0._TriggerEvent(arg_19_0, arg_19_1)
+	local var_19_0 = var_0_5.assistantEvents[arg_19_1]
+
+	if var_19_0.dialog ~= "" then
+		arg_19_0:DisplayWord(var_19_0.dialog)
 	else
-		slot0:TriggerNextEventAuto()
+		arg_19_0:TriggerNextEventAuto()
 	end
 end
 
-slot0.TriggerEvent = function(slot0, slot1)
-	if slot0.isDragAndZoomState then
+function var_0_0.TriggerEvent(arg_20_0, arg_20_1)
+	if arg_20_0.isDragAndZoomState then
 		return
 	end
 
-	if slot0.chatting then
+	if arg_20_0.chatting then
 		return
 	end
 
-	slot0:RemoveTimer()
-	slot0:_TriggerEvent(slot1)
-	slot0:OnTriggerEvent()
+	arg_20_0:RemoveTimer()
+	arg_20_0:_TriggerEvent(arg_20_1)
+	arg_20_0:OnTriggerEvent()
 end
 
-slot0.TriggerNextEventAuto = function(slot0)
-	if slot0.isPuase or slot0.isExited then
+function var_0_0.TriggerNextEventAuto(arg_21_0)
+	if arg_21_0.isPuase or arg_21_0.isExited then
 		return
 	end
 
-	slot0:OnEndChatting()
-	slot0:RemoveTimer()
+	arg_21_0:OnEndChatting()
+	arg_21_0:RemoveTimer()
 
-	slot0.timer = Timer.New(function ()
-		slot0 = uv0:CollectIdleEvents(uv0.lastChatEvent)
-		uv0.lastChatEvent = slot0[math.ceil(math.random(#slot0))]
+	arg_21_0.timer = Timer.New(function()
+		local var_22_0 = arg_21_0:CollectIdleEvents(arg_21_0.lastChatEvent)
 
-		uv0:_TriggerEvent(uv0.lastChatEvent)
-		uv0:OnTriggerEventAuto()
-		uv0:RemoveTimer()
+		arg_21_0.lastChatEvent = var_22_0[math.ceil(math.random(#var_22_0))]
+
+		arg_21_0:_TriggerEvent(arg_21_0.lastChatEvent)
+		arg_21_0:OnTriggerEventAuto()
+		arg_21_0:RemoveTimer()
 	end, 30, 1, true)
 
-	slot0.timer:Start()
+	arg_21_0.timer:Start()
 end
 
-slot0.OnStartChatting = function(slot0)
-	slot0.chatting = true
+function var_0_0.OnStartChatting(arg_23_0)
+	arg_23_0.chatting = true
 end
 
-slot0.OnEndChatting = function(slot0)
-	slot0.chatting = false
+function var_0_0.OnEndChatting(arg_24_0)
+	arg_24_0.chatting = false
 end
 
-slot0.GetWordAndCv = function(slot0, slot1, slot2)
-	slot3, slot4, slot5, slot6, slot7, slot8 = ShipWordHelper.GetCvDataForShip(slot0.ship, slot2)
+function var_0_0.GetWordAndCv(arg_25_0, arg_25_1, arg_25_2)
+	local var_25_0, var_25_1, var_25_2, var_25_3, var_25_4, var_25_5 = ShipWordHelper.GetCvDataForShip(arg_25_0.ship, arg_25_2)
 
-	return slot3, slot4, slot5, slot6, slot7, slot8
+	return var_25_0, var_25_1, var_25_2, var_25_3, var_25_4, var_25_5
 end
 
-slot0.DisplayWord = function(slot0, slot1)
-	slot0:OnStartChatting()
+function var_0_0.DisplayWord(arg_26_0, arg_26_1)
+	arg_26_0:OnStartChatting()
 
-	slot2, slot3, slot4, slot5, slot6, slot7 = slot0:GetWordAndCv(slot0.ship, slot1)
+	local var_26_0, var_26_1, var_26_2, var_26_3, var_26_4, var_26_5 = arg_26_0:GetWordAndCv(arg_26_0.ship, arg_26_1)
 
-	if not slot4 or slot4 == nil or slot4 == "" or slot4 == "nil" then
-		slot0:OnEndChatting()
+	if not var_26_2 or var_26_2 == nil or var_26_2 == "" or var_26_2 == "nil" then
+		arg_26_0:OnEndChatting()
 
 		return
 	end
 
-	slot0:OnDisplayWorld(slot1)
-	slot0:emit(MainWordView.SET_CONTENT, slot1, slot4)
-	slot0:PlayCvAndAnimation(slot6, slot5, slot3)
+	if PLATFORM_CODE == PLATFORM_US then
+		setTextEN(arg_26_0.chatText, var_26_2)
+	else
+		setText(arg_26_0.chatText, SwitchSpecialChar(var_26_2))
+	end
+
+	arg_26_0:AdjustChatPosition()
+	arg_26_0:OnDisplayWorld(arg_26_1)
+	arg_26_0:RegisterChatSkipAction(arg_26_1)
+	arg_26_0:PlayCvAndAnimation(var_26_4, var_26_3, var_26_1)
 end
 
-slot0.PlayCvAndAnimation = function(slot0, slot1, slot2, slot3)
+function var_0_0.RegisterChatSkipAction(arg_27_0, arg_27_1)
+	removeOnButton(arg_27_0.chatTf)
+	onButton(arg_27_0, arg_27_0.chatTf, function()
+		if arg_27_1 == "mission_complete" or arg_27_1 == "mission" then
+			pg.m02:sendNotification(GAME.GO_SCENE, SCENE.TASK)
+		elseif arg_27_1 == "collection" then
+			pg.m02:sendNotification(GAME.GO_SCENE, SCENE.EVENT)
+		elseif arg_27_1 == "event_complete" then
+			pg.m02:sendNotification(GAME.GO_SCENE, SCENE.EVENT)
+		end
+	end)
+end
+
+function var_0_0.PlayCvAndAnimation(arg_29_0, arg_29_1, arg_29_2, arg_29_3)
 	if getProxy(ContextProxy):getContextByMediator(NewShipMediator) then
-		slot0:OnEndChatting()
+		arg_29_0:OnEndChatting()
 
 		return
 	end
 
-	slot4 = -1
+	local var_29_0 = -1
 
 	seriesAsync({
-		function (slot0)
-			if not uv0 or not not pg.NewStoryMgr.GetInstance():IsRunning() then
-				slot0()
+		function(arg_30_0)
+			if not arg_29_3 or not not pg.NewStoryMgr.GetInstance():IsRunning() then
+				arg_30_0()
 
 				return
 			end
 
-			slot1 = uv1
+			arg_29_0:PlayCV(arg_29_1, arg_29_2, arg_29_3, function(arg_31_0)
+				var_29_0 = arg_31_0
 
-			slot1:PlayCV(uv2, uv3, uv0, function (slot0)
-				uv0 = slot0
-
-				uv1()
+				arg_30_0()
 			end)
 		end,
-		function (slot0)
-			uv0:StartChatAnimtion(uv1, slot0)
+		function(arg_32_0)
+			arg_29_0:StartChatAnimtion(var_29_0, arg_32_0)
 		end
-	}, function ()
-		uv0:OnDisplayWordEnd()
+	}, function()
+		arg_29_0:OnDisplayWordEnd()
 	end)
 end
 
-slot0.OnDisplayWordEnd = function(slot0)
-	slot0:TriggerNextEventAuto()
+function var_0_0.OnDisplayWordEnd(arg_34_0)
+	arg_34_0:TriggerNextEventAuto()
 end
 
-slot0.PlayCV = function(slot0, slot1, slot2, slot3, slot4)
-	slot0.cvLoader:Load(pg.CriMgr.GetCVBankName(ShipWordHelper.RawGetCVKey(slot0.ship.skinId)), slot3, 0, slot4)
+function var_0_0.PlayCV(arg_35_0, arg_35_1, arg_35_2, arg_35_3, arg_35_4)
+	local var_35_0 = ShipWordHelper.RawGetCVKey(arg_35_0.ship.skinId)
+	local var_35_1 = pg.CriMgr.GetCVBankName(var_35_0)
+
+	arg_35_0.cvLoader:Load(var_35_1, arg_35_3, 0, arg_35_4)
 end
 
-slot0.StartChatAnimtion = function(slot0, slot1, slot2)
-	slot3 = 0.3
-	slot4 = slot1 > 0 and slot1 or 3
+function var_0_0.AdjustChatPosition(arg_36_0)
+	local var_36_0 = arg_36_0.chatText:GetComponent(typeof(Text))
 
-	slot0:emit(MainWordView.START_ANIMATION, slot3, slot4)
-	slot0:AddCharTimer(function ()
-		if uv0:IsUnload() then
-			return
-		end
+	if #var_36_0.text > CHAT_POP_STR_LEN then
+		var_36_0.alignment = TextAnchor.MiddleLeft
+	else
+		var_36_0.alignment = TextAnchor.MiddleCenter
+	end
 
-		uv1()
-	end, slot3 * 3 + slot4)
-end
+	local var_36_1 = var_36_0.preferredHeight + 26
 
-slot0.AddCharTimer = function(slot0, slot1, slot2)
-	slot0:RemoveChatTimer()
+	if var_36_1 > arg_36_0.initChatBgH then
+		arg_36_0.chatTextBg.sizeDelta = Vector2.New(arg_36_0.chatTextBg.sizeDelta.x, var_36_1)
+	else
+		arg_36_0.chatTextBg.sizeDelta = Vector2.New(arg_36_0.chatTextBg.sizeDelta.x, arg_36_0.initChatBgH)
+	end
 
-	slot0.chatTimer = Timer.New(slot1, slot2, 1)
+	if arg_36_0.isFoldState then
+		local var_36_2 = arg_36_0:GetCenterPos()
 
-	slot0.chatTimer:Start()
-end
-
-slot0.RemoveChatTimer = function(slot0)
-	if slot0.chatTimer then
-		slot0.chatTimer:Stop()
-
-		slot0.chatTimer = nil
+		arg_36_0.chatTf.localPosition = Vector3(var_36_2.x, -190, 0)
 	end
 end
 
-slot0.StopChatAnimtion = function(slot0)
-	slot0:emit(MainWordView.STOP_ANIMATION)
-	slot0:OnEndChatting()
+function var_0_0.StartChatAnimtion(arg_37_0, arg_37_1, arg_37_2)
+	local var_37_0 = getProxy(SettingsProxy):ShouldShipMainSceneWord() and 1 or 0
+	local var_37_1 = 0.3
+	local var_37_2 = arg_37_1 > 0 and arg_37_1 or 3
+
+	LeanTween.scale(rtf(arg_37_0.chatTf.gameObject), Vector3.New(var_37_0, var_37_0, 1), var_37_1):setEase(LeanTweenType.easeOutBack):setOnComplete(System.Action(function()
+		LeanTween.scale(rtf(arg_37_0.chatTf.gameObject), Vector3.New(0, 0, 1), var_37_1):setEase(LeanTweenType.easeInBack):setDelay(var_37_1 + var_37_2):setOnComplete(System.Action(arg_37_2))
+	end))
 end
 
-slot0.OnStopVoice = function(slot0)
-	slot0.cvLoader:Stop()
+function var_0_0.StopChatAnimtion(arg_39_0)
+	if LeanTween.isTweening(arg_39_0.chatTf.gameObject) then
+		LeanTween.cancel(arg_39_0.chatTf.gameObject)
+	end
+
+	arg_39_0.chatTf.localScale = Vector3.zero
+
+	arg_39_0:OnEndChatting()
 end
 
-slot0.CollectIdleEvents = function(slot0, slot1)
-	slot2 = {}
+function var_0_0.OnStopVoice(arg_40_0)
+	arg_40_0.cvLoader:Stop()
+end
 
-	if getProxy(EventProxy):hasFinishState() and slot1 ~= "event_complete" then
-		table.insert(slot2, "event_complete")
+function var_0_0.CollectIdleEvents(arg_41_0, arg_41_1)
+	local var_41_0 = {}
+
+	if getProxy(EventProxy):hasFinishState() and arg_41_1 ~= "event_complete" then
+		table.insert(var_41_0, "event_complete")
 	else
-		if getProxy(TaskProxy):getCanReceiveCount() > 0 and slot1 ~= "mission_complete" then
-			table.insert(slot2, "mission_complete")
+		if getProxy(TaskProxy):getCanReceiveCount() > 0 and arg_41_1 ~= "mission_complete" then
+			table.insert(var_41_0, "mission_complete")
 		end
 
-		if getProxy(MailProxy):GetAttachmentCount() > 0 and slot1 ~= "mail" then
-			table.insert(slot2, "mail")
+		if getProxy(MailProxy):GetAttachmentCount() > 0 and arg_41_1 ~= "mail" then
+			table.insert(var_41_0, "mail")
 		end
 
-		if #slot2 == 0 then
-			slot2 = uv0.filterAssistantEvents(Clone(uv0.IdleEvents), slot0.ship.skinId, slot0.ship:getCVIntimacy())
+		if #var_41_0 == 0 then
+			local var_41_1 = arg_41_0.ship:getCVIntimacy()
 
-			if getProxy(TaskProxy):getNotFinishCount() and getProxy(TaskProxy):getNotFinishCount() > 0 and slot1 ~= "mission" then
-				table.insert(slot2, "mission")
+			var_41_0 = var_0_5.filterAssistantEvents(Clone(var_0_5.IdleEvents), arg_41_0.ship.skinId, var_41_1)
+
+			if getProxy(TaskProxy):getNotFinishCount() and getProxy(TaskProxy):getNotFinishCount() > 0 and arg_41_1 ~= "mission" then
+				table.insert(var_41_0, "mission")
 			end
 		end
 	end
 
-	return slot2
+	return var_41_0
 end
 
-slot0.CollectTouchEvents = function(slot0)
-	return uv0.filterAssistantEvents(uv0.PaintingTouchEvents, slot0.ship.skinId, slot0.ship:getCVIntimacy())
+function var_0_0.CollectTouchEvents(arg_42_0)
+	local var_42_0 = arg_42_0.ship:getCVIntimacy()
+
+	return (var_0_5.filterAssistantEvents(var_0_5.PaintingTouchEvents, arg_42_0.ship.skinId, var_42_0))
 end
 
-slot0.GetTouchEvent = function(slot0, slot1)
-	return uv0.filterAssistantEvents(uv0.getAssistantTouchEvents(slot1, slot0.ship.skinId), slot0.ship.skinId, 0)
+function var_0_0.GetTouchEvent(arg_43_0, arg_43_1)
+	return (var_0_5.filterAssistantEvents(var_0_5.getAssistantTouchEvents(arg_43_1, arg_43_0.ship.skinId), arg_43_0.ship.skinId, 0))
 end
 
-slot0.GetIdleEvents = function(slot0)
-	return uv0.filterAssistantEvents(uv0.IdleEvents, slot0.ship.skinId, 0)
+function var_0_0.GetIdleEvents(arg_44_0)
+	return (var_0_5.filterAssistantEvents(var_0_5.IdleEvents, arg_44_0.ship.skinId, 0))
 end
 
-slot0.GetEventConfig = function(slot0, slot1)
-	return uv0.assistantEvents[slot1]
+function var_0_0.GetEventConfig(arg_45_0, arg_45_1)
+	return var_0_5.assistantEvents[arg_45_1]
 end
 
-slot0.GetSpecialTouchEvent = function(slot0, slot1)
-	return uv0.getPaintingTouchEvents(slot1)
+function var_0_0.GetSpecialTouchEvent(arg_46_0, arg_46_1)
+	return var_0_5.getPaintingTouchEvents(arg_46_1)
 end
 
-slot0.RemoveTimer = function(slot0)
-	if slot0.timer then
-		slot0.timer:Stop()
+function var_0_0.RemoveTimer(arg_47_0)
+	if arg_47_0.timer then
+		arg_47_0.timer:Stop()
 
-		slot0.timer = nil
+		arg_47_0.timer = nil
 	end
 end
 
-slot0.IsExited = function(slot0)
-	return slot0.isExited
+function var_0_0.IsExited(arg_48_0)
+	return arg_48_0.isExited
 end
 
-slot0.Fold = function(slot0, slot1, slot2)
-	slot0.isFoldState = slot1
+function var_0_0.Fold(arg_49_0, arg_49_1, arg_49_2)
+	arg_49_0.isFoldState = arg_49_1
 
-	slot0:RemoveMoveTimer()
-	slot0:OnFold(slot1)
+	arg_49_0:RemoveMoveTimer()
+
+	if arg_49_1 and arg_49_2 > 0 then
+		LeanTween.value(arg_49_0.container.gameObject, 0, 1, arg_49_2):setOnUpdate(System.Action_float(function(arg_50_0)
+			local var_50_0 = arg_49_0:GetCenterPos()
+
+			arg_49_0.chatTf.localPosition = Vector3(var_50_0.x, -190, 0)
+		end))
+	end
+
+	arg_49_0:OnFold(arg_49_1)
 end
 
-slot0.RemoveMoveTimer = function(slot0)
-	if slot0.moveTimer then
-		slot0.moveTimer:Stop()
+function var_0_0.RemoveMoveTimer(arg_51_0)
+	if arg_51_0.moveTimer then
+		arg_51_0.moveTimer:Stop()
 
-		slot0.moveTimer = nil
+		arg_51_0.moveTimer = nil
 	end
 end
 
-slot0.EnableOrDisableMove = function(slot0, slot1)
-	slot0.isDragAndZoomState = slot1
+function var_0_0.EnableOrDisableMove(arg_52_0, arg_52_1)
+	arg_52_0.isDragAndZoomState = arg_52_1
 
-	slot0:RemoveMoveTimer()
+	arg_52_0:RemoveMoveTimer()
 
-	if slot1 then
-		slot0:StopChatAnimtion()
-		slot0:RemoveTimer()
-		slot0.cvLoader:Stop()
+	if arg_52_1 then
+		arg_52_0:StopChatAnimtion()
+		arg_52_0:RemoveTimer()
+		arg_52_0.cvLoader:Stop()
 	else
-		slot0:TriggerNextEventAuto()
+		arg_52_0:TriggerNextEventAuto()
 	end
 
-	slot0:OnEnableOrDisableDragAndZoom(slot1)
+	arg_52_0:OnEnableOrDisableDragAndZoom(arg_52_1)
 end
 
-slot0.GetOffset = function(slot0)
+function var_0_0.GetOffset(arg_53_0)
 	return 0
 end
 
-slot0.IslimitYPos = function(slot0)
+function var_0_0.IslimitYPos(arg_54_0)
 	return false
 end
 
-slot0.PauseForSilent = function(slot0)
-	if slot0:IsLoaded() then
-		slot0:_Pause()
-	end
+function var_0_0.Puase(arg_55_0)
+	arg_55_0.isPuase = true
+
+	arg_55_0:RemoveMoveTimer()
+	arg_55_0:StopChatAnimtion()
+	arg_55_0:RemoveTimer()
+	arg_55_0.cvLoader:Stop()
+	arg_55_0:OnPuase()
 end
 
-slot0._Pause = function(slot0)
-	slot0.isPuase = true
+function var_0_0.Resume(arg_56_0)
+	arg_56_0.isPuase = false
 
-	slot0:RemoveMoveTimer()
-	slot0:StopChatAnimtion()
-	slot0:RemoveChatTimer()
-	slot0:RemoveTimer()
-	slot0.cvLoader:Stop()
+	arg_56_0:TriggerNextEventAuto()
+	arg_56_0:OnResume()
 end
 
-slot0.Puase = function(slot0)
-	slot0:_Pause()
-	slot0:OnPuase()
+function var_0_0.updateShip(arg_57_0, arg_57_1)
+	arg_57_0:OnUpdateShip(arg_57_1)
 end
 
-slot0.ResumeForSilent = function(slot0)
-	if slot0:IsLoaded() then
-		slot0:_Resume()
-	end
+function var_0_0.OnUpdateShip(arg_58_0, arg_58_1)
+	return
 end
 
-slot0._Resume = function(slot0)
-	slot0.isPuase = false
+function var_0_0.Dispose(arg_59_0)
+	arg_59_0.isExited = true
 
-	slot0:TriggerNextEventAuto()
-end
+	pg.DelegateInfo.Dispose(arg_59_0)
 
-slot0.Resume = function(slot0)
-	slot0:_Resume()
-	slot0:OnResume()
-end
-
-slot0.updateShip = function(slot0, slot1)
-	if slot1 and slot0.ship.id == slot1.id then
-		slot0.ship = slot1
+	if arg_59_0.state == var_0_3 then
+		arg_59_0:UnLoad()
 	end
 
-	slot0:OnUpdateShip(slot1)
+	arg_59_0.cvLoader:Dispose()
+
+	arg_59_0.cvLoader = nil
+	arg_59_0.triggerWhenLoaded = false
+
+	arg_59_0:RemoveTimer()
+	arg_59_0:RemoveMoveTimer()
 end
 
-slot0.OnUpdateShip = function(slot0, slot1)
+function var_0_0.OnLoad(arg_60_0, arg_60_1)
+	arg_60_1()
 end
 
-slot0.Dispose = function(slot0)
-	slot0:disposeEvent()
-
-	slot0.isExited = true
-
-	pg.DelegateInfo.Dispose(slot0)
-
-	if slot0.state == uv0 then
-		slot0:UnLoad()
-	end
-
-	slot0.cvLoader:Dispose()
-
-	slot0.cvLoader = nil
-	slot0.triggerWhenLoaded = false
-
-	slot0:RemoveTimer()
-	slot0:RemoveMoveTimer()
-	slot0:RemoveChatTimer()
+function var_0_0.OnUnload(arg_61_0)
+	return
 end
 
-slot0.OnLoad = function(slot0, slot1)
-	slot1()
+function var_0_0.OnClick(arg_62_0)
+	return
 end
 
-slot0.OnUnload = function(slot0)
+function var_0_0.OnLongPress(arg_63_0)
+	return
 end
 
-slot0.OnClick = function(slot0)
+function var_0_0.OnTriggerEvent(arg_64_0)
+	return
 end
 
-slot0.OnLongPress = function(slot0)
+function var_0_0.OnTriggerEventAuto(arg_65_0)
+	return
 end
 
-slot0.OnTriggerEvent = function(slot0)
+function var_0_0.OnDisplayWorld(arg_66_0, arg_66_1)
+	return
 end
 
-slot0.OnTriggerEventAuto = function(slot0)
+function var_0_0.OnFold(arg_67_0, arg_67_1)
+	return
 end
 
-slot0.OnDisplayWorld = function(slot0, slot1)
+function var_0_0.OnEnableOrDisableDragAndZoom(arg_68_0, arg_68_1)
+	return
 end
 
-slot0.OnFold = function(slot0, slot1)
+function var_0_0.OnPuase(arg_69_0)
+	return
 end
 
-slot0.OnEnableOrDisableDragAndZoom = function(slot0, slot1)
+function var_0_0.OnResume(arg_70_0)
+	return
 end
 
-slot0.OnPuase = function(slot0)
-end
-
-slot0.OnResume = function(slot0)
-end
-
-return slot0
+return var_0_0

@@ -1,7 +1,8 @@
-slot0 = class("BattleGate")
-ys.Battle.BattleGate = slot0
-slot0.__name = "BattleGate"
-slot0.Gates = {
+﻿local var_0_0 = class("BattleGate")
+
+ys.Battle.BattleGate = var_0_0
+var_0_0.__name = "BattleGate"
+var_0_0.Gates = {
 	[SYSTEM_PROLOGUE] = ys.Battle.BattleGatePrologue,
 	[SYSTEM_PERFORM] = ys.Battle.BattleGatePerform,
 	[SYSTEM_SIMULATION] = ys.Battle.BattleGateSimulation,
@@ -26,8 +27,7 @@ slot0.Gates = {
 	[SYSTEM_GUILD] = ys.Battle.BattleGateGuild,
 	[SYSTEM_DEBUG] = ys.Battle.BattleGateDebug,
 	[SYSTEM_TEST] = ys.Battle.BattleGateTest,
-	[SYSTEM_CARDPUZZLE] = ys.Battle.BattleGateCardPuzzle,
-	[SYSTEM_BOSS_SINGLE] = ys.Battle.BattleGateBossSingle
+	[SYSTEM_CARDPUZZLE] = ys.Battle.BattleGateCardPuzzle
 }
 
-return slot0
+return var_0_0

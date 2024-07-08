@@ -1,84 +1,91 @@
-ys = ys or {}
-slot0 = ys
-slot1 = slot0.Battle.BattleConst
-slot0.Battle.BattleWallData = class("BattleWallData")
-slot0.Battle.BattleWallData.__name = "BattleWallData"
-slot2 = slot0.Battle.BattleWallData
-slot2.CLD_OBJ_TYPE_BULLET = 1
-slot2.CLD_OBJ_TYPE_SHIP = 2
+﻿ys = ys or {}
 
-slot2.Ctor = function(slot0, slot1, slot2, slot3, slot4, slot5)
-	slot0._id = slot1
-	slot0._host = slot2
-	slot0._cldFun = slot3
-	slot0._cldBox = slot4
-	slot0._cldOffset = slot5
+local var_0_0 = ys
+local var_0_1 = var_0_0.Battle.BattleConst
 
-	slot0:InitCldComponent()
+var_0_0.Battle.BattleWallData = class("BattleWallData")
+var_0_0.Battle.BattleWallData.__name = "BattleWallData"
+
+local var_0_2 = var_0_0.Battle.BattleWallData
+
+var_0_2.CLD_OBJ_TYPE_BULLET = 1
+var_0_2.CLD_OBJ_TYPE_SHIP = 2
+
+function var_0_2.Ctor(arg_1_0, arg_1_1, arg_1_2, arg_1_3, arg_1_4, arg_1_5)
+	arg_1_0._id = arg_1_1
+	arg_1_0._host = arg_1_2
+	arg_1_0._cldFun = arg_1_3
+	arg_1_0._cldBox = arg_1_4
+	arg_1_0._cldOffset = arg_1_5
+
+	arg_1_0:InitCldComponent()
 end
 
-slot2.InitCldComponent = function(slot0)
-	slot2 = slot0._cldOffset
+function var_0_2.InitCldComponent(arg_2_0)
+	local var_2_0 = arg_2_0._cldBox
+	local var_2_1 = arg_2_0._cldOffset
 
-	if slot0._cldBox.range then
-		slot0._cldComponent = uv0.Battle.BattleColumnCldComponent.New(slot1.range, 5, slot2[1], slot2[3])
+	if var_2_0.range then
+		arg_2_0._cldComponent = var_0_0.Battle.BattleColumnCldComponent.New(var_2_0.range, 5, var_2_1[1], var_2_1[3])
 	else
-		slot0._cldComponent = uv0.Battle.BattleCubeCldComponent.New(slot1[1], slot1[2], slot1[3], slot2[1], slot2[3])
+		arg_2_0._cldComponent = var_0_0.Battle.BattleCubeCldComponent.New(var_2_0[1], var_2_0[2], var_2_0[3], var_2_1[1], var_2_1[3])
 	end
 
-	slot0._cldComponent:SetCldData({
-		type = uv1.CldType.WALL,
-		UID = slot0:GetUniqueID(),
-		func = slot0:GetCldFunc()
-	})
-	slot0._cldComponent:SetActive(true)
-	slot0:SetCldObjType()
+	local var_2_2 = {
+		type = var_0_1.CldType.WALL,
+		UID = arg_2_0:GetUniqueID(),
+		func = arg_2_0:GetCldFunc()
+	}
+
+	arg_2_0._cldComponent:SetCldData(var_2_2)
+	arg_2_0._cldComponent:SetActive(true)
+	arg_2_0:SetCldObjType()
 end
 
-slot2.IsActive = function(slot0)
-	return slot0._host:IsWallActive()
+function var_0_2.IsActive(arg_3_0)
+	return arg_3_0._host:IsWallActive()
 end
 
-slot2.DeactiveCldBox = function(slot0)
-	slot0._cldComponent:SetActive(false)
+function var_0_2.DeactiveCldBox(arg_4_0)
+	arg_4_0._cldComponent:SetActive(false)
 end
 
-slot2.GetCldBox = function(slot0)
-	return slot0._cldComponent:GetCldBox(slot0:GetPosition())
+function var_0_2.GetCldBox(arg_5_0)
+	return arg_5_0._cldComponent:GetCldBox(arg_5_0:GetPosition())
 end
 
-slot2.GetCldData = function(slot0)
-	return slot0._cldComponent:GetCldData()
+function var_0_2.GetCldData(arg_6_0)
+	return arg_6_0._cldComponent:GetCldData()
 end
 
-slot2.GetBoxSize = function(slot0)
-	return slot0._cldComponent:GetCldBoxSize()
+function var_0_2.GetBoxSize(arg_7_0)
+	return arg_7_0._cldComponent:GetCldBoxSize()
 end
 
-slot2.GetHost = function(slot0)
-	return slot0._host
+function var_0_2.GetHost(arg_8_0)
+	return arg_8_0._host
 end
 
-slot2.GetIFF = function(slot0)
-	return slot0:GetHost():GetIFF()
+function var_0_2.GetIFF(arg_9_0)
+	return arg_9_0:GetHost():GetIFF()
 end
 
-slot2.GetPosition = function(slot0)
-	return slot0:GetHost():GetPosition()
+function var_0_2.GetPosition(arg_10_0)
+	return arg_10_0:GetHost():GetPosition()
 end
 
-slot2.GetUniqueID = function(slot0)
-	return slot0._id
+function var_0_2.GetUniqueID(arg_11_0)
+	return arg_11_0._id
 end
 
-slot2.GetCldFunc = function(slot0)
-	return slot0._cldFun
+function var_0_2.GetCldFunc(arg_12_0)
+	return arg_12_0._cldFun
 end
 
-slot2.SetCldObjType = function(slot0, slot1)
-	slot0._cldObjType = slot1 or uv0.CLD_OBJ_TYPE_BULLET
+function var_0_2.SetCldObjType(arg_13_0, arg_13_1)
+	arg_13_0._cldObjType = arg_13_1 or var_0_2.CLD_OBJ_TYPE_BULLET
 end
 
-slot2.GetCldObjType = function(slot0)
-	return slot0._cldObjType
+function var_0_2.GetCldObjType(arg_14_0)
+	return arg_14_0._cldObjType
 end

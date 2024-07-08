@@ -1,25 +1,4 @@
-return {
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	{},
-	desc_get = "",
-	name = "最适化武装",
-	init_effect = "",
-	time = 0,
-	color = "red",
-	picture = "",
-	desc = "",
-	stack = 1,
-	id = 12150,
-	icon = 12150,
-	last_effect = "",
+﻿return {
 	effect_list = {
 		{
 			type = "BattleBuffCastSkill",
@@ -56,13 +35,12 @@ return {
 		{
 			type = "BattleBuffCastSkill",
 			trigger = {
-				"onUpdate"
+				"onStartGame"
 			},
 			arg_list = {
 				minTargetNumber = 1,
-				quota = 1,
-				skill_id = 12170,
 				target = "TargetSelf",
+				skill_id = 12170,
 				check_target = {
 					"TargetShipTag"
 				},
@@ -71,5 +49,26 @@ return {
 				}
 			}
 		}
-	}
+	},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	{},
+	desc_get = "",
+	name = "最适化武装",
+	init_effect = "",
+	time = 0,
+	color = "red",
+	picture = "",
+	desc = "",
+	stack = 1,
+	id = 12150,
+	icon = 12150,
+	last_effect = ""
 }

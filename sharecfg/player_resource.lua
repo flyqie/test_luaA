@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.player_resource = {
 	{
 		id = 1,
@@ -1067,23 +1067,8 @@ pg.player_resource = {
 	},
 	[317] = {
 		id = 317,
-		name = "xiaochaijun_pt2",
-		itemid = 59548
-	},
-	[318] = {
-		id = 318,
-		name = "xiaochaijun_youhao_pt2",
-		itemid = 59549
-	},
-	[319] = {
-		id = 319,
-		name = "xiaoxinnong_pt",
-		itemid = 59572
-	},
-	[320] = {
-		id = 320,
-		name = "xiaosipei_pt2",
-		itemid = 59576
+		name = "xiaoougen_youhao_pt2",
+		itemid = 59412
 	},
 	[350] = {
 		id = 350,
@@ -1289,86 +1274,6 @@ pg.player_resource = {
 		id = 396,
 		name = "tongmeng_pt",
 		itemid = 59532
-	},
-	[397] = {
-		id = 397,
-		name = "yidalisp_pt2",
-		itemid = 59533
-	},
-	[398] = {
-		id = 398,
-		name = "skinTicket67",
-		itemid = 59534
-	},
-	[399] = {
-		id = 399,
-		name = "yongzhe_pt2",
-		itemid = 59536
-	},
-	[400] = {
-		id = 400,
-		name = "skinTicket68",
-		itemid = 59539
-	},
-	[401] = {
-		id = 401,
-		name = "yishijie_jinbi",
-		itemid = 59542
-	},
-	[402] = {
-		id = 402,
-		name = "yishijie_exp",
-		itemid = 59543
-	},
-	[403] = {
-		id = 403,
-		name = "maoxiv3_pt2",
-		itemid = 59544
-	},
-	[404] = {
-		id = 404,
-		name = "maoxiv3_frame_pt2",
-		itemid = 59545
-	},
-	[405] = {
-		id = 405,
-		name = "skinTicket69",
-		itemid = 59547
-	},
-	[406] = {
-		id = 406,
-		name = "skinTicket70",
-		itemid = 59570
-	},
-	[407] = {
-		id = 407,
-		name = "ouxiang3_pt",
-		itemid = 59571
-	},
-	[408] = {
-		id = 408,
-		name = "newserver_pt_240425",
-		itemid = 59573
-	},
-	[409] = {
-		id = 409,
-		name = "skinTicket71",
-		itemid = 59578
-	},
-	[410] = {
-		id = 410,
-		name = "huiguang_pt1",
-		itemid = 59579
-	},
-	[411] = {
-		id = 411,
-		name = "huiguang_pt2",
-		itemid = 59580
-	},
-	[412] = {
-		id = 412,
-		name = "union11_pt",
-		itemid = 59581
 	},
 	[950] = {
 		id = 950,
@@ -1585,11 +1490,6 @@ pg.player_resource = {
 		name = "synchronize_jiluofu",
 		itemid = 21913
 	},
-	[3015] = {
-		id = 3015,
-		name = "synchronize_luodeni",
-		itemid = 21914
-	},
 	[3106] = {
 		id = 3106,
 		name = "twhongran_pt",
@@ -1674,11 +1574,6 @@ pg.player_resource = {
 		id = 4015,
 		name = "Battlepass_15",
 		itemid = 59525
-	},
-	[4016] = {
-		id = 4016,
-		name = "Battlepass_16",
-		itemid = 59540
 	},
 	[4186] = {
 		id = 4186,
@@ -2365,17 +2260,8 @@ pg.player_resource = {
 		skinTicket48 = {
 			316
 		},
-		xiaochaijun_pt2 = {
+		xiaoougen_youhao_pt2 = {
 			317
-		},
-		xiaochaijun_youhao_pt2 = {
-			318
-		},
-		xiaoxinnong_pt = {
-			319
-		},
-		xiaosipei_pt2 = {
-			320
 		},
 		liuzhounianhaidao_pt = {
 			350
@@ -2499,54 +2385,6 @@ pg.player_resource = {
 		},
 		tongmeng_pt = {
 			396
-		},
-		yidalisp_pt2 = {
-			397
-		},
-		skinTicket67 = {
-			398
-		},
-		yongzhe_pt2 = {
-			399
-		},
-		skinTicket68 = {
-			400
-		},
-		yishijie_jinbi = {
-			401
-		},
-		yishijie_exp = {
-			402
-		},
-		maoxiv3_pt2 = {
-			403
-		},
-		maoxiv3_frame_pt2 = {
-			404
-		},
-		skinTicket69 = {
-			405
-		},
-		skinTicket70 = {
-			406
-		},
-		ouxiang3_pt = {
-			407
-		},
-		newserver_pt_240425 = {
-			408
-		},
-		skinTicket71 = {
-			409
-		},
-		huiguang_pt1 = {
-			410
-		},
-		huiguang_pt2 = {
-			411
-		},
-		union11_pt = {
-			412
 		},
 		yisegefuke_pt1 = {
 			950
@@ -2677,9 +2515,6 @@ pg.player_resource = {
 		synchronize_jiluofu = {
 			3014
 		},
-		synchronize_luodeni = {
-			3015
-		},
 		twhongran_pt = {
 			3106
 		},
@@ -2730,9 +2565,6 @@ pg.player_resource = {
 		},
 		Battlepass_15 = {
 			4015
-		},
-		Battlepass_16 = {
-			4016
 		},
 		skin_rerun_pt1 = {
 			4186
@@ -2977,9 +2809,6 @@ pg.player_resource = {
 		315,
 		316,
 		317,
-		318,
-		319,
-		320,
 		350,
 		351,
 		352,
@@ -3021,22 +2850,6 @@ pg.player_resource = {
 		394,
 		395,
 		396,
-		397,
-		398,
-		399,
-		400,
-		401,
-		402,
-		403,
-		404,
-		405,
-		406,
-		407,
-		408,
-		409,
-		410,
-		411,
-		412,
 		950,
 		951,
 		952,
@@ -3080,7 +2893,6 @@ pg.player_resource = {
 		3012,
 		3013,
 		3014,
-		3015,
 		3106,
 		3137,
 		4001,
@@ -3098,7 +2910,6 @@ pg.player_resource = {
 		4013,
 		4014,
 		4015,
-		4016,
 		4186,
 		4276,
 		4599,

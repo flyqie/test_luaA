@@ -1,38 +1,41 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_72 = {}
-slot1 = slot0.word_template_72
+﻿pg = pg or {}
 
-temp = function()
-	uv0["汔"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_72 = {}
+
+local var_0_1 = var_0_0.word_template_72
+
+function temp()
+	var_0_1.汔 = {
 		this = {
 			this = true
 		},
-		["狗"] = {
+		狗 = {
 			this = true,
-			["子"] = {
-				["弹"] = {
+			子 = {
+				弹 = {
 					this = true
 				}
 			},
-			["专"] = {
+			专 = {
 				this = true
 			}
 		},
-		["枪"] = {
+		枪 = {
 			this = true,
-			["打"] = {
-				["鸟"] = {
+			打 = {
+				鸟 = {
 					this = true
 				}
 			},
-			["订"] = {
-				["购"] = {
+			订 = {
+				购 = {
 					this = true
 				}
 			},
-			["直"] = {
-				["销"] = {
+			直 = {
+				销 = {
 					this = true
 				}
 			}
@@ -42,8 +45,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["碛"] = {
+function temp()
+	var_0_1.碛 = {
 		this = {
 			this = true
 		}
@@ -52,8 +55,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["葜"] = {
+function temp()
+	var_0_1.葜 = {
 		this = {
 			this = true
 		}
@@ -62,8 +65,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["佥"] = {
+function temp()
+	var_0_1.佥 = {
 		this = {
 			this = true
 		}
@@ -72,8 +75,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["岍"] = {
+function temp()
+	var_0_1.岍 = {
 		this = {
 			this = true
 		}
@@ -82,8 +85,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["愆"] = {
+function temp()
+	var_0_1.愆 = {
 		this = {
 			this = true
 		}
@@ -92,8 +95,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["搴"] = {
+function temp()
+	var_0_1.搴 = {
 		this = {
 			this = true
 		}
@@ -102,8 +105,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["钤"] = {
+function temp()
+	var_0_1.钤 = {
 		this = {
 			this = true
 		}
@@ -112,8 +115,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["掮"] = {
+function temp()
+	var_0_1.掮 = {
 		this = {
 			this = true
 		}
@@ -122,8 +125,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["凵"] = {
+function temp()
+	var_0_1.凵 = {
 		this = {
 			this = true
 		}

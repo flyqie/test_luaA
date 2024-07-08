@@ -1,9 +1,9 @@
-slot0 = class("ResourceFieldLevelProductAttr", import(".ResourceFieldProductAttr"))
+﻿local var_0_0 = class("ResourceFieldLevelProductAttr", import(".ResourceFieldProductAttr"))
 
-slot0.ReCalcValue = function(slot0)
-	slot0.multiple = slot0.config[slot0.level].hour_time
+function var_0_0.ReCalcValue(arg_1_0)
+	arg_1_0.multiple = arg_1_0.config[arg_1_0.level].hour_time
 
-	uv0.super.ReCalcValue(slot0)
+	var_0_0.super.ReCalcValue(arg_1_0)
 end
 
-return slot0
+return var_0_0

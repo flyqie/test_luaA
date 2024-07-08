@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.mini_game_hub = {
 	{
 		reward = 91494,
@@ -158,16 +158,16 @@ pg.mini_game_hub = {
 		}
 	},
 	{
-		reward = 902169,
-		reward_target = 59575,
+		reward = 94015,
+		reward_target = 59187,
 		id = 12,
 		reward_need = 7,
 		reborn_times = 1,
-		act_id = 5310,
+		act_id = 762,
 		signet_reward = {},
 		reward_display = {
-			3,
-			89740,
+			4,
+			901121,
 			1
 		}
 	},
@@ -711,20 +711,6 @@ pg.mini_game_hub = {
 			1
 		}
 	},
-	{
-		reward = 902438,
-		reward_target = 0,
-		id = 55,
-		reward_need = 7,
-		reborn_times = 1,
-		act_id = 5355,
-		signet_reward = {},
-		reward_display = {
-			3,
-			2,
-			1
-		}
-	},
 	all = {
 		1,
 		2,
@@ -779,7 +765,6 @@ pg.mini_game_hub = {
 		51,
 		52,
 		53,
-		54,
-		55
+		54
 	}
 }

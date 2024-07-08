@@ -1,7 +1,7 @@
-slot0 = class("NotifyTipHelper")
+﻿local var_0_0 = class("NotifyTipHelper")
 
-slot0.ShouldShowUrTip = function()
+function var_0_0.ShouldShowUrTip()
 	return false
 end
 
-return slot0
+return var_0_0

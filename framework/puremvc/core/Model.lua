@@ -1,63 +1,66 @@
-slot0 = class("Model")
+﻿local var_0_0 = class("Model")
 
-slot0.Ctor = function(slot0, slot1)
-	if uv0.instanceMap[slot1] then
-		error(uv0.MULTITON_MSG)
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	if var_0_0.instanceMap[arg_1_1] then
+		error(var_0_0.MULTITON_MSG)
 	end
 
-	slot0.multitonKey = slot1
-	uv0.instanceMap[slot1] = slot0
-	slot0.proxyMap = {}
+	arg_1_0.multitonKey = arg_1_1
+	var_0_0.instanceMap[arg_1_1] = arg_1_0
+	arg_1_0.proxyMap = {}
 
-	slot0:initializeModel()
+	arg_1_0:initializeModel()
 end
 
-slot0.initializeModel = function(slot0)
+function var_0_0.initializeModel(arg_2_0)
+	return
 end
 
-slot0.getInstance = function(slot0)
-	if slot0 == nil then
+function var_0_0.getInstance(arg_3_0)
+	if arg_3_0 == nil then
 		return nil
 	end
 
-	if uv0.instanceMap[slot0] == nil then
-		return uv0.New(slot0)
+	if var_0_0.instanceMap[arg_3_0] == nil then
+		return var_0_0.New(arg_3_0)
 	else
-		return uv0.instanceMap[slot0]
+		return var_0_0.instanceMap[arg_3_0]
 	end
 end
 
-slot0.registerProxy = function(slot0, slot1)
-	slot1:initializeNotifier(slot0.multitonKey)
+function var_0_0.registerProxy(arg_4_0, arg_4_1)
+	arg_4_1:initializeNotifier(arg_4_0.multitonKey)
 
-	slot0.proxyMap[slot1:getProxyName()] = slot1
+	arg_4_0.proxyMap[arg_4_1:getProxyName()] = arg_4_1
 
-	slot1:onRegister()
+	arg_4_1:onRegister()
 end
 
-slot0.retrieveProxy = function(slot0, slot1)
-	return slot0.proxyMap[slot1]
+function var_0_0.retrieveProxy(arg_5_0, arg_5_1)
+	return arg_5_0.proxyMap[arg_5_1]
 end
 
-slot0.hasProxy = function(slot0, slot1)
-	return slot0.proxyMap[slot1] ~= nil
+function var_0_0.hasProxy(arg_6_0, arg_6_1)
+	return arg_6_0.proxyMap[arg_6_1] ~= nil
 end
 
-slot0.removeProxy = function(slot0, slot1)
-	if slot0.proxyMap[slot1] ~= nil then
-		slot0.proxyMap[slot1] = nil
+function var_0_0.removeProxy(arg_7_0, arg_7_1)
+	local var_7_0 = arg_7_0.proxyMap[arg_7_1]
 
-		slot2:onRemove()
+	if var_7_0 ~= nil then
+		arg_7_0.proxyMap[arg_7_1] = nil
+
+		var_7_0:onRemove()
 	end
 
-	return slot2
+	return var_7_0
 end
 
-slot0.removeModel = function(slot0)
-	uv0.instanceMap[slot0] = nil
+function var_0_0.removeModel(arg_8_0)
+	var_0_0.instanceMap[arg_8_0] = nil
 end
 
-slot0.instanceMap = {}
-slot0.MULTITON_MSG = "Model instance for this Multiton key already constructed!"
+var_0_0.instanceMap = {}
+var_0_0.MULTITON_MSG = "Model instance for this Multiton key already constructed!"
 
-return slot0
+return var_0_0

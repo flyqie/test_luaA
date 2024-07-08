@@ -1,4 +1,4 @@
-return {
+﻿return {
 	fadeOut = 1.5,
 	mode = 2,
 	id = "HONGCAIDEZHONGMUQU32",
@@ -436,7 +436,7 @@ return {
 			}
 		},
 		{
-			expression = 4,
+			expression = 5,
 			side = 2,
 			bgName = "bg_port_chongdong",
 			hidePaintObj = true,

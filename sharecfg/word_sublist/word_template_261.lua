@@ -1,17 +1,20 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_261 = {}
-slot1 = slot0.word_template_261
+﻿pg = pg or {}
 
-temp = function()
-	uv0["璽"] = {
-		["禁"] = {
-			["屛"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_261 = {}
+
+local var_0_1 = var_0_0.word_template_261
+
+function temp()
+	var_0_1.璽 = {
+		禁 = {
+			屛 = {
 				this = true
 			}
 		},
-		["燼"] = {
-			["貧"] = {
+		燼 = {
+			貧 = {
 				this = true
 			}
 		}
@@ -20,25 +23,25 @@ end
 
 temp()
 
-temp = function()
-	uv0["係"] = {
-		["緊"] = {
-			["缾"] = {
+function temp()
+	var_0_1.係 = {
+		緊 = {
+			缾 = {
 				this = true
 			}
 		},
-		["儘"] = {
-			["貧"] = {
+		儘 = {
+			貧 = {
 				this = true
 			}
 		},
-		["精"] = {
-			["品"] = {
+		精 = {
+			品 = {
 				this = true
 			}
 		},
-		["重"] = {
-			["廵"] = {
+		重 = {
+			廵 = {
 				this = true
 			}
 		}
@@ -47,31 +50,31 @@ end
 
 temp()
 
-temp = function()
-	uv0["戲"] = {
-		["金"] = {
-			["缾"] = {
+function temp()
+	var_0_1.戲 = {
+		金 = {
+			缾 = {
 				this = true
 			}
 		},
-		["燼"] = {
-			["平"] = {
+		燼 = {
+			平 = {
 				this = true
 			}
 		},
-		["經"] = {
-			["平"] = {
+		經 = {
+			平 = {
 				this = true
 			}
 		},
-		["精"] = {
-			["平"] = {
+		精 = {
+			平 = {
 				this = true
 			},
-			["缾"] = {
+			缾 = {
 				this = true
 			},
-			["蘋"] = {
+			蘋 = {
 				this = true
 			}
 		}
@@ -80,11 +83,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["枭"] = {
-		["雄"] = {
-			["韦"] = {
-				["腻"] = {
+function temp()
+	var_0_1.枭 = {
+		雄 = {
+			韦 = {
+				腻 = {
 					this = true
 				}
 			}
@@ -94,11 +97,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["梟"] = {
-		["雄"] = {
-			["韋"] = {
-				["膩"] = {
+function temp()
+	var_0_1.梟 = {
+		雄 = {
+			韋 = {
+				膩 = {
 					this = true
 				}
 			}
@@ -108,11 +111,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["曉"] = {
-		["雄"] = {
-			["淮"] = {
-				["屁"] = {
+function temp()
+	var_0_1.曉 = {
+		雄 = {
+			淮 = {
+				屁 = {
 					this = true
 				}
 			}
@@ -122,10 +125,10 @@ end
 
 temp()
 
-temp = function()
-	uv0["衺"] = {
-		["禁"] = {
-			["缾"] = {
+function temp()
+	var_0_1.衺 = {
+		禁 = {
+			缾 = {
 				this = true
 			}
 		}
@@ -134,44 +137,44 @@ end
 
 temp()
 
-temp = function()
-	uv0["姓"] = {
-		["习"] = {
-			["名"] = {
-				["近"] = {
-					["平"] = {
+function temp()
+	var_0_1.姓 = {
+		习 = {
+			名 = {
+				近 = {
+					平 = {
 						this = true
 					}
 				}
 			}
 		},
-		["李"] = {
-			["的"] = {
-				["叫"] = {
-					["克"] = {
-						["强"] = {
+		李 = {
+			的 = {
+				叫 = {
+					克 = {
+						强 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["周"] = {
-			["不"] = {
-				["姓"] = {
-					["邓"] = {
+		周 = {
+			不 = {
+				姓 = {
+					邓 = {
 						this = true
 					},
-					["鄧"] = {
+					鄧 = {
 						this = true
 					}
 				}
 			}
 		},
-		["马"] = {
-			["单"] = {
-				["字"] = {
-					["元"] = {
+		马 = {
+			单 = {
+				字 = {
+					元 = {
 						this = true
 					}
 				}
@@ -182,11 +185,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["鎀"] = {
-		["誸"] = {
-			["穪"] = {
-				["偙"] = {
+function temp()
+	var_0_1.鎀 = {
+		誸 = {
+			穪 = {
+				偙 = {
 					this = true
 				}
 			}
@@ -196,10 +199,10 @@ end
 
 temp()
 
-temp = function()
-	uv0["續"] = {
-		["命"] = {
-			["習"] = {
+function temp()
+	var_0_1.續 = {
+		命 = {
+			習 = {
 				this = true
 			}
 		}

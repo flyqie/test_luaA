@@ -1,4 +1,4 @@
-return {
+﻿return {
 	init_effect = "",
 	name = "弹药充足",
 	time = 0,
@@ -18,25 +18,6 @@ return {
 			arg_list = {
 				attr = "damageRatioBullet",
 				number = 0.1
-			}
-		},
-		{
-			type = "BattleBuffAddTag",
-			trigger = {
-				"onAttach",
-				"onRemove"
-			},
-			arg_list = {
-				tag = "danyaochongzu"
-			}
-		},
-		{
-			type = "BattleBuffCleanse",
-			trigger = {
-				"onRemove"
-			},
-			arg_list = {
-				buff_id = 17793
 			}
 		}
 	}

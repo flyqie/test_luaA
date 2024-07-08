@@ -1,30 +1,30 @@
-slot0 = class("SelectDorm3DMediator", import("view.base.ContextMediator"))
-slot0.ON_DORM = "SelectDorm3DMediator.ON_DORM"
+﻿local var_0_0 = class("SelectDorm3DMediator", import("view.base.ContextMediator"))
 
-slot0.register = function(slot0)
-	slot0:bind(uv0.ON_DORM, function (slot0, slot1)
-		slot2 = pg.SceneAnimMgr.GetInstance()
+var_0_0.ON_DORM = "SelectDorm3DMediator.ON_DORM"
 
-		slot2:Dorm3DSceneChange(function (slot0)
-			uv0:sendNotification(GAME.CHANGE_SCENE, SCENE.DORM3D, {
+function var_0_0.register(arg_1_0)
+	arg_1_0:bind(var_0_0.ON_DORM, function(arg_2_0, arg_2_1)
+		pg.SceneAnimMgr.GetInstance():Dorm3DSceneChange(function(arg_3_0)
+			arg_1_0:sendNotification(GAME.CHANGE_SCENE, SCENE.DORM3D, {
 				showLoading = false,
-				groupId = uv1,
-				resumeCallback = slot0
+				groupId = arg_2_1,
+				resumeCallback = arg_3_0
 			})
 		end)
 	end)
 end
 
-slot0.listNotificationInterests = function(slot0)
+function var_0_0.listNotificationInterests(arg_4_0)
 	return {}
 end
 
-slot0.handleNotification = function(slot0, slot1)
-	slot3 = slot1:getBody()
+function var_0_0.handleNotification(arg_5_0, arg_5_1)
+	local var_5_0 = arg_5_1:getName()
+	local var_5_1 = arg_5_1:getBody()
 
-	if slot1:getName() == nil then
-		-- Nothing
+	if var_5_0 == nil then
+		-- block empty
 	end
 end
 
-return slot0
+return var_0_0

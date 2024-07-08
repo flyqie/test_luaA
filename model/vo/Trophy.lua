@@ -1,123 +1,129 @@
-slot0 = class("Trophy", import(".BaseVO"))
-slot0.INTAMACT_TYPE = 1043
-slot0.COMPLEX_TROPHY_TYPE = 160
-slot0.ALWAYS_SHOW = 0
-slot0.ALWAYS_HIDE = 1
-slot0.HIDE_BEFORE_UNLOCK = 2
-slot0.COMING_SOON = 3
+﻿local var_0_0 = class("Trophy", import(".BaseVO"))
 
-slot0.Ctor = function(slot0, slot1)
-	slot0.id = slot1.id
-	slot0.configId = slot1.id
-	slot0.subTrophyList = {}
+var_0_0.INTAMACT_TYPE = 1043
+var_0_0.COMPLEX_TROPHY_TYPE = 160
+var_0_0.ALWAYS_SHOW = 0
+var_0_0.ALWAYS_HIDE = 1
+var_0_0.HIDE_BEFORE_UNLOCK = 2
+var_0_0.COMING_SOON = 3
 
-	slot0:update(slot1)
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	arg_1_0.id = arg_1_1.id
+	arg_1_0.configId = arg_1_1.id
+	arg_1_0.subTrophyList = {}
+
+	arg_1_0:update(arg_1_1)
 end
 
-slot0.generateDummyTrophy = function(slot0)
-	return Trophy.New({
+function var_0_0.generateDummyTrophy(arg_2_0)
+	return (Trophy.New({
 		progress = 0,
 		timestamp = -1,
-		id = slot0
-	})
+		id = arg_2_0
+	}))
 end
 
-slot0.bindConfigTable = function(slot0)
+function var_0_0.bindConfigTable(arg_3_0)
 	return pg.medal_template
 end
 
-slot0.update = function(slot0, slot1)
-	slot0.progress = slot1.progress
-	slot0.timestamp = slot1.timestamp
-	slot0.new = slot1.new
+function var_0_0.update(arg_4_0, arg_4_1)
+	arg_4_0.progress = arg_4_1.progress
+	arg_4_0.timestamp = arg_4_1.timestamp
+	arg_4_0.new = arg_4_1.new
 end
 
-slot0.isNew = function(slot0)
-	return slot0.isNew == true
+function var_0_0.isNew(arg_5_0)
+	return arg_5_0.isNew == true
 end
 
-slot0.clearNew = function(slot0)
-	slot0.isNew = nil
+function var_0_0.clearNew(arg_6_0)
+	arg_6_0.isNew = nil
 end
 
-slot0.updateTimeStamp = function(slot0, slot1)
-	if slot1 > 0 then
-		slot0.isNew = true
+function var_0_0.updateTimeStamp(arg_7_0, arg_7_1)
+	if arg_7_1 > 0 then
+		arg_7_0.isNew = true
 	end
 
-	slot0.timestamp = slot1
+	arg_7_0.timestamp = arg_7_1
 end
 
-slot0.isComplexTrophy = function(slot0)
-	return slot0:getConfig("target_type") == slot0.COMPLEX_TROPHY_TYPE
+function var_0_0.isComplexTrophy(arg_8_0)
+	return arg_8_0:getConfig("target_type") == arg_8_0.COMPLEX_TROPHY_TYPE
 end
 
-slot0.bindTrophys = function(slot0, slot1)
-	slot0.subTrophyList[slot1.id] = slot1
+function var_0_0.bindTrophys(arg_9_0, arg_9_1)
+	arg_9_0.subTrophyList[arg_9_1.id] = arg_9_1
 end
 
-slot0.getSubTrophy = function(slot0)
-	return slot0.subTrophyList
+function var_0_0.getSubTrophy(arg_10_0)
+	return arg_10_0.subTrophyList
 end
 
-slot0.getTargetID = function(slot0)
-	return slot0:getConfig("target_id")
+function var_0_0.getTargetID(arg_11_0)
+	return arg_11_0:getConfig("target_id")
 end
 
-slot0.canClaimed = function(slot0)
-	return slot0:getProgressRate() >= 1
+function var_0_0.canClaimed(arg_12_0)
+	return arg_12_0:getProgressRate() >= 1
 end
 
-slot0.isClaimed = function(slot0)
-	return slot0.timestamp > 0
+function var_0_0.isClaimed(arg_13_0)
+	return arg_13_0.timestamp > 0
 end
 
-slot0.isDummy = function(slot0)
-	return slot0.timestamp == -1
+function var_0_0.isDummy(arg_14_0)
+	return arg_14_0.timestamp == -1
 end
 
-slot0.getProgressRate = function(slot0)
-	slot1, slot2 = slot0:getProgress()
+function var_0_0.getProgressRate(arg_15_0)
+	local var_15_0, var_15_1 = arg_15_0:getProgress()
 
-	return slot1 / slot2
+	return var_15_0 / var_15_1
 end
 
-slot0.getProgress = function(slot0)
-	if slot0:isComplexTrophy() then
-		slot1 = 0
+function var_0_0.getProgress(arg_16_0)
+	if arg_16_0:isComplexTrophy() then
+		local var_16_0 = 0
 
-		for slot5, slot6 in pairs(slot0.subTrophyList) do
-			if slot6:isClaimed() then
-				slot1 = slot1 + 1
+		for iter_16_0, iter_16_1 in pairs(arg_16_0.subTrophyList) do
+			if iter_16_1:isClaimed() then
+				var_16_0 = var_16_0 + 1
 			end
 		end
 
-		return slot1, slot0:getConfig("target_num")
+		return var_16_0, arg_16_0:getConfig("target_num")
 	else
-		return slot0.progress, slot0:getConfig("target_num")
+		return arg_16_0.progress, arg_16_0:getConfig("target_num")
 	end
 end
 
-slot0.getHideType = function(slot0)
-	return slot0:getConfig("hide")
+function var_0_0.getHideType(arg_17_0)
+	return arg_17_0:getConfig("hide")
 end
 
-slot0.isHide = function(slot0)
-	if slot0:getConfig("hide") == uv0.ALWAYS_HIDE then
+function var_0_0.isHide(arg_18_0)
+	local var_18_0 = arg_18_0:getConfig("hide")
+
+	if var_18_0 == var_0_0.ALWAYS_HIDE then
 		return true
-	elseif slot1 == uv0.HIDE_BEFORE_UNLOCK and slot0.timestamp <= 0 then
+	elseif var_18_0 == var_0_0.HIDE_BEFORE_UNLOCK and arg_18_0.timestamp <= 0 then
 		return true
 	else
 		return false
 	end
 end
 
-slot0.isMaxLevel = function(slot0)
-	return slot0:getConfig("next") == 0 or slot0:bindConfigTable()[slot1] == nil
+function var_0_0.isMaxLevel(arg_19_0)
+	local var_19_0 = arg_19_0:getConfig("next")
+	local var_19_1 = arg_19_0:bindConfigTable()
+
+	return var_19_0 == 0 or var_19_1[var_19_0] == nil
 end
 
-slot0.getTargetType = function(slot0)
-	return slot0:getConfig("target_type")
+function var_0_0.getTargetType(arg_20_0)
+	return arg_20_0:getConfig("target_type")
 end
 
-return slot0
+return var_0_0

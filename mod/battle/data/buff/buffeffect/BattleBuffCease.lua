@@ -1,17 +1,19 @@
-ys = ys or {}
-slot0 = ys
-slot1 = class("BattleBuffCease", slot0.Battle.BattleBuffEffect)
-slot0.Battle.BattleBuffCease = slot1
-slot1.__name = "BattleBuffCease"
+﻿ys = ys or {}
 
-slot1.Ctor = function(slot0, slot1)
-	uv0.super.Ctor(slot0, slot1)
+local var_0_0 = ys
+local var_0_1 = class("BattleBuffCease", var_0_0.Battle.BattleBuffEffect)
+
+var_0_0.Battle.BattleBuffCease = var_0_1
+var_0_1.__name = "BattleBuffCease"
+
+function var_0_1.Ctor(arg_1_0, arg_1_1)
+	var_0_1.super.Ctor(arg_1_0, arg_1_1)
 end
 
-slot1.onAttach = function(slot0, slot1, slot2)
-	slot1:CeaseAllWeapon(true)
+function var_0_1.onAttach(arg_2_0, arg_2_1, arg_2_2)
+	arg_2_1:CeaseAllWeapon(true)
 end
 
-slot1.onRemove = function(slot0, slot1, slot2)
-	slot1:CeaseAllWeapon(false)
+function var_0_1.onRemove(arg_3_0, arg_3_1, arg_3_2)
+	arg_3_1:CeaseAllWeapon(false)
 end

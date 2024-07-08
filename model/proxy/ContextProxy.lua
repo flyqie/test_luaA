@@ -1,59 +1,66 @@
-slot0 = class("ContextProxy", pm.Proxy)
+﻿local var_0_0 = class("ContextProxy", pm.Proxy)
 
-slot0.getCurrentContext = function(slot0)
-	return slot0.data[#slot0.data]
+function var_0_0.getCurrentContext(arg_1_0)
+	return arg_1_0.data[#arg_1_0.data]
 end
 
-slot0.pushContext = function(slot0, slot1)
-	table.insert(slot0.data, slot1)
+function var_0_0.pushContext(arg_2_0, arg_2_1)
+	table.insert(arg_2_0.data, arg_2_1)
 end
 
-slot0.popContext = function(slot0)
-	return table.remove(slot0.data)
+function var_0_0.popContext(arg_3_0)
+	return table.remove(arg_3_0.data)
 end
 
-slot0.cleanContext = function(slot0)
-	slot0.data = {}
+function var_0_0.cleanContext(arg_4_0)
+	arg_4_0.data = {}
 end
 
-slot0.getContextCount = function(slot0)
-	return #slot0.data
+function var_0_0.getContextCount(arg_5_0)
+	return #arg_5_0.data
 end
 
-slot0.getContextByMediator = function(slot0, slot1)
-	for slot5 = #slot0.data, 1, -1 do
-		if slot0.data[slot5]:getContextByMediator(slot1) then
-			return slot7, slot6
+function var_0_0.getContextByMediator(arg_6_0, arg_6_1)
+	for iter_6_0 = #arg_6_0.data, 1, -1 do
+		local var_6_0 = arg_6_0.data[iter_6_0]
+		local var_6_1 = var_6_0:getContextByMediator(arg_6_1)
+
+		if var_6_1 then
+			return var_6_1, var_6_0
 		end
 	end
 
 	return nil
 end
 
-slot0.CleanUntilMediator = function(slot0, slot1)
-	for slot5 = #slot0.data, 1, -1 do
-		if not (slot0.data[slot5].mediator.__cname == slot1.__cname) then
-			table.remove(slot0.data, slot5)
+function var_0_0.CleanUntilMediator(arg_7_0, arg_7_1)
+	for iter_7_0 = #arg_7_0.data, 1, -1 do
+		if not (arg_7_0.data[iter_7_0].mediator.__cname == arg_7_1.__cname) then
+			table.remove(arg_7_0.data, iter_7_0)
 		else
 			break
 		end
 	end
 end
 
-slot0.GetPrevContext = function(slot0, slot1)
-	return slot0.data[#slot0.data - slot1]
+function var_0_0.GetPrevContext(arg_8_0, arg_8_1)
+	return arg_8_0.data[#arg_8_0.data - arg_8_1]
 end
 
-slot0.RemoveContext = function(slot0, slot1)
-	for slot5 = #slot0.data, 1, -1 do
-		if slot1 == slot0.data[slot5] then
-			table.remove(slot0.data, slot5)
+function var_0_0.RemoveContext(arg_9_0, arg_9_1)
+	for iter_9_0 = #arg_9_0.data, 1, -1 do
+		if arg_9_1 == arg_9_0.data[iter_9_0] then
+			table.remove(arg_9_0.data, iter_9_0)
 		end
 	end
 end
 
-slot0.PushContext2Prev = function(slot0, slot1, slot2)
-	table.insert(slot0.data, math.clamp(#slot0.data + 1 - (slot2 or 1), 1, #slot0.data + 1), slot1)
+function var_0_0.PushContext2Prev(arg_10_0, arg_10_1, arg_10_2)
+	arg_10_2 = arg_10_2 or 1
+
+	local var_10_0 = math.clamp(#arg_10_0.data + 1 - arg_10_2, 1, #arg_10_0.data + 1)
+
+	table.insert(arg_10_0.data, var_10_0, arg_10_1)
 end
 
-return slot0
+return var_0_0

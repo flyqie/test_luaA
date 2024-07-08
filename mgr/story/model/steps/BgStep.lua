@@ -1,36 +1,36 @@
-slot0 = class("BgStep", import(".DialogueStep"))
+﻿local var_0_0 = class("BgStep", import(".DialogueStep"))
 
-slot0.Ctor = function(slot0, slot1)
-	uv0.super.Ctor(slot0, slot1)
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	var_0_0.super.Ctor(arg_1_0, arg_1_1)
 
-	slot0.bgSpeed = slot1.bgSpeed
-	slot0.blankScreenTime = slot1.blankScreen
-	slot0.unscaleDelay = slot1.unscaleDelay or 0
-	slot0.subBg = slot1.subBgName
+	arg_1_0.bgSpeed = arg_1_1.bgSpeed
+	arg_1_0.blankScreenTime = arg_1_1.blankScreen
+	arg_1_0.unscaleDelay = arg_1_1.unscaleDelay or 0
+	arg_1_0.subBg = arg_1_1.subBgName
 end
 
-slot0.GetMode = function(slot0)
+function var_0_0.GetMode(arg_2_0)
 	return Story.MODE_BG
 end
 
-slot0.GetFadeSpeed = function(slot0)
-	return slot0.bgSpeed or 0.5
+function var_0_0.GetFadeSpeed(arg_3_0)
+	return arg_3_0.bgSpeed or 0.5
 end
 
-slot0.GetSubBg = function(slot0)
-	return slot0.subBg
+function var_0_0.GetSubBg(arg_4_0)
+	return arg_4_0.subBg
 end
 
-slot0.GetPainting = function(slot0)
+function var_0_0.GetPainting(arg_5_0)
 	return nil
 end
 
-slot0.ShouldBlackScreen = function(slot0)
-	return slot0.blankScreenTime
+function var_0_0.ShouldBlackScreen(arg_6_0)
+	return arg_6_0.blankScreenTime
 end
 
-slot0.GetUnscaleDelay = function(slot0)
-	return slot0.unscaleDelay
+function var_0_0.GetUnscaleDelay(arg_7_0)
+	return arg_7_0.unscaleDelay
 end
 
-return slot0
+return var_0_0

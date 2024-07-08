@@ -1,32 +1,35 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_290 = {}
-slot1 = slot0.word_template_290
+﻿pg = pg or {}
 
-temp = function()
-	uv0["倲"] = {
-		["京"] = {
-			["热"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_290 = {}
+
+local var_0_1 = var_0_0.word_template_290
+
+function temp()
+	var_0_1.倲 = {
+		京 = {
+			热 = {
 				this = true
 			}
 		},
-		["亰"] = {
-			["熱"] = {
-				["в"] = {
-					["Ｔ"] = {
+		亰 = {
+			熱 = {
+				в = {
+					Ｔ = {
 						this = true
 					}
 				},
-				["種"] = {
-					["孒"] = {
+				種 = {
+					孒 = {
 						this = true
 					}
 				}
 			}
 		},
-		["尾"] = {
-			["眞"] = {
-				["孒"] = {
+		尾 = {
+			眞 = {
+				孒 = {
 					this = true
 				}
 			}
@@ -36,15 +39,15 @@ end
 
 temp()
 
-temp = function()
-	uv0["崬"] = {
-		["倞"] = {
-			["慹"] = {
-				["視"] = {
-					["頻"] = {
+function temp()
+	var_0_1.崬 = {
+		倞 = {
+			慹 = {
+				視 = {
+					頻 = {
 						this = true,
-						["芐"] = {
-							["酨"] = {
+						芐 = {
+							酨 = {
 								this = true
 							}
 						}
@@ -57,14 +60,14 @@ end
 
 temp()
 
-temp = function()
-	uv0["侗"] = {
-		["族"] = {
-			["生"] = {
-				["世"] = {
-					["爱"] = {
-						["情"] = {
-							["粉"] = {
+function temp()
+	var_0_1.侗 = {
+		族 = {
+			生 = {
+				世 = {
+					爱 = {
+						情 = {
+							粉 = {
 								this = true
 							}
 						}
@@ -77,35 +80,35 @@ end
 
 temp()
 
-temp = function()
-	uv0["洞"] = {
-		["抽"] = {
-			["少"] = {
-				["妇"] = {
+function temp()
+	var_0_1.洞 = {
+		抽 = {
+			少 = {
+				妇 = {
 					this = true
 				}
 			}
 		},
-		["房"] = {
-			["性"] = {
-				["爱"] = {
+		房 = {
+			性 = {
+				爱 = {
 					this = true
 				}
 			},
-			["与"] = {
-				["性"] = {
-					["爱"] = {
+			与 = {
+				性 = {
+					爱 = {
 						this = true
 					}
 				}
 			}
 		},
-		["穴"] = {
-			["好"] = {
-				["妩"] = {
-					["媚"] = {
-						["风"] = {
-							["骚"] = {
+		穴 = {
+			好 = {
+				妩 = {
+					媚 = {
+						风 = {
+							骚 = {
 								this = true
 							}
 						}
@@ -118,21 +121,21 @@ end
 
 temp()
 
-temp = function()
-	uv0["恫"] = {
-		["濨"] = {
-			["悻"] = {
-				["閞"] = {
-					["鎻"] = {
-						["噐"] = {
+function temp()
+	var_0_1.恫 = {
+		濨 = {
+			悻 = {
+				閞 = {
+					鎻 = {
+						噐 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["烸"] = {
-			["埖"] = {
+		烸 = {
+			埖 = {
 				this = true
 			}
 		}
@@ -141,14 +144,14 @@ end
 
 temp()
 
-temp = function()
-	uv0["胴"] = {
-		["熟"] = {
-			["体"] = {
+function temp()
+	var_0_1.胴 = {
+		熟 = {
+			体 = {
 				this = true
 			}
 		},
-		["體"] = {
+		體 = {
 			this = true
 		}
 	}
@@ -156,20 +159,20 @@ end
 
 temp()
 
-temp = function()
-	uv0["兜"] = {
-		["售"] = {
-			["迷"] = {
-				["▓"] = {
-					["药"] = {
+function temp()
+	var_0_1.兜 = {
+		售 = {
+			迷 = {
+				▓ = {
+					药 = {
 						this = true
 					}
 				}
 			},
-			["沙"] = {
-				["漠"] = {
-					["之"] = {
-						["鹰"] = {
+			沙 = {
+				漠 = {
+					之 = {
+						鹰 = {
 							this = true
 						}
 					}
@@ -181,9 +184,9 @@ end
 
 temp()
 
-temp = function()
-	uv0["窦"] = {
-		["店"] = {
+function temp()
+	var_0_1.窦 = {
+		店 = {
 			this = true
 		}
 	}
@@ -191,24 +194,24 @@ end
 
 temp()
 
-temp = function()
-	uv0["嘟"] = {
-		["嘟"] = {
-			["游"] = {
-				["戏"] = {
-					["网"] = {
+function temp()
+	var_0_1.嘟 = {
+		嘟 = {
+			游 = {
+				戏 = {
+					网 = {
 						this = true
 					}
 				}
 			}
 		},
-		["巿"] = {
-			["緣"] = {
+		巿 = {
+			緣 = {
 				this = true
 			}
 		},
-		["铈"] = {
-			["緣"] = {
+		铈 = {
+			緣 = {
 				this = true
 			}
 		}
@@ -217,10 +220,10 @@ end
 
 temp()
 
-temp = function()
-	uv0["渎"] = {
-		["职"] = {
-			["罪"] = {
+function temp()
+	var_0_1.渎 = {
+		职 = {
+			罪 = {
 				this = true
 			}
 		}

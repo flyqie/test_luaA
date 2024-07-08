@@ -1,364 +1,282 @@
-slot0 = class("SpinePainting")
-slot1 = require("Mgr/Pool/PoolUtil")
-slot2 = {
-	"aimudeng_4",
-	"aimudeng_4M"
-}
-slot3 = {
-	"gaoxiong_6",
-	"aimudeng_4M"
-}
+﻿local var_0_0 = class("SpinePainting")
+local var_0_1 = require("Mgr/Pool/PoolUtil")
 
-slot0.GenerateData = function(slot0)
-	slot1 = {
-		SetData = function (slot0, slot1)
-			slot0.ship = slot1.ship
-			slot0.parent = slot1.parent
-			slot0.effectParent = slot1.effectParent
-			slot2 = slot0:GetShipSkinConfig()
-			slot0.pos = slot1.position + BuildVector3(slot2.spine_offset[1])
-			slot3 = slot2.spine_offset[2][1]
-			slot0.scale = Vector3(slot3, slot3, slot3)
+function var_0_0.GenerateData(arg_1_0)
+	local var_1_0 = {
+		SetData = function(arg_2_0, arg_2_1)
+			arg_2_0.ship = arg_2_1.ship
+			arg_2_0.parent = arg_2_1.parent
+			arg_2_0.effectParent = arg_2_1.effectParent
 
-			if #slot2.special_effects > 0 then
-				slot0.bgEffectName = slot2.special_effects[1]
-				slot0.bgEffectPos = slot1.position + BuildVector3(slot2.special_effects[2])
-				slot4 = slot2.special_effects[3][1]
-				slot0.bgEffectScale = Vector3(slot4, slot4, slot4)
+			local var_2_0 = arg_2_0:GetShipSkinConfig()
+
+			arg_2_0.pos = arg_2_1.position + BuildVector3(var_2_0.spine_offset[1])
+
+			local var_2_1 = var_2_0.spine_offset[2][1]
+
+			arg_2_0.scale = Vector3(var_2_1, var_2_1, var_2_1)
+
+			if #var_2_0.special_effects > 0 then
+				arg_2_0.bgEffectName = var_2_0.special_effects[1]
+				arg_2_0.bgEffectPos = arg_2_1.position + BuildVector3(var_2_0.special_effects[2])
+
+				local var_2_2 = var_2_0.special_effects[3][1]
+
+				arg_2_0.bgEffectScale = Vector3(var_2_2, var_2_2, var_2_2)
 			end
 		end,
-		GetShipName = function (slot0)
-			return slot0.ship:getPainting()
+		GetShipName = function(arg_3_0)
+			return arg_3_0.ship:getPainting()
 		end,
-		GetShipSkinConfig = function (slot0)
-			return slot0.ship:GetSkinConfig()
+		GetShipSkinConfig = function(arg_4_0)
+			return arg_4_0.ship:GetSkinConfig()
 		end,
-		isEmpty = function (slot0)
-			return slot0.ship == nil
+		isEmpty = function(arg_5_0)
+			return arg_5_0.ship == nil
 		end,
-		Clear = function (slot0)
-			slot0.ship = nil
-			slot0.parent = nil
-			slot0.scale = nil
-			slot0.pos = nil
-			slot0.bgEffectName = nil
-			slot0.bgEffectPos = nil
-			slot0.bgEffectScale = nil
-			slot0.effectParent = nil
+		Clear = function(arg_6_0)
+			arg_6_0.ship = nil
+			arg_6_0.parent = nil
+			arg_6_0.scale = nil
+			arg_6_0.pos = nil
+			arg_6_0.bgEffectName = nil
+			arg_6_0.bgEffectPos = nil
+			arg_6_0.bgEffectScale = nil
+			arg_6_0.effectParent = nil
 		end
 	}
 
-	slot1:SetData(slot0)
+	var_1_0:SetData(arg_1_0)
 
-	return slot1
+	return var_1_0
 end
 
-slot4 = function(slot0, slot1)
-	slot0._go = slot1
-	slot0._tf = tf(slot1)
+local function var_0_2(arg_7_0, arg_7_1)
+	arg_7_0._go = arg_7_1
+	arg_7_0._tf = tf(arg_7_1)
 
-	UIUtil.SetLayerRecursively(slot0._go, LayerMask.NameToLayer("UI"))
-	slot0._tf:SetParent(slot0._spinePaintingData.parent, true)
+	UIUtil.SetLayerRecursively(arg_7_0._go, LayerMask.NameToLayer("UI"))
+	arg_7_0._tf:SetParent(arg_7_0._spinePaintingData.parent, true)
 
-	slot0._tf.localScale = slot0._spinePaintingData.scale
-	slot0._tf.localPosition = slot0._spinePaintingData.pos
-	slot0.spineAnimList = {}
+	arg_7_0._tf.localScale = arg_7_0._spinePaintingData.scale
+	arg_7_0._tf.localPosition = arg_7_0._spinePaintingData.pos
+	arg_7_0.spineAnimList = {}
 
-	for slot6 = 0, slot0._tf:GetComponent(typeof(ItemList)).prefabItem.Length - 1 do
-		slot0.spineAnimList[#slot0.spineAnimList + 1] = GetOrAddComponent(slot2[slot6], "SpineAnimUI")
+	local var_7_0 = arg_7_0._tf:GetComponent(typeof(ItemList)).prefabItem
+
+	for iter_7_0 = 0, var_7_0.Length - 1 do
+		arg_7_0.spineAnimList[#arg_7_0.spineAnimList + 1] = GetOrAddComponent(var_7_0[iter_7_0], "SpineAnimUI")
 	end
 
-	assert(#slot0.spineAnimList > 0, "动态立绘至少要保证有一个spine动画，请检查" .. slot0._spinePaintingData:GetShipName())
+	local var_7_1 = #arg_7_0.spineAnimList
 
-	if slot3 == 1 then
-		slot0.mainSpineAnim = slot0.spineAnimList[1]
+	assert(var_7_1 > 0, "动态立绘至少要保证有一个spine动画，请检查" .. arg_7_0._spinePaintingData:GetShipName())
+
+	if var_7_1 == 1 then
+		arg_7_0.mainSpineAnim = arg_7_0.spineAnimList[1]
 	else
-		slot0.mainSpineAnim = slot0.spineAnimList[#slot0.spineAnimList]
+		arg_7_0.mainSpineAnim = arg_7_0.spineAnimList[#arg_7_0.spineAnimList]
 	end
 
-	slot0._skeletonGraphic = slot0.mainSpineAnim:GetComponent("SkeletonGraphic")
-	slot0.idleName = slot0:getNormalName()
+	arg_7_0.idleName = "normal"
 
-	slot0:checkActionShow()
+	arg_7_0:checkActionShow()
 end
 
-slot0.getNormalName = function(slot0)
-	return "normal"
+local function var_0_3(arg_8_0, arg_8_1)
+	arg_8_0._bgEffectGo = arg_8_1
+	arg_8_0._bgEffectTf = tf(arg_8_1)
+
+	UIUtil.SetLayerRecursively(arg_8_0._bgEffectGo, LayerMask.NameToLayer("UI"))
+	arg_8_0._bgEffectTf:SetParent(arg_8_0._spinePaintingData.effectParent, true)
+
+	arg_8_0._bgEffectTf.localScale = arg_8_0._spinePaintingData.bgEffectScale
+	arg_8_0._bgEffectTf.localPosition = arg_8_0._spinePaintingData.bgEffectPos
 end
 
-slot5 = function(slot0, slot1)
-	slot0._bgEffectGo = slot1
-	slot0._bgEffectTf = tf(slot1)
-
-	UIUtil.SetLayerRecursively(slot0._bgEffectGo, LayerMask.NameToLayer("UI"))
-	slot0._bgEffectTf:SetParent(slot0._spinePaintingData.effectParent, true)
-
-	slot0._bgEffectTf.localScale = slot0._spinePaintingData.bgEffectScale
-	slot0._bgEffectTf.localPosition = slot0._spinePaintingData.bgEffectPos
-end
-
-slot0.Ctor = function(slot0, slot1, slot2)
-	slot0._spinePaintingData = slot1
-	slot0._loader = AutoLoader.New()
+function var_0_0.Ctor(arg_9_0, arg_9_1, arg_9_2)
+	arg_9_0._spinePaintingData = arg_9_1
+	arg_9_0._loader = AutoLoader.New()
 
 	parallelAsync({
-		function (slot0)
-			slot1 = uv0._spinePaintingData
-			slot2, slot3 = HXSet.autoHxShift("spinepainting/", slot1:GetShipName())
-			slot4 = slot2 .. slot3
-			slot5 = uv0._loader
+		function(arg_10_0)
+			local var_10_0 = arg_9_0._spinePaintingData:GetShipName()
+			local var_10_1, var_10_2 = HXSet.autoHxShift("spinepainting/", var_10_0)
+			local var_10_3 = var_10_1 .. var_10_2
 
-			slot5:LoadPrefab(slot4, nil, function (slot0)
-				uv0(uv1, slot0)
-				uv2()
-			end, slot4)
+			arg_9_0._loader:LoadPrefab(var_10_3, nil, function(arg_11_0)
+				var_0_2(arg_9_0, arg_11_0)
+				arg_10_0()
+			end, var_10_3)
 		end,
-		function (slot0)
-			if uv0._spinePaintingData.bgEffectName ~= nil then
-				slot2 = "ui/" .. slot1
-				slot3 = uv0._loader
+		function(arg_12_0)
+			local var_12_0 = arg_9_0._spinePaintingData.bgEffectName
 
-				slot3:LoadPrefab(slot2, slot1, function (slot0)
-					uv0(uv1, slot0)
-					uv2()
-				end, slot2)
+			if var_12_0 ~= nil then
+				local var_12_1 = "ui/" .. var_12_0
+
+				arg_9_0._loader:LoadPrefab(var_12_1, var_12_0, function(arg_13_0)
+					var_0_3(arg_9_0, arg_13_0)
+					arg_12_0()
+				end, var_12_1)
 			else
-				slot0()
+				arg_12_0()
 			end
 		end
-	}, function ()
-		setActive(uv0._spinePaintingData.parent, true)
-		setActive(uv0._spinePaintingData.effectParent, true)
+	}, function()
+		setActive(arg_9_0._spinePaintingData.parent, true)
+		setActive(arg_9_0._spinePaintingData.effectParent, true)
 
-		if uv1 then
-			uv1(uv0)
+		if arg_9_2 then
+			arg_9_2(arg_9_0)
 		end
 	end)
 end
 
-slot0.SetVisible = function(slot0, slot1)
-	setActive(slot0._spinePaintingData.effectParent, slot1)
-	setActiveViaLayer(slot0._spinePaintingData.effectParent, slot1)
-	setActive(slot0._tf, slot1)
-
-	if not slot1 then
-		slot0.mainSpineAnim:SetActionCallBack(nil)
-
-		slot0.inAction = false
-
-		if LeanTween.isTweening(go(slot0._tf)) then
-			LeanTween.cancel(go(slot0._tf))
-		end
-
-		if slot0._baseShader then
-			slot0._skeletonGraphic.material.shader = slot0._baseShader
-			slot0._baseShader = nil
-		end
-	end
-
-	slot0:checkActionShow()
+function var_0_0.SetVisible(arg_15_0, arg_15_1)
+	setActive(arg_15_0._spinePaintingData.effectParent, arg_15_1)
+	setActiveViaLayer(arg_15_0._spinePaintingData.effectParent, arg_15_1)
+	setActive(arg_15_0._tf, arg_15_1)
+	arg_15_0:checkActionShow()
 end
 
-slot0.checkActionShow = function(slot0)
-	if PlayerPrefs.GetString(tostring(slot0.mainSpineAnim.name) .. "_" .. tostring(slot0._spinePaintingData.ship.id)) and #slot2 > 0 then
-		if PlayerPrefs.GetInt(LIVE2D_STATUS_SAVE, 1) == 1 and slot0.idleName ~= slot2 then
-			slot0.idleName = slot2
+function var_0_0.checkActionShow(arg_16_0)
+	local var_16_0 = tostring(arg_16_0.mainSpineAnim.name) .. "_" .. tostring(arg_16_0._spinePaintingData.ship.id)
+	local var_16_1 = PlayerPrefs.GetString(var_16_0)
 
-			slot0:SetAction(slot2, 0)
-		elseif PlayerPrefs.GetInt(LIVE2D_STATUS_SAVE, 1) ~= 1 and slot0.idleName ~= slot0:getNormalName() then
-			slot0.idleName = slot0:getNormalName()
+	if var_16_1 and #var_16_1 > 0 then
+		if PlayerPrefs.GetInt(LIVE2D_STATUS_SAVE, 1) == 1 and arg_16_0.idleName ~= var_16_1 then
+			arg_16_0.idleName = var_16_1
 
-			slot0:SetAction(slot0.idleName, 0)
+			arg_16_0:SetAction(var_16_1, 0)
+		elseif PlayerPrefs.GetInt(LIVE2D_STATUS_SAVE, 1) ~= 1 and arg_16_0.idleName ~= "normal" then
+			arg_16_0.idleName = "normal"
+
+			arg_16_0:SetAction(arg_16_0.idleName, 0)
 		end
 	end
 end
 
-slot0.DoSpecialTouch = function(slot0)
-	if not slot0.inAction then
-		slot0.inAction = true
+function var_0_0.DoSpecialTouch(arg_17_0)
+	if not arg_17_0.inAction then
+		arg_17_0.inAction = true
 
-		slot0:SetActionWithCallback("special", 0, function ()
-			uv0:SetAction(uv0:getNormalName(), 0)
+		arg_17_0:SetActionWithCallback("special", 0, function()
+			arg_17_0:SetAction("normal", 0)
 
-			uv0.inAction = false
+			arg_17_0.inAction = false
 		end)
 	end
 end
 
-slot0.DoDragClick = function(slot0)
-end
+function var_0_0.DoDragTouch(arg_19_0)
+	if string.find(arg_19_0.mainSpineAnim.name, "gaoxiong_6") == 1 and not arg_19_0.inAction then
+		arg_19_0.inAction = true
 
-slot0.DoDragTouch = function(slot0)
-	slot1 = false
+		if not arg_19_0.idleName or arg_19_0.idleName ~= "ex" then
+			arg_19_0.idleName = "ex"
 
-	for slot5, slot6 in ipairs(uv0) do
-		slot1 = slot1 or string.find(slot0.mainSpineAnim.name, slot6) == 1
-	end
+			arg_19_0:SetActionWithFinishCallback("drag", 0, function()
+				arg_19_0:SetAction("ex", 0)
 
-	if slot1 and not slot0.inAction then
-		slot0.inAction = true
+				local var_20_0 = tostring(arg_19_0.mainSpineAnim.name) .. "_" .. tostring(arg_19_0._spinePaintingData.ship.id)
 
-		if not slot0.idleName or slot0.idleName ~= "ex" then
-			slot0.idleName = "ex"
+				PlayerPrefs.SetString(var_20_0, "ex")
 
-			if string.find(slot0.mainSpineAnim.name, "aimudeng_4") then
-				slot0._baseMaterial = slot0._skeletonGraphic.material
+				arg_19_0.inAction = false
+			end)
+		elseif arg_19_0.idleName == "ex" then
+			arg_19_0.idleName = "normal"
 
-				slot0:getSpineMaterial("SkeletonGraphicDefaultRGBSplit", function (slot0)
-					uv0._skeletonGraphic.material = slot0
+			arg_19_0:SetActionWithFinishCallback("drag_ex", 0, function()
+				local var_21_0 = tostring(arg_19_0.mainSpineAnim.name) .. "_" .. tostring(arg_19_0._spinePaintingData.ship.id)
 
-					LeanTween.delayedCall(go(uv0._tf), 0.5, System.Action(function ()
-						uv0._skeletonGraphic.material = uv0._baseMaterial
+				PlayerPrefs.SetString(var_21_0, "normal")
+				arg_19_0:SetAction("normal", 0)
 
-						uv0:changeSpecialIdle(uv0.idleName)
-					end))
-				end)
-			else
-				slot0:SetActionWithFinishCallback("drag", 0, function ()
-					uv0:changeSpecialIdle(uv0.idleName)
-				end)
-			end
-		elseif slot0.idleName == "ex" then
-			slot0.idleName = "normal"
-
-			if string.find(slot0.mainSpineAnim.name, "aimudeng_4") then
-				slot0._baseMaterial = slot0._skeletonGraphic.material
-
-				slot0:getSpineMaterial("SkeletonGraphicDefaultRGBSplit", function (slot0)
-					uv0._skeletonGraphic.material = slot0
-
-					LeanTween.delayedCall(go(uv0._tf), 0.5, System.Action(function ()
-						uv0._skeletonGraphic.material = uv0._baseMaterial
-
-						uv0:changeSpecialIdle(uv0.idleName)
-					end))
-				end)
-			else
-				slot0:SetActionWithFinishCallback("drag_ex", 0, function ()
-					uv0:changeSpecialIdle(uv0.idleName)
-				end)
-			end
+				arg_19_0.inAction = false
+			end)
 		end
 	end
 end
 
-slot0.getSpineMaterial = function(slot0, slot1, slot2)
-	if not slot0._materialDic then
-		slot0._materialDic = {}
+function var_0_0.SetAction(arg_22_0, arg_22_1, arg_22_2)
+	if arg_22_2 == 1 and arg_22_0.inAction then
+		return
 	end
 
-	if slot0._materialDic[slot1] then
-		slot2(slot0._materialDic[slot1])
+	if arg_22_1 == "normal" and arg_22_0.idleName ~= nil then
+		arg_22_1 = arg_22_0.idleName
 	end
 
-	slot3 = PoolMgr
-	slot3 = slot3:GetInstance()
-
-	slot3:LoadAsset("spinematerials", slot1, false, typeof(Material), function (slot0)
-		uv0._materialDic[uv1] = slot0
-
-		uv2(uv0._materialDic[uv1])
-	end, false)
-end
-
-slot0.changeSpecialIdle = function(slot0, slot1)
-	slot0:SetAction(slot1, 0)
-	PlayerPrefs.SetString(tostring(slot0.mainSpineAnim.name) .. "_" .. tostring(slot0._spinePaintingData.ship.id), slot1)
-
-	slot0.inAction = false
-end
-
-slot0.SetAction = function(slot0, slot1, slot2)
-	if slot2 == 1 then
-		if slot0.inAction then
-			return
-		end
-
-		slot3, slot4 = slot0:getMultipFaceData()
-
-		if tonumber(slot1) and slot3 then
-			slot1 = tostring(slot5 + slot4)
-		end
-	end
-
-	if slot1 == slot0:getNormalName() and slot0.idleName ~= nil then
-		slot1 = slot0.idleName
-	end
-
-	for slot6, slot7 in ipairs(slot0.spineAnimList) do
-		slot7:SetAction(slot1, slot2)
+	for iter_22_0, iter_22_1 in ipairs(arg_22_0.spineAnimList) do
+		iter_22_1:SetAction(arg_22_1, arg_22_2)
 	end
 end
 
-slot0.SetActionWithCallback = function(slot0, slot1, slot2, slot3)
-	slot0:SetAction(slot1, slot2)
+function var_0_0.SetActionWithCallback(arg_23_0, arg_23_1, arg_23_2, arg_23_3)
+	arg_23_0:SetAction(arg_23_1, arg_23_2)
 
-	if slot0.mainSpineAnim then
-		slot0.mainSpineAnim:SetActionCallBack(function (slot0)
-			uv0.mainSpineAnim:SetActionCallBack(nil)
+	if arg_23_0.mainSpineAnim then
+		arg_23_0.mainSpineAnim:SetActionCallBack(function(arg_24_0)
+			arg_23_0.mainSpineAnim:SetActionCallBack(nil)
 
-			if slot0 == "finish" and uv1 then
-				uv1()
+			if arg_24_0 == "finish" and arg_23_3 then
+				arg_23_3()
 			end
 		end)
-		slot0.mainSpineAnim:SetAction(slot1, 0)
+		arg_23_0.mainSpineAnim:SetAction(arg_23_1, 0)
 	end
 end
 
-slot0.SetActionWithFinishCallback = function(slot0, slot1, slot2, slot3)
-	slot0:SetAction(slot1, slot2)
+function var_0_0.SetActionWithFinishCallback(arg_25_0, arg_25_1, arg_25_2, arg_25_3)
+	arg_25_0:SetAction(arg_25_1, arg_25_2)
 
-	if slot0.mainSpineAnim then
-		slot0.mainSpineAnim:SetActionCallBack(function (slot0)
-			if slot0 == "finish" and uv0 then
-				uv1.mainSpineAnim:SetActionCallBack(nil)
-				uv0()
+	if arg_25_0.mainSpineAnim then
+		arg_25_0.mainSpineAnim:SetActionCallBack(function(arg_26_0)
+			if arg_26_0 == "finish" and arg_25_3 then
+				arg_25_0.mainSpineAnim:SetActionCallBack(nil)
+				arg_25_3()
 			end
 		end)
-		slot0.mainSpineAnim:SetAction(slot1, 0)
+		arg_25_0.mainSpineAnim:SetAction(arg_25_1, 0)
 	end
 end
 
-slot0.SetEmptyAction = function(slot0, slot1)
-	for slot5, slot6 in ipairs(slot0.spineAnimList) do
-		if slot6:GetAnimationState() then
-			slot7:SetEmptyAnimation(slot1, 0)
-			GetComponent(slot6.transform, "SkeletonGraphic"):Update(Time.deltaTime)
+function var_0_0.SetEmptyAction(arg_27_0, arg_27_1)
+	for iter_27_0, iter_27_1 in ipairs(arg_27_0.spineAnimList) do
+		local var_27_0 = iter_27_1:GetAnimationState()
+
+		if var_27_0 then
+			var_27_0:SetEmptyAnimation(arg_27_1, 0)
+			GetComponent(iter_27_1.transform, "SkeletonGraphic"):Update(Time.deltaTime)
 		end
 	end
 end
 
-slot0.getMultipFaceData = function(slot0)
-	if table.contains(uv0, slot0.mainSpineAnim.name) and slot0.idleName == "ex" then
-		return true, 5
+function var_0_0.Dispose(arg_28_0)
+	if arg_28_0._spinePaintingData then
+		arg_28_0._spinePaintingData:Clear()
+	end
+
+	arg_28_0._loader:Clear()
+
+	if arg_28_0._go ~= nil then
+		var_0_1.Destroy(arg_28_0._go)
+	end
+
+	if arg_28_0._bgEffectGo ~= nil then
+		var_0_1.Destroy(arg_28_0._bgEffectGo)
+	end
+
+	arg_28_0._go = nil
+	arg_28_0._tf = nil
+	arg_28_0._bgEffectGo = nil
+	arg_28_0._bgEffectTf = nil
+
+	if arg_28_0.spineAnim then
+		arg_28_0.spineAnim:SetActionCallBack(nil)
 	end
 end
 
-slot0.Dispose = function(slot0)
-	slot0._materialDic = {}
-
-	if slot0._spinePaintingData then
-		slot0._spinePaintingData:Clear()
-	end
-
-	slot0._loader:Clear()
-
-	if slot0._go ~= nil then
-		uv0.Destroy(slot0._go)
-	end
-
-	if slot0._bgEffectGo ~= nil then
-		uv0.Destroy(slot0._bgEffectGo)
-	end
-
-	slot0._go = nil
-	slot0._tf = nil
-	slot0._bgEffectGo = nil
-	slot0._bgEffectTf = nil
-
-	if slot0.spineAnim then
-		slot0.spineAnim:SetActionCallBack(nil)
-	end
-end
-
-return slot0
+return var_0_0

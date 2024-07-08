@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.activity_shop_extra = {
 	{
 		commodity_id = 106011,
@@ -3878,157 +3878,6 @@ pg.activity_shop_extra = {
 			}
 		}
 	},
-	[115] = {
-		commodity_id = 401466,
-		activity = 5243,
-		scene = "",
-		num = 1,
-		num_limit = 1,
-		end_by_maintenance = 1,
-		commodity_type = 7,
-		id = 115,
-		order = 11,
-		time = {
-			{
-				{
-					2024,
-					3,
-					18
-				},
-				{
-					0,
-					0,
-					0
-				}
-			},
-			{
-				{
-					2024,
-					3,
-					28
-				},
-				{
-					23,
-					59,
-					59
-				}
-			}
-		}
-	},
-	[116] = {
-		commodity_type = 7,
-		activity = 7016,
-		commodity_id = 301124,
-		order = 10,
-		id = 116,
-		num = 1,
-		num_limit = 1,
-		end_by_maintenance = 0,
-		scene = {
-			"crusing",
-			{}
-		},
-		time = {
-			{
-				{
-					2024,
-					4,
-					1
-				},
-				{
-					0,
-					0,
-					0
-				}
-			},
-			{
-				{
-					2024,
-					5,
-					31
-				},
-				{
-					23,
-					59,
-					59
-				}
-			}
-		}
-	},
-	[117] = {
-		commodity_id = 100011,
-		activity = 5267,
-		scene = "",
-		num = 1,
-		num_limit = 1,
-		end_by_maintenance = 0,
-		commodity_type = 7,
-		id = 117,
-		order = 10,
-		time = {
-			{
-				{
-					2024,
-					4,
-					1
-				},
-				{
-					0,
-					0,
-					0
-				}
-			},
-			{
-				{
-					2024,
-					4,
-					7
-				},
-				{
-					23,
-					59,
-					59
-				}
-			}
-		}
-	},
-	[118] = {
-		commodity_id = 106014,
-		activity = 5324,
-		scene = "",
-		num = 1,
-		num_limit = 1,
-		end_by_maintenance = 1,
-		commodity_type = 7,
-		id = 118,
-		order = 9,
-		time = {
-			{
-				{
-					2024,
-					5,
-					16
-				},
-				{
-					0,
-					0,
-					0
-				}
-			},
-			{
-				{
-					2024,
-					6,
-					13
-				},
-				{
-					23,
-					59,
-					59
-				}
-			}
-		}
-	},
 	get_id_list_by_commodity_type = {
 		[7] = {
 			1,
@@ -4140,11 +3989,7 @@ pg.activity_shop_extra = {
 			111,
 			112,
 			113,
-			114,
-			115,
-			116,
-			117,
-			118
+			114
 		}
 	},
 	all = {
@@ -4257,10 +4102,6 @@ pg.activity_shop_extra = {
 		111,
 		112,
 		113,
-		114,
-		115,
-		116,
-		117,
-		118
+		114
 	}
 }

@@ -1,65 +1,66 @@
-slot0 = class("MetaQuickTacticsOverflowLayer", import("...base.BaseUI"))
+﻿local var_0_0 = class("MetaQuickTacticsOverflowLayer", import("...base.BaseUI"))
 
-slot0.getUIName = function(slot0)
+function var_0_0.getUIName(arg_1_0)
 	return "MetaQuickTacticsOverflowUI"
 end
 
-slot0.init = function(slot0)
-	slot0:initData()
-	slot0:initUI()
-	slot0:addListener()
-	slot0:overlayPanel(true)
+function var_0_0.init(arg_2_0)
+	arg_2_0:initData()
+	arg_2_0:initUI()
+	arg_2_0:addListener()
+	arg_2_0:overlayPanel(true)
 end
 
-slot0.didEnter = function(slot0)
+function var_0_0.didEnter(arg_3_0)
+	return
 end
 
-slot0.willExit = function(slot0)
-	slot0:overlayPanel(false)
+function var_0_0.willExit(arg_4_0)
+	arg_4_0:overlayPanel(false)
 end
 
-slot0.onBackPressed = function(slot0)
-	slot0:closeView()
+function var_0_0.onBackPressed(arg_5_0)
+	arg_5_0:closeView()
 end
 
-slot0.overlayPanel = function(slot0, slot1)
-	if slot1 and slot0._tf then
-		pg.UIMgr.GetInstance():OverlayPanel(slot0._tf, {
+function var_0_0.overlayPanel(arg_6_0, arg_6_1)
+	if arg_6_1 and arg_6_0._tf then
+		pg.UIMgr.GetInstance():OverlayPanel(arg_6_0._tf, {
 			groupName = LayerWeightConst.GROUP_META,
 			weight = LayerWeightConst.BASE_LAYER
 		})
-	elseif slot0._tf then
-		pg.UIMgr.GetInstance():UnOverlayPanel(slot0._tf)
+	elseif arg_6_0._tf then
+		pg.UIMgr.GetInstance():UnOverlayPanel(arg_6_0._tf)
 	end
 end
 
-slot0.initData = function(slot0)
-	slot0.shipID = slot0.contextData.shipID
-	slot0.skillID = slot0.contextData.skillID
-	slot0.useCountDict = slot0.contextData.useCountDict
-	slot0.overExp = slot0.contextData.overExp
+function var_0_0.initData(arg_7_0)
+	arg_7_0.shipID = arg_7_0.contextData.shipID
+	arg_7_0.skillID = arg_7_0.contextData.skillID
+	arg_7_0.useCountDict = arg_7_0.contextData.useCountDict
+	arg_7_0.overExp = arg_7_0.contextData.overExp
 end
 
-slot0.initUI = function(slot0)
-	slot0.bg = slot0:findTF("BG")
-	slot0.text = slot0:findTF("Content/Context/Text")
-	slot0.cancelBtn = slot0:findTF("Content/CancelBtn")
-	slot0.confirmBtn = slot0:findTF("Content/ConfirmBtn")
+function var_0_0.initUI(arg_8_0)
+	arg_8_0.bg = arg_8_0:findTF("BG")
+	arg_8_0.text = arg_8_0:findTF("Content/Context/Text")
+	arg_8_0.cancelBtn = arg_8_0:findTF("Content/CancelBtn")
+	arg_8_0.confirmBtn = arg_8_0:findTF("Content/ConfirmBtn")
 
-	setText(slot0.text, i18n("metaskill_overflow_tip", slot0.overExp))
+	setText(arg_8_0.text, i18n("metaskill_overflow_tip", arg_8_0.overExp))
 end
 
-slot0.addListener = function(slot0)
-	slot1 = function()
-		uv0:closeView()
+function var_0_0.addListener(arg_9_0)
+	local function var_9_0()
+		arg_9_0:closeView()
 	end
 
-	onButton(slot0, slot0.bg, slot1, SFX_PANEL)
-	onButton(slot0, slot0.cancelBtn, slot1, SFX_PANEL)
-	onButton(slot0, slot0.confirmBtn, function ()
-		uv0:emit(MetaQuickTacticsOverflowMediator.USE_TACTICS_BOOK, uv0.shipID, uv0.skillID, uv0.useCountDict)
-		uv0:closeView()
+	onButton(arg_9_0, arg_9_0.bg, var_9_0, SFX_PANEL)
+	onButton(arg_9_0, arg_9_0.cancelBtn, var_9_0, SFX_PANEL)
+	onButton(arg_9_0, arg_9_0.confirmBtn, function()
+		arg_9_0:emit(MetaQuickTacticsOverflowMediator.USE_TACTICS_BOOK, arg_9_0.shipID, arg_9_0.skillID, arg_9_0.useCountDict)
+		arg_9_0:closeView()
 	end, SFX_PANEL)
 end
 
-return slot0
+return var_0_0

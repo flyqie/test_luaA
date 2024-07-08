@@ -1,60 +1,64 @@
-CameraHelper = {}
-slot0 = CameraHelper
-slot1 = YSTool.YSPermissionTool.Inst
+﻿CameraHelper = {}
 
-slot0.IsAndroid = function()
+local var_0_0 = CameraHelper
+local var_0_1 = YSTool.YSPermissionTool.Inst
+
+function var_0_0.IsAndroid()
 	return getProxy(UserProxy):GetCacheGatewayInServerLogined() == PLATFORM_ANDROID
 end
 
-slot0.IsIOS = function()
+function var_0_0.IsIOS()
 	return getProxy(UserProxy):GetCacheGatewayInServerLogined() == PLATFORM_IPHONEPLAYER
 end
 
-slot0.RequestCamera = function(slot0, slot1)
-	if uv0.IsAndroid() then
-		slot2 = {
+function var_0_0.RequestCamera(arg_3_0, arg_3_1)
+	if var_0_0.IsAndroid() then
+		local var_3_0 = {
 			"android.permission.CAMERA",
 			"android.permission.RECORD_AUDIO"
 		}
 
 		if PathMgr.getOSVersionNum() < 10 then
-			table.insert(slot2, "android.permission.WRITE_EXTERNAL_STORAGE")
+			table.insert(var_3_0, "android.permission.WRITE_EXTERNAL_STORAGE")
 		end
 
-		slot4 = uv1
+		local function var_3_1(arg_4_0, arg_4_1)
+			local var_4_0 = true
+			local var_4_1 = arg_4_1.Length
 
-		slot4:RequestMulti(slot2, function (slot0, slot1)
-			slot2 = true
-
-			for slot7 = 0, slot1.Length - 1 do
-				if not slot1[slot7] then
-					slot2 = false
+			for iter_4_0 = 0, var_4_1 - 1 do
+				if not arg_4_1[iter_4_0] then
+					var_4_0 = false
 
 					break
 				end
 			end
 
-			if slot2 then
-				if uv0 then
-					uv0()
+			if var_4_0 then
+				if arg_3_0 then
+					arg_3_0()
 				end
-			elseif uv1 then
-				uv1()
+			elseif arg_3_1 then
+				arg_3_1()
 			end
-		end)
-	elseif uv0.IsIOS() then
-		slot4 = uv1
+		end
 
-		slot4:RequestSingle("camera", function (slot0, slot1)
-			if slot1 then
-				if uv0 then
-					uv0()
+		var_0_1:RequestMulti(var_3_0, var_3_1)
+	elseif var_0_0.IsIOS() then
+		local var_3_2 = "camera"
+
+		local function var_3_3(arg_5_0, arg_5_1)
+			if arg_5_1 then
+				if arg_3_0 then
+					arg_3_0()
 				end
-			elseif uv1 then
-				uv1()
+			elseif arg_3_1 then
+				arg_3_1()
 			end
-		end)
-	elseif slot0 then
-		slot0()
+		end
+
+		var_0_1:RequestSingle(var_3_2, var_3_3)
+	elseif arg_3_0 then
+		arg_3_0()
 	end
 end

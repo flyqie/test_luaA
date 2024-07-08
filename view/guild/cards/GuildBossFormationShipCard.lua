@@ -1,50 +1,52 @@
-slot0 = class("GuildBossFormationShipCard")
+﻿local var_0_0 = class("GuildBossFormationShipCard")
 
-slot0.Ctor = function(slot0, slot1)
-	slot0._go = slot1
-	tf(slot1).pivot = Vector2(0.5, 0)
-	tf(slot1).sizeDelta = Vector2(200, 300)
-	tf(slot1).localScale = Vector3(0.6, 0.6, 0.6)
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	arg_1_0._go = arg_1_1
+	tf(arg_1_1).pivot = Vector2(0.5, 0)
+	tf(arg_1_1).sizeDelta = Vector2(200, 300)
+	tf(arg_1_1).localScale = Vector3(0.6, 0.6, 0.6)
 end
 
-slot0.RefreshPosition = function(slot0, slot1, slot2)
-	slot0.soltIndex = slot1
+function var_0_0.RefreshPosition(arg_2_0, arg_2_1, arg_2_2)
+	arg_2_0.soltIndex = arg_2_1
 
-	if slot2 then
-		slot0:UpdateLocalPosition()
+	if arg_2_2 then
+		arg_2_0:UpdateLocalPosition()
 	end
 end
 
-slot0.UpdateLocalPosition = function(slot0)
-	slot0:SetLocalPosition(slot0._go.transform.parent:Find(slot0.soltIndex).localPosition)
+function var_0_0.UpdateLocalPosition(arg_3_0)
+	local var_3_0 = arg_3_0._go.transform.parent:Find(arg_3_0.soltIndex).localPosition
+
+	arg_3_0:SetLocalPosition(var_3_0)
 end
 
-slot0.SetLocalPosition = function(slot0, slot1)
-	slot0._go.transform.localPosition = slot1
+function var_0_0.SetLocalPosition(arg_4_0, arg_4_1)
+	arg_4_0._go.transform.localPosition = arg_4_1
 end
 
-slot0.GetLocalPosition = function(slot0)
-	return slot0._go.transform.localPosition
+function var_0_0.GetLocalPosition(arg_5_0)
+	return arg_5_0._go.transform.localPosition
 end
 
-slot0.GetSoltIndex = function(slot0)
-	return slot0.soltIndex
+function var_0_0.GetSoltIndex(arg_6_0)
+	return arg_6_0.soltIndex
 end
 
-slot0.Update = function(slot0, slot1, slot2)
-	slot0.shipId = slot1.id
-	slot0.teamType = slot1:getTeamType()
+function var_0_0.Update(arg_7_0, arg_7_1, arg_7_2)
+	arg_7_0.shipId = arg_7_1.id
+	arg_7_0.teamType = arg_7_1:getTeamType()
 
-	slot0:RefreshPosition(slot2, true)
+	arg_7_0:RefreshPosition(arg_7_2, true)
 end
 
-slot0.Dispose = function(slot0)
-	if slot0._go then
-		tf(slot0._go).pivot = Vector2(0.5, 0.5)
+function var_0_0.Dispose(arg_8_0)
+	if arg_8_0._go then
+		tf(arg_8_0._go).pivot = Vector2(0.5, 0.5)
 	end
 
-	ClearEventTrigger(GetOrAddComponent(slot0._go, "EventTriggerListener"))
-	PoolMgr.GetInstance():ReturnSpineChar(slot0._go.name, slot0._go)
+	ClearEventTrigger(GetOrAddComponent(arg_8_0._go, "EventTriggerListener"))
+	PoolMgr.GetInstance():ReturnSpineChar(arg_8_0._go.name, arg_8_0._go)
 end
 
-return slot0
+return var_0_0

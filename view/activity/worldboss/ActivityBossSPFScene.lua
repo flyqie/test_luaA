@@ -1,7 +1,7 @@
-slot0 = class("ActivityBossSPFScene", import(".ActivityBossSceneTemplate"))
+﻿local var_0_0 = class("ActivityBossSPFScene", import(".ActivityBossSceneTemplate"))
 
-slot0.getUIName = function(slot0)
+function var_0_0.getUIName(arg_1_0)
 	return "ActivityBossSPFUI"
 end
 
-return slot0
+return var_0_0

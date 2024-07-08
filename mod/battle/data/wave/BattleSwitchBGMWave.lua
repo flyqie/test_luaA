@@ -1,21 +1,24 @@
-ys = ys or {}
-slot0 = ys
-slot0.Battle.BattleSwitchBGMWave = class("BattleSwitchBGMWave", slot0.Battle.BattleWaveInfo)
-slot0.Battle.BattleSwitchBGMWave.__name = "BattleSwitchBGMWave"
-slot1 = slot0.Battle.BattleSwitchBGMWave
+﻿ys = ys or {}
 
-slot1.Ctor = function(slot0)
-	uv0.super.Ctor(slot0)
+local var_0_0 = ys
+
+var_0_0.Battle.BattleSwitchBGMWave = class("BattleSwitchBGMWave", var_0_0.Battle.BattleWaveInfo)
+var_0_0.Battle.BattleSwitchBGMWave.__name = "BattleSwitchBGMWave"
+
+local var_0_1 = var_0_0.Battle.BattleSwitchBGMWave
+
+function var_0_1.Ctor(arg_1_0)
+	var_0_1.super.Ctor(arg_1_0)
 end
 
-slot1.SetWaveData = function(slot0, slot1)
-	uv0.super.SetWaveData(slot0, slot1)
+function var_0_1.SetWaveData(arg_2_0, arg_2_1)
+	var_0_1.super.SetWaveData(arg_2_0, arg_2_1)
 
-	slot0._bgmName = slot0._param.bgm
+	arg_2_0._bgmName = arg_2_0._param.bgm
 end
 
-slot1.DoWave = function(slot0)
-	uv0.super.DoWave(slot0)
-	pg.BgmMgr.GetInstance():Push(BattleScene.__cname, slot0._bgmName)
-	slot0:doPass()
+function var_0_1.DoWave(arg_3_0)
+	var_0_1.super.DoWave(arg_3_0)
+	pg.BgmMgr.GetInstance():Push(BattleScene.__cname, arg_3_0._bgmName)
+	arg_3_0:doPass()
 end

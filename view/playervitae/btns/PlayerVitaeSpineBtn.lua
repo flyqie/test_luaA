@@ -1,33 +1,35 @@
-slot0 = class("PlayerVitaeSpineBtn", import(".PlayerVitaeBaseBtn"))
+﻿local var_0_0 = class("PlayerVitaeSpineBtn", import(".PlayerVitaeBaseBtn"))
 
-slot0.GetBgName = function(slot0)
-	if slot0:IsHrzType() then
-		return "share/btn_l2d_atlas", "spine_painting_bg"
+function var_0_0.GetBgName(arg_1_0)
+	if arg_1_0:IsHrzType() then
+		return "commonUI_atlas", "spine_painting_bg"
 	else
 		return "AdmiralUI_atlas", "sp"
 	end
 end
 
-slot0.IsActive = function(slot0, slot1)
-	return PathMgr.FileExists(PathMgr.getAssetBundle(HXSet.autoHxShiftPath("spinepainting/" .. slot1:getPainting())))
+function var_0_0.IsActive(arg_2_0, arg_2_1)
+	local var_2_0 = HXSet.autoHxShiftPath("spinepainting/" .. arg_2_1:getPainting())
+
+	return (PathMgr.FileExists(PathMgr.getAssetBundle(var_2_0)))
 end
 
-slot0.GetDefaultValue = function(slot0)
-	return getProxy(SettingsProxy):getCharacterSetting(slot0.ship.id, SHIP_FLAG_SP)
+function var_0_0.GetDefaultValue(arg_3_0)
+	return getProxy(SettingsProxy):getCharacterSetting(arg_3_0.ship.id, SHIP_FLAG_SP)
 end
 
-slot0.OnSwitch = function(slot0, slot1)
-	getProxy(SettingsProxy):setCharacterSetting(slot0.ship.id, SHIP_FLAG_SP, slot1)
+function var_0_0.OnSwitch(arg_4_0, arg_4_1)
+	getProxy(SettingsProxy):setCharacterSetting(arg_4_0.ship.id, SHIP_FLAG_SP, arg_4_1)
 
 	return true
 end
 
-slot0.Load = function(slot0, slot1)
-	uv0.super.Load(slot0, slot1)
+function var_0_0.Load(arg_5_0, arg_5_1)
+	var_0_0.super.Load(arg_5_0, arg_5_1)
 
-	if slot0:IsHrzType() then
-		slot1.gameObject.name = "spine"
+	if arg_5_0:IsHrzType() then
+		arg_5_1.gameObject.name = "spine"
 	end
 end
 
-return slot0
+return var_0_0

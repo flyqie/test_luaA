@@ -1,26 +1,26 @@
-slot0 = class("ShipAtlasBgBtn", import("....PlayerVitae.btns.PlayerVitaeBGBtn"))
+﻿local var_0_0 = class("ShipAtlasBgBtn", import("....PlayerVitae.btns.PlayerVitaeBGBtn"))
 
-slot0.Ctor = function(slot0, slot1, slot2, slot3, slot4)
-	uv0.super.Ctor(slot0, slot1, slot2)
+function var_0_0.Ctor(arg_1_0, arg_1_1, arg_1_2, arg_1_3, arg_1_4)
+	var_0_0.super.Ctor(arg_1_0, arg_1_1, arg_1_2)
 
-	slot0.event = slot3
-	slot0.value = slot4
+	arg_1_0.event = arg_1_3
+	arg_1_0.value = arg_1_4
 end
 
-slot0.emit = function(slot0, ...)
-	slot0.event:emit(...)
+function var_0_0.emit(arg_2_0, ...)
+	arg_2_0.event:emit(...)
 end
 
-slot0.GetDefaultValue = function(slot0)
-	return slot0.value
+function var_0_0.GetDefaultValue(arg_3_0)
+	return arg_3_0.value
 end
 
-slot0.OnSwitch = function(slot0, slot1)
+function var_0_0.OnSwitch(arg_4_0, arg_4_1)
 	return true
 end
 
-slot0.OnSwitchDone = function(slot0)
-	slot0:emit(SkinAtlasPreviewPage.ON_BG_SWITCH_DONE, slot0.flag)
+function var_0_0.OnSwitchDone(arg_5_0)
+	arg_5_0:emit(SkinAtlasPreviewPage.ON_BG_SWITCH_DONE, arg_5_0.flag)
 end
 
-return slot0
+return var_0_0

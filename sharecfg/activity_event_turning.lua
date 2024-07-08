@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.activity_event_turning = {
 	{
 		id = 1,
@@ -191,65 +191,9 @@ pg.activity_event_turning = {
 		story_list = {},
 		story_task = {}
 	},
-	{
-		id = 4,
-		total_num = 0,
-		type = 1,
-		groupid_list = {},
-		task_table = {
-			{
-				20162
-			},
-			{
-				20163
-			},
-			{
-				20164
-			},
-			{
-				20165
-			},
-			{
-				20166
-			},
-			{
-				20167
-			},
-			{
-				20168
-			},
-			{
-				20169
-			},
-			{
-				20170
-			},
-			{
-				20171
-			},
-			{
-				20172
-			},
-			{
-				20173
-			},
-			{
-				20174
-			},
-			{
-				20175
-			},
-			{
-				20176
-			}
-		},
-		story_list = {},
-		story_task = {}
-	},
 	all = {
 		1,
 		2,
-		3,
-		4
+		3
 	}
 }

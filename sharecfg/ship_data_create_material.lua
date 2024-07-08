@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.ship_data_create_material = {
 	{
 		use_gold = 1500,
@@ -115,13 +115,12 @@ pg.ship_data_create_material = {
 		number_1 = 2,
 		id = 6,
 		icon = "build_6",
-		exchange_count = 2,
+		exchange_count = 0,
 		rate_tip = {
-			"<color=#ff5e39>海上传奇舰船</color>：1.2%",
 			"<color=#ffde38>超稀有舰船</color>：7%",
 			"<color=#d797ff>精锐舰船</color>：12%",
 			"<color=#3dc6ff>稀有舰船</color>：51%",
-			"普通舰船：28.8%"
+			"普通舰船：30%"
 		}
 	},
 	{
@@ -135,7 +134,7 @@ pg.ship_data_create_material = {
 		number_1 = 1,
 		id = 7,
 		icon = "build_7",
-		exchange_count = 1,
+		exchange_count = 0,
 		rate_tip = {
 			"<color=#ffde38>超稀有舰船</color>：7%",
 			"<color=#d797ff>精锐舰船</color>：12%",
@@ -154,13 +153,12 @@ pg.ship_data_create_material = {
 		number_1 = 2,
 		id = 8,
 		icon = "build_8",
-		exchange_count = 2,
+		exchange_count = 0,
 		rate_tip = {
-			"<color=#ff5e39>海上传奇舰船</color>：1.2%",
 			"<color=#ffde38>超稀有舰船</color>：7%",
 			"<color=#d797ff>精锐舰船</color>：12%",
 			"<color=#3dc6ff>稀有舰船</color>：51%",
-			"普通舰船：28.8%"
+			"普通舰船：30%"
 		}
 	},
 	{
@@ -202,13 +200,13 @@ pg.ship_data_create_material = {
 			"<color=#3dc6ff>稀有舰船</color>：51%",
 			"普通舰船：28.8%",
 			" ",
-			"<color=#ff5e39>阿尔萨斯</color>：1.2%(<color=#92fc63>up!</color>)",
+			"<color=#ff5e39>{namecode:529}</color>：1.2%(<color=#92fc63>up!</color>)",
 			" ",
-			"<color=#ffde38>布伦努斯</color>：2.0%(<color=#92fc63>up!</color>)",
+			"<color=#ffde38>火力</color>：2.0%(<color=#92fc63>up!</color>)",
 			" ",
-			"<color=#ffde38>贝亚恩·META</color>：0.5%",
+			"<color=#ffde38>水星纪念·META</color>：0.5%",
 			" ",
-			"<color=#d797ff>花剑</color>：2.5%(<color=#92fc63>up!</color>)"
+			"<color=#d797ff>波尔塔瓦</color>：2.5%(<color=#92fc63>up!</color>)"
 		}
 	},
 	{

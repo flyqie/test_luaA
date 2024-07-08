@@ -1,19 +1,24 @@
-ys = ys or {}
-slot0 = ys
-slot0.Battle.BattleAllInStrikeVO = class("BattleAllInStrikeVO", slot0.Battle.BattlePlayerWeaponVO)
-slot0.Battle.BattleAllInStrikeVO.__name = "BattleAllInStrikeVO"
-slot2 = slot0.Battle.BattleAllInStrikeVO
-slot2.GCD = slot0.Battle.BattleConfig.AirAssistCFG.GCD
+﻿ys = ys or {}
 
-slot2.Ctor = function(slot0)
-	uv0.super.Ctor(slot0, uv0.GCD)
+local var_0_0 = ys
+local var_0_1 = var_0_0.Battle.BattleConfig
+
+var_0_0.Battle.BattleAllInStrikeVO = class("BattleAllInStrikeVO", var_0_0.Battle.BattlePlayerWeaponVO)
+var_0_0.Battle.BattleAllInStrikeVO.__name = "BattleAllInStrikeVO"
+
+local var_0_2 = var_0_0.Battle.BattleAllInStrikeVO
+
+var_0_2.GCD = var_0_1.AirAssistCFG.GCD
+
+function var_0_2.Ctor(arg_1_0)
+	var_0_2.super.Ctor(arg_1_0, var_0_2.GCD)
 end
 
-slot2.AppendWeapon = function(slot0, slot1)
-	slot1:SetAllInWeaponVO(slot0)
-	uv0.super.AppendWeapon(slot0, slot1)
+function var_0_2.AppendWeapon(arg_2_0, arg_2_1)
+	arg_2_1:SetAllInWeaponVO(arg_2_0)
+	var_0_2.super.AppendWeapon(arg_2_0, arg_2_1)
 end
 
-slot2.GetCurrentWeaponIconIndex = function(slot0)
+function var_0_2.GetCurrentWeaponIconIndex(arg_3_0)
 	return 3
 end

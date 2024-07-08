@@ -1,10 +1,6 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.chapter_model_multistageboss = {
 	[1503] = {
-		boss_expedition_id = {
-			153013,
-			153014
-		},
 		boss_refresh = {
 			3,
 			2
@@ -14,11 +10,6 @@ pg.chapter_model_multistageboss = {
 		}
 	},
 	[1504] = {
-		boss_expedition_id = {
-			154013,
-			154014,
-			154015
-		},
 		boss_refresh = {
 			3,
 			2,

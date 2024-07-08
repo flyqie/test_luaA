@@ -1,53 +1,55 @@
-slot0 = class("CommonBuff", import(".BaseVO"))
+﻿local var_0_0 = class("CommonBuff", import(".BaseVO"))
 
-slot0.Ctor = function(slot0, slot1)
-	slot0.id = slot1.id
-	slot0.configId = slot0.id
-	slot0.timestamp = slot1.timestamp
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	arg_1_0.id = arg_1_1.id
+	arg_1_0.configId = arg_1_0.id
+	arg_1_0.timestamp = arg_1_1.timestamp
 end
 
-slot0.IsActiveType = function(slot0)
+function var_0_0.IsActiveType(arg_2_0)
 	return false
 end
 
-slot0.bindConfigTable = function(slot0)
+function var_0_0.bindConfigTable(arg_3_0)
 	return pg.benefit_buff_template
 end
 
-slot0.checkShow = function(slot0)
-	return slot0:getConfig("hide") ~= 1
+function var_0_0.checkShow(arg_4_0)
+	return arg_4_0:getConfig("hide") ~= 1
 end
 
-slot0.BackYardExpUsage = function(slot0)
-	return slot0:getConfig("benefit_type") == BuffUsageConst.DORM_EXP
+function var_0_0.BackYardExpUsage(arg_5_0)
+	return arg_5_0:getConfig("benefit_type") == BuffUsageConst.DORM_EXP
 end
 
-slot0.BattleUsage = function(slot0)
-	return slot0:getConfig("benefit_type") == BuffUsageConst.BATTLE
+function var_0_0.BattleUsage(arg_6_0)
+	return arg_6_0:getConfig("benefit_type") == BuffUsageConst.BATTLE
 end
 
-slot0.RookieBattleExpUsage = function(slot0)
-	return slot0:getConfig("benefit_type") == BuffUsageConst.ROOKIEBATTLEEXP
+function var_0_0.RookieBattleExpUsage(arg_7_0)
+	return arg_7_0:getConfig("benefit_type") == BuffUsageConst.ROOKIEBATTLEEXP
 end
 
-slot0.ShipModExpUsage = function(slot0)
-	return slot0:getConfig("benefit_type") == BuffUsageConst.SHIP_MOD_EXP
+function var_0_0.ShipModExpUsage(arg_8_0)
+	return arg_8_0:getConfig("benefit_type") == BuffUsageConst.SHIP_MOD_EXP
 end
 
-slot0.BackyardEnergyUsage = function(slot0)
-	return slot0:getConfig("benefit_type") == BuffUsageConst.DORM_ENERGY
+function var_0_0.BackyardEnergyUsage(arg_9_0)
+	return arg_9_0:getConfig("benefit_type") == BuffUsageConst.DORM_ENERGY
 end
 
-slot0.GetRookieBattleExpMaxLevel = function(slot0)
-	return slot0:getConfig("benefit_condition")[3]
+function var_0_0.GetRookieBattleExpMaxLevel(arg_10_0)
+	return arg_10_0:getConfig("benefit_condition")[3]
 end
 
-slot0.isActivate = function(slot0)
-	return pg.TimeMgr.GetInstance():GetServerTime() <= slot0.timestamp
+function var_0_0.isActivate(arg_11_0)
+	return pg.TimeMgr.GetInstance():GetServerTime() <= arg_11_0.timestamp
 end
 
-slot0.getLeftTime = function(slot0)
-	return slot0.timestamp - pg.TimeMgr.GetInstance():GetServerTime()
+function var_0_0.getLeftTime(arg_12_0)
+	local var_12_0 = pg.TimeMgr.GetInstance():GetServerTime()
+
+	return arg_12_0.timestamp - var_12_0
 end
 
-return slot0
+return var_0_0

@@ -1,63 +1,68 @@
-pg = pg or {}
-slot0 = pg
-slot0.NodeCanvasMgr = singletonClass("NodeCanvasMgr")
-slot1 = slot0.NodeCanvasMgr
+﻿pg = pg or {}
 
-slot1.Ctor = function(slot0)
-	slot0:Clear()
+local var_0_0 = pg
+
+var_0_0.NodeCanvasMgr = singletonClass("NodeCanvasMgr")
+
+local var_0_1 = var_0_0.NodeCanvasMgr
+
+function var_0_1.Ctor(arg_1_0)
+	arg_1_0:Clear()
 end
 
-slot1.Init = function(slot0, slot1)
+function var_0_1.Init(arg_2_0, arg_2_1)
 	print("initializing NodeCanvas manager...")
-	existCall(slot1)
+	existCall(arg_2_1)
 end
 
-slot1.SetOwner = function(slot0, slot1)
-	assert(not slot0.mainOwner)
+function var_0_1.SetOwner(arg_3_0, arg_3_1)
+	assert(not arg_3_0.mainOwner)
 
-	slot0.mainOwner = GetComponent(slot1, "GraphOwner")
-	slot0.mainBlackboard = GetComponent(slot1, "Blackboard")
+	arg_3_0.mainOwner = GetComponent(arg_3_1, "GraphOwner")
+	arg_3_0.mainBlackboard = GetComponent(arg_3_1, "Blackboard")
 end
 
-slot1.SetBlackboradValue = function(slot0, slot1, slot2, slot3)
-	slot3 = slot3 or slot0.mainBlackboard
+function var_0_1.SetBlackboradValue(arg_4_0, arg_4_1, arg_4_2, arg_4_3)
+	arg_4_3 = arg_4_3 or arg_4_0.mainBlackboard
 
-	if slot2 == nil then
-		slot3:RemoveVariable(slot1)
+	if arg_4_2 == nil then
+		arg_4_3:RemoveVariable(arg_4_1)
 	else
-		slot3:SetVariableValue(slot1, slot2)
+		arg_4_3:SetVariableValue(arg_4_1, arg_4_2)
 	end
 end
 
-slot1.SendEvent = function(slot0, slot1, slot2, slot3)
-	slot3 = slot3 or slot0.mainOwner
+function var_0_1.SendEvent(arg_5_0, arg_5_1, arg_5_2, arg_5_3)
+	arg_5_3 = arg_5_3 or arg_5_0.mainOwner
 
-	if slot2 == nil then
-		slot3:SendEvent(slot1)
+	if arg_5_2 == nil then
+		arg_5_3:SendEvent(arg_5_1)
 	else
-		slot3:SendEvent(slot1, slot2, nil)
+		arg_5_3:SendEvent(arg_5_1, arg_5_2, nil)
 	end
 end
 
-slot1.SendGlobalEvent = function(slot0, slot1, slot2)
-	slot0.mainOwner.graph:SendGlobalEvent(slot1, slot2, nil)
+function var_0_1.SendGlobalEvent(arg_6_0, arg_6_1, arg_6_2)
+	arg_6_0.mainOwner.graph:SendGlobalEvent(arg_6_1, arg_6_2, nil)
 end
 
-slot1.RegisterFunc = function(slot0, slot1, slot2)
-	slot0.functionDic[slot1] = slot2
+function var_0_1.RegisterFunc(arg_7_0, arg_7_1, arg_7_2)
+	arg_7_0.functionDic[arg_7_1] = arg_7_2
 end
 
-slot1.CallFunc = function(slot0, slot1, ...)
-	assert(slot0.functionDic[slot1], "with out register call:" .. slot1)
-	slot0.functionDic[slot1](...)
+function var_0_1.CallFunc(arg_8_0, arg_8_1, ...)
+	assert(arg_8_0.functionDic[arg_8_1], "with out register call:" .. arg_8_1)
+	arg_8_0.functionDic[arg_8_1](...)
 end
 
-slot1.Clear = function(slot0)
-	slot0.mainOwner = nil
-	slot0.functionDic = {}
+function var_0_1.Clear(arg_9_0)
+	arg_9_0.mainOwner = nil
+	arg_9_0.functionDic = {}
 end
 
-LuaActionTaskCall = function(slot0, ...)
-	assert(uv0.NodeCanvasMgr.GetInstance() and slot1.mainOwner)
-	slot1:CallFunc(slot0, ...)
+function LuaActionTaskCall(arg_10_0, ...)
+	local var_10_0 = var_0_0.NodeCanvasMgr.GetInstance()
+
+	assert(var_10_0 and var_10_0.mainOwner)
+	var_10_0:CallFunc(arg_10_0, ...)
 end

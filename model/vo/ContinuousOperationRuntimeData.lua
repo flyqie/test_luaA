@@ -1,81 +1,81 @@
-slot0 = class("ContinuousOperationRuntimeData")
+﻿local var_0_0 = class("ContinuousOperationRuntimeData")
 
-slot0.Ctor = function(slot0, slot1)
-	for slot5, slot6 in pairs(slot1) do
-		slot0[slot5] = slot6
+function var_0_0.Ctor(arg_1_0, arg_1_1)
+	for iter_1_0, iter_1_1 in pairs(arg_1_1) do
+		arg_1_0[iter_1_0] = iter_1_1
 	end
 
-	slot0.system = slot1.system
-	slot0.totalBattleTime = slot1.battleTime
-	slot0.battleTime = slot1.battleTime
-	slot0.drops = {}
-	slot0.settlementDrops = {}
-	slot0.events = {
+	arg_1_0.system = arg_1_1.system
+	arg_1_0.totalBattleTime = arg_1_1.battleTime
+	arg_1_0.battleTime = arg_1_1.battleTime
+	arg_1_0.drops = {}
+	arg_1_0.settlementDrops = {}
+	arg_1_0.events = {
 		{},
 		{},
 		{}
 	}
-	slot0.active = nil
+	arg_1_0.active = nil
 end
 
-slot0.GetSystem = function(slot0)
-	return slot0.system
+function var_0_0.GetSystem(arg_2_0)
+	return arg_2_0.system
 end
 
-slot0.GetTotalBattleTime = function(slot0)
-	return slot0.totalBattleTime
+function var_0_0.GetTotalBattleTime(arg_3_0)
+	return arg_3_0.totalBattleTime
 end
 
-slot0.GetRestBattleTime = function(slot0)
-	return slot0.battleTime
+function var_0_0.GetRestBattleTime(arg_4_0)
+	return arg_4_0.battleTime
 end
 
-slot0.ConsumeBattleTime = function(slot0)
-	slot0.battleTime = slot0.battleTime - 1
+function var_0_0.ConsumeBattleTime(arg_5_0)
+	arg_5_0.battleTime = arg_5_0.battleTime - 1
 end
 
-slot0.IsFirstBattle = function(slot0)
-	return slot0:GetTotalBattleTime() == slot0:GetRestBattleTime()
+function var_0_0.IsFirstBattle(arg_6_0)
+	return arg_6_0:GetTotalBattleTime() == arg_6_0:GetRestBattleTime()
 end
 
-slot0.GetDrops = function(slot0)
-	return slot0.drops
+function var_0_0.GetDrops(arg_7_0)
+	return arg_7_0.drops
 end
 
-slot0.GetSettlementDrops = function(slot0)
-	return slot0.settlementDrops
+function var_0_0.GetSettlementDrops(arg_8_0)
+	return arg_8_0.settlementDrops
 end
 
-slot0.MergeDrops = function(slot0, slot1, slot2)
-	slot0.drops = table.mergeArray(slot0.drops, slot1)
-	slot0.settlementDrops = table.mergeArray(slot0.settlementDrops, slot2)
+function var_0_0.MergeDrops(arg_9_0, arg_9_1, arg_9_2)
+	arg_9_0.drops = table.mergeArray(arg_9_0.drops, arg_9_1)
+	arg_9_0.settlementDrops = table.mergeArray(arg_9_0.settlementDrops, arg_9_2)
 end
 
-slot0.MergeEvents = function(slot0, slot1, slot2, slot3)
-	slot0.events[1] = table.merge(slot0.events[1], slot1 or {})
-	slot0.events[2] = table.merge(slot0.events[2], slot2 or {})
-	slot0.events[3] = table.merge(slot0.events[3], slot3 or {})
+function var_0_0.MergeEvents(arg_10_0, arg_10_1, arg_10_2, arg_10_3)
+	arg_10_0.events[1] = table.merge(arg_10_0.events[1], arg_10_1 or {})
+	arg_10_0.events[2] = table.merge(arg_10_0.events[2], arg_10_2 or {})
+	arg_10_0.events[3] = table.merge(arg_10_0.events[3], arg_10_3 or {})
 end
 
-slot0.GetEvents = function(slot0, slot1)
-	return slot0.events[slot1]
+function var_0_0.GetEvents(arg_11_0, arg_11_1)
+	return arg_11_0.events[arg_11_1]
 end
 
-slot0.TryActivate = function(slot0)
-	if slot0.active ~= nil then
+function var_0_0.TryActivate(arg_12_0)
+	if arg_12_0.active ~= nil then
 		return
 	end
 
-	slot0.active = true
+	arg_12_0.active = true
 end
 
-slot0.Stop = function(slot0, slot1)
-	slot0.active = false
-	slot0.stopReason = slot1 or ChapterConst.AUTOFIGHT_STOP_REASON.UNKNOWN
+function var_0_0.Stop(arg_13_0, arg_13_1)
+	arg_13_0.active = false
+	arg_13_0.stopReason = arg_13_1 or ChapterConst.AUTOFIGHT_STOP_REASON.UNKNOWN
 end
 
-slot0.IsActive = function(slot0)
-	return tobool(slot0.active)
+function var_0_0.IsActive(arg_14_0)
+	return tobool(arg_14_0.active)
 end
 
-return slot0
+return var_0_0

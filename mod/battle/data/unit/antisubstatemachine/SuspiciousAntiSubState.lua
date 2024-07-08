@@ -1,49 +1,52 @@
-ys = ys or {}
-slot0 = ys
-slot0.Battle.SuspiciousAntiSubState = class("SuspiciousAntiSubState", slot0.Battle.IAntiSubState)
-slot0.Battle.SuspiciousAntiSubState.__name = "SuspiciousAntiSubState"
-slot1 = slot0.Battle.SuspiciousAntiSubState
+﻿ys = ys or {}
 
-slot1.Ctor = function(slot0)
-	uv0.super.Ctor(slot0)
+local var_0_0 = ys
+
+var_0_0.Battle.SuspiciousAntiSubState = class("SuspiciousAntiSubState", var_0_0.Battle.IAntiSubState)
+var_0_0.Battle.SuspiciousAntiSubState.__name = "SuspiciousAntiSubState"
+
+local var_0_1 = var_0_0.Battle.SuspiciousAntiSubState
+
+function var_0_1.Ctor(arg_1_0)
+	var_0_1.super.Ctor(arg_1_0)
 end
 
-slot1.OnVigilantEngage = function(slot0, slot1)
-	slot1:OnVigilantState()
+function var_0_1.OnVigilantEngage(arg_2_0, arg_2_1)
+	arg_2_1:OnVigilantState()
 end
 
-slot1.OnMineExplode = function(slot0, slot1)
-	slot1:OnVigilantState()
+function var_0_1.OnMineExplode(arg_3_0, arg_3_1)
+	arg_3_1:OnVigilantState()
 end
 
-slot1.OnSubmarinFloat = function(slot0, slot1)
-	slot1:OnVigilantState()
+function var_0_1.OnSubmarinFloat(arg_4_0, arg_4_1)
+	arg_4_1:OnVigilantState()
 end
 
-slot1.ToPreLevel = function(slot0, slot1)
-	slot1:OnCalmState()
+function var_0_1.ToPreLevel(arg_5_0, arg_5_1)
+	arg_5_1:OnCalmState()
 end
 
-slot1.OnHateChain = function(slot0, slot1)
-	slot1:OnVigilantState()
+function var_0_1.OnHateChain(arg_6_0, arg_6_1)
+	arg_6_1:OnVigilantState()
 end
 
-slot1.GetWeaponUseable = function(slot0)
+function var_0_1.GetWeaponUseable(arg_7_0)
 	return {}
 end
 
-slot1.CanDecay = function(slot0)
+function var_0_1.CanDecay(arg_8_0)
 	return true
 end
 
-slot1.GetWarnMark = function(slot0)
+function var_0_1.GetWarnMark(arg_9_0)
 	return 1
 end
 
-slot1.GetMeterSpeed = function(slot0)
+function var_0_1.GetMeterSpeed(arg_10_0)
 	return 1
 end
 
-slot1.DecayDuration = function(slot0)
+function var_0_1.DecayDuration(arg_11_0)
 	return 1
 end

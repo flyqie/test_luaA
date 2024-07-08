@@ -1,4 +1,4 @@
-if jit then
+﻿if jit then
 	if jit.opt then
 		jit.opt.start(3)
 	end
@@ -80,7 +80,6 @@ ParticleAnimator = UnityEngine.ParticleAnimator
 TouchPhase = UnityEngine.TouchPhase
 AnimationBlendMode = UnityEngine.AnimationBlendMode
 Sprite = UnityEngine.Sprite
-QualitySettings = UnityEngine.QualitySettings
 Resources = UnityEngine.Resources
 PlayerPrefs = UnityEngine.PlayerPrefs
 RectTransform = UnityEngine.RectTransform

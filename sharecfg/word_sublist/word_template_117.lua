@@ -1,10 +1,13 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_117 = {}
-slot1 = slot0.word_template_117
+﻿pg = pg or {}
 
-temp = function()
-	uv0["鞀"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_117 = {}
+
+local var_0_1 = var_0_0.word_template_117
+
+function temp()
+	var_0_1.鞀 = {
 		this = {
 			this = true
 		}
@@ -13,8 +16,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["謄"] = {
+function temp()
+	var_0_1.謄 = {
 		this = {
 			this = true
 		}
@@ -23,181 +26,181 @@ end
 
 temp()
 
-temp = function()
-	uv0["田"] = {
-		["紀"] = {
-			["雲"] = {
+function temp()
+	var_0_1.田 = {
+		紀 = {
+			雲 = {
 				this = true
 			},
-			["云"] = {
+			云 = {
 				this = true
 			}
 		},
-		["纪"] = {
-			["云"] = {
+		纪 = {
+			云 = {
 				this = true,
 				["*"] = {
 					this = true
 				}
 			},
-			["雲"] = {
+			雲 = {
 				this = true
 			}
 		},
-		["凤"] = {
-			["山"] = {
+		凤 = {
+			山 = {
 				this = true
 			}
 		},
-		["明"] = {
-			["建"] = {
-				["时"] = {
-					["间"] = {
+		明 = {
+			建 = {
+				时 = {
+					间 = {
 						this = true
 					}
 				}
 			}
 		},
-		["村"] = {
-			["麻"] = {
-				["里"] = {
-					["江"] = {
-						["种"] = {
-							["子"] = {
+		村 = {
+			麻 = {
+				里 = {
+					江 = {
+						种 = {
+							子 = {
 								this = true
 							}
 						}
 					}
 				}
 			},
-			["香"] = {
-				["织"] = {
-					["种"] = {
-						["子"] = {
+			香 = {
+				织 = {
+					种 = {
+						子 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["代"] = {
-			["幸"] = {
-				["惠"] = {
-					["种"] = {
-						["子"] = {
+		代 = {
+			幸 = {
+				惠 = {
+					种 = {
+						子 = {
 							this = true
 						}
 					},
-					["種"] = {
-						["子"] = {
+					種 = {
+						子 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["乐"] = {
-			["磷"] = {
+		乐 = {
+			磷 = {
 				this = true
 			}
 		},
-		["崎"] = {
-			["由"] = {
-				["希"] = {
-					["种"] = {
-						["子"] = {
+		崎 = {
+			由 = {
+				希 = {
+					种 = {
+						子 = {
 							this = true
 						}
 					},
-					["種"] = {
-						["子"] = {
+					種 = {
+						子 = {
 							this = true
 						}
 					}
 				}
 			}
 		},
-		["丸"] = {
-			["爱"] = {
-				["全"] = {
-					["集"] = {
+		丸 = {
+			爱 = {
+				全 = {
+					集 = {
 						this = true
 					}
 				},
-				["种"] = {
-					["子"] = {
+				种 = {
+					子 = {
 						this = true
 					},
-					["紫"] = {
+					紫 = {
 						this = true
 					}
 				}
 			},
-			["愛"] = {
-				["全"] = {
-					["集"] = {
+			愛 = {
+				全 = {
+					集 = {
 						this = true
 					}
 				}
 			}
 		},
-		["骁"] = {
-			["鸣"] = {
+		骁 = {
+			鸣 = {
 				this = true
 			}
 		},
-		["修"] = {
-			["思"] = {
+		修 = {
+			思 = {
 				this = true
 			}
 		},
-		["原"] = {
-			["步"] = {
-				["迅"] = {
-					["雷"] = {
+		原 = {
+			步 = {
+				迅 = {
+					雷 = {
 						this = true
 					}
 				},
-				["种"] = {
-					["子"] = {
+				种 = {
+					子 = {
 						this = true
 					},
-					["紫"] = {
+					紫 = {
 						this = true
 					}
 				}
 			}
 		},
-		["中"] = {
+		中 = {
 			this = true
 		},
-		["按"] = {
-			["们"] = {
-				["事"] = {
-					["件"] = {
+		按 = {
+			们 = {
+				事 = {
+					件 = {
 						this = true
 					}
 				}
 			},
-			["們"] = {
-				["事"] = {
-					["件"] = {
+			們 = {
+				事 = {
+					件 = {
 						this = true
 					}
 				}
 			}
 		},
-		["黄"] = {
-			["万"] = {
-				["岁"] = {
+		黄 = {
+			万 = {
+				岁 = {
 					this = true
 				}
 			}
 		},
-		["庵"] = {
-			["闷"] = {
-				["事"] = {
-					["件"] = {
+		庵 = {
+			闷 = {
+				事 = {
+					件 = {
 						this = true
 					}
 				}
@@ -208,8 +211,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["齠"] = {
+function temp()
+	var_0_1.齠 = {
 		this = {
 			this = true
 		}
@@ -218,8 +221,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["鰷"] = {
+function temp()
+	var_0_1.鰷 = {
 		this = {
 			this = true
 		}
@@ -228,8 +231,8 @@ end
 
 temp()
 
-temp = function()
-	uv0["銚"] = {
+function temp()
+	var_0_1.銚 = {
 		this = {
 			this = true
 		}
@@ -238,12 +241,12 @@ end
 
 temp()
 
-temp = function()
-	uv0["庭"] = {
-		["院"] = {
-			["警"] = {
-				["衛"] = {
-					["兵"] = {
+function temp()
+	var_0_1.庭 = {
+		院 = {
+			警 = {
+				衛 = {
+					兵 = {
 						this = true
 					}
 				}
@@ -251,12 +254,12 @@ temp = function()
 		},
 		[" "] = {
 			[" "] = {
-				["妍"] = {
+				妍 = {
 					this = true
 				}
 			}
 		},
-		["妍"] = {
+		妍 = {
 			this = true
 		}
 	}
@@ -264,22 +267,22 @@ end
 
 temp()
 
-temp = function()
-	uv0["統"] = {
-		["獨"] = {
+function temp()
+	var_0_1.統 = {
+		獨 = {
 			this = true,
-			["論"] = {
-				["壇"] = {
+			論 = {
+				壇 = {
 					this = true
 				}
 			}
 		},
-		["戰"] = {
+		戰 = {
 			this = true
 		},
-		["駑"] = {
-			["之"] = {
-				["法"] = {
+		駑 = {
+			之 = {
+				法 = {
 					this = true
 				}
 			}
@@ -289,19 +292,19 @@ end
 
 temp()
 
-temp = function()
-	uv0["頭"] = {
-		["領"] = {
-			["奧"] = {
-				["馬"] = {
+function temp()
+	var_0_1.頭 = {
+		領 = {
+			奧 = {
+				馬 = {
 					this = true
 				}
 			},
-			["墳"] = {
-				["墓"] = {
-					["管"] = {
-						["理"] = {
-							["員"] = {
+			墳 = {
+				墓 = {
+					管 = {
+						理 = {
+							員 = {
 								this = true
 							}
 						}
@@ -312,7 +315,7 @@ temp = function()
 		this = {
 			this = true
 		},
-		["糖"] = {
+		糖 = {
 			Q = {
 				this = true
 			}
@@ -322,14 +325,14 @@ end
 
 temp()
 
-temp = function()
-	uv0["圖"] = {
-		["書"] = {
-			["管"] = {
-				["理"] = {
-					["員"] = {
-						["卡"] = {
-							["特"] = {
+function temp()
+	var_0_1.圖 = {
+		書 = {
+			管 = {
+				理 = {
+					員 = {
+						卡 = {
+							特 = {
 								this = true
 							}
 						}

@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.activity_event_blueprint_catchup = {
 	{
 		id = 1,
@@ -125,11 +125,6 @@ pg.activity_event_blueprint_catchup = {
 		obtain_max = 30,
 		char_choice = 79901
 	},
-	{
-		id = 26,
-		obtain_max = 30,
-		char_choice = 89903
-	},
 	all = {
 		1,
 		2,
@@ -155,7 +150,6 @@ pg.activity_event_blueprint_catchup = {
 		22,
 		23,
 		24,
-		25,
-		26
+		25
 	}
 }

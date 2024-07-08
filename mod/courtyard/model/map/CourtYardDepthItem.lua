@@ -1,239 +1,251 @@
-slot0 = class("CourtYardDepthItem", import("...CourtYardDispatcher"))
+﻿local var_0_0 = class("CourtYardDepthItem", import("...CourtYardDispatcher"))
 
-slot0.Ctor = function(slot0, slot1, slot2, slot3, slot4)
-	uv0.super.Ctor(slot0, slot1)
+function var_0_0.Ctor(arg_1_0, arg_1_1, arg_1_2, arg_1_3, arg_1_4)
+	var_0_0.super.Ctor(arg_1_0, arg_1_1)
 
-	slot0.ob = {
-		id = slot2,
-		type = slot0:GetDeathType()
+	local var_1_0 = arg_1_0:GetDeathType()
+
+	arg_1_0.ob = {
+		id = arg_1_2,
+		type = var_1_0
 	}
-	slot0.initSizeX = slot3 or 0
-	slot0.initSizeY = slot4 or 0
-	slot0.sizeX = slot0.initSizeX
-	slot0.sizeY = slot0.initSizeY
-	slot0.posX = 0
-	slot0.posY = 0
-	slot0.maxX = 0
-	slot0.maxY = 0
-	slot0.posZ = 0
-	slot0.dir = 1
-	slot0.sortedFlag = true
-	slot0.dirty = false
-	slot0.parent = nil
-	slot0.opFlag = false
-	slot0.area = {}
+	arg_1_0.initSizeX = arg_1_3 or 0
+	arg_1_0.initSizeY = arg_1_4 or 0
+	arg_1_0.sizeX = arg_1_0.initSizeX
+	arg_1_0.sizeY = arg_1_0.initSizeY
+	arg_1_0.posX = 0
+	arg_1_0.posY = 0
+	arg_1_0.maxX = 0
+	arg_1_0.maxY = 0
+	arg_1_0.posZ = 0
+	arg_1_0.dir = 1
+	arg_1_0.sortedFlag = true
+	arg_1_0.dirty = false
+	arg_1_0.parent = nil
+	arg_1_0.opFlag = false
+	arg_1_0.area = {}
 end
 
-slot0.GetInitSize = function(slot0)
+function var_0_0.GetInitSize(arg_2_0)
 	return {
 		{
-			slot0.sizeX,
-			slot0.sizeY
+			arg_2_0.sizeX,
+			arg_2_0.sizeY
 		}
 	}
 end
 
-slot0.GetInitSizeCnt = function(slot0)
-	slot1 = slot0:GetInitSize()[1]
+function var_0_0.GetInitSizeCnt(arg_3_0)
+	local var_3_0 = arg_3_0:GetInitSize()[1]
 
-	return slot1[1] * slot1[2]
+	return var_3_0[1] * var_3_0[2]
 end
 
-slot0.GetObjType = function(slot0)
+function var_0_0.GetObjType(arg_4_0)
 	assert(false)
 end
 
-slot0.GetOffset = function(slot0)
+function var_0_0.GetOffset(arg_5_0)
 	assert(false)
 end
 
-slot0.UpdateOpFlag = function(slot0, slot1)
-	slot0.opFlag = slot1
+function var_0_0.UpdateOpFlag(arg_6_0, arg_6_1)
+	arg_6_0.opFlag = arg_6_1
 end
 
-slot0.GetOpFlag = function(slot0)
-	return slot0.opFlag
+function var_0_0.GetOpFlag(arg_7_0)
+	return arg_7_0.opFlag
 end
 
-slot0.InActivityRange = function(slot0, slot1)
+function var_0_0.InActivityRange(arg_8_0, arg_8_1)
 	return true
 end
 
-slot0.GetDeathType = function(slot0)
+function var_0_0.GetDeathType(arg_9_0)
 	assert(false)
 end
 
-slot0.SetPosition = function(slot0, slot1)
-	slot0:SetDirty()
-	slot0:SetPos(slot1.x + 1, slot1.y + 1)
-	slot0:ReGenArea()
+function var_0_0.SetPosition(arg_10_0, arg_10_1)
+	arg_10_0:SetDirty()
+	arg_10_0:SetPos(arg_10_1.x + 1, arg_10_1.y + 1)
+	arg_10_0:ReGenArea()
 end
 
-slot0.SetDir = function(slot0, slot1)
-	slot0:SetDirty()
+function var_0_0.SetDir(arg_11_0, arg_11_1)
+	arg_11_0:SetDirty()
 
-	if slot1 == 2 then
-		slot0.sizeX = slot0.initSizeY
-		slot0.sizeY = slot0.initSizeX
+	if arg_11_1 == 2 then
+		arg_11_0.sizeX = arg_11_0.initSizeY
+		arg_11_0.sizeY = arg_11_0.initSizeX
 	else
-		slot0.sizeX = slot0.initSizeX
-		slot0.sizeY = slot0.initSizeY
+		arg_11_0.sizeX = arg_11_0.initSizeX
+		arg_11_0.sizeY = arg_11_0.initSizeY
 	end
 
-	slot0.dir = slot1
+	arg_11_0.dir = arg_11_1
 
-	slot0:SetPosition(slot0:GetPosition())
+	arg_11_0:SetPosition(arg_11_0:GetPosition())
 end
 
-slot0.GetDirection = function(slot0)
-	return slot0.dir
+function var_0_0.GetDirection(arg_12_0)
+	return arg_12_0.dir
 end
 
-slot0.GetNormalDirection = function(slot0)
-	if slot0.dir == 1 then
+function var_0_0.GetNormalDirection(arg_13_0)
+	if arg_13_0.dir == 1 then
 		return 1
 	end
 
-	if slot0.dir == 2 then
+	if arg_13_0.dir == 2 then
 		return -1
 	end
 end
 
-slot0.ReGenArea = function(slot0)
-	table.clear(slot0.area)
+function var_0_0.ReGenArea(arg_14_0)
+	table.clear(arg_14_0.area)
 
-	slot0.area = slot0:GetAreaByPosition(slot0:GetPosition())
+	local var_14_0 = arg_14_0:GetPosition()
+
+	arg_14_0.area = arg_14_0:GetAreaByPosition(var_14_0)
 end
 
-slot0.GetPosition = function(slot0)
-	return Vector2(slot0.posX - 1, slot0.posY - 1)
+function var_0_0.GetPosition(arg_15_0)
+	return Vector2(arg_15_0.posX - 1, arg_15_0.posY - 1)
 end
 
-slot0.SetPos = function(slot0, slot1, slot2)
-	slot0.posX = slot1
-	slot0.posY = slot2
-	slot0.maxX = slot1 + slot0.sizeX - 1
-	slot0.maxY = slot2 + slot0.sizeY - 1
+function var_0_0.SetPos(arg_16_0, arg_16_1, arg_16_2)
+	arg_16_0.posX = arg_16_1
+	arg_16_0.posY = arg_16_2
+	arg_16_0.maxX = arg_16_1 + arg_16_0.sizeX - 1
+	arg_16_0.maxY = arg_16_2 + arg_16_0.sizeY - 1
 end
 
-slot0.SetDepth = function(slot0, slot1)
-	slot0.posZ = slot1
+function var_0_0.SetDepth(arg_17_0, arg_17_1)
+	arg_17_0.posZ = arg_17_1
 end
 
-slot0.GetArea = function(slot0)
-	return slot0.area
+function var_0_0.GetArea(arg_18_0)
+	return arg_18_0.area
 end
 
-slot0.GetAreaByPosition = function(slot0, slot1)
-	slot2 = {}
+function var_0_0.GetAreaByPosition(arg_19_0, arg_19_1)
+	local var_19_0 = {}
 
-	for slot6 = slot1.x, slot1.x + slot0.sizeX - 1 do
-		for slot10 = slot1.y, slot1.y + slot0.sizeY - 1 do
-			table.insert(slot2, Vector2(slot6, slot10))
+	for iter_19_0 = arg_19_1.x, arg_19_1.x + arg_19_0.sizeX - 1 do
+		for iter_19_1 = arg_19_1.y, arg_19_1.y + arg_19_0.sizeY - 1 do
+			table.insert(var_19_0, Vector2(iter_19_0, iter_19_1))
 		end
 	end
 
-	return slot2
+	return var_19_0
 end
 
-slot0._GetRotatePositions = function(slot0, slot1)
-	slot3 = slot0.sizeX
-	slot4 = {}
+function var_0_0._GetRotatePositions(arg_20_0, arg_20_1)
+	local var_20_0 = arg_20_0.sizeY
+	local var_20_1 = arg_20_0.sizeX
+	local var_20_2 = {}
 
-	for slot8 = slot1.x, slot1.x + slot0.sizeY - 1 do
-		for slot12 = slot1.y, slot1.y + slot3 - 1 do
-			table.insert(slot4, Vector2(slot8, slot12))
+	for iter_20_0 = arg_20_1.x, arg_20_1.x + var_20_0 - 1 do
+		for iter_20_1 = arg_20_1.y, arg_20_1.y + var_20_1 - 1 do
+			table.insert(var_20_2, Vector2(iter_20_0, iter_20_1))
 		end
 	end
 
-	return slot4
+	return var_20_2
 end
 
-slot0.GetRotatePositions = function(slot0)
-	return slot0:_GetRotatePositions(slot0:GetPosition())
+function var_0_0.GetRotatePositions(arg_21_0)
+	local var_21_0 = arg_21_0:GetPosition()
+
+	return arg_21_0:_GetRotatePositions(var_21_0)
 end
 
-slot0.SetDirty = function(slot0)
-	slot0.dirty = true
+function var_0_0.SetDirty(arg_22_0)
+	arg_22_0.dirty = true
 end
 
-slot0.UnDirty = function(slot0)
-	slot0.dirty = false
+function var_0_0.UnDirty(arg_23_0)
+	arg_23_0.dirty = false
 end
 
-slot0.IsDirty = function(slot0)
-	return slot0.dirty
+function var_0_0.IsDirty(arg_24_0)
+	return arg_24_0.dirty
 end
 
-slot0.Interaction = function(slot0, slot1)
+function var_0_0.Interaction(arg_25_0, arg_25_1)
+	return
 end
 
-slot0.ClearInteraction = function(slot0, slot1)
+function var_0_0.ClearInteraction(arg_26_0, arg_26_1)
+	return
 end
 
-slot0.SetParent = function(slot0, slot1)
-	slot0:SetDirty()
+function var_0_0.SetParent(arg_27_0, arg_27_1)
+	arg_27_0:SetDirty()
 
-	slot0.parent = slot1
+	arg_27_0.parent = arg_27_1
 end
 
-slot0.HasParent = function(slot0)
-	return slot0.parent ~= nil
+function var_0_0.HasParent(arg_28_0)
+	return arg_28_0.parent ~= nil
 end
 
-slot0.GetParent = function(slot0)
-	return slot0.parent
+function var_0_0.GetParent(arg_29_0)
+	return arg_29_0.parent
 end
 
-slot0.GetAroundPositions = function(slot0)
-	slot1 = slot0:GetPosition()
+function var_0_0.GetAroundPositions(arg_30_0)
+	local var_30_0 = arg_30_0:GetPosition()
 
 	return {
-		Vector2(slot1.x + 1, slot1.y),
-		Vector2(slot1.x, slot1.y + 1),
-		Vector2(slot1.x - 1, slot1.y),
-		Vector2(slot1.x, slot1.y - 1)
+		Vector2(var_30_0.x + 1, var_30_0.y),
+		Vector2(var_30_0.x, var_30_0.y + 1),
+		Vector2(var_30_0.x - 1, var_30_0.y),
+		Vector2(var_30_0.x, var_30_0.y - 1)
 	}
 end
 
-slot0.MarkPosition = function(slot0, slot1)
-	slot0.markPosition = slot1
+function var_0_0.MarkPosition(arg_31_0, arg_31_1)
+	arg_31_0.markPosition = arg_31_1
 end
 
-slot0.GetMarkPosition = function(slot0)
-	return slot0.markPosition
+function var_0_0.GetMarkPosition(arg_32_0)
+	return arg_32_0.markPosition
 end
 
-slot0.ClearMarkPosition = function(slot0)
-	slot0.markPosition = nil
+function var_0_0.ClearMarkPosition(arg_33_0)
+	arg_33_0.markPosition = nil
 end
 
-slot0.GetOffset = function(slot0)
-	if slot0:HasParent() then
-		return slot0.parent:RawGetOffset()
+function var_0_0.GetOffset(arg_34_0)
+	if arg_34_0:HasParent() then
+		return arg_34_0.parent:RawGetOffset()
 	else
 		return Vector3.zero
 	end
 end
 
-slot0.UnClear = function(slot0, slot1)
-	slot0.unClear = slot1
+function var_0_0.UnClear(arg_35_0, arg_35_1)
+	arg_35_0.unClear = arg_35_1
 end
 
-slot0.IsUnClear = function(slot0)
-	return slot0.unClear
+function var_0_0.IsUnClear(arg_36_0)
+	return arg_36_0.unClear
 end
 
-slot0.RawGetOffset = function(slot0)
+function var_0_0.RawGetOffset(arg_37_0)
 	return Vector3.zero
 end
 
-slot0.IsDifferentDirection = function(slot0, slot1)
-	return slot0.dir ~= ((slot1.x < slot0:GetPosition().x and slot1.y == slot2.y or slot1.x == slot2.x and slot2.y < slot1.y) and 2 or 1)
+function var_0_0.IsDifferentDirection(arg_38_0, arg_38_1)
+	local var_38_0 = arg_38_0:GetPosition()
+	local var_38_1 = (arg_38_1.x < var_38_0.x and arg_38_1.y == var_38_0.y or arg_38_1.x == var_38_0.x and arg_38_1.y > var_38_0.y) and 2 or 1
+
+	return arg_38_0.dir ~= var_38_1
 end
 
-slot0.Dispose = function(slot0)
-	slot0:ClearListeners()
+function var_0_0.Dispose(arg_39_0)
+	arg_39_0:ClearListeners()
 end
 
-return slot0
+return var_0_0

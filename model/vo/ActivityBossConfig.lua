@@ -1,65 +1,69 @@
-slot0 = class("ActivityBossConfig", import("model.vo.BaseVO"))
+﻿local var_0_0 = class("ActivityBossConfig", import("model.vo.BaseVO"))
 
-slot0.bindConfigTable = function(slot0)
+function var_0_0.bindConfigTable(arg_1_0)
 	return pg.activity_event_worldboss
 end
 
-slot0.GetConfigID = function(slot0)
-	return slot0.configId
+function var_0_0.GetConfigID(arg_2_0)
+	return arg_2_0.configId
 end
 
-slot0.Ctor = function(slot0, slot1)
-	uv0.super.Ctor(slot0, slot1)
+function var_0_0.Ctor(arg_3_0, arg_3_1)
+	var_0_0.super.Ctor(arg_3_0, arg_3_1)
 
-	if slot0:getConfig("extrachallenge_id") > 0 then
-		slot0.spEnemy = ActivityBossSPEnemy.New({
-			configId = slot2
+	local var_3_0 = arg_3_0:getConfig("extrachallenge_id")
+
+	if var_3_0 > 0 then
+		arg_3_0.spEnemy = ActivityBossSPEnemy.New({
+			configId = var_3_0
 		})
 	end
 end
 
-slot0.GetTicketID = function(slot0)
-	return slot0:getConfig("ticket")
+function var_0_0.GetTicketID(arg_4_0)
+	return arg_4_0:getConfig("ticket")
 end
 
-slot0.GetBattleTime = function(slot0)
-	return slot0:getConfig("time")
+function var_0_0.GetBattleTime(arg_5_0)
+	return arg_5_0:getConfig("time")
 end
 
-slot0.GetNormalStageIDs = function(slot0)
-	return slot0:getConfig("normal_expedition")
+function var_0_0.GetNormalStageIDs(arg_6_0)
+	return arg_6_0:getConfig("normal_expedition")
 end
 
-slot0.GetEXStageID = function(slot0)
-	return slot0:getConfig("ex_expedition")
+function var_0_0.GetEXStageID(arg_7_0)
+	return arg_7_0:getConfig("ex_expedition")
 end
 
-slot0.GetOilLimits = function(slot0)
-	return slot0:getConfig("use_oil_limit")
+function var_0_0.GetOilLimits(arg_8_0)
+	return arg_8_0:getConfig("use_oil_limit")
 end
 
-slot0.GetBossID = function(slot0)
-	return slot0:getConfig("boss_id")[1]
+function var_0_0.GetBossID(arg_9_0)
+	return arg_9_0:getConfig("boss_id")[1]
 end
 
-slot0.GetMilestoneRewards = function(slot0)
-	return AcessWithinNull(pg.extraenemy_template[slot0:GetBossID()], "reward_display") or {}
+function var_0_0.GetMilestoneRewards(arg_10_0)
+	local var_10_0 = arg_10_0:GetBossID()
+
+	return AcessWithinNull(pg.extraenemy_template[var_10_0], "reward_display") or {}
 end
 
-slot0.GetInitTicketPools = function(slot0)
-	return slot0:getConfig("normal_expedition_drop_num")
+function var_0_0.GetInitTicketPools(arg_11_0)
+	return arg_11_0:getConfig("normal_expedition_drop_num")
 end
 
-slot0.GetSPEnemy = function(slot0)
-	return slot0.spEnemy
+function var_0_0.GetSPEnemy(arg_12_0)
+	return arg_12_0.spEnemy
 end
 
-slot0.GetSPStageID = function(slot0)
-	if not slot0.spEnemy then
+function var_0_0.GetSPStageID(arg_13_0)
+	if not arg_13_0.spEnemy then
 		return
 	end
 
-	return slot0.spEnemy:GetExtraStageId()
+	return arg_13_0.spEnemy:GetExtraStageId()
 end
 
-return slot0
+return var_0_0

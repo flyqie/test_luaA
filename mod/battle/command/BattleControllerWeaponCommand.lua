@@ -1,116 +1,130 @@
-ys = ys or {}
-slot0 = ys
-slot1 = slot0.Battle.BattleEvent
-slot0.Battle.BattleControllerWeaponCommand = class("BattleControllerWeaponCommand", slot0.MVC.Command)
-slot0.Battle.BattleControllerWeaponCommand.__name = "BattleControllerWeaponCommand"
-slot2 = slot0.Battle.BattleControllerWeaponCommand
+﻿ys = ys or {}
 
-slot2.Ctor = function(slot0)
-	uv0.super.Ctor(slot0)
+local var_0_0 = ys
+local var_0_1 = var_0_0.Battle.BattleEvent
+
+var_0_0.Battle.BattleControllerWeaponCommand = class("BattleControllerWeaponCommand", var_0_0.MVC.Command)
+var_0_0.Battle.BattleControllerWeaponCommand.__name = "BattleControllerWeaponCommand"
+
+local var_0_2 = var_0_0.Battle.BattleControllerWeaponCommand
+
+function var_0_2.Ctor(arg_1_0)
+	var_0_2.super.Ctor(arg_1_0)
 end
 
-slot2.Initialize = function(slot0)
-	uv0.super.Initialize(slot0)
+function var_0_2.Initialize(arg_2_0)
+	var_0_2.super.Initialize(arg_2_0)
 
-	slot0._dataProxy = slot0._state:GetProxyByName(uv1.Battle.BattleDataProxy.__name)
+	arg_2_0._dataProxy = arg_2_0._state:GetProxyByName(var_0_0.Battle.BattleDataProxy.__name)
 
-	slot0:InitBattleEvent()
+	arg_2_0:InitBattleEvent()
 
-	slot0._focusBlockCast = false
+	arg_2_0._focusBlockCast = false
 end
 
-slot2.ActiveBot = function(slot0, slot1, slot2)
-	slot0._manualWeaponAutoBot:SetActive(slot1, slot2)
-	slot0._joyStickAutoBot:SetActive(slot1)
+function var_0_2.ActiveBot(arg_3_0, arg_3_1, arg_3_2)
+	arg_3_0._manualWeaponAutoBot:SetActive(arg_3_1, arg_3_2)
+	arg_3_0._joyStickAutoBot:SetActive(arg_3_1)
 end
 
-slot2.TryAutoSub = function(slot0)
-	if uv0.Battle.BattleState.IsAutoSubActive(slot0:GetState():GetBattleType()) and slot0._dataProxy:GetFleetByIFF(uv0.Battle.BattleConfig.FRIENDLY_CODE)._submarineVO:GetUseable() and slot3:GetCount() > 0 then
-		slot0._dataProxy:SubmarineStrike(uv0.Battle.BattleConfig.FRIENDLY_CODE)
-		slot3:Cast()
+function var_0_2.TryAutoSub(arg_4_0)
+	local var_4_0 = arg_4_0:GetState():GetBattleType()
+
+	if var_0_0.Battle.BattleState.IsAutoSubActive(var_4_0) then
+		local var_4_1 = arg_4_0._dataProxy:GetFleetByIFF(var_0_0.Battle.BattleConfig.FRIENDLY_CODE)._submarineVO
+
+		if var_4_1:GetUseable() and var_4_1:GetCount() > 0 then
+			arg_4_0._dataProxy:SubmarineStrike(var_0_0.Battle.BattleConfig.FRIENDLY_CODE)
+			var_4_1:Cast()
+		end
 	end
 end
 
-slot2.GetWeaponBot = function(slot0)
-	return slot0._manualWeaponAutoBot
+function var_0_2.GetWeaponBot(arg_5_0)
+	return arg_5_0._manualWeaponAutoBot
 end
 
-slot2.GetBotActiveDuration = function(slot0)
-	return slot0._manualWeaponAutoBot:GetTotalActiveDuration()
+function var_0_2.GetBotActiveDuration(arg_6_0)
+	return arg_6_0._manualWeaponAutoBot:GetTotalActiveDuration()
 end
 
-slot2.GetStickBot = function(slot0)
-	return slot0._joyStickAutoBot
+function var_0_2.GetStickBot(arg_7_0)
+	return arg_7_0._joyStickAutoBot
 end
 
-slot2.InitBattleEvent = function(slot0)
-	slot0._dataProxy:RegisterEventListener(slot0, uv0.COMMON_DATA_INIT_FINISH, slot0.onUnitInitFinish)
-	slot0._dataProxy:RegisterEventListener(slot0, uv0.JAMMING, slot0.onJamming)
+function var_0_2.InitBattleEvent(arg_8_0)
+	arg_8_0._dataProxy:RegisterEventListener(arg_8_0, var_0_1.COMMON_DATA_INIT_FINISH, arg_8_0.onUnitInitFinish)
+	arg_8_0._dataProxy:RegisterEventListener(arg_8_0, var_0_1.JAMMING, arg_8_0.onJamming)
 end
 
-slot2.Update = function(slot0, slot1)
-	if slot0._jammingFlag then
+function var_0_2.Update(arg_9_0, arg_9_1)
+	if arg_9_0._jammingFlag then
 		return
 	end
 
-	if not slot0._focusBlockCast then
-		slot0._manualWeaponAutoBot:Update()
+	if not arg_9_0._focusBlockCast then
+		arg_9_0._manualWeaponAutoBot:Update()
 	end
 
-	for slot5, slot6 in pairs(slot0._fleetList) do
-		slot6:UpdateManualWeaponVO(slot1)
+	for iter_9_0, iter_9_1 in pairs(arg_9_0._fleetList) do
+		iter_9_1:UpdateManualWeaponVO(arg_9_1)
 	end
 end
 
-slot2.onJamming = function(slot0, slot1)
-	slot0._jammingFlag = slot1.Data.jammingFlag
+function var_0_2.onJamming(arg_10_0, arg_10_1)
+	arg_10_0._jammingFlag = arg_10_1.Data.jammingFlag
 end
 
-slot2.onUnitInitFinish = function(slot0, slot1)
-	slot0._fleetList = slot0._dataProxy:GetFleetList()
-	slot2 = slot0._dataProxy:GetFleetByIFF(uv0.Battle.BattleConfig.FRIENDLY_CODE)
+function var_0_2.onUnitInitFinish(arg_11_0, arg_11_1)
+	arg_11_0._fleetList = arg_11_0._dataProxy:GetFleetList()
 
-	slot2:RegisterEventListener(slot0, uv1.REFRESH_FLEET_FORMATION, slot0.onFleetFormationUpdate)
-	slot2:RegisterEventListener(slot0, uv1.OVERRIDE_AUTO_BOT, slot0.onOverrideAutoBot)
+	local var_11_0 = arg_11_0._dataProxy:GetFleetByIFF(var_0_0.Battle.BattleConfig.FRIENDLY_CODE)
 
-	slot0._manualWeaponAutoBot = uv0.Battle.BattleManualWeaponAutoBot.New(slot2)
-	slot0._joyStickAutoBot = uv0.Battle.BattleJoyStickAutoBot.New(slot0._dataProxy, slot2)
+	var_11_0:RegisterEventListener(arg_11_0, var_0_1.REFRESH_FLEET_FORMATION, arg_11_0.onFleetFormationUpdate)
+	var_11_0:RegisterEventListener(arg_11_0, var_0_1.OVERRIDE_AUTO_BOT, arg_11_0.onOverrideAutoBot)
 
-	uv0.Battle.BattleCameraUtil.GetInstance():RegisterEventListener(slot0, uv1.CAMERA_FOCUS, slot0.onCameraFocus)
+	arg_11_0._manualWeaponAutoBot = var_0_0.Battle.BattleManualWeaponAutoBot.New(var_11_0)
+	arg_11_0._joyStickAutoBot = var_0_0.Battle.BattleJoyStickAutoBot.New(arg_11_0._dataProxy, var_11_0)
+
+	var_0_0.Battle.BattleCameraUtil.GetInstance():RegisterEventListener(arg_11_0, var_0_1.CAMERA_FOCUS, arg_11_0.onCameraFocus)
 end
 
-slot2.onFleetFormationUpdate = function(slot0, slot1)
-	slot0._joyStickAutoBot:FleetFormationUpdate()
+function var_0_2.onFleetFormationUpdate(arg_12_0, arg_12_1)
+	arg_12_0._joyStickAutoBot:FleetFormationUpdate()
 end
 
-slot2.onOverrideAutoBot = function(slot0, slot1)
-	slot0._joyStickAutoBot:SwitchStrategy(uv0.Battle.BattleJoyStickAutoBot.AUTO_PILOT)
+function var_0_2.onOverrideAutoBot(arg_13_0, arg_13_1)
+	arg_13_0._joyStickAutoBot:SwitchStrategy(var_0_0.Battle.BattleJoyStickAutoBot.AUTO_PILOT)
 end
 
-slot2.onCameraFocus = function(slot0, slot1)
-	if slot1.Data.unit ~= nil then
-		slot0._focusBlockCast = true
+function var_0_2.onCameraFocus(arg_14_0, arg_14_1)
+	local var_14_0 = arg_14_1.Data
+
+	if var_14_0.unit ~= nil then
+		arg_14_0._focusBlockCast = true
 	else
-		LeanTween.delayedCall(slot2.duration + slot2.extraBulletTime, System.Action(function ()
-			uv0._focusBlockCast = false
+		local var_14_1 = var_14_0.duration + var_14_0.extraBulletTime
+
+		LeanTween.delayedCall(var_14_1, System.Action(function()
+			arg_14_0._focusBlockCast = false
 		end))
 	end
 end
 
-slot2.Dispose = function(slot0)
-	slot1 = slot0._dataProxy:GetFleetByIFF(uv0.Battle.BattleConfig.FRIENDLY_CODE)
+function var_0_2.Dispose(arg_16_0)
+	local var_16_0 = arg_16_0._dataProxy:GetFleetByIFF(var_0_0.Battle.BattleConfig.FRIENDLY_CODE)
 
-	slot1:UnregisterEventListener(slot0, uv1.REFRESH_FLEET_FORMATION)
-	slot1:UnregisterEventListener(slot0, uv1.OVERRIDE_AUTO_BOT)
-	slot0._dataProxy:UnregisterEventListener(slot0, uv1.COMMON_DATA_INIT_FINISH)
-	uv0.Battle.BattleCameraUtil.GetInstance():UnregisterEventListener(slot0, uv1.CAMERA_FOCUS)
-	slot0._joyStickAutoBot:Dispose()
+	var_16_0:UnregisterEventListener(arg_16_0, var_0_1.REFRESH_FLEET_FORMATION)
+	var_16_0:UnregisterEventListener(arg_16_0, var_0_1.OVERRIDE_AUTO_BOT)
+	arg_16_0._dataProxy:UnregisterEventListener(arg_16_0, var_0_1.COMMON_DATA_INIT_FINISH)
+	var_0_0.Battle.BattleCameraUtil.GetInstance():UnregisterEventListener(arg_16_0, var_0_1.CAMERA_FOCUS)
+	arg_16_0._joyStickAutoBot:Dispose()
 
-	slot0._joyStickAutoBot = nil
+	arg_16_0._joyStickAutoBot = nil
 
-	slot0._manualWeaponAutoBot:Dispose()
+	arg_16_0._manualWeaponAutoBot:Dispose()
 
-	slot0._manualWeaponAutoBot = nil
+	arg_16_0._manualWeaponAutoBot = nil
 
-	uv2.super.Dispose(slot0)
+	var_0_2.super.Dispose(arg_16_0)
 end

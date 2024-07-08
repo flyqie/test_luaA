@@ -1,7 +1,7 @@
-slot0 = class("ActivityBossJofferScene", import(".ActivityBossBristolScene"))
+﻿local var_0_0 = class("ActivityBossJofferScene", import(".ActivityBossBristolScene"))
 
-slot0.getUIName = function(slot0)
+function var_0_0.getUIName(arg_1_0)
 	return "ActivityBossJoffreUI"
 end
 
-return slot0
+return var_0_0

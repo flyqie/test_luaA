@@ -1,12 +1,15 @@
-pg = pg or {}
-slot0 = pg
-slot0.word_template_363 = {}
-slot1 = slot0.word_template_363
+﻿pg = pg or {}
 
-temp = function()
-	uv0["俗"] = {
-		["人"] = {
-			["岛"] = {
+local var_0_0 = pg
+
+var_0_0.word_template_363 = {}
+
+local var_0_1 = var_0_0.word_template_363
+
+function temp()
+	var_0_1.俗 = {
+		人 = {
+			岛 = {
 				this = true
 			}
 		}
@@ -15,13 +18,13 @@ end
 
 temp()
 
-temp = function()
-	uv0["肃"] = {
-		["清"] = {
-			["亲"] = {
-				["属"] = {
-					["企"] = {
-						["业"] = {
+function temp()
+	var_0_1.肃 = {
+		清 = {
+			亲 = {
+				属 = {
+					企 = {
+						业 = {
 							this = true
 						}
 					}
@@ -33,12 +36,12 @@ end
 
 temp()
 
-temp = function()
-	uv0["溯"] = {
-		["源"] = {
+function temp()
+	var_0_1.溯 = {
+		源 = {
 			this = true,
-			["书"] = {
-				["社"] = {
+			书 = {
+				社 = {
 					this = true
 				}
 			}
@@ -48,10 +51,10 @@ end
 
 temp()
 
-temp = function()
-	uv0["蒜"] = {
-		["头"] = {
-			["网"] = {
+function temp()
+	var_0_1.蒜 = {
+		头 = {
+			网 = {
 				this = true
 			}
 		}
@@ -60,29 +63,29 @@ end
 
 temp()
 
-temp = function()
-	uv0["算"] = {
+function temp()
+	var_0_1.算 = {
 		["*"] = {
-			["命"] = {
+			命 = {
 				this = true
 			}
 		},
-		["个"] = {
-			["鸟"] = {
+		个 = {
+			鸟 = {
 				this = true
 			}
 		},
-		["命"] = {
-			["一"] = {
-				["条"] = {
-					["街"] = {
+		命 = {
+			一 = {
+				条 = {
+					街 = {
 						this = true
 					}
 				}
 			}
 		},
-		["计"] = {
-			["师"] = {
+		计 = {
+			师 = {
 				this = true
 			}
 		}
@@ -91,17 +94,17 @@ end
 
 temp()
 
-temp = function()
-	uv0["隋"] = {
-		["豹"] = {
-			["鸣"] = {
+function temp()
+	var_0_1.隋 = {
+		豹 = {
+			鸣 = {
 				this = true
 			}
 		},
-		["炀"] = {
+		炀 = {
 			this = true
 		},
-		["煬"] = {
+		煬 = {
 			this = true
 		}
 	}
@@ -109,97 +112,97 @@ end
 
 temp()
 
-temp = function()
-	uv0["随"] = {
-		["机"] = {
-			["地"] = {
-				["图"] = {
+function temp()
+	var_0_1.随 = {
+		机 = {
+			地 = {
+				图 = {
 					this = true
 				}
 			},
-			["面"] = {
-				["具"] = {
+			面 = {
+				具 = {
 					this = true
 				}
 			},
-			["人"] = {
-				["皮"] = {
+			人 = {
+				皮 = {
 					this = true
 				}
 			},
-			["重"] = {
-				["开"] = {
+			重 = {
+				开 = {
 					this = true
 				}
 			}
 		},
-		["身"] = {
-			["爱"] = {
-				["侣"] = {
+		身 = {
+			爱 = {
+				侣 = {
 					this = true
 				}
 			}
 		},
-		["时"] = {
-			["随"] = {
-				["地"] = {
+		时 = {
+			随 = {
+				地 = {
 					this = true
 				}
 			}
 		},
-		["手"] = {
+		手 = {
 			this = true,
-			["互"] = {
-				["动"] = {
+			互 = {
+				动 = {
 					this = true
 				}
 			},
-			["尊"] = {
-				["者"] = {
+			尊 = {
+				者 = {
 					this = true
 				}
 			}
 		},
-		["心"] = {
-			["所"] = {
-				["欲"] = {
+		心 = {
+			所 = {
+				欲 = {
 					this = true
 				}
 			}
 		},
-		["意"] = {
-			["改"] = {
-				["号"] = {
+		意 = {
+			改 = {
+				号 = {
 					this = true
 				}
 			},
-			["显"] = {
-				["软"] = {
-					["件"] = {
+			显 = {
+				软 = {
+					件 = {
 						this = true
 					}
 				}
 			}
 		},
-		["州"] = {
-			["办"] = {
-				["假"] = {
-					["身"] = {
-						["份"] = {
-							["证"] = {
+		州 = {
+			办 = {
+				假 = {
+					身 = {
+						份 = {
+							证 = {
 								this = true
 							}
 						}
 					}
 				}
 			},
-			["汽"] = {
-				["枪"] = {
+			汽 = {
+				枪 = {
 					this = true
 				}
 			},
-			["在"] = {
-				["哪"] = {
+			在 = {
+				哪 = {
 					this = true
 				}
 			}
@@ -209,11 +212,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["隨"] = {
-		["機"] = {
-			["面"] = {
-				["具"] = {
+function temp()
+	var_0_1.隨 = {
+		機 = {
+			面 = {
+				具 = {
 					this = true
 				}
 			}
@@ -223,11 +226,11 @@ end
 
 temp()
 
-temp = function()
-	uv0["岁"] = {
-		["月"] = {
-			["无"] = {
-				["声"] = {
+function temp()
+	var_0_1.岁 = {
+		月 = {
+			无 = {
+				声 = {
 					this = true
 				}
 			}
@@ -237,27 +240,27 @@ end
 
 temp()
 
-temp = function()
-	uv0["遂"] = {
-		["宁"] = {
+function temp()
+	var_0_1.遂 = {
+		宁 = {
 			K = {
-				["粉"] = {
+				粉 = {
 					this = true
 				}
 			},
-			["冰"] = {
-				["毒"] = {
+			冰 = {
+				毒 = {
 					this = true
 				}
 			},
-			["假"] = {
-				["币"] = {
+			假 = {
+				币 = {
 					this = true
 				}
 			},
-			["身"] = {
-				["份"] = {
-					["证"] = {
+			身 = {
+				份 = {
+					证 = {
 						this = true
 					}
 				}

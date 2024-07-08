@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.expedition_data_by_map = setmetatable({
 	__name = "expedition_data_by_map",
 	all = {
@@ -373,16 +373,6 @@ pg.expedition_data_by_map = setmetatable({
 		1790012,
 		1790025,
 		1790026,
-		1800001,
-		1800002,
-		1800003,
-		1800004,
-		1810001,
-		1810002,
-		1810011,
-		1810012,
-		1810025,
-		1810026,
 		2100000,
 		2100001,
 		2100010,
@@ -469,8 +459,7 @@ pg.expedition_data_by_map = setmetatable({
 		2200070,
 		2200080,
 		2200090,
-		2200100,
-		2200110
+		2200100
 	}
 }, confHX)
 pg.base = pg.base or {}
@@ -12733,7 +12722,7 @@ pg.base.expedition_data_by_map = {
 		ani_controller = "",
 		cloud_suffix = "",
 		uifx = "",
-		on_activity = 5287,
+		on_activity = 4265,
 		ui_type = 1,
 		bg = "Map_1610001",
 		destory_icon_suffix = "blue",
@@ -12777,7 +12766,7 @@ pg.base.expedition_data_by_map = {
 		ani_controller = "",
 		cloud_suffix = "",
 		uifx = "",
-		on_activity = 5287,
+		on_activity = 4265,
 		ui_type = 1,
 		bg = "Map_1610002",
 		destory_icon_suffix = "blue",
@@ -12821,7 +12810,7 @@ pg.base.expedition_data_by_map = {
 		ani_controller = "",
 		cloud_suffix = "",
 		uifx = "",
-		on_activity = 5287,
+		on_activity = 4265,
 		ui_type = 1,
 		bg = "Map_1610003",
 		destory_icon_suffix = "blue",
@@ -12865,7 +12854,7 @@ pg.base.expedition_data_by_map = {
 		ani_controller = "",
 		cloud_suffix = "",
 		uifx = "",
-		on_activity = 5287,
+		on_activity = 4265,
 		ui_type = 1,
 		bg = "Map_1610004",
 		destory_icon_suffix = "blue",
@@ -12909,7 +12898,7 @@ pg.base.expedition_data_by_map = {
 		ani_controller = "",
 		cloud_suffix = "",
 		uifx = "",
-		on_activity = 5287,
+		on_activity = 4265,
 		ui_type = 1,
 		bg = "Map_1610004",
 		destory_icon_suffix = "blue",
@@ -12953,7 +12942,7 @@ pg.base.expedition_data_by_map = {
 		ani_controller = "",
 		cloud_suffix = "",
 		uifx = "",
-		on_activity = 5287,
+		on_activity = 4265,
 		ui_type = 1,
 		bg = "Map_1610004",
 		destory_icon_suffix = "blue",
@@ -12996,7 +12985,7 @@ pg.base.expedition_data_by_map = {
 		guide_id = "",
 		cloud_suffix = "",
 		uifx = "",
-		on_activity = 5233,
+		on_activity = 4286,
 		ui_type = 1,
 		bg = "Map_1620001",
 		destory_icon_suffix = "blue",
@@ -13070,7 +13059,7 @@ pg.base.expedition_data_by_map = {
 		ani_controller = "",
 		cloud_suffix = "",
 		uifx = "",
-		on_activity = 5233,
+		on_activity = 4286,
 		ui_type = 1,
 		bg = "Map_1620001",
 		destory_icon_suffix = "blue",
@@ -13114,7 +13103,7 @@ pg.base.expedition_data_by_map = {
 		ani_controller = "",
 		cloud_suffix = "",
 		uifx = "",
-		on_activity = 5233,
+		on_activity = 4286,
 		ui_type = 1,
 		bg = "Map_1620001",
 		destory_icon_suffix = "blue",
@@ -17536,496 +17525,6 @@ pg.base.expedition_data_by_map = {
 			}
 		}
 	},
-	[1800001] = {
-		map = 1800001,
-		name = "共鸣的Passion|| ||CHAPTER EX||E.X.",
-		level_limit = 1,
-		type = 4,
-		anchor = "",
-		title = "EX",
-		drop_by_map_display = "",
-		bgm = "votefes-start",
-		enter_story = "GONGMINGDEPASSION1",
-		ani_name = "Map_1800001",
-		guide_id = "",
-		ani_controller = "",
-		cloud_suffix = "",
-		uifx = "",
-		on_activity = 5301,
-		ui_type = 8,
-		bg = "Map_1800001",
-		destory_icon_suffix = "blue",
-		animtor = 1,
-		bind_map = 1800002,
-		clouds_pos = {
-			{
-				332,
-				271
-			},
-			{
-				896,
-				110
-			},
-			{
-				-280,
-				0
-			},
-			{
-				990,
-				-90
-			},
-			{
-				0,
-				-465
-			}
-		}
-	},
-	[1800002] = {
-		map = 1800002,
-		name = "共鸣的Passion·进阶|| ||CHAPTER EX||E.X.",
-		level_limit = 1,
-		type = 5,
-		anchor = "",
-		title = "EX",
-		drop_by_map_display = "",
-		bgm = "votefes-start",
-		enter_story = "",
-		ani_name = "Map_1800002",
-		guide_id = "",
-		ani_controller = "",
-		cloud_suffix = "",
-		uifx = "",
-		on_activity = 5301,
-		ui_type = 8,
-		bg = "Map_1800002",
-		destory_icon_suffix = "blue",
-		animtor = 1,
-		bind_map = 1800001,
-		clouds_pos = {
-			{
-				332,
-				271
-			},
-			{
-				896,
-				110
-			},
-			{
-				-280,
-				0
-			},
-			{
-				990,
-				-90
-			},
-			{
-				0,
-				-465
-			}
-		}
-	},
-	[1800003] = {
-		map = 1800003,
-		name = "共鸣的Passion·SP|| ||CHAPTER EX||E.X.",
-		level_limit = 1,
-		type = 8,
-		anchor = "",
-		title = "EX",
-		drop_by_map_display = "",
-		bgm = "song-Cyanidin-full",
-		enter_story = "",
-		ani_name = "Map_1800001",
-		guide_id = "",
-		ani_controller = "",
-		cloud_suffix = "",
-		uifx = "",
-		on_activity = 5301,
-		ui_type = 8,
-		bg = "Map_1800001",
-		destory_icon_suffix = "blue",
-		animtor = 1,
-		bind_map = 1800002,
-		clouds_pos = {
-			{
-				332,
-				271
-			},
-			{
-				896,
-				110
-			},
-			{
-				-280,
-				0
-			},
-			{
-				990,
-				-90
-			},
-			{
-				0,
-				-465
-			}
-		}
-	},
-	[1800004] = {
-		map = 1800004,
-		name = "共鸣的Passion·EX|| ||CHAPTER EX||E.X.",
-		level_limit = 1,
-		type = 8,
-		anchor = "",
-		title = "EX",
-		drop_by_map_display = "",
-		bgm = "song-Alizarin-full",
-		enter_story = "",
-		ani_name = "Map_1800002",
-		guide_id = "",
-		ani_controller = "",
-		cloud_suffix = "",
-		uifx = "",
-		on_activity = 5301,
-		ui_type = 8,
-		bg = "Map_1800002",
-		destory_icon_suffix = "blue",
-		animtor = 1,
-		bind_map = 1800002,
-		clouds_pos = {
-			{
-				332,
-				271
-			},
-			{
-				896,
-				110
-			},
-			{
-				-280,
-				0
-			},
-			{
-				990,
-				-90
-			},
-			{
-				0,
-				-465
-			}
-		}
-	},
-	[1810001] = {
-		map = 1810001,
-		name = "绽放于辉光之城·上篇|| ||CHAPTER EX||E.X.",
-		level_limit = 1,
-		type = 4,
-		anchor = "",
-		title = "EX",
-		drop_by_map_display = "",
-		bgm = "theme-lightheven",
-		enter_story = "ZHANFANGYUHUIGUANGZHICHENG1",
-		ani_name = "Map_1810006",
-		guide_id = "",
-		cloud_suffix = "",
-		uifx = "",
-		on_activity = 5331,
-		ui_type = 1,
-		bg = "Map_1810005",
-		destory_icon_suffix = "blue",
-		animtor = 1,
-		bind_map = 1810011,
-		clouds_pos = {
-			{
-				332,
-				271
-			},
-			{
-				896,
-				110
-			},
-			{
-				-280,
-				0
-			},
-			{
-				990,
-				-90
-			},
-			{
-				0,
-				-465
-			}
-		},
-		ani_controller = {
-			{
-				2,
-				{
-					1810001,
-					"map_1650001",
-					"effect_1650001",
-					"bgm_theme-camelot"
-				}
-			},
-			{
-				2,
-				{
-					1810003,
-					"effect_1810005"
-				}
-			}
-		}
-	},
-	[1810002] = {
-		map = 1810002,
-		name = "绽放于辉光之城·下篇|| ||CHAPTER EX||E.X.",
-		level_limit = 1,
-		type = 4,
-		anchor = "",
-		title = "EX",
-		drop_by_map_display = "",
-		bgm = "theme-lightheven",
-		enter_story = "ZHANFANGYUHUIGUANGZHICHENG15",
-		ani_name = "Map_1810007",
-		guide_id = "",
-		cloud_suffix = "",
-		uifx = "",
-		on_activity = 5331,
-		ui_type = 1,
-		bg = "Map_1810005",
-		destory_icon_suffix = "blue",
-		animtor = 1,
-		bind_map = 1810012,
-		clouds_pos = {
-			{
-				332,
-				271
-			},
-			{
-				896,
-				110
-			},
-			{
-				-280,
-				0
-			},
-			{
-				990,
-				-90
-			},
-			{
-				0,
-				-465
-			}
-		},
-		ani_controller = {
-			{
-				2,
-				{
-					1810005,
-					"effect_1810006"
-				}
-			}
-		}
-	},
-	[1810011] = {
-		map = 1810011,
-		name = "绽放于辉光之城·上篇|| ||CHAPTER EX||E.X.",
-		level_limit = 1,
-		type = 5,
-		anchor = "",
-		title = "EX",
-		drop_by_map_display = "",
-		bgm = "theme-lightheven",
-		enter_story = "ZHANFANGYUHUIGUANGZHICHENG1",
-		ani_name = "Map_1810002",
-		guide_id = "",
-		cloud_suffix = "",
-		uifx = "",
-		on_activity = 5331,
-		ui_type = 1,
-		bg = "Map_1810001",
-		destory_icon_suffix = "blue",
-		animtor = 1,
-		bind_map = 1810001,
-		clouds_pos = {
-			{
-				332,
-				271
-			},
-			{
-				896,
-				110
-			},
-			{
-				-280,
-				0
-			},
-			{
-				990,
-				-90
-			},
-			{
-				0,
-				-465
-			}
-		},
-		ani_controller = {
-			{
-				2,
-				{
-					1810021,
-					"map_1650003",
-					"effect_1650003",
-					"bgm_theme-camelot"
-				}
-			},
-			{
-				2,
-				{
-					1810023,
-					"effect_1810001"
-				}
-			}
-		}
-	},
-	[1810012] = {
-		map = 1810012,
-		name = "绽放于辉光之城·下篇|| ||CHAPTER EX||E.X.",
-		level_limit = 1,
-		type = 5,
-		anchor = "",
-		title = "EX",
-		drop_by_map_display = "",
-		bgm = "theme-lightheven",
-		enter_story = "ZHANFANGYUHUIGUANGZHICHENG15",
-		ani_name = "Map_1810003",
-		guide_id = "",
-		cloud_suffix = "",
-		uifx = "",
-		on_activity = 5331,
-		ui_type = 1,
-		bg = "Map_1810001",
-		destory_icon_suffix = "blue",
-		animtor = 1,
-		bind_map = 1810002,
-		clouds_pos = {
-			{
-				332,
-				271
-			},
-			{
-				896,
-				110
-			},
-			{
-				-280,
-				0
-			},
-			{
-				990,
-				-90
-			},
-			{
-				0,
-				-465
-			}
-		},
-		ani_controller = {
-			{
-				2,
-				{
-					1810025,
-					"effect_1810002"
-				}
-			}
-		}
-	},
-	[1810025] = {
-		map = 1810025,
-		name = "绽放于辉光之城·SP|| ||CHAPTER EX||E.X.",
-		level_limit = 1,
-		type = 8,
-		anchor = "",
-		title = "EX",
-		drop_by_map_display = "",
-		bgm = "theme-thehierophantV",
-		enter_story = "",
-		ani_name = "Map_1810004",
-		guide_id = "",
-		ani_controller = "",
-		cloud_suffix = "",
-		uifx = "",
-		on_activity = 5331,
-		ui_type = 1,
-		bg = "Map_1810001",
-		destory_icon_suffix = "blue",
-		animtor = 1,
-		bind_map = 1810012,
-		clouds_pos = {
-			{
-				332,
-				271
-			},
-			{
-				896,
-				110
-			},
-			{
-				-280,
-				0
-			},
-			{
-				990,
-				-90
-			},
-			{
-				0,
-				-465
-			}
-		}
-	},
-	[1810026] = {
-		map = 1810026,
-		name = "绽放于辉光之城·EX|| ||CHAPTER EX||E.X.",
-		level_limit = 1,
-		type = 8,
-		anchor = "",
-		title = "EX",
-		drop_by_map_display = "",
-		bgm = "theme-lightheven",
-		enter_story = "",
-		ani_name = "Map_1810008",
-		guide_id = "",
-		ani_controller = "",
-		cloud_suffix = "",
-		uifx = "",
-		on_activity = 5331,
-		ui_type = 1,
-		bg = "Map_1810005",
-		destory_icon_suffix = "blue",
-		animtor = 1,
-		bind_map = 1810012,
-		clouds_pos = {
-			{
-				332,
-				271
-			},
-			{
-				896,
-				110
-			},
-			{
-				-280,
-				0
-			},
-			{
-				990,
-				-90
-			},
-			{
-				0,
-				-465
-			}
-		}
-	},
 	[2100000] = {
 		map = 2100000,
 		name = "『红染的参访者』-前篇|| ||CHAPTER EX||E.X.",
@@ -21725,50 +21224,6 @@ pg.base.expedition_data_by_map = {
 		bg = "Map_1330001",
 		destory_icon_suffix = "blue",
 		animtor = 1,
-		bind_map = 0,
-		clouds_pos = {
-			{
-				332,
-				271
-			},
-			{
-				896,
-				110
-			},
-			{
-				-280,
-				0
-			},
-			{
-				990,
-				-90
-			},
-			{
-				0,
-				-465
-			}
-		}
-	},
-	[2200110] = {
-		map = 2200110,
-		name = "划破海空之翼|| ||CHAPTER SP||S.P.",
-		level_limit = 1,
-		type = 3,
-		anchor = "",
-		title = "SP",
-		drop_by_map_display = "",
-		bgm = "level",
-		enter_story = "",
-		ani_name = "",
-		guide_id = "",
-		ani_controller = "",
-		cloud_suffix = "",
-		uifx = "",
-		on_activity = 0,
-		ui_type = 1,
-		bg = "Map_1360001",
-		destory_icon_suffix = "blue",
-		animtor = 0,
 		bind_map = 0,
 		clouds_pos = {
 			{

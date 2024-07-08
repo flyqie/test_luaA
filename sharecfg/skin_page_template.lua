@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.skin_page_template = {
 	{
 		id = 1,
@@ -132,12 +132,6 @@ pg.skin_page_template = {
 		res = "bangongshiguang",
 		english_name = "On the Job"
 	},
-	[24] = {
-		id = 24,
-		name = "奇幻冒险",
-		res = "qihuanmaoxian",
-		english_name = "RPG Adventure"
-	},
 	[9997] = {
 		id = 9997,
 		name = "改造",
@@ -179,7 +173,6 @@ pg.skin_page_template = {
 		21,
 		22,
 		23,
-		24,
 		9997,
 		9998,
 		9999

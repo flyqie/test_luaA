@@ -1,54 +1,54 @@
-slot0 = class("PtAwardLayer", import("view.base.BaseUI"))
+﻿local var_0_0 = class("PtAwardLayer", import("view.base.BaseUI"))
 
-slot0.getUIName = function(slot0)
+function var_0_0.getUIName(arg_1_0)
 	return "ActivitybonusWindow_btnVariant"
 end
 
-slot0.init = function(slot0)
-	slot0.window = PtAwardWindow.New(slot0._tf, slot0)
+function var_0_0.init(arg_2_0)
+	arg_2_0.window = PtAwardWindow.New(arg_2_0._tf, arg_2_0)
 
-	slot0.window.Hide = function()
-		uv0:Hide()
+	function arg_2_0.window.Hide()
+		arg_2_0:Hide()
 	end
 
-	slot0.btn_banned = slot0._tf:Find("window/btn_banned")
-	slot0.btn_get = slot0._tf:Find("window/btn_get")
-	slot0.btn_got = slot0._tf:Find("window/btn_got")
+	arg_2_0.btn_banned = arg_2_0._tf:Find("window/btn_banned")
+	arg_2_0.btn_get = arg_2_0._tf:Find("window/btn_get")
+	arg_2_0.btn_got = arg_2_0._tf:Find("window/btn_got")
 end
 
-slot0.didEnter = function(slot0)
-	onButton(slot0, slot0.btn_get, function ()
-		slot0 = uv0.contextData.ptData
-		slot1, slot2 = slot0:GetResProgress()
+function var_0_0.didEnter(arg_4_0)
+	onButton(arg_4_0, arg_4_0.btn_get, function()
+		local var_5_0 = arg_4_0.contextData.ptData
+		local var_5_1, var_5_2 = var_5_0:GetResProgress()
 
-		uv0:emit(ActivityMediator.EVENT_PT_OPERATION, {
+		arg_4_0:emit(ActivityMediator.EVENT_PT_OPERATION, {
 			cmd = 1,
-			activity_id = slot0:GetId(),
-			arg1 = slot2
+			activity_id = var_5_0:GetId(),
+			arg1 = var_5_2
 		})
 	end, SFX_PANEL)
-	slot0:UpdateView()
+	arg_4_0:UpdateView()
 end
 
-slot0.UpdateView = function(slot0)
-	slot0.window:Show(slot0.contextData.ptData)
+function var_0_0.UpdateView(arg_6_0)
+	arg_6_0.window:Show(arg_6_0.contextData.ptData)
 
-	slot1 = slot0.contextData.ptData:CanGetAward()
+	local var_6_0 = arg_6_0.contextData.ptData:CanGetAward()
 
-	setActive(slot0.btn_get, slot1)
-	setActive(slot0.btn_banned, not slot1)
+	setActive(arg_6_0.btn_get, var_6_0)
+	setActive(arg_6_0.btn_banned, not var_6_0)
 end
 
-slot0.Hide = function(slot0)
-	slot0:closeView()
+function var_0_0.Hide(arg_7_0)
+	arg_7_0:closeView()
 end
 
-slot0.willExit = function(slot0)
-	if slot0.window then
-		slot0.window:Dispose()
+function var_0_0.willExit(arg_8_0)
+	if arg_8_0.window then
+		arg_8_0.window:Dispose()
 
-		slot0.window = nil
+		arg_8_0.window = nil
 	end
 end
 
-return slot0
+return var_0_0

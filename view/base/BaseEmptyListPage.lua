@@ -1,37 +1,39 @@
-slot0 = class("BaseEmptyListPage", import("..base.BaseSubView"))
+﻿local var_0_0 = class("BaseEmptyListPage", import("..base.BaseSubView"))
 
-slot0.getUIName = function(slot0)
+function var_0_0.getUIName(arg_1_0)
 	return "TaskEmptyListUI"
 end
 
-slot0.OnLoaded = function(slot0)
-	slot0._tf:SetSiblingIndex(1)
+function var_0_0.OnLoaded(arg_2_0)
+	arg_2_0._tf:SetSiblingIndex(1)
 end
 
-slot0.OnInit = function(slot0)
-	slot0.isShowUI = false
+function var_0_0.OnInit(arg_3_0)
+	arg_3_0.isShowUI = false
 end
 
-slot0.SetEmptyText = function(slot0, slot1)
-	setText(findTF(slot0._tf, "Text"), slot1)
+function var_0_0.SetEmptyText(arg_4_0, arg_4_1)
+	local var_4_0 = findTF(arg_4_0._tf, "Text")
+
+	setText(var_4_0, arg_4_1)
 end
 
-slot0.SetPosY = function(slot0, slot1)
-	setAnchoredPosition(slot0._tf, slot1)
+function var_0_0.SetPosY(arg_5_0, arg_5_1)
+	setAnchoredPosition(arg_5_0._tf, arg_5_1)
 end
 
-slot0.ShowOrHide = function(slot0, slot1)
-	if slot0.isShowUI == slot1 then
+function var_0_0.ShowOrHide(arg_6_0, arg_6_1)
+	if arg_6_0.isShowUI == arg_6_1 then
 		return
 	end
 
-	if slot1 then
-		slot0:Show()
+	if arg_6_1 then
+		arg_6_0:Show()
 	else
-		slot0:Hide()
+		arg_6_0:Hide()
 	end
 
-	slot0.isShowUI = slot1
+	arg_6_0.isShowUI = arg_6_1
 end
 
-return slot0
+return var_0_0

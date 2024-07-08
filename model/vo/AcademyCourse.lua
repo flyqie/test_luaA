@@ -1,32 +1,35 @@
-slot0 = class("AcademyCourse", import(".BaseVO"))
-slot0.MaxStudyTime = 43200
+﻿local var_0_0 = class("AcademyCourse", import(".BaseVO"))
 
-slot0.Ctor = function(slot0)
-	slot0.proficiency = 0
+var_0_0.MaxStudyTime = 43200
+
+function var_0_0.Ctor(arg_1_0)
+	arg_1_0.proficiency = 0
 end
 
-slot0.bindConfigTable = function(slot0)
+function var_0_0.bindConfigTable(arg_2_0)
 	return pg.class_upgrade_group
 end
 
-slot0.getConfig = function(slot0, slot1)
-	return slot0:bindConfigTable()[pg.TimeMgr.GetInstance():GetServerWeek()][slot1]
+function var_0_0.getConfig(arg_3_0, arg_3_1)
+	local var_3_0 = pg.TimeMgr.GetInstance():GetServerWeek()
+
+	return arg_3_0:bindConfigTable()[var_3_0][arg_3_1]
 end
 
-slot0.update = function(slot0, slot1)
-	slot0.proficiency = slot1.proficiency
+function var_0_0.update(arg_4_0, arg_4_1)
+	arg_4_0.proficiency = arg_4_1.proficiency
 end
 
-slot0.GetProficiency = function(slot0)
-	return slot0.proficiency
+function var_0_0.GetProficiency(arg_5_0)
+	return arg_5_0.proficiency
 end
 
-slot0.getExtraRate = function(slot0)
+function var_0_0.getExtraRate(arg_6_0)
 	return pg.TimeMgr.GetInstance():GetServerWeek() == 7 and 2 or 1
 end
 
-slot0.SetProficiency = function(slot0, slot1)
-	slot0.proficiency = slot1
+function var_0_0.SetProficiency(arg_7_0, arg_7_1)
+	arg_7_0.proficiency = arg_7_1
 end
 
-return slot0
+return var_0_0

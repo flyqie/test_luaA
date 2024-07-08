@@ -1,4 +1,4 @@
-slot0 = {
+﻿local var_0_0 = {
 	"指挥官，军部为港区派遣了能够在水下作战的舰娘协助我们，快去迎接一下新的伙伴吧",
 	"欢迎港区的第一个潜艇！给我们的新伙伴编队吧，指挥官！",
 	"这样我们的第一支潜艇舰队就诞生了！",
@@ -22,7 +22,7 @@ return {
 				mode = 1,
 				posY = -110,
 				posX = 200,
-				text = slot0[1]
+				text = var_0_0[1]
 			}
 		},
 		{
@@ -33,13 +33,7 @@ return {
 		},
 		{
 			ui = {
-				dynamicPath = function ()
-					if getProxy(SettingsProxy):IsMellowStyle() then
-						return "/OverlayCamera/Overlay/UIMain/NewMainMellowTheme(Clone)/frame/bottom/frame/task"
-					else
-						return "/OverlayCamera/Overlay/UIMain/NewMainClassicTheme(Clone)/frame/bottom/taskButton"
-					end
-				end
+				path = "/OverlayCamera/Overlay/UIMain/main/frame/bottom/taskButton"
 			}
 		},
 		{
@@ -89,7 +83,7 @@ return {
 				mode = 1,
 				posY = -110,
 				posX = 200,
-				text = slot0[2]
+				text = var_0_0[2]
 			}
 		},
 		{
@@ -99,13 +93,7 @@ return {
 		},
 		{
 			ui = {
-				dynamicPath = function ()
-					if getProxy(SettingsProxy):IsMellowStyle() then
-						return "/OverlayCamera/Overlay/UIMain/NewMainMellowTheme(Clone)/frame/right/1/formation"
-					else
-						return "/OverlayCamera/Overlay/UIMain/NewMainClassicTheme(Clone)/frame/right/formationButton"
-					end
-				end
+				path = "/OverlayCamera/Overlay/UIMain/main/frame/right/formationButton"
 			}
 		},
 		{
@@ -141,7 +129,7 @@ return {
 				mode = 1,
 				posY = -110,
 				posX = 200,
-				text = slot0[3]
+				text = var_0_0[3]
 			}
 		},
 		{
@@ -151,7 +139,7 @@ return {
 				mode = 1,
 				posY = -110,
 				posX = 200,
-				text = slot0[4]
+				text = var_0_0[4]
 			}
 		},
 		{
@@ -161,13 +149,7 @@ return {
 		},
 		{
 			ui = {
-				dynamicPath = function ()
-					if getProxy(SettingsProxy):IsMellowStyle() then
-						return "/OverlayCamera/Overlay/UIMain/NewMainMellowTheme(Clone)/frame/bottom/frame/dock"
-					else
-						return "/OverlayCamera/Overlay/UIMain/NewMainClassicTheme(Clone)/frame/bottom/dockBtn"
-					end
-				end
+				path = "/OverlayCamera/Overlay/UIMain/main/frame/bottom/dockBtn"
 			}
 		},
 		{
@@ -189,7 +171,7 @@ return {
 				mode = 1,
 				posY = -110,
 				posX = 200,
-				text = slot0[5]
+				text = var_0_0[5]
 			}
 		},
 		{

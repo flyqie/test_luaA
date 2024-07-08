@@ -1,384 +1,427 @@
-slot0 = class("ActivityMainScene", import("..base.BaseUI"))
-slot0.LOCK_ACT_MAIN = "ActivityMainScene:LOCK_ACT_MAIN"
-slot0.UPDATE_ACTIVITY = "ActivityMainScene:UPDATE_ACTIVITY"
-slot0.GET_PAGE_BGM = "ActivityMainScene.GET_PAGE_BGM"
-slot0.FLUSH_TABS = "ActivityMainScene.FLUSH_TABS"
+﻿local var_0_0 = class("ActivityMainScene", import("..base.BaseUI"))
 
-slot0.preload = function(slot0, slot1)
-	slot1()
+var_0_0.LOCK_ACT_MAIN = "ActivityMainScene:LOCK_ACT_MAIN"
+var_0_0.UPDATE_ACTIVITY = "ActivityMainScene:UPDATE_ACTIVITY"
+var_0_0.GET_PAGE_BGM = "ActivityMainScene.GET_PAGE_BGM"
+var_0_0.FLUSH_TABS = "ActivityMainScene.FLUSH_TABS"
+
+function var_0_0.preload(arg_1_0, arg_1_1)
+	arg_1_1()
 end
 
-slot0.getUIName = function(slot0)
+function var_0_0.getUIName(arg_2_0)
 	return "ActivityMainUI"
 end
 
-slot0.PlayBGM = function(slot0)
+function var_0_0.PlayBGM(arg_3_0)
+	return
 end
 
-slot0.onBackPressed = function(slot0)
-	if slot0.locked then
+function var_0_0.onBackPressed(arg_4_0)
+	if arg_4_0.locked then
 		return
 	end
 
-	for slot4, slot5 in pairs(slot0.windowList) do
-		if isActive(slot5._tf) then
-			slot0:HideWindow(slot5.class)
+	for iter_4_0, iter_4_1 in pairs(arg_4_0.windowList) do
+		if isActive(iter_4_1._tf) then
+			arg_4_0:HideWindow(iter_4_1.class)
 
 			return
 		end
 	end
 
-	if slot0.awardWindow and slot0.awardWindow:GetLoaded() and slot0.awardWindow:isShowing() then
-		slot0.awardWindow:Hide()
+	if arg_4_0.awardWindow and arg_4_0.awardWindow:GetLoaded() and arg_4_0.awardWindow:isShowing() then
+		arg_4_0.awardWindow:Hide()
 
 		return
 	end
 
-	slot0:emit(uv0.ON_BACK_PRESSED)
+	arg_4_0:emit(var_0_0.ON_BACK_PRESSED)
 end
 
-slot1 = nil
+local var_0_1
 
-slot0.init = function(slot0)
-	slot0.btnBack = slot0:findTF("blur_panel/adapt/top/back_btn")
-	slot0.pageContainer = slot0:findTF("pages")
-	slot0.permanentFinshMask = slot0:findTF("pages_finish")
-	slot0.tabs = slot0:findTF("scroll/viewport/content")
-	slot0.tab = slot0:findTF("tab", slot0.tabs)
-	slot0.entranceList = UIItemList.New(slot0:findTF("enter/viewport/content"), slot0:findTF("enter/viewport/content/btn"))
-	slot0.windowList = {}
-	slot0.lockAll = slot0:findTF("blur_panel/lock_all")
-	slot0.awardWindow = AwardWindow.New(slot0._tf, slot0.event)
-	slot0.chargeTipWindow = ChargeTipWindow.New(slot0._tf, slot0.event)
+function var_0_0.init(arg_5_0)
+	arg_5_0.btnBack = arg_5_0:findTF("blur_panel/adapt/top/back_btn")
+	arg_5_0.pageContainer = arg_5_0:findTF("pages")
+	arg_5_0.permanentFinshMask = arg_5_0:findTF("pages_finish")
+	arg_5_0.tabs = arg_5_0:findTF("scroll/viewport/content")
+	arg_5_0.tab = arg_5_0:findTF("tab", arg_5_0.tabs)
+	arg_5_0.entranceList = UIItemList.New(arg_5_0:findTF("enter/viewport/content"), arg_5_0:findTF("enter/viewport/content/btn"))
+	arg_5_0.windowList = {}
+	arg_5_0.lockAll = arg_5_0:findTF("blur_panel/lock_all")
+	arg_5_0.awardWindow = AwardWindow.New(arg_5_0._tf, arg_5_0.event)
+	arg_5_0.chargeTipWindow = ChargeTipWindow.New(arg_5_0._tf, arg_5_0.event)
 
-	setActive(slot0.tab, false)
-	setActive(slot0.lockAll, false)
-	setActive(slot0.permanentFinshMask, false)
-
-	slot2 = slot0.permanentFinshMask
-
-	setText(slot2:Find("piece/Text"), i18n("activity_permanent_tips2"))
-
-	slot3 = slot0.permanentFinshMask
-
-	onButton(slot0, slot3:Find("piece/arrow/Image"), function ()
-		uv0:emit(ActivityMediator.FINISH_ACTIVITY_PERMANENT)
+	setActive(arg_5_0.tab, false)
+	setActive(arg_5_0.lockAll, false)
+	setActive(arg_5_0.permanentFinshMask, false)
+	setText(arg_5_0.permanentFinshMask:Find("piece/Text"), i18n("activity_permanent_tips2"))
+	onButton(arg_5_0, arg_5_0.permanentFinshMask:Find("piece/arrow/Image"), function()
+		arg_5_0:emit(ActivityMediator.FINISH_ACTIVITY_PERMANENT)
 	end, SFX_PANEL)
-
-	slot0.tabsList = UIItemList.New(slot0.tabs, slot0.tab)
-	slot1 = slot0.tabsList
-
-	slot1:make(function (slot0, slot1, slot2)
-		if slot0 == UIItemList.EventUpdate then
-			if uv0.pageDic[uv0.activities[slot1 + 1].id] ~= nil then
-				if slot3:getConfig("title_res_tag") then
-					setImageSprite(uv0:findTF("off/text", slot2), GetSpriteFromAtlas("activityuitable/" .. slot5 .. "_text", "") or GetSpriteFromAtlas("activityuitable/activity_text", ""), true)
-					setImageSprite(uv0:findTF("on/text", slot2), GetSpriteFromAtlas("activityuitable/" .. slot5 .. "_text_selected", "") or GetSpriteFromAtlas("activityuitable/activity_text_selected", ""), true)
-					setActive(uv0:findTF("red", slot2), slot3:readyToAchieve())
-					onToggle(uv0, slot2, function (slot0)
-						if slot0 then
-							uv0:selectActivity(uv1)
-						end
-					end, SFX_PANEL)
-				else
-					onToggle(uv0, slot2, function (slot0)
-						uv0:loadActivityPanel(slot0, uv1)
-					end, SFX_PANEL)
-				end
-			end
-		end
-	end)
 end
 
-slot0.didEnter = function(slot0)
-	onButton(slot0, slot0.btnBack, function ()
-		uv0:emit(uv1.ON_BACK)
+function var_0_0.didEnter(arg_7_0)
+	onButton(arg_7_0, arg_7_0.btnBack, function()
+		arg_7_0:emit(var_0_0.ON_BACK)
 	end, SOUND_BACK)
-	slot0:updateEntrances()
-	slot0:emit(ActivityMediator.SHOW_NEXT_ACTIVITY)
-	slot0:bind(uv0.LOCK_ACT_MAIN, function (slot0, slot1)
-		uv0.locked = slot1
+	arg_7_0:updateEntrances()
+	arg_7_0:emit(ActivityMediator.SHOW_NEXT_ACTIVITY)
+	arg_7_0:bind(var_0_0.LOCK_ACT_MAIN, function(arg_9_0, arg_9_1)
+		arg_7_0.locked = arg_9_1
 
-		setActive(uv0.lockAll, slot1)
+		setActive(arg_7_0.lockAll, arg_9_1)
 	end)
-	slot0:bind(uv0.UPDATE_ACTIVITY, function (slot0, slot1)
-		uv0:updateActivity(slot1)
+	arg_7_0:bind(var_0_0.UPDATE_ACTIVITY, function(arg_10_0, arg_10_1)
+		arg_7_0:updateActivity(arg_10_1)
 	end)
-	slot0:bind(uv0.GET_PAGE_BGM, function (slot0, slot1, slot2)
-		slot2.bgm = uv0:getBGM(slot1) or uv0:getBGM()
+	arg_7_0:bind(var_0_0.GET_PAGE_BGM, function(arg_11_0, arg_11_1, arg_11_2)
+		arg_11_2.bgm = arg_7_0:getBGM(arg_11_1) or arg_7_0:getBGM()
 	end)
-	slot0:bind(uv0.FLUSH_TABS, function ()
-		uv0:flushTabs()
+	arg_7_0:bind(var_0_0.FLUSH_TABS, function()
+		arg_7_0:flushTabs()
 	end)
 end
 
-slot0.setPlayer = function(slot0, slot1)
-	slot0.shareData:SetPlayer(slot1)
+function var_0_0.setPlayer(arg_13_0, arg_13_1)
+	arg_13_0.shareData:SetPlayer(arg_13_1)
 end
 
-slot0.setFlagShip = function(slot0, slot1)
-	slot0.shareData:SetFlagShip(slot1)
+function var_0_0.setFlagShip(arg_14_0, arg_14_1)
+	arg_14_0.shareData:SetFlagShip(arg_14_1)
 end
 
-slot0.updateTaskLayers = function(slot0)
-	if not slot0.activity then
+function var_0_0.updateTaskLayers(arg_15_0)
+	if not arg_15_0.activity then
 		return
 	end
 
-	slot0:updateActivity(slot0.activity)
+	arg_15_0:updateActivity(arg_15_0.activity)
 end
 
-slot0.instanceActivityPage = function(slot0, slot1)
-	if slot1:getConfig("page_info").class_name and not slot0.pageDic[slot1.id] and not slot1:isEnd() then
-		if import("view.activity.subPages." .. slot2.class_name).New(slot0.pageContainer, slot0.event, slot0.contextData):UseSecondPage(slot1) then
-			slot4:SetUIName(slot2.ui_name2)
+function var_0_0.instanceActivityPage(arg_16_0, arg_16_1)
+	local var_16_0 = arg_16_1:getConfig("page_info")
+
+	if var_16_0.class_name and not arg_16_0.pageDic[arg_16_1.id] and not arg_16_1:isEnd() then
+		local var_16_1 = import("view.activity.subPages." .. var_16_0.class_name).New(arg_16_0.pageContainer, arg_16_0.event, arg_16_0.contextData)
+
+		if var_16_1:UseSecondPage(arg_16_1) then
+			var_16_1:SetUIName(var_16_0.ui_name2)
 		else
-			slot4:SetUIName(slot2.ui_name)
+			var_16_1:SetUIName(var_16_0.ui_name)
 		end
 
-		slot4:SetShareData(slot0.shareData)
+		var_16_1:SetShareData(arg_16_0.shareData)
 
-		slot0.pageDic[slot1.id] = slot4
+		arg_16_0.pageDic[arg_16_1.id] = var_16_1
 	end
 end
 
-slot0.setActivities = function(slot0, slot1)
-	slot0.activities = slot1 or {}
-	slot0.shareData = slot0.shareData or ActivityShareData.New()
-	slot0.pageDic = slot0.pageDic or {}
+function var_0_0.setActivities(arg_17_0, arg_17_1)
+	arg_17_0.activities = arg_17_1 or {}
+	arg_17_0.shareData = arg_17_0.shareData or ActivityShareData.New()
+	arg_17_0.pageDic = arg_17_0.pageDic or {}
 
-	for slot5, slot6 in ipairs(slot1) do
-		slot0:instanceActivityPage(slot6)
+	for iter_17_0, iter_17_1 in ipairs(arg_17_1) do
+		arg_17_0:instanceActivityPage(iter_17_1)
 	end
 
-	slot0.activity = nil
+	arg_17_0.activity = nil
 
-	table.sort(slot0.activities, function (slot0, slot1)
-		if slot0:getShowPriority() == slot1:getShowPriority() then
-			return slot1.id < slot0.id
+	table.sort(arg_17_0.activities, function(arg_18_0, arg_18_1)
+		local var_18_0 = arg_18_0:getShowPriority()
+		local var_18_1 = arg_18_1:getShowPriority()
+
+		if var_18_0 == var_18_1 then
+			return arg_18_0.id > arg_18_1.id
 		end
 
-		return slot3 < slot2
+		return var_18_1 < var_18_0
 	end)
-	slot0:flushTabs()
+	arg_17_0:flushTabs()
 end
 
-slot0.getActivityIndex = function(slot0, slot1)
-	for slot5, slot6 in ipairs(slot0.activities) do
-		if slot6.id == slot1 then
-			return slot5
+function var_0_0.getActivityIndex(arg_19_0, arg_19_1)
+	for iter_19_0, iter_19_1 in ipairs(arg_19_0.activities) do
+		if iter_19_1.id == arg_19_1 then
+			return iter_19_0
 		end
 	end
 
 	return nil
 end
 
-slot0.updateActivity = function(slot0, slot1)
-	if ActivityConst.PageIdLink[slot1.id] then
-		slot1 = getProxy(ActivityProxy):getActivityById(ActivityConst.PageIdLink[slot1.id])
+function var_0_0.updateActivity(arg_20_0, arg_20_1)
+	if ActivityConst.PageIdLink[arg_20_1.id] then
+		arg_20_1 = getProxy(ActivityProxy):getActivityById(ActivityConst.PageIdLink[arg_20_1.id])
 	end
 
-	if slot1:isShow() and not slot1:isEnd() then
-		slot0.activities[slot0:getActivityIndex(slot1.id) or #slot0.activities + 1] = slot1
+	if arg_20_1:isShow() and not arg_20_1:isEnd() then
+		arg_20_0.activities[arg_20_0:getActivityIndex(arg_20_1.id) or #arg_20_0.activities + 1] = arg_20_1
 
-		table.sort(slot0.activities, function (slot0, slot1)
-			if slot0:getShowPriority() == slot1:getShowPriority() then
-				return slot1.id < slot0.id
+		table.sort(arg_20_0.activities, function(arg_21_0, arg_21_1)
+			local var_21_0 = arg_21_0:getShowPriority()
+			local var_21_1 = arg_21_1:getShowPriority()
+
+			if var_21_0 == var_21_1 then
+				return arg_21_0.id > arg_21_1.id
 			end
 
-			return slot3 < slot2
+			return var_21_1 < var_21_0
 		end)
 
-		if not slot0.pageDic[slot1.id] then
-			slot0:instanceActivityPage(slot1)
+		if not arg_20_0.pageDic[arg_20_1.id] then
+			arg_20_0:instanceActivityPage(arg_20_1)
 		end
 
-		slot0:flushTabs()
+		arg_20_0:flushTabs()
 
-		if slot0.activity and slot0.activity.id == slot1.id then
-			slot0.activity = slot1
+		if arg_20_0.activity and arg_20_0.activity.id == arg_20_1.id then
+			arg_20_0.activity = arg_20_1
 
-			slot0.pageDic[slot1.id]:ActionInvoke("Flush", slot1)
-			setActive(slot0.permanentFinshMask, pg.activity_task_permanent[slot1.id] and slot1:canPermanentFinish())
-		end
-	end
-end
-
-slot0.removeActivity = function(slot0, slot1)
-	if slot0:getActivityIndex(slot1) then
-		table.remove(slot0.activities, slot2)
-		slot0.pageDic[slot1]:Destroy()
-
-		slot0.pageDic[slot1] = nil
-
-		slot0:flushTabs()
-
-		if slot0.activity and slot0.activity.id == slot1 then
-			slot0.activity = nil
-
-			slot0:verifyTabs()
+			arg_20_0.pageDic[arg_20_1.id]:ActionInvoke("Flush", arg_20_1)
+			setActive(arg_20_0.permanentFinshMask, pg.activity_task_permanent[arg_20_1.id] and arg_20_1:canPermanentFinish())
 		end
 	end
 end
 
-slot0.loadLayers = function(slot0)
-	if slot0.pageDic[slot0.activity.id] and slot1.OnLoadLayers then
-		slot1:OnLoadLayers()
+function var_0_0.removeActivity(arg_22_0, arg_22_1)
+	local var_22_0 = arg_22_0:getActivityIndex(arg_22_1)
+
+	if var_22_0 then
+		table.remove(arg_22_0.activities, var_22_0)
+		arg_22_0.pageDic[arg_22_1]:Destroy()
+
+		arg_22_0.pageDic[arg_22_1] = nil
+
+		arg_22_0:flushTabs()
+
+		if arg_22_0.activity and arg_22_0.activity.id == arg_22_1 then
+			arg_22_0.activity = nil
+
+			arg_22_0:verifyTabs()
+		end
 	end
 end
 
-slot0.removeLayers = function(slot0)
-	if slot0.pageDic[slot0.activity.id] and slot1.OnRemoveLayers then
-		slot1:OnRemoveLayers()
+function var_0_0.loadLayers(arg_23_0)
+	local var_23_0 = arg_23_0.pageDic[arg_23_0.activity.id]
+
+	if var_23_0 and var_23_0.OnLoadLayers then
+		var_23_0:OnLoadLayers()
 	end
 end
 
-slot0.GetOnShowEntranceData = function()
-	uv0 = uv0 or require("GameCfg.activity.EntranceData")
+function var_0_0.removeLayers(arg_24_0)
+	local var_24_0 = arg_24_0.pageDic[arg_24_0.activity.id]
 
-	assert(uv0, "Missing EntranceData.lua!")
-
-	uv0 = uv0 or {}
-
-	return _.select(uv0, function (slot0)
-		return slot0.isShow and slot0.isShow()
-	end)
+	if var_24_0 and var_24_0.OnRemoveLayers then
+		var_24_0:OnRemoveLayers()
+	end
 end
 
-slot0.updateEntrances = function(slot0)
-	slot0.entranceList:make(function (slot0, slot1, slot2)
-		if slot0 == UIItemList.EventUpdate then
-			slot4 = "empty"
+function var_0_0.GetOnShowEntranceData()
+	var_0_1 = var_0_1 or require("GameCfg.activity.EntranceData")
 
-			removeOnButton(slot2)
+	assert(var_0_1, "Missing EntranceData.lua!")
 
-			slot5 = false
+	var_0_1 = var_0_1 or {}
 
-			if uv0[slot1 + 1] and table.getCount(slot3) ~= 0 and slot3.isShow() then
-				onButton(uv1, slot2, function ()
-					uv0:emit(uv1.event, uv1.data[1], uv1.data[2])
+	return (_.select(var_0_1, function(arg_26_0)
+		return arg_26_0.isShow and arg_26_0.isShow()
+	end))
+end
+
+function var_0_0.updateEntrances(arg_27_0)
+	local var_27_0 = var_0_0.GetOnShowEntranceData()
+	local var_27_1 = math.max(#var_27_0, 5)
+
+	arg_27_0.entranceList:make(function(arg_28_0, arg_28_1, arg_28_2)
+		if arg_28_0 == UIItemList.EventUpdate then
+			local var_28_0 = var_27_0[arg_28_1 + 1]
+			local var_28_1 = "empty"
+
+			removeOnButton(arg_28_2)
+
+			local var_28_2 = false
+
+			if var_28_0 and table.getCount(var_28_0) ~= 0 and var_28_0.isShow() then
+				onButton(arg_27_0, arg_28_2, function()
+					arg_27_0:emit(var_28_0.event, var_28_0.data[1], var_28_0.data[2])
 				end, SFX_PANEL)
 
-				slot4 = slot3.banner
+				var_28_1 = var_28_0.banner
 
-				if slot3.isTip then
-					slot5 = slot3.isTip()
+				if var_28_0.isTip then
+					var_28_2 = var_28_0.isTip()
 				end
 			end
 
-			setActive(slot2:Find("tip"), slot5)
-			LoadImageSpriteAsync("activitybanner/" .. slot4, slot2)
+			setActive(arg_28_2:Find("tip"), var_28_2)
+			LoadImageSpriteAsync("activitybanner/" .. var_28_1, arg_28_2)
 		end
 	end)
-	slot0.entranceList:align(math.max(#uv0.GetOnShowEntranceData(), 5))
+	arg_27_0.entranceList:align(var_27_1)
 end
 
-slot0.flushTabs = function(slot0)
-	slot0.tabsList:align(#slot0.activities)
+function var_0_0.flushTabs(arg_30_0)
+	if not arg_30_0.tabsList then
+		arg_30_0.tabsList = UIItemList.New(arg_30_0.tabs, arg_30_0.tab)
+
+		arg_30_0.tabsList:make(function(arg_31_0, arg_31_1, arg_31_2)
+			if arg_31_0 == UIItemList.EventUpdate then
+				local var_31_0 = arg_30_0.activities[arg_31_1 + 1]
+
+				if arg_30_0.pageDic[var_31_0.id] ~= nil then
+					local var_31_1 = var_31_0:getConfig("title_res_tag")
+
+					if var_31_1 then
+						local var_31_2 = arg_30_0:findTF("red", arg_31_2)
+						local var_31_3 = GetSpriteFromAtlas("activityuitable/" .. var_31_1 .. "_text", "") or GetSpriteFromAtlas("activityuitable/activity_text", "")
+						local var_31_4 = GetSpriteFromAtlas("activityuitable/" .. var_31_1 .. "_text_selected", "") or GetSpriteFromAtlas("activityuitable/activity_text_selected", "")
+
+						setImageSprite(arg_30_0:findTF("off/text", arg_31_2), var_31_3, true)
+						setImageSprite(arg_30_0:findTF("on/text", arg_31_2), var_31_4, true)
+						setActive(var_31_2, var_31_0:readyToAchieve())
+						onToggle(arg_30_0, arg_31_2, function(arg_32_0)
+							if arg_32_0 then
+								arg_30_0:selectActivity(var_31_0)
+							end
+						end, SFX_PANEL)
+					else
+						onToggle(arg_30_0, arg_31_2, function(arg_33_0)
+							arg_30_0:loadActivityPanel(arg_33_0, var_31_0)
+						end, SFX_PANEL)
+					end
+
+					triggerToggle(arg_31_2, false)
+				end
+			end
+		end)
+	end
+
+	setActive(arg_30_0.tabs, false)
+	arg_30_0.tabsList:align(#arg_30_0.activities)
+	setActive(arg_30_0.tabs, true)
+
+	local var_30_0 = arg_30_0.activity and arg_30_0:getActivityIndex(arg_30_0.activity.id)
+
+	if var_30_0 then
+		triggerToggle(arg_30_0.tabs:GetChild(var_30_0 - 1), true)
+	end
 end
 
-slot0.selectActivity = function(slot0, slot1)
-	if slot1 and (not slot0.activity or slot0.activity.id ~= slot1.id) then
-		slot2 = slot0.pageDic[slot1.id]
+function var_0_0.selectActivity(arg_34_0, arg_34_1)
+	if arg_34_1 and (not arg_34_0.activity or arg_34_0.activity.id ~= arg_34_1.id) then
+		local var_34_0 = arg_34_0.pageDic[arg_34_1.id]
 
-		assert(slot2, "找不到id:" .. slot1.id .. "的活动页，请检查")
-		slot2:Load()
-		slot2:ActionInvoke("Flush", slot1)
-		slot2:ActionInvoke("ShowOrHide", true)
+		assert(var_34_0, "找不到id:" .. arg_34_1.id .. "的活动页，请检查")
+		var_34_0:Load()
+		var_34_0:ActionInvoke("Flush", arg_34_1)
+		var_34_0:ActionInvoke("ShowOrHide", true)
 
-		if slot0.activity and slot0.activity.id ~= slot1.id then
-			slot0.pageDic[slot0.activity.id]:ActionInvoke("ShowOrHide", false)
+		if arg_34_0.activity and arg_34_0.activity.id ~= arg_34_1.id then
+			arg_34_0.pageDic[arg_34_0.activity.id]:ActionInvoke("ShowOrHide", false)
 		end
 
-		slot0.activity = slot1
-		slot0.contextData.id = slot1.id
+		arg_34_0.activity = arg_34_1
+		arg_34_0.contextData.id = arg_34_1.id
 
-		setActive(slot0.permanentFinshMask, pg.activity_task_permanent[slot1.id] and slot1:canPermanentFinish())
+		setActive(arg_34_0.permanentFinshMask, pg.activity_task_permanent[arg_34_1.id] and arg_34_1:canPermanentFinish())
 	end
 end
 
-slot0.verifyTabs = function(slot0, slot1)
-	triggerToggle(slot0.tabs:GetChild((slot0:getActivityIndex(slot1) or 1) - 1), true)
+function var_0_0.verifyTabs(arg_35_0, arg_35_1)
+	local var_35_0 = arg_35_0:getActivityIndex(arg_35_1) or 1
+	local var_35_1 = arg_35_0.tabs:GetChild(var_35_0 - 1)
+
+	triggerToggle(var_35_1, true)
 end
 
-slot0.loadActivityPanel = function(slot0, slot1, slot2)
-	slot3 = slot2:getConfig("type")
+function var_0_0.loadActivityPanel(arg_36_0, arg_36_1, arg_36_2)
+	local var_36_0 = arg_36_2:getConfig("type")
+	local var_36_1
 
-	if nil and slot1 then
-		slot0:emit(ActivityMediator.OPEN_LAYER, slot4)
-	elseif slot4 and not slot1 then
-		slot0:emit(ActivityMediator.CLOSE_LAYER, slot4.mediator)
+	if var_36_1 and arg_36_1 then
+		arg_36_0:emit(ActivityMediator.OPEN_LAYER, var_36_1)
+	elseif var_36_1 and not arg_36_1 then
+		arg_36_0:emit(ActivityMediator.CLOSE_LAYER, var_36_1.mediator)
 	else
-		originalPrint("------活动id为" .. slot2.id .. "类型为" .. slot2:getConfig("type") .. "的页面不存在")
+		originalPrint("------活动id为" .. arg_36_2.id .. "类型为" .. arg_36_2:getConfig("type") .. "的页面不存在")
 	end
 end
 
-slot0.getBonusWindow = function(slot0, slot1, slot2)
-	if not slot0:findTF(slot1) then
-		slot4 = PoolMgr.GetInstance()
+function var_0_0.getBonusWindow(arg_37_0, arg_37_1, arg_37_2)
+	local var_37_0 = arg_37_0:findTF(arg_37_1)
 
-		slot4:GetUI("ActivitybonusWindow", true, function (slot0)
-			SetParent(slot0, uv0._tf, false)
+	if not var_37_0 then
+		PoolMgr.GetInstance():GetUI("ActivitybonusWindow", true, function(arg_38_0)
+			SetParent(arg_38_0, arg_37_0._tf, false)
 
-			slot0.name = uv1
+			arg_38_0.name = arg_37_1
 
-			uv2(slot0)
+			arg_37_2(arg_38_0)
 		end)
 	else
-		slot2(slot3)
+		arg_37_2(var_37_0)
 	end
 end
 
-slot0.ShowWindow = function(slot0, slot1, slot2)
-	if not slot0.windowList[slot1.__cname] then
-		slot0:getBonusWindow(slot3, function (slot0)
-			uv0.windowList[uv1] = uv2.New(tf(slot0), uv0)
+function var_0_0.ShowWindow(arg_39_0, arg_39_1, arg_39_2)
+	local var_39_0 = arg_39_1.__cname
 
-			uv0.windowList[uv1]:Show(uv3)
+	if not arg_39_0.windowList[var_39_0] then
+		arg_39_0:getBonusWindow(var_39_0, function(arg_40_0)
+			arg_39_0.windowList[var_39_0] = arg_39_1.New(tf(arg_40_0), arg_39_0)
+
+			arg_39_0.windowList[var_39_0]:Show(arg_39_2)
 		end)
 	else
-		slot0.windowList[slot3]:Show(slot2)
+		arg_39_0.windowList[var_39_0]:Show(arg_39_2)
 	end
 end
 
-slot0.HideWindow = function(slot0, slot1)
-	if not slot0.windowList[slot1.__cname] then
+function var_0_0.HideWindow(arg_41_0, arg_41_1)
+	local var_41_0 = arg_41_1.__cname
+
+	if not arg_41_0.windowList[var_41_0] then
 		return
 	end
 
-	slot0.windowList[slot2]:Hide()
+	arg_41_0.windowList[var_41_0]:Hide()
 end
 
-slot0.ShowAwardWindow = function(slot0, slot1, slot2, slot3)
-	slot0.awardWindow:ExecuteAction("Flush", slot1, slot2, slot3)
+function var_0_0.ShowAwardWindow(arg_42_0, arg_42_1, arg_42_2, arg_42_3)
+	arg_42_0.awardWindow:ExecuteAction("Flush", arg_42_1, arg_42_2, arg_42_3)
 end
 
-slot0.OnChargeSuccess = function(slot0, slot1)
-	slot0.chargeTipWindow:ExecuteAction("Show", slot1)
+function var_0_0.OnChargeSuccess(arg_43_0, arg_43_1)
+	arg_43_0.chargeTipWindow:ExecuteAction("Show", arg_43_1)
 end
 
-slot0.willExit = function(slot0)
-	slot0.shareData = nil
+function var_0_0.willExit(arg_44_0)
+	arg_44_0.shareData = nil
 
-	for slot4, slot5 in pairs(slot0.pageDic) do
-		slot5:Destroy()
+	for iter_44_0, iter_44_1 in pairs(arg_44_0.pageDic) do
+		iter_44_1:Destroy()
 	end
 
-	for slot4, slot5 in pairs(slot0.windowList) do
-		slot5:Dispose()
+	for iter_44_2, iter_44_3 in pairs(arg_44_0.windowList) do
+		iter_44_3:Dispose()
 	end
 
-	if slot0.awardWindow then
-		slot0.awardWindow:Destroy()
+	if arg_44_0.awardWindow then
+		arg_44_0.awardWindow:Destroy()
 
-		slot0.awardWindow = nil
+		arg_44_0.awardWindow = nil
 	end
 
-	if slot0.chargeTipWindow then
-		slot0.chargeTipWindow:Destroy()
+	if arg_44_0.chargeTipWindow then
+		arg_44_0.chargeTipWindow:Destroy()
 
-		slot0.chargeTipWindow = nil
+		arg_44_0.chargeTipWindow = nil
 	end
 end
 
-return slot0
+return var_0_0

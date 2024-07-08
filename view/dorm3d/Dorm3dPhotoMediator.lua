@@ -1,43 +1,42 @@
-slot0 = class("Dorm3dPhotoMediator", import("view.base.ContextMediator"))
+﻿local var_0_0 = class("Dorm3dPhotoMediator", import("view.base.ContextMediator"))
 
-slot0.register = function(slot0)
-	slot1 = pg.m02
-	slot1 = slot1:retrieveMediator(Dorm3dSceneMediator.__cname)
-	slot2 = slot1:getViewComponent()
-	slot3 = slot0.viewComponent
+function var_0_0.register(arg_1_0)
+	local var_1_0 = pg.m02:retrieveMediator(Dorm3dSceneMediator.__cname):getViewComponent()
 
-	slot3:SetSceneRoot(slot2)
+	arg_1_0.viewComponent:SetSceneRoot(var_1_0)
 
-	slot4 = slot0.viewComponent
+	local var_1_1 = var_1_0:GetApartment()
 
-	slot4:SetApartment(slot2:GetApartment())
-	slot0:bind(SnapshotScene.SHARE_PANEL, function (slot0, slot1, slot2)
-		uv0:addSubLayers(Context.New({
+	arg_1_0.viewComponent:SetApartment(var_1_1)
+	arg_1_0:bind(SnapshotScene.SHARE_PANEL, function(arg_2_0, arg_2_1, arg_2_2)
+		arg_1_0:addSubLayers(Context.New({
 			mediator = SnapshotShareMediator,
 			viewComponent = SnapshotShareLayer,
 			data = {
-				photoTex = slot1,
-				photoData = slot2
+				photoTex = arg_2_1,
+				photoData = arg_2_2
 			}
 		}))
 	end)
 end
 
-slot0.listNotificationInterests = function(slot0)
+function var_0_0.listNotificationInterests(arg_3_0)
 	return {
 		ApartmentProxy.UPDATE_APARTMENT
 	}
 end
 
-slot0.handleNotification = function(slot0, slot1)
-	slot3 = slot1:getBody()
+function var_0_0.handleNotification(arg_4_0, arg_4_1)
+	local var_4_0 = arg_4_1:getName()
+	local var_4_1 = arg_4_1:getBody()
 
-	if slot1:getName() == ApartmentProxy.UPDATE_APARTMENT then
-		-- Nothing
+	if var_4_0 == ApartmentProxy.UPDATE_APARTMENT then
+		-- block empty
 	end
 end
 
-slot0.remove = function(slot0)
+function var_0_0.remove(arg_5_0)
+	return
 end
 
-return slot0
+return var_0_0

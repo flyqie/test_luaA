@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.activity_ins_language = setmetatable({
 	__name = "activity_ins_language",
 	all = {
@@ -4990,220 +4990,7 @@ pg.activity_ins_language = setmetatable({
 		"ins_op_455_1_1",
 		"op_reply_455_1_1",
 		"ins_op_455_1_2",
-		"op_reply_455_1_2",
-		"ins_457",
-		"ins_discuss_457_1",
-		"ins_reply_457_1_1",
-		"ins_reply_457_1_2",
-		"ins_reply_457_1_3",
-		"ins_reply_457_1_4",
-		"ins_discuss_457_2",
-		"ins_reply_457_2_1",
-		"ins_reply_457_2_2",
-		"ins_reply_457_2_3",
-		"ins_reply_457_2_4",
-		"ins_op_457_1_1",
-		"op_reply_457_1_1",
-		"ins_op_457_1_2",
-		"op_reply_457_1_2",
-		"ins_458",
-		"ins_discuss_458_1",
-		"ins_reply_458_1_1",
-		"ins_reply_458_1_2",
-		"ins_reply_458_1_3",
-		"ins_discuss_458_2",
-		"ins_reply_458_2_1",
-		"ins_reply_458_2_2",
-		"ins_reply_458_2_3",
-		"ins_reply_458_2_4",
-		"ins_op_458_1_1",
-		"op_reply_458_1_1",
-		"ins_op_458_1_2",
-		"op_reply_458_1_2",
-		"ins_459",
-		"ins_discuss_459_1",
-		"ins_reply_459_1_1",
-		"ins_reply_459_1_2",
-		"ins_reply_459_1_3",
-		"ins_discuss_459_2",
-		"ins_reply_459_2_1",
-		"ins_reply_459_2_2",
-		"ins_reply_459_2_3",
-		"ins_reply_459_2_4",
-		"ins_reply_459_2_5",
-		"ins_op_459_1_1",
-		"op_reply_459_1_1",
-		"ins_op_459_1_2",
-		"op_reply_459_1_2",
-		"ins_460",
-		"ins_discuss_460_1",
-		"ins_reply_460_1_1",
-		"ins_reply_460_1_2",
-		"ins_reply_460_1_3",
-		"ins_discuss_460_2",
-		"ins_reply_460_2_1",
-		"ins_reply_460_2_2",
-		"ins_reply_460_2_3",
-		"ins_op_460_1_1",
-		"op_reply_460_1_1",
-		"ins_op_460_1_2",
-		"op_reply_460_1_2",
-		"ins_461",
-		"ins_discuss_461_1",
-		"ins_reply_461_1_1",
-		"ins_reply_461_1_2",
-		"ins_discuss_461_2",
-		"ins_reply_461_2_1",
-		"ins_reply_461_2_2",
-		"ins_op_461_1_1",
-		"op_reply_461_1_1",
-		"ins_op_461_1_2",
-		"op_reply_461_1_2",
-		"ins_462",
-		"ins_discuss_462_1",
-		"ins_reply_462_1_1",
-		"ins_reply_462_1_2",
-		"ins_reply_462_1_3",
-		"ins_reply_462_1_4",
-		"ins_reply_462_1_5",
-		"ins_discuss_462_2",
-		"ins_reply_462_2_1",
-		"ins_reply_462_2_2",
-		"ins_reply_462_2_3",
-		"ins_discuss_462_3",
-		"ins_reply_462_3_1",
-		"ins_reply_462_3_2",
-		"ins_reply_462_3_3",
-		"ins_reply_462_3_4",
-		"ins_op_462_1_1",
-		"op_reply_462_1_1",
-		"ins_op_462_1_2",
-		"op_reply_462_1_2",
-		"ins_463",
-		"ins_discuss_463_1",
-		"ins_reply_463_1_1",
-		"ins_reply_463_1_2",
-		"ins_discuss_463_2",
-		"ins_reply_463_2_1",
-		"ins_reply_463_2_2",
-		"ins_discuss_463_3",
-		"ins_reply_463_3_1",
-		"ins_reply_463_3_2",
-		"ins_reply_463_3_3",
-		"ins_op_463_1_1",
-		"op_reply_463_1_1",
-		"ins_op_463_1_2",
-		"op_reply_463_1_2",
-		"ins_464",
-		"ins_discuss_464_1",
-		"ins_reply_464_1_1",
-		"ins_discuss_464_2",
-		"ins_reply_464_2_1",
-		"ins_discuss_464_3",
-		"ins_reply_464_3_1",
-		"ins_op_464_1_1",
-		"op_reply_464_1_1",
-		"ins_op_464_1_2",
-		"op_reply_464_1_2",
-		"ins_465",
-		"ins_discuss_465_1",
-		"ins_reply_465_1_1",
-		"ins_discuss_465_2",
-		"ins_reply_465_2_1",
-		"ins_reply_465_2_2",
-		"ins_reply_465_2_3",
-		"ins_discuss_465_3",
-		"ins_reply_465_3_1",
-		"ins_reply_465_3_2",
-		"ins_op_465_1_1",
-		"op_reply_465_1_1",
-		"ins_op_465_1_2",
-		"op_reply_465_1_2",
-		"ins_466",
-		"ins_discuss_466_1",
-		"ins_reply_466_1_1",
-		"ins_reply_466_1_2",
-		"ins_reply_466_1_3",
-		"ins_discuss_466_2",
-		"ins_reply_466_2_1",
-		"ins_reply_466_2_2",
-		"ins_reply_466_2_3",
-		"ins_op_466_1_1",
-		"op_reply_466_1_1",
-		"ins_op_466_1_2",
-		"op_reply_466_1_2",
-		"ins_467",
-		"ins_discuss_467_1",
-		"ins_reply_467_1_1",
-		"ins_reply_467_1_2",
-		"ins_discuss_467_2",
-		"ins_reply_467_2_1",
-		"ins_op_467_1_1",
-		"op_reply_467_1_1",
-		"ins_op_467_1_2",
-		"op_reply_467_1_2",
-		"ins_468",
-		"ins_discuss_468_1",
-		"ins_reply_468_1_1",
-		"ins_reply_468_1_2",
-		"ins_discuss_468_2",
-		"ins_reply_468_2_1",
-		"ins_op_468_1_1",
-		"op_reply_468_1_1",
-		"ins_op_468_1_2",
-		"op_reply_468_1_2",
-		"ins_469",
-		"ins_discuss_469_1",
-		"ins_reply_469_1_1",
-		"ins_discuss_469_2",
-		"ins_reply_469_2_1",
-		"ins_op_469_1_1",
-		"op_reply_469_1_1",
-		"ins_op_469_1_2",
-		"op_reply_469_1_2",
-		"ins_470",
-		"ins_discuss_470_1",
-		"ins_reply_470_1_1",
-		"ins_discuss_470_2",
-		"ins_reply_470_2_1",
-		"ins_op_470_1_1",
-		"op_reply_470_1_1",
-		"ins_op_470_1_2",
-		"op_reply_470_1_2",
-		"ins_471",
-		"ins_discuss_471_1",
-		"ins_reply_471_1_1",
-		"ins_discuss_471_2",
-		"ins_reply_471_2_1",
-		"ins_reply_471_2_2",
-		"ins_reply_471_2_3",
-		"ins_op_471_1_1",
-		"op_reply_471_1_1",
-		"ins_op_471_1_2",
-		"op_reply_471_1_2",
-		"ins_472",
-		"ins_discuss_472_1",
-		"ins_reply_472_1_1",
-		"ins_discuss_472_2",
-		"ins_reply_472_2_1",
-		"ins_discuss_472_3",
-		"ins_reply_472_3_1",
-		"ins_op_472_1_1",
-		"op_reply_472_1_1",
-		"ins_op_472_1_2",
-		"op_reply_472_1_2",
-		"ins_473",
-		"ins_discuss_473_1",
-		"ins_reply_473_1_1",
-		"ins_reply_473_1_2",
-		"ins_reply_473_1_3",
-		"ins_discuss_473_2",
-		"ins_reply_473_2_1",
-		"ins_reply_473_2_2",
-		"ins_op_473_1_1",
-		"op_reply_473_1_1",
-		"ins_op_473_1_2",
-		"op_reply_473_1_2"
+		"op_reply_455_1_2"
 	}
 }, confHX)
 pg.base = pg.base or {}
@@ -19837,981 +19624,342 @@ pg.base.activity_ins_language = {
 		value = "原……原来如此？"
 	},
 	ins_449 = {
-		value = "这就是……冲击性的可爱~！"
+		value = ""
 	},
 	ins_discuss_449_1 = {
-		value = "冲击性的可爱！"
+		value = ""
 	},
 	ins_reply_449_1_1 = {
-		value = "冲击性的可爱！"
+		value = ""
 	},
 	ins_discuss_449_2 = {
-		value = "嗯？这不是北极兔嘛。虽然看起来温顺，但实际上力气很大哦~"
+		value = ""
 	},
 	ins_reply_449_2_1 = {
-		value = "欸~真的假的？看起来软软的很想咬一口呢~"
+		value = ""
 	},
 	ins_reply_449_2_2 = {
-		value = "这种兔子一次能跳3米远，最快每小时能跑60公里呢。"
+		value = ""
 	},
 	ins_reply_449_2_3 = {
-		value = "新锐航空母舰级的速度？！"
+		value = ""
 	},
 	ins_discuss_449_3 = {
-		value = "好可爱的兔兔！我可以带去兔兔星么！"
+		value = ""
 	},
 	ins_reply_449_3_1 = {
-		value = "兔兔星……是哪里？"
+		value = ""
 	},
 	ins_reply_449_3_2 = {
-		value = "兔兔星在——兔兔宇宙哦！"
+		value = ""
 	},
 	ins_op_449_1_1 = {
-		value = "冲击性的可爱！"
+		value = ""
 	},
 	op_reply_449_1_1 = {
-		value = "嗯，冲击性的可爱！"
+		value = ""
 	},
 	ins_op_449_1_2 = {
-		value = "照片请多发些给我！"
+		value = ""
 	},
 	op_reply_449_1_2 = {
-		value = "已经发好了，请查收。"
+		value = ""
 	},
 	op_reply_449_1_3 = {
-		value = "抱歉……刚刚错发成了我的旅行照，请收一下新文件。"
+		value = ""
 	},
 	ins_450 = {
-		value = "嗯哼哼♪温暖的汤~"
+		value = ""
 	},
 	ins_discuss_450_1 = {
-		value = "哇啊！"
+		value = ""
 	},
 	ins_reply_450_1_1 = {
-		value = "火力同志！"
+		value = ""
 	},
 	ins_reply_450_1_2 = {
-		value = "别发动态啦！"
+		value = ""
 	},
 	ins_reply_450_1_3 = {
-		value = "锅子！锅子要裂开了！"
+		value = ""
 	},
 	ins_reply_450_1_4 = {
-		value = "嗯？裂开？"
+		value = ""
 	},
 	ins_reply_450_1_5 = {
-		value = "哦~你是说花纹吧，这只是女巫风格的花纹装饰啦~"
+		value = ""
 	},
 	ins_reply_450_1_6 = {
-		value = "人气商品女巫炼金锅正在热卖中，快联系{namecode:98}采购吧~喵！"
+		value = ""
 	},
 	ins_discuss_450_2 = {
-		value = "你这熬汤不加盖子，水很快就耗光了啊！"
+		value = ""
 	},
 	ins_reply_450_2_1 = {
-		value = "搅拌完之后会好好盖上啦~"
+		value = ""
 	},
 	ins_reply_450_2_2 = {
-		value = "呼……那就好，期待你的手艺！"
+		value = ""
 	},
 	ins_reply_450_2_3 = {
-		value = "晚上一起来喝吧~"
+		value = ""
 	},
 	ins_discuss_450_3 = {
-		value = "“这锅汤，十分的珍贵。”"
+		value = ""
 	},
 	ins_reply_450_3_1 = {
-		value = "“不咸也不淡，味道好极了。”"
+		value = ""
 	},
 	ins_reply_450_3_2 = {
-		value = "人家汤还没熬好，你们怎么说的好像已经喝完了一样！"
+		value = ""
 	},
 	ins_reply_450_3_3 = {
-		value = "呃……她们只是在对暗号而已，大概……"
+		value = ""
 	},
 	ins_op_450_1_1 = {
-		value = "隔着屏幕都感受到了汤的温暖！"
+		value = ""
 	},
 	op_reply_450_1_1 = {
-		value = "喝下去更温暖哦，火力熬好之后就给指挥官送去~"
+		value = ""
 	},
 	ins_451 = {
-		value = "日常保养中~"
+		value = ""
 	},
 	ins_discuss_451_1 = {
-		value = "恕我冒昧，你的锁链看起来十分具有杀伤力。"
+		value = ""
 	},
 	ins_reply_451_1_1 = {
-		value = "所以还请使用时多加注意并遵守《港区船锚及锁链使用规范》，避免造成无关损伤。"
+		value = ""
 	},
 	ins_reply_451_1_2 = {
-		value = "感谢你的提议，认真的女仆小姐。"
+		value = ""
 	},
 	ins_reply_451_1_3 = {
-		value = "我会非常小心使用的哦，呵呵~"
+		value = ""
 	},
 	ins_discuss_451_2 = {
-		value = "一张很有冲击力的自拍呢。"
+		value = ""
 	},
 	ins_reply_451_2_1 = {
-		value = "就是这种感觉，我们的同志就应该如火焰般奔放！"
+		value = ""
 	},
 	ins_reply_451_2_2 = {
-		value = "再多好话波尔塔瓦也不会陪你喝酒的哦。"
+		value = ""
 	},
 	ins_reply_451_2_3 = {
-		value = "没错，那这个艰巨任务就交给你们了。"
+		value = ""
 	},
 	ins_discuss_451_3 = {
-		value = "铁链的保养确实十分重要呢，要是“断掉”可就大事不妙了。"
+		value = ""
 	},
 	ins_reply_451_3_1 = {
-		value = "呵呵~没错，随时保持良好状态可是非常重要的哦。"
+		value = ""
 	},
 	ins_reply_451_3_2 = {
-		value = "呵呵~"
+		value = ""
 	},
 	ins_reply_451_3_3 = {
-		value = "……明明每个字都认识，但连起来就……难道是加密通话？！"
+		value = ""
 	},
 	ins_op_451_1_1 = {
-		value = "真是一条牢固的锁链啊……"
+		value = ""
 	},
 	op_reply_451_1_1 = {
-		value = "没错，就如同你我之间的关系一般牢固哦~"
+		value = ""
 	},
 	ins_op_451_1_2 = {
-		value = "这个锁链，其实是用来做什么的？"
+		value = ""
 	},
 	op_reply_451_1_2 = {
-		value = "用处其实意外的多哦，指挥官要不现在就来找我，我来给您演示一下？"
+		value = ""
 	},
 	ins_452 = {
-		value = "凶猛军团出击！"
+		value = ""
 	},
 	ins_discuss_452_1 = {
-		value = "危机出现！黑兔队长正带领白兔队员赶往现场保卫秩序！"
+		value = ""
 	},
 	ins_reply_452_1_1 = {
-		value = "哈哈哈~来试试看吧！凶猛大人的手下会狠狠收拾你的！"
+		value = ""
 	},
 	ins_discuss_452_2 = {
-		value = "这个玩偶看起来好眼熟……是你以自己形象设计的吧？"
+		value = ""
 	},
 	ins_reply_452_2_1 = {
-		value = "哼哼~当然了，是不是为我的才华所惊艳？我为其命名为“凶猛军团1号”！"
+		value = ""
 	},
 	ins_reply_452_2_2 = {
-		value = "灵感来了，马上做一个达·芬奇1号。"
+		value = ""
 	},
 	ins_reply_452_2_3 = {
-		value = "这么有趣的事我也不能落后！灵敏1号立刻开工！"
+		value = ""
 	},
 	ins_reply_452_2_4 = {
-		value = "等、等一下！你们不要连命名方式都抄袭啊！"
+		value = ""
 	},
 	ins_discuss_452_3 = {
-		value = "领域展开！到此为止了，我不会再让你前进半步！"
+		value = ""
 	},
 	ins_reply_452_3_1 = {
-		value = "呵呵呵~就凭这种程度的领域吗？"
+		value = ""
 	},
 	ins_reply_452_3_2 = {
-		value = "不要太小看我了，凶猛军团合体攻击！"
+		value = ""
 	},
 	ins_reply_452_3_3 = {
-		value = "咕……！什、什么……这就是毛绒绒圣徒的力量吗！"
+		value = ""
 	},
 	ins_reply_452_3_4 = {
-		value = "乖乖臣服吧~"
+		value = ""
 	},
 	ins_op_452_1_1 = {
-		value = "很有气势！"
+		value = ""
 	},
 	op_reply_452_1_1 = {
-		value = "那就来加入我们，成为凶猛3号一同战斗吧！"
+		value = ""
 	},
 	ins_op_452_1_2 = {
-		value = "作战胜利之后有什么打算吗？"
+		value = ""
 	},
 	op_reply_452_1_2 = {
-		value = "乘胜追击，直到占领整个港区！"
+		value = ""
 	},
 	ins_453 = {
-		value = "探员阿贝克隆比，正在巡逻！"
+		value = ""
 	},
 	ins_discuss_453_1 = {
-		value = "照片好有速度感！看起来好快！"
+		value = ""
 	},
 	ins_reply_453_1_1 = {
-		value = "论速度的话我可不会输哦！要比比看吗？"
+		value = ""
 	},
 	ins_reply_453_1_2 = {
-		value = "随时奉陪~不过敢超过我的话就算成超速哟！"
+		value = ""
 	},
 	ins_discuss_453_2 = {
-		value = "多注意安全，不要恶作剧给指挥官添麻烦哦。"
+		value = ""
 	},
 	ins_reply_453_2_1 = {
-		value = "知道了，胡德阿姨！"
+		value = ""
 	},
 	ins_reply_453_2_2 = {
-		value = "听话的话，回来之后奖励你好吃的。"
+		value = ""
 	},
 	ins_reply_453_2_3 = {
-		value = "知道了，胡德姐姐！"
+		value = ""
 	},
 	ins_op_453_1_1 = {
-		value = "定期汇报，阿贝克隆比探员。"
+		value = ""
 	},
 	op_reply_453_1_1 = {
-		value = "报告指挥官，海域一切正常！港区的安全就交给探员阿贝克隆比吧~"
+		value = ""
 	},
 	ins_op_453_1_2 = {
-		value = "乘风破浪的感觉真不错。"
+		value = ""
 	},
 	op_reply_453_1_2 = {
-		value = "嘻嘻~指挥官下次要拉着我的手一起试试吗？"
+		value = ""
 	},
 	ins_454 = {
-		value = "哼哼~出演道具准备万全~"
+		value = ""
 	},
 	ins_discuss_454_1 = {
-		value = "这是那种游离在双面身份之间的怪盗剧本吗？"
+		value = ""
 	},
 	ins_reply_454_1_1 = {
-		value = "不错不错~完成度很高嘛，不过细节还可以再打磨一下。"
+		value = ""
 	},
 	ins_reply_454_1_2 = {
-		value = "嘿嘿~有何指教？"
+		value = ""
 	},
 	ins_reply_454_1_3 = {
-		value = "可怖，要不你跟我一起去看看？"
+		value = ""
 	},
 	ins_reply_454_1_4 = {
-		value = "没问题，稍后见。"
+		value = ""
 	},
 	ins_discuss_454_2 = {
-		value = "总感觉……有点谢菲的既视感。"
+		value = ""
 	},
 	ins_reply_454_2_1 = {
-		value = "需要澄清，我是擅长潜入而不是乔装潜入。"
+		value = ""
 	},
 	ins_reply_454_2_2 = {
-		value = "这二者之间的差别相当大。"
+		value = ""
 	},
 	ins_reply_454_2_3 = {
-		value = "啊哈哈~谢菲尔德小姐是硬核实力派呢~"
+		value = ""
 	},
 	ins_discuss_454_3 = {
-		value = "看来并不是那种一下子能猜到结局的类型。"
+		value = ""
 	},
 	ins_reply_454_3_1 = {
-		value = "好在意……谁来给我点剧透。"
+		value = ""
 	},
 	ins_reply_454_3_2 = {
-		value = "我来——！"
+		value = ""
 	},
 	ins_reply_454_3_3 = {
-		value = "喂，你根本就没看过剧本吧！"
+		value = ""
 	},
 	ins_op_454_1_1 = {
-		value = "原来你就是怪盗「Mystic」！"
+		value = ""
 	},
 	op_reply_454_1_1 = {
-		value = "没错，在牢房里乖乖等着我哦，「指挥官」~"
+		value = ""
 	},
 	ins_op_454_1_2 = {
-		value = "双面身份可以拿双份工资么？"
+		value = ""
 	},
 	op_reply_454_1_2 = {
-		value = "不愧是指挥官……你发现了盲点！"
+		value = ""
 	},
 	ins_455 = {
-		value = "寻找线索中……这种小场面可难不倒都会警探。"
+		value = ""
 	},
 	ins_discuss_455_1 = {
-		value = "……这次拍摄的是侦探剧么？服装道具看起来都很帅气呢！"
+		value = ""
 	},
 	ins_reply_455_1_1 = {
-		value = "其实不是……这次拍摄的剧目主题很难一言以蔽之呢。"
+		value = ""
 	},
 	ins_reply_455_1_2 = {
-		value = "不过有枪炮横飞的大场面，你会喜欢的。"
+		value = ""
 	},
 	ins_reply_455_1_3 = {
-		value = "甚至还有直升机和火箭炮哦~"
+		value = ""
 	},
 	ins_reply_455_1_4 = {
-		value = "期待起来了！"
+		value = ""
 	},
 	ins_discuss_455_2 = {
-		value = "这……难道是失窃现场？没想到我才出差就发生了这种事……"
+		value = ""
 	},
 	ins_reply_455_2_1 = {
-		value = "没错，艾伦·萨姆纳探员，你有什么头绪吗？"
+		value = ""
 	},
 	ins_reply_455_2_2 = {
-		value = "犯人的手法非常利落老练，看来我必须尽快回来参与布置防线了。"
+		value = ""
 	},
 	ins_discuss_455_3 = {
-		value = "根据我多年的补番经验，我已经猜到犯人是谁了。"
+		value = ""
 	},
 	ins_reply_455_3_1 = {
-		value = "真相永远只有一个！"
+		value = ""
 	},
 	ins_reply_455_3_2 = {
-		value = "……什么，竟然比我这个都会警探还要厉害？"
+		value = ""
 	},
 	ins_op_455_1_1 = {
-		value = "这身衣服好帅！"
+		value = ""
 	},
 	op_reply_455_1_1 = {
-		value = "嗯？指挥官原来喜欢这种风格么。正好，我也不讨厌。"
+		value = ""
 	},
 	ins_op_455_1_2 = {
-		value = "要是怪盗也在看这条动态怎么办？"
+		value = ""
 	},
 	op_reply_455_1_2 = {
-		value = "坦白从宽，抗拒从严。怪盗，快来自首吧。"
-	},
-	ins_457 = {
-		value = "……现代的女仆都是这样吗？！"
-	},
-	ins_discuss_457_1 = {
-		value = "嗯…？那本书难道是……"
-	},
-	ins_reply_457_1_1 = {
-		value = "……研究方向是不是有点奇怪？"
-	},
-	ins_reply_457_1_2 = {
-		value = "嗯哼，有人是喜欢这样的呢。"
-	},
-	ins_reply_457_1_3 = {
-		value = "努比亚人，你现在、立刻、马上来我这里一趟。"
-	},
-	ins_reply_457_1_4 = {
-		value = "是、是！"
-	},
-	ins_discuss_457_2 = {
-		value = "等等，这本杂志我好像有点眼熟。"
-	},
-	ins_reply_457_2_1 = {
-		value = "《女仆的一百九十九种〇〇〇》，我也有一本哦。"
-	},
-	ins_reply_457_2_2 = {
-		value = "不得了。"
-	},
-	ins_reply_457_2_3 = {
-		value = "了不得。"
-	},
-	ins_reply_457_2_4 = {
-		value = "欸……啊？！"
-	},
-	ins_op_457_1_1 = {
-		value = "……这本书是什么？"
-	},
-	op_reply_457_1_1 = {
-		value = "现代女仆的修行书……大概！"
-	},
-	ins_op_457_1_2 = {
-		value = "这本书是好书！"
-	},
-	op_reply_457_1_2 = {
-		value = "真的么？！那我会仔细钻研的！"
-	},
-	ins_458 = {
-		value = "新鲜出炉的美味与新鲜出炉的Smile！"
-	},
-	ins_discuss_458_1 = {
-		value = "这是……河豚白子刺身配昆布汁么？"
-	},
-	ins_reply_458_1_1 = {
-		value = "是美味的鳗鱼冻哦！"
-	},
-	ins_reply_458_1_2 = {
-		value = "鳗鱼……原来还可以这么做啊。"
-	},
-	ins_reply_458_1_3 = {
-		value = "皇家美食，很神奇吧。"
-	},
-	ins_discuss_458_2 = {
-		value = "利物浦小姐的厨艺真好，我也要加油了！"
-	},
-	ins_reply_458_2_1 = {
-		value = "我也要加油了。"
-	},
-	ins_reply_458_2_2 = {
-		value = "柴郡也要学~柴郡也要学~"
-	},
-	ins_reply_458_2_3 = {
-		value = "好哦，下次我来教大家做这道菜！"
-	},
-	ins_reply_458_2_4 = {
-		value = "呵呵……指挥官有福了。"
-	},
-	ins_op_458_1_1 = {
-		value = "强力的视觉冲击力……"
-	},
-	op_reply_458_1_1 = {
-		value = "嘿嘿！我正好也有新想法呢！"
-	},
-	ins_op_458_1_2 = {
-		value = "鳗鱼就是正义！"
-	},
-	op_reply_458_1_2 = {
-		value = "没错，鳗鱼就是正义~！"
-	},
-	ins_459 = {
-		value = "有虫子溜进来了，该怎么办才好呢……"
-	},
-	ins_discuss_459_1 = {
-		value = "我现在要点名一个除虫高手来看看。@ShiningS"
-	},
-	ins_reply_459_1_1 = {
-		value = ".44还是.50?"
-	},
-	ins_reply_459_1_2 = {
-		value = "不……我需要的并不是这种服务。"
-	},
-	ins_reply_459_1_3 = {
-		value = "除虫，就选{namecode:98}牌除虫剂，虫子杀杀杀！"
-	},
-	ins_discuss_459_2 = {
-		value = "当你看到了一只，就表明……"
-	},
-	ins_reply_459_2_1 = {
-		value = "不……请不要再说了。"
-	},
-	ins_reply_459_2_2 = {
-		value = "看来有必要在港区进行一次灭虫行动了呢。"
-	},
-	ins_reply_459_2_3 = {
-		value = "灭虫行动？我加入。"
-	},
-	ins_reply_459_2_4 = {
-		value = "呵呵，也算我一个。"
-	},
-	ins_reply_459_2_5 = {
-		value = "除虫，就选{namecode:98}牌除虫剂，虫子杀杀杀！"
-	},
-	ins_op_459_1_1 = {
-		value = "别怕，我来帮你！"
-	},
-	op_reply_459_1_1 = {
-		value = "娇弱模式——ON，地面已经失守……人家在床上等您。"
-	},
-	ins_op_459_1_2 = {
-		value = "现在是什么模式？"
-	},
-	op_reply_459_1_2 = {
-		value = "是无力应对害虫入侵的娇弱模式。"
-	},
-	ins_460 = {
-		value = "正在全力以赴的可畏~"
-	},
-	ins_discuss_460_1 = {
-		value = "啊…这是之前训练时的照片！感谢光辉姐姐帮我拍下来~"
-	},
-	ins_reply_460_1_1 = {
-		value = "可畏姐姐加油哦~！"
-	},
-	ins_reply_460_1_2 = {
-		value = "这下你真的摇滚出道了呢~什么时候发专辑？"
-	},
-	ins_reply_460_1_3 = {
-		value = "或许在正式演出之后？敬请期待哦~"
-	},
-	ins_discuss_460_2 = {
-		value = "呵呵，看来单人练习也很顺利呢。"
-	},
-	ins_reply_460_2_1 = {
-		value = "这还要多亏之前大家一起练习时打下的基础。"
-	},
-	ins_reply_460_2_2 = {
-		value = "那接下来要和我们一起来运动么？我已经约了{namecode:50}，Alizarin就差你了哦~"
-	},
-	ins_reply_460_2_3 = {
-		value = "好啊，一会运动场见。"
-	},
-	ins_op_460_1_1 = {
-		value = "正在前往练习舞台！"
-	},
-	op_reply_460_1_1 = {
-		value = "可畏已经不在练习舞台了哦。要找我的话，一会运动场见~"
-	},
-	ins_op_460_1_2 = {
-		value = "期待正式演出的那一天！"
-	},
-	op_reply_460_1_2 = {
-		value = "嗯~敬请期待吧，Alizarin绝对不会让你失望的！"
-	},
-	ins_461 = {
-		value = "呼…本日练习结束，接下来去做什么好呢…"
-	},
-	ins_discuss_461_1 = {
-		value = "{namecode:50}姐好厉害！{namecode:50}姐辛苦了~！"
-	},
-	ins_reply_461_1_1 = {
-		value = "只是演出前的日常练习而已…我觉得已经登台演出过的{namecode:226}要更厉害一些哦。"
-	},
-	ins_reply_461_1_2 = {
-		value = "嗯~那{namecode:50}姐和我都很厉害~！"
-	},
-	ins_discuss_461_2 = {
-		value = "单人练习辛苦了~没想好接下来做什么的话，来运动场怎么样？"
-	},
-	ins_reply_461_2_1 = {
-		value = "我已经约了可畏，Alizarin就差你了哦~"
-	},
-	ins_reply_461_2_2 = {
-		value = "…是这样么？那你们稍等，我换身衣服就到。"
-	},
-	ins_op_461_1_1 = {
-		value = "接下来一起去运动场吧。"
-	},
-	op_reply_461_1_1 = {
-		value = "指挥官也要去么…？！我已经出门了，运动场见。"
-	},
-	ins_op_461_1_2 = {
-		value = "{namecode:428}是懂约人组局的！"
-	},
-	op_reply_461_1_2 = {
-		value = "啊，我才看到可畏那边的动态…算了，她开心就好。"
-	},
-	ins_462 = {
-		value = "#指挥官执教中#率先得分的是{namecode:427}选手~！"
-	},
-	ins_discuss_462_1 = {
-		value = "哇哦，指挥官执教的比赛么，好像很有趣，能加我一个么？！"
-	},
-	ins_reply_462_1_1 = {
-		value = "欢迎欢迎~再多叫些人也可以哦，人越多越有趣嘛。"
-	},
-	ins_reply_462_1_2 = {
-		value = "海上骑士，集合！"
-	},
-	ins_reply_462_1_3 = {
-		value = "正在前往体育场！"
-	},
-	ins_reply_462_1_4 = {
-		value = "正在前往体育场！"
-	},
-	ins_reply_462_1_5 = {
-		value = "正在前往体育场！"
-	},
-	ins_discuss_462_2 = {
-		value = "…你为什么能在比赛中玩手机？"
-	},
-	ins_reply_462_2_1 = {
-		value = "因为这是王牌的游刃有余哦~"
-	},
-	ins_reply_462_2_2 = {
-		value = "其实…比赛的人还没凑齐，这是摆拍。"
-	},
-	ins_reply_462_2_3 = {
-		value = "不过看这个架势…凑齐两队人只是时间问题了呢。"
-	},
-	ins_discuss_462_3 = {
-		value = "指挥官执教？这是TAG是什么意思？"
-	},
-	ins_reply_462_3_1 = {
-		value = "字面意思，指挥官正在当我们的教练哦，姐姐要一起来么？"
-	},
-	ins_reply_462_3_2 = {
-		value = "哼，我才不要呢！"
-	},
-	ins_reply_462_3_3 = {
-		value = "指挥官，姐姐说她不来了~"
-	},
-	ins_reply_462_3_4 = {
-		value = "哈啊？！没、我说的是不要！又不是不来！"
-	},
-	ins_op_462_1_1 = {
-		value = "我什么时候成教练了…？"
-	},
-	op_reply_462_1_1 = {
-		value = "在这个动态发出去的那一刻开始哟~"
-	},
-	ins_op_462_1_2 = {
-		value = "向右移动五步，冲锋！"
-	},
-	op_reply_462_1_2 = {
-		value = "收到~多亏教练的指令，现在是2比0了哦~"
-	},
-	ins_463 = {
-		value = "在大自然中体悟Cyanidin的真谛~"
-	},
-	ins_discuss_463_1 = {
-		value = "嗯…我也有同感，面对树木唱歌的时候确实有一种独特的感觉。"
-	},
-	ins_reply_463_1_1 = {
-		value = "这难道是…“格物”的力量么？！"
-	},
-	ins_reply_463_1_2 = {
-		value = "欸~我还没有那么厉害啦！"
-	},
-	ins_discuss_463_2 = {
-		value = "{namecode:70}小姐辛苦啦！期待正式演出的那一天~"
-	},
-	ins_reply_463_2_1 = {
-		value = "顺带一提，劳逸结合也是很重要的。我在不远处准备了一场林间茶会，{namecode:70}小姐愿意来参加么？"
-	},
-	ins_reply_463_2_2 = {
-		value = "感谢您的邀请，不挠小姐。我愿意参加。"
-	},
-	ins_discuss_463_3 = {
-		value = "聆听自然的声音，感受自然的力量。{namecode:70}小姐看上去已经渐入佳境了呢~"
-	},
-	ins_reply_463_3_1 = {
-		value = "多谢您的赞许，如果布雷斯特小姐愿意指导我一下的话就更好了！"
-	},
-	ins_reply_463_3_2 = {
-		value = "当然，这是我的荣幸。"
-	},
-	ins_reply_463_3_3 = {
-		value = "那布雷斯特也一起来参加茶会吧~！"
-	},
-	ins_op_463_1_1 = {
-		value = "Cyanidin的真谛是什么？"
-	},
-	op_reply_463_1_1 = {
-		value = "是活泼~充满希望~以及做最鲜活的自己哦！"
-	},
-	ins_op_463_1_2 = {
-		value = "简直像林中妖精一样！"
-	},
-	op_reply_463_1_2 = {
-		value = "呼呼，指挥官也开始理解Cyanidin了呢~"
-	},
-	ins_464 = {
-		value = "应援练习中！加油~★！Fight！"
-	},
-	ins_discuss_464_1 = {
-		value = "应援用的魔法和道具都准备好了哦~"
-	},
-	ins_reply_464_1_1 = {
-		value = "加油~★！Fight！"
-	},
-	ins_discuss_464_2 = {
-		value = "鲁莽，体育场的比赛需要你的应援支援~"
-	},
-	ins_reply_464_2_1 = {
-		value = "加油~★！Fight！"
-	},
-	ins_discuss_464_3 = {
-		value = "鲁莽，林间茶会也需要你的应援支援~"
-	},
-	ins_reply_464_3_1 = {
-		value = "加油~★！Fight！"
-	},
-	ins_op_464_1_1 = {
-		value = "加油~★！Fight！"
-	},
-	op_reply_464_1_1 = {
-		value = "嗯嗯~加油~★！Fight！"
-	},
-	ins_op_464_1_2 = {
-		value = "很有精神！"
-	},
-	op_reply_464_1_2 = {
-		value = "嘿嘿~加油~★！Fight！"
-	},
-	ins_465 = {
-		value = "寻找作曲灵感中……"
-	},
-	ins_discuss_465_1 = {
-		value = "没想到你也来公园了，这就是Cyanidin的羁绊啊！"
-	},
-	ins_reply_465_1_1 = {
-		value = "嗯……{namecode:70}的练习也加油哦。"
-	},
-	ins_discuss_465_2 = {
-		value = "要小心别在林子里迷路哟！"
-	},
-	ins_reply_465_2_1 = {
-		value = "港区的公园……应该不会迷路吧……？"
-	},
-	ins_reply_465_2_2 = {
-		value = "想迷路的话我可以免费帮忙~！"
-	},
-	ins_reply_465_2_3 = {
-		value = "还是不了……谢谢……"
-	},
-	ins_discuss_465_3 = {
-		value = "灵感不能强求。不远处有一场我举办的林间茶会，{namecode:197}小姐愿意来参加么？"
-	},
-	ins_reply_465_3_1 = {
-		value = "或许在茶会中，灵感会突然冒出来哦？"
-	},
-	ins_reply_465_3_2 = {
-		value = "有道理……那就打扰了……"
-	},
-	ins_op_465_1_1 = {
-		value = "灵感找到了么？"
-	},
-	op_reply_465_1_1 = {
-		value = "暂时还没有……好像遇到了瓶颈！"
-	},
-	ins_op_465_1_2 = {
-		value = "加油~★！Fight！"
-	},
-	op_reply_465_1_2 = {
-		value = "唔……加油~★！Fight！"
-	},
-	ins_466 = {
-		value = ""
-	},
-	ins_discuss_466_1 = {
-		value = ""
-	},
-	ins_reply_466_1_1 = {
-		value = ""
-	},
-	ins_reply_466_1_2 = {
-		value = ""
-	},
-	ins_reply_466_1_3 = {
-		value = ""
-	},
-	ins_discuss_466_2 = {
-		value = ""
-	},
-	ins_reply_466_2_1 = {
-		value = ""
-	},
-	ins_reply_466_2_2 = {
-		value = ""
-	},
-	ins_reply_466_2_3 = {
-		value = ""
-	},
-	ins_op_466_1_1 = {
-		value = ""
-	},
-	op_reply_466_1_1 = {
-		value = ""
-	},
-	ins_op_466_1_2 = {
-		value = ""
-	},
-	op_reply_466_1_2 = {
-		value = ""
-	},
-	ins_467 = {
-		value = ""
-	},
-	ins_discuss_467_1 = {
-		value = ""
-	},
-	ins_reply_467_1_1 = {
-		value = ""
-	},
-	ins_reply_467_1_2 = {
-		value = ""
-	},
-	ins_discuss_467_2 = {
-		value = ""
-	},
-	ins_reply_467_2_1 = {
-		value = ""
-	},
-	ins_op_467_1_1 = {
-		value = ""
-	},
-	op_reply_467_1_1 = {
-		value = ""
-	},
-	ins_op_467_1_2 = {
-		value = ""
-	},
-	op_reply_467_1_2 = {
-		value = ""
-	},
-	ins_468 = {
-		value = ""
-	},
-	ins_discuss_468_1 = {
-		value = ""
-	},
-	ins_reply_468_1_1 = {
-		value = ""
-	},
-	ins_reply_468_1_2 = {
-		value = ""
-	},
-	ins_discuss_468_2 = {
-		value = ""
-	},
-	ins_reply_468_2_1 = {
-		value = ""
-	},
-	ins_op_468_1_1 = {
-		value = ""
-	},
-	op_reply_468_1_1 = {
-		value = ""
-	},
-	ins_op_468_1_2 = {
-		value = ""
-	},
-	op_reply_468_1_2 = {
-		value = ""
-	},
-	ins_469 = {
-		value = ""
-	},
-	ins_discuss_469_1 = {
-		value = ""
-	},
-	ins_reply_469_1_1 = {
-		value = ""
-	},
-	ins_discuss_469_2 = {
-		value = ""
-	},
-	ins_reply_469_2_1 = {
-		value = ""
-	},
-	ins_op_469_1_1 = {
-		value = ""
-	},
-	op_reply_469_1_1 = {
-		value = ""
-	},
-	ins_op_469_1_2 = {
-		value = ""
-	},
-	op_reply_469_1_2 = {
-		value = ""
-	},
-	ins_470 = {
-		value = ""
-	},
-	ins_discuss_470_1 = {
-		value = ""
-	},
-	ins_reply_470_1_1 = {
-		value = ""
-	},
-	ins_discuss_470_2 = {
-		value = ""
-	},
-	ins_reply_470_2_1 = {
-		value = ""
-	},
-	ins_op_470_1_1 = {
-		value = ""
-	},
-	op_reply_470_1_1 = {
-		value = ""
-	},
-	ins_op_470_1_2 = {
-		value = ""
-	},
-	op_reply_470_1_2 = {
-		value = ""
-	},
-	ins_471 = {
-		value = ""
-	},
-	ins_discuss_471_1 = {
-		value = ""
-	},
-	ins_reply_471_1_1 = {
-		value = ""
-	},
-	ins_discuss_471_2 = {
-		value = ""
-	},
-	ins_reply_471_2_1 = {
-		value = ""
-	},
-	ins_reply_471_2_2 = {
-		value = ""
-	},
-	ins_reply_471_2_3 = {
-		value = ""
-	},
-	ins_op_471_1_1 = {
-		value = ""
-	},
-	op_reply_471_1_1 = {
-		value = ""
-	},
-	ins_op_471_1_2 = {
-		value = ""
-	},
-	op_reply_471_1_2 = {
-		value = ""
-	},
-	ins_472 = {
-		value = ""
-	},
-	ins_discuss_472_1 = {
-		value = ""
-	},
-	ins_reply_472_1_1 = {
-		value = ""
-	},
-	ins_discuss_472_2 = {
-		value = ""
-	},
-	ins_reply_472_2_1 = {
-		value = ""
-	},
-	ins_discuss_472_3 = {
-		value = ""
-	},
-	ins_reply_472_3_1 = {
-		value = ""
-	},
-	ins_op_472_1_1 = {
-		value = ""
-	},
-	op_reply_472_1_1 = {
-		value = ""
-	},
-	ins_op_472_1_2 = {
-		value = ""
-	},
-	op_reply_472_1_2 = {
-		value = ""
-	},
-	ins_473 = {
-		value = ""
-	},
-	ins_discuss_473_1 = {
-		value = ""
-	},
-	ins_reply_473_1_1 = {
-		value = ""
-	},
-	ins_reply_473_1_2 = {
-		value = ""
-	},
-	ins_reply_473_1_3 = {
-		value = ""
-	},
-	ins_discuss_473_2 = {
-		value = ""
-	},
-	ins_reply_473_2_1 = {
-		value = ""
-	},
-	ins_reply_473_2_2 = {
-		value = ""
-	},
-	ins_op_473_1_1 = {
-		value = ""
-	},
-	op_reply_473_1_1 = {
-		value = ""
-	},
-	ins_op_473_1_2 = {
-		value = ""
-	},
-	op_reply_473_1_2 = {
 		value = ""
 	}
 }

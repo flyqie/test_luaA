@@ -1,4 +1,4 @@
-pg = pg or {}
+﻿pg = pg or {}
 pg.box_data_template = setmetatable({
 	__name = "box_data_template",
 	all = {
@@ -610,32 +610,32 @@ pg.base.box_data_template = {
 		name = "线索",
 		type = 1,
 		effect_arg = 1,
-		icon = "event8",
-		effect_id = 901878
+		icon = "event7",
+		effect_id = 99312
 	},
 	[10130] = {
 		id = 10130,
 		name = "线索",
 		type = 1,
 		effect_arg = 1,
-		icon = "event8",
-		effect_id = 901880
+		icon = "event7",
+		effect_id = 99314
 	},
 	[10131] = {
 		id = 10131,
 		name = "线索",
 		type = 1,
 		effect_arg = 1,
-		icon = "event8",
-		effect_id = 901882
+		icon = "event7",
+		effect_id = 99316
 	},
 	[10132] = {
 		id = 10132,
 		name = "线索",
 		type = 1,
 		effect_arg = 1,
-		icon = "event8",
-		effect_id = 901884
+		icon = "event7",
+		effect_id = 99318
 	},
 	[20001] = {
 		id = 20001,

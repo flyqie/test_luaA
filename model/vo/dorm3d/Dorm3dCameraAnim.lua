@@ -1,35 +1,35 @@
-slot0 = class("Dorm3dCameraAnim", import("model.vo.BaseVO"))
+﻿local var_0_0 = class("Dorm3dCameraAnim", import("model.vo.BaseVO"))
 
-slot0.bindConfigTable = function(slot0)
+function var_0_0.bindConfigTable(arg_1_0)
 	return pg.dorm3d_camera_anim_template
 end
 
-slot0.GetName = function(slot0)
-	return slot0:getConfig("desc")
+function var_0_0.GetName(arg_2_0)
+	return arg_2_0:getConfig("desc")
 end
 
-slot0.GetStateName = function(slot0)
-	return slot0:getConfig("state")
+function var_0_0.GetStateName(arg_3_0)
+	return arg_3_0:getConfig("state")
 end
 
-slot0.GetAnimTime = function(slot0)
-	return slot0:getConfig("anim_time")
+function var_0_0.GetAnimTime(arg_4_0)
+	return arg_4_0:getConfig("anim_time")
 end
 
-slot0.GetPreAnimID = function(slot0)
-	return slot0:getConfig("pre_anim")
+function var_0_0.GetPreAnimID(arg_5_0)
+	return arg_5_0:getConfig("pre_anim")
 end
 
-slot0.GetFinishAnimID = function(slot0)
-	return slot0:getConfig("finish_anim")
+function var_0_0.GetFinishAnimID(arg_6_0)
+	return arg_6_0:getConfig("finish_anim")
 end
 
-slot0.GetUnlockRequirment = function(slot0)
-	return slot0:getConfig("unlock")
+function var_0_0.GetUnlockRequirment(arg_7_0)
+	return arg_7_0:getConfig("unlock")
 end
 
-slot0.GetFurnitureID = function(slot0)
-	return slot0:getConfig("furniture_id")
+function var_0_0.GetFurnitureID(arg_8_0)
+	return arg_8_0:getConfig("furniture_id")
 end
 
-return slot0
+return var_0_0

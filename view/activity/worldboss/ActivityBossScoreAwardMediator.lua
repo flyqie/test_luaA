@@ -1,21 +1,24 @@
-slot0 = class("ActivityBossScoreAwardMediator", import("view.base.ContextMediator"))
+﻿local var_0_0 = class("ActivityBossScoreAwardMediator", import("view.base.ContextMediator"))
 
-slot0.register = function(slot0)
+function var_0_0.register(arg_1_0)
+	return
 end
 
-slot0.listNotificationInterests = function(slot0)
+function var_0_0.listNotificationInterests(arg_2_0)
 	return {}
 end
 
-slot0.handleNotification = function(slot0, slot1)
-	slot3 = slot1:getBody()
+function var_0_0.handleNotification(arg_3_0, arg_3_1)
+	local var_3_0 = arg_3_1:getName()
+	local var_3_1 = arg_3_1:getBody()
 
-	if slot1:getName() == nil then
-		-- Nothing
+	if var_3_0 == nil then
+		-- block empty
 	end
 end
 
-slot0.remove = function(slot0)
+function var_0_0.remove(arg_4_0)
+	return
 end
 
-return slot0
+return var_0_0
